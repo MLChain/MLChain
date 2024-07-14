@@ -1,6 +1,6 @@
 from typing import Optional, Union, cast
 
-from configs import dify_config
+from configs import mlchain_config
 from core.helper.code_executor.code_executor import CodeExecutionException, CodeExecutor, CodeLanguage
 from core.helper.code_executor.code_node_provider import CodeNodeProvider
 from core.helper.code_executor.javascript.javascript_code_provider import JavascriptCodeProvider
@@ -11,14 +11,14 @@ from core.workflow.nodes.base_node import BaseNode
 from core.workflow.nodes.code.entities import CodeNodeData
 from models.workflow import WorkflowNodeExecutionStatus
 
-MAX_NUMBER = dify_config.CODE_MAX_NUMBER
-MIN_NUMBER = dify_config.CODE_MIN_NUMBER
+MAX_NUMBER = mlchain_config.CODE_MAX_NUMBER
+MIN_NUMBER = mlchain_config.CODE_MIN_NUMBER
 MAX_PRECISION = 20
 MAX_DEPTH = 5
-MAX_STRING_LENGTH = dify_config.CODE_MAX_STRING_LENGTH
-MAX_STRING_ARRAY_LENGTH = dify_config.CODE_MAX_STRING_ARRAY_LENGTH
-MAX_OBJECT_ARRAY_LENGTH = dify_config.CODE_MAX_OBJECT_ARRAY_LENGTH
-MAX_NUMBER_ARRAY_LENGTH = dify_config.CODE_MAX_NUMBER_ARRAY_LENGTH
+MAX_STRING_LENGTH = mlchain_config.CODE_MAX_STRING_LENGTH
+MAX_STRING_ARRAY_LENGTH = mlchain_config.CODE_MAX_STRING_ARRAY_LENGTH
+MAX_OBJECT_ARRAY_LENGTH = mlchain_config.CODE_MAX_OBJECT_ARRAY_LENGTH
+MAX_NUMBER_ARRAY_LENGTH = mlchain_config.CODE_MAX_NUMBER_ARRAY_LENGTH
 
 
 class CodeNode(BaseNode):

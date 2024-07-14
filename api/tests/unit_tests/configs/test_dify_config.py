@@ -20,7 +20,7 @@ def example_env_file(tmp_path, monkeypatch) -> str:
     return str(file_path)
 
 
-def test_dify_config_undefined_entry(example_env_file):
+def test_mlchain_config_undefined_entry(example_env_file):
     # NOTE: See https://github.com/microsoft/pylance-release/issues/6099 for more details about this type error.
     # load dotenv file with pydantic-settings
     config = DifyConfig(_env_file=example_env_file)
@@ -31,7 +31,7 @@ def test_dify_config_undefined_entry(example_env_file):
         assert config['LOG_LEVEL'] == 'INFO'
 
 
-def test_dify_config(example_env_file):
+def test_mlchain_config(example_env_file):
     # load dotenv file with pydantic-settings
     config = DifyConfig(_env_file=example_env_file)
 
@@ -64,7 +64,7 @@ def test_flask_configs(example_env_file):
     # fallback to alias choices value as CONSOLE_API_URL
     assert config['FILES_URL'] == 'https://example.com'
 
-    assert config['SQLALCHEMY_DATABASE_URI'] == 'postgresql://postgres:@localhost:5432/dify'
+    assert config['SQLALCHEMY_DATABASE_URI'] == 'postgresql://postgres:@localhost:5432/mlchain'
     assert config['SQLALCHEMY_ENGINE_OPTIONS'] == {
         'connect_args': {
             'options': '-c timezone=UTC',

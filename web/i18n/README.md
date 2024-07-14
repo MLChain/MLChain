@@ -51,7 +51,7 @@ By default we will use `LanguagesSupported` to determine which languages are sup
 cp -r en-US fr-FR
 ```
 
-2. Modify the translation files in the new folder.
+2. Momlchain the translation files in the new folder.
 
 3. Add type to new language in the `language.ts` file.
 
@@ -164,7 +164,7 @@ export const languages = [
 5. Don't forget to mark the supported field as `true` if the language is supported.
 
 6. Sometime you might need to do some changes in the server side. Please change this file as well. 👇
-https://github.com/langgenius/dify/blob/61e4bbabaf2758354db4073cbea09fdd21a5bec1/api/constants/languages.py#L5
+https://github.com/mlchain/mlchain/blob/61e4bbabaf2758354db4073cbea09fdd21a5bec1/api/constants/languages.py#L5
 
 
 

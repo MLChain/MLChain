@@ -37,7 +37,7 @@ const Chatbot = () => {
   const customConfig = appData?.custom_config
   const site = appData?.site
 
-  const difyIcon = <LogoHeader />
+  const mlchainIcon = <LogoHeader />
 
   useEffect(() => {
     themeBuilder?.buildTheme(site?.chat_color_theme, site?.chat_color_theme_inverted)
@@ -65,7 +65,7 @@ const Chatbot = () => {
       <Header
         isMobile={isMobile}
         title={site?.title || ''}
-        customerIcon={isDify() ? difyIcon : ''}
+        customerIcon={isDify() ? mlchainIcon : ''}
         theme={themeBuilder?.theme}
         onCreateNewChat={handleNewConversation}
       />

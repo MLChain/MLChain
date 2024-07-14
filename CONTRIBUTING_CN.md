@@ -8,11 +8,11 @@
 
 ## 在开始之前
 
-[查找](https://github.com/langgenius/dify/issues?q=is:issue+is:closed)现有问题，或[创建](https://github.com/langgenius/dify/issues/new/choose)一个新问题。我们将问题分为两类：
+[查找](https://github.com/mlchain/mlchain/issues?q=is:issue+is:closed)现有问题，或[创建](https://github.com/mlchain/mlchain/issues/new/choose)一个新问题。我们将问题分为两类：
 
 ### 功能请求：
 
-* 如果您要提出新的功能请求，请解释所提议的功能的目标，并尽可能提供详细的上下文。[@perzeusss](https://github.com/perzeuss)制作了一个很好的[功能请求助手](https://udify.app/chat/MK2kVSnw1gakVwMX)，可以帮助您起草需求。随时尝试一下。
+* 如果您要提出新的功能请求，请解释所提议的功能的目标，并尽可能提供详细的上下文。[@perzeusss](https://github.com/perzeuss)制作了一个很好的[功能请求助手](https://umlchain.app/chat/MK2kVSnw1gakVwMX)，可以帮助您起草需求。随时尝试一下。
 
 * 如果您想从现有问题中选择一个，请在其下方留下评论表示您的意愿。
 
@@ -34,7 +34,7 @@
   | Feature Type                                                 | Priority        |
   | ------------------------------------------------------------ | --------------- |
   | High-Priority Features as being labeled by a team member     | High Priority   |
-  | Popular feature requests from our [community feedback board](https://github.com/langgenius/dify/discussions/categories/feedbacks) | Medium Priority |
+  | Popular feature requests from our [community feedback board](https://github.com/mlchain/mlchain/discussions/categories/feedbacks) | Medium Priority |
   | Non-core features and minor enhancements                     | Low Priority    |
   | Valuable but not immediate                                   | Future-Feature  |
 
@@ -61,7 +61,7 @@
 从终端克隆fork的仓库：
 
 ```
-git clone git@github.com:<github_username>/dify.git
+git clone git@github.com:<github_username>/mlchain.git
 ```
 
 ### 3. 验证依赖项
@@ -78,7 +78,7 @@ Dify 依赖以下工具和库：
 
 Dify由后端和前端组成。通过`cd api/`导航到后端目录，然后按照[后端README](api/README.md)进行安装。在另一个终端中，通过`cd web/`导航到前端目录，然后按照[前端README](web/README.md)进行安装。
 
-查看[安装常见问题解答](https://docs.dify.ai/getting-started/faq/install-faq)以获取常见问题列表和故障排除步骤。
+查看[安装常见问题解答](https://docs.mlchain.ai/getting-started/faq/install-faq)以获取常见问题列表和故障排除步骤。
 
 ### 5. 在浏览器中访问Dify
 
@@ -86,7 +86,7 @@ Dify由后端和前端组成。通过`cd api/`导航到后端目录，然后按�
 
 ## 开发
 
-如果您要添加模型提供程序，请参考[此指南](https://github.com/langgenius/dify/blob/main/api/core/model_runtime/README.md)。
+如果您要添加模型提供程序，请参考[此指南](https://github.com/mlchain/mlchain/blob/main/api/core/model_runtime/README.md)。
 
 如果您要向Agent或Workflow添加工具提供程序，请参考[此指南](./api/core/tools/README.md)。
 
@@ -148,7 +148,7 @@ Dify的后端使用Python编写，使用[Flask](https://flask.palletsprojects.co
 
 最后，是时候向我们的仓库提交一个拉取请求（PR）了。对于重要的功能，我们首先将它们合并到 `deploy/dev` 分支进行测试，然后再合并到 `main` 分支。如果你遇到合并冲突或者不知道如何提交拉取请求的问题，请查看 [GitHub 的拉取请求教程](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)。
 
-就是这样！一旦你的 PR 被合并，你将成为我们 [README](https://github.com/langgenius/dify/blob/main/README.md) 中的贡献者。
+就是这样！一旦你的 PR 被合并，你将成为我们 [README](https://github.com/mlchain/mlchain/blob/main/README.md) 中的贡献者。
 
 ## 获取帮助
 

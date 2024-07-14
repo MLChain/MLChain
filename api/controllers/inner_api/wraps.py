@@ -46,7 +46,7 @@ def inner_api_user_auth(view):
 
         inner_api_key = request.headers.get('X-Inner-Api-Key')
 
-        data_to_sign = f'DIFY {user_id}'
+        data_to_sign = f'MLCHAIN {user_id}'
 
         signature = hmac_new(inner_api_key.encode('utf-8'), data_to_sign.encode('utf-8'), sha1)
         signature = b64encode(signature.digest()).decode('utf-8')

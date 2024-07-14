@@ -2,12 +2,12 @@ from typing import Literal, Optional, Union
 
 from pydantic import BaseModel, ValidationInfo, field_validator
 
-from configs import dify_config
+from configs import mlchain_config
 from core.workflow.entities.base_node_data_entities import BaseNodeData
 
-MAX_CONNECT_TIMEOUT = dify_config.HTTP_REQUEST_MAX_CONNECT_TIMEOUT
-MAX_READ_TIMEOUT = dify_config.HTTP_REQUEST_MAX_READ_TIMEOUT
-MAX_WRITE_TIMEOUT = dify_config.HTTP_REQUEST_MAX_WRITE_TIMEOUT
+MAX_CONNECT_TIMEOUT = mlchain_config.HTTP_REQUEST_MAX_CONNECT_TIMEOUT
+MAX_READ_TIMEOUT = mlchain_config.HTTP_REQUEST_MAX_READ_TIMEOUT
+MAX_WRITE_TIMEOUT = mlchain_config.HTTP_REQUEST_MAX_WRITE_TIMEOUT
 
 
 class HttpRequestNodeAuthorizationConfig(BaseModel):

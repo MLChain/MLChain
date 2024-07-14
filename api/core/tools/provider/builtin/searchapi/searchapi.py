@@ -15,7 +15,7 @@ class SearchAPIProvider(BuiltinToolProviderController):
             ).invoke(
                 user_id='',
                 tool_parameters={
-                    "query": "SearchApi dify",
+                    "query": "SearchApi mlchain",
                     "result_type": "link"
                 },
             )

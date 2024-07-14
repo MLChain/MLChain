@@ -18,9 +18,9 @@ from .account import Account, Tenant
 
 
 class DifySetup(db.Model):
-    __tablename__ = 'dify_setups'
+    __tablename__ = 'mlchain_setups'
     __table_args__ = (
-        db.PrimaryKeyConstraint('version', name='dify_setup_pkey'),
+        db.PrimaryKeyConstraint('version', name='mlchain_setup_pkey'),
     )
 
     version = db.Column(db.String(255), nullable=False)

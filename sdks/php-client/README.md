@@ -22,7 +22,7 @@ use YourVendorName\DifyPHP\ChatClient;
 
 $apiKey = 'your-api-key-here';
 
-$difyClient = new DifyClient($apiKey);
+$mlchainClient = new DifyClient($apiKey);
 
 // Create a completion client
 $completionClient = new CompletionClient($apiKey);
@@ -61,15 +61,15 @@ $fileForUpload = [
         'name' => 'filename.jpg'
     ]
 ];
-$response = $difyClient->file_upload("user_id", $fileForUpload);
+$response = $mlchainClient->file_upload("user_id", $fileForUpload);
 $result = json_decode($response->getBody(), true);
 echo 'upload_file_id: ' . $result['id'];
 
 // Fetch application parameters
-$response = $difyClient->get_application_parameters("user_id");
+$response = $mlchainClient->get_application_parameters("user_id");
 
 // Provide feedback for a message
-$response = $difyClient->message_feedback($message_id, $rating, "user_id");
+$response = $mlchainClient->message_feedback($message_id, $rating, "user_id");
 
 // Other available methods:
 // - get_conversation_messages()

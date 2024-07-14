@@ -9,7 +9,7 @@ from typing import Any, Optional
 from sqlalchemy import func
 from werkzeug.exceptions import Unauthorized
 
-from configs import dify_config
+from configs import mlchain_config
 from constants.languages import language_timezone_mapping, languages
 from events.tenant_event import tenant_was_created
 from extensions.ext_redis import redis_client
@@ -80,7 +80,7 @@ class AccountService:
         payload = {
             "user_id": account.id,
             "exp": datetime.now(timezone.utc).replace(tzinfo=None) + exp,
-            "iss": dify_config.EDITION,
+            "iss": mlchain_config.EDITION,
             "sub": 'Console API Passport',
         }
 
@@ -502,7 +502,7 @@ class RegisterService:
     @classmethod
     def setup(cls, email: str, name: str, password: str, ip_address: str) -> None:
         """
-        Setup dify
+        Setup mlchain
 
         :param email: email
         :param name: username
@@ -523,10 +523,10 @@ class RegisterService:
 
             TenantService.create_owner_tenant_if_not_exist(account)
 
-            dify_setup = DifySetup(
-                version=dify_config.CURRENT_VERSION
+            mlchain_setup = DifySetup(
+                version=mlchain_config.CURRENT_VERSION
             )
-            db.session.add(dify_setup)
+            db.session.add(mlchain_setup)
             db.session.commit()
         except Exception as e:
             db.session.query(DifySetup).delete()
@@ -559,7 +559,7 @@ class RegisterService:
 
             if open_id is not None or provider is not None:
                 AccountService.link_account_integrate(provider, open_id, account)
-            if dify_config.EDITION != 'SELF_HOSTED':
+            if mlchain_config.EDITION != 'SELF_HOSTED':
                 tenant = TenantService.create_tenant(f"{account.name}'s Workspace")
 
                 TenantService.create_tenant_member(tenant, account, role='owner')
@@ -623,7 +623,7 @@ class RegisterService:
             'email': account.email,
             'workspace_id': tenant.id,
         }
-        expiryHours = dify_config.INVITE_EXPIRY_HOURS
+        expiryHours = mlchain_config.INVITE_EXPIRY_HOURS
         redis_client.setex(
             cls._get_invitation_token_key(token),
             expiryHours * 60 * 60,

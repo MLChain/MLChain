@@ -8,7 +8,7 @@ class DeploymentConfig(BaseSettings):
     """
     APPLICATION_NAME: str = Field(
         description='application name',
-        default='langgenius/dify',
+        default='mlchain/mlchain',
     )
 
     TESTING: bool = Field(

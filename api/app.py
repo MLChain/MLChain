@@ -1,6 +1,6 @@
 import os
 
-from configs import dify_config
+from configs import mlchain_config
 
 if os.environ.get("DEBUG", "false").lower() != 'true':
     from gevent import monkey
@@ -82,11 +82,11 @@ def create_flask_app_with_configs() -> Flask:
     create a raw flask app
     with configs loaded from .env file
     """
-    dify_app = DifyApp(__name__)
-    dify_app.config.from_mapping(dify_config.model_dump())
+    mlchain_app = DifyApp(__name__)
+    mlchain_app.config.from_mapping(mlchain_config.model_dump())
 
     # populate configs into system environment variables
-    for key, value in dify_app.config.items():
+    for key, value in mlchain_app.config.items():
         if isinstance(value, str):
             os.environ[key] = value
         elif isinstance(value, int | float | bool):
@@ -94,7 +94,7 @@ def create_flask_app_with_configs() -> Flask:
         elif value is None:
             os.environ[key] = ''
 
-    return dify_app
+    return mlchain_app
 
 
 def create_app() -> Flask:

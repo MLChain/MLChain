@@ -169,7 +169,7 @@ docker/middleware.env
 
 sdks/python-client/build
 sdks/python-client/dist
-sdks/python-client/dify_client.egg-info
+sdks/python-client/mlchain_client.egg-info
 
 .vscode/*
 !.vscode/launch.json

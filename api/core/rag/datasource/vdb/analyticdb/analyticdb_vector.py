@@ -25,7 +25,7 @@ class AnalyticdbConfig(BaseModel):
     instance_id: str
     account: str
     account_password: str
-    namespace: str = ("dify",)
+    namespace: str = ("mlchain",)
     namespace_password: str = (None,)
     metrics: str = ("cosine",)
     read_timeout: int = 60000
@@ -58,7 +58,7 @@ class AnalyticdbVector(BaseVector):
             raise ImportError(_import_err_msg)
         self.config = config
         self._client_config = open_api_models.Config(
-            user_agent="dify", **config.to_analyticdb_client_params()
+            user_agent="mlchain", **config.to_analyticdb_client_params()
         )
         self._client = Client(self._client_config)
         self._initialize()

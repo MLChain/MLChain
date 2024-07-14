@@ -6,7 +6,7 @@ import requests
 from flask import current_app, redirect, request
 from flask_restful import Resource
 
-from configs import dify_config
+from configs import mlchain_config
 from constants.languages import languages
 from extensions.ext_database import db
 from libs.helper import get_remote_ip
@@ -19,21 +19,21 @@ from .. import api
 
 def get_oauth_providers():
     with current_app.app_context():
-        if not dify_config.GITHUB_CLIENT_ID or not dify_config.GITHUB_CLIENT_SECRET:
+        if not mlchain_config.GITHUB_CLIENT_ID or not mlchain_config.GITHUB_CLIENT_SECRET:
             github_oauth = None
         else:
             github_oauth = GitHubOAuth(
-                client_id=dify_config.GITHUB_CLIENT_ID,
-                client_secret=dify_config.GITHUB_CLIENT_SECRET,
-                redirect_uri=dify_config.CONSOLE_API_URL + '/console/api/oauth/authorize/github',
+                client_id=mlchain_config.GITHUB_CLIENT_ID,
+                client_secret=mlchain_config.GITHUB_CLIENT_SECRET,
+                redirect_uri=mlchain_config.CONSOLE_API_URL + '/console/api/oauth/authorize/github',
             )
-        if not dify_config.GOOGLE_CLIENT_ID or not dify_config.GOOGLE_CLIENT_SECRET:
+        if not mlchain_config.GOOGLE_CLIENT_ID or not mlchain_config.GOOGLE_CLIENT_SECRET:
             google_oauth = None
         else:
             google_oauth = GoogleOAuth(
-                client_id=dify_config.GOOGLE_CLIENT_ID,
-                client_secret=dify_config.GOOGLE_CLIENT_SECRET,
-                redirect_uri=dify_config.CONSOLE_API_URL + '/console/api/oauth/authorize/google',
+                client_id=mlchain_config.GOOGLE_CLIENT_ID,
+                client_secret=mlchain_config.GOOGLE_CLIENT_SECRET,
+                redirect_uri=mlchain_config.CONSOLE_API_URL + '/console/api/oauth/authorize/google',
             )
 
         OAUTH_PROVIDERS = {'github': github_oauth, 'google': google_oauth}
@@ -83,7 +83,7 @@ class OAuthCallback(Resource):
 
         token = AccountService.login(account, ip_address=get_remote_ip(request))
 
-        return redirect(f'{dify_config.CONSOLE_WEB_URL}?console_token={token}')
+        return redirect(f'{mlchain_config.CONSOLE_WEB_URL}?console_token={token}')
 
 
 def _get_account_by_openid_or_email(provider: str, user_info: OAuthUserInfo) -> Optional[Account]:

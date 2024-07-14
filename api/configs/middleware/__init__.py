@@ -76,7 +76,7 @@ class DatabaseConfig:
 
     DB_DATABASE: str = Field(
         description='db database',
-        default='dify',
+        default='mlchain',
     )
 
     DB_CHARSET: str = Field(

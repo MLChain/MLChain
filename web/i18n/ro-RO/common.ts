@@ -373,7 +373,7 @@ const translation = {
   apiBasedExtension: {
     title: 'Extensiile bazate pe API oferă o gestionare centralizată a API-urilor, simplificând configurația pentru o utilizare ușoară în aplicațiile Dify.',
     link: 'Aflați cum să dezvoltați propria extensie bazată pe API.',
-    linkUrl: 'https://docs.dify.ai/features/extension/api_based_extension',
+    linkUrl: 'https://docs.mlchain.ai/features/extension/api_based_extension',
     add: 'Adăugați extensie API',
     selector: {
       title: 'Extensie API',

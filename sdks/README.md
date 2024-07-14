@@ -6,7 +6,7 @@ https://github.com/langgenius/java-client/
 
 ## Go
 
-https://github.com/langgenius/dify-sdk-go
+https://github.com/mlchain/mlchain-sdk-go
 
 ## Ruby
 

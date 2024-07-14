@@ -48,7 +48,7 @@ class CodeExecutionSandboxConfig(BaseSettings):
 
     CODE_EXECUTION_API_KEY: str = Field(
         description='API key for code execution service',
-        default='dify-sandbox',
+        default='mlchain-sandbox',
     )
 
 
@@ -230,7 +230,7 @@ class UpdateConfig(BaseSettings):
     """
     CHECK_UPDATE_URL: str = Field(
         description='url for checking updates',
-        default='https://updates.dify.ai',
+        default='https://updates.mlchain.ai',
     )
 
 
@@ -370,8 +370,8 @@ class RagEtlConfig(BaseSettings):
     """
 
     ETL_TYPE: str = Field(
-        description='RAG ETL type name, default to `dify`, available values are `dify` and `Unstructured`. ',
-        default='dify',
+        description='RAG ETL type name, default to `mlchain`, available values are `mlchain` and `Unstructured`. ',
+        default='mlchain',
     )
 
     KEYWORD_DATA_SOURCE_TYPE: str = Field(

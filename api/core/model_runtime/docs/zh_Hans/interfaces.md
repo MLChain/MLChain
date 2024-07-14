@@ -221,7 +221,7 @@ class XinferenceProvider(Provider):
 
 ​当供应商支持增加自定义 LLM 时，可实现此方法让自定义模型可获取模型规则，默认返回 None。
 
-对于`OpenAI`供应商下的大部分微调模型，可以通过其微调模型名称获取到其基类模型，如`gpt-3.5-turbo-1106`，然后返回基类模型的预定义参数规则，参考[openai](https://github.com/langgenius/dify/blob/feat/model-runtime/api/core/model_runtime/model_providers/openai/llm/llm.py#L801)
+对于`OpenAI`供应商下的大部分微调模型，可以通过其微调模型名称获取到其基类模型，如`gpt-3.5-turbo-1106`，然后返回基类模型的预定义参数规则，参考[openai](https://github.com/mlchain/mlchain/blob/feat/model-runtime/api/core/model_runtime/model_providers/openai/llm/llm.py#L801)
 的具体实现
 
 ### TextEmbedding

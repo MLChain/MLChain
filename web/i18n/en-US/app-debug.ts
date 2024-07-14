@@ -238,7 +238,7 @@ const translation = {
     'Prompts guide AI responses with instructions and constraints. Insert variables like {{input}}. This prompt won\'t be visible to users.',
   formattingChangedTitle: 'Formatting changed',
   formattingChangedText:
-    'Modifying the formatting will reset the debug area, are you sure?',
+    'Momlchaining the formatting will reset the debug area, are you sure?',
   variableTitle: 'Variables',
   variableTip:
     'Users fill variables in a form, automatically replacing variables in the prompt.',
@@ -381,7 +381,7 @@ const translation = {
     top_kTip: 'Used to filter chunks that are most similar to user questions. The system will also dynamically adjust the value of Top K, according to max_tokens of the selected model.',
     score_threshold: 'Score Threshold',
     score_thresholdTip: 'Used to set the similarity threshold for chunks filtering.',
-    retrieveChangeTip: 'Modifying the index mode and retrieval mode may affect applications associated with this Knowledge.',
+    retrieveChangeTip: 'Momlchaining the index mode and retrieval mode may affect applications associated with this Knowledge.',
   },
   debugAsSingleModel: 'Debug as Single Model',
   debugAsMultipleModel: 'Debug as Multiple Models',

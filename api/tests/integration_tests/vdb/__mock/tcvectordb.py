@@ -26,7 +26,7 @@ class MockTcvectordbClass:
             Database(
                 conn=self._conn,
                 read_consistency=self._read_consistency,
-                name='dify',
+                name='mlchain',
             )]
 
     def list_collections(self, timeout: Optional[float] = None) -> list[Collection]:

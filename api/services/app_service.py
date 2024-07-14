@@ -7,7 +7,7 @@ import yaml
 from flask_login import current_user
 from flask_sqlalchemy.pagination import Pagination
 
-from configs import dify_config
+from configs import mlchain_config
 from constants.model_template import default_app_templates
 from core.agent.entities import AgentToolEntity
 from core.app.features.rate_limiting import RateLimit
@@ -446,7 +446,7 @@ class AppService:
             # get all tools
             tools = agent_config.get('tools', [])
 
-        url_prefix = (dify_config.CONSOLE_API_URL
+        url_prefix = (mlchain_config.CONSOLE_API_URL
                       + "/console/api/workspaces/current/tool-provider/builtin/")
 
         for tool in tools:

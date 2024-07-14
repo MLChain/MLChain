@@ -8,7 +8,7 @@ from httpx import get, post
 from pydantic import BaseModel
 from yarl import URL
 
-from configs import dify_config
+from configs import mlchain_config
 from core.helper.code_executor.entities import CodeDependency
 from core.helper.code_executor.javascript.javascript_transformer import NodeJsTemplateTransformer
 from core.helper.code_executor.jinja2.jinja2_transformer import Jinja2TemplateTransformer
@@ -18,8 +18,8 @@ from core.helper.code_executor.template_transformer import TemplateTransformer
 logger = logging.getLogger(__name__)
 
 # Code Executor
-CODE_EXECUTION_ENDPOINT = dify_config.CODE_EXECUTION_ENDPOINT
-CODE_EXECUTION_API_KEY = dify_config.CODE_EXECUTION_API_KEY
+CODE_EXECUTION_ENDPOINT = mlchain_config.CODE_EXECUTION_ENDPOINT
+CODE_EXECUTION_API_KEY = mlchain_config.CODE_EXECUTION_API_KEY
 
 CODE_EXECUTION_TIMEOUT= (10, 60)
 

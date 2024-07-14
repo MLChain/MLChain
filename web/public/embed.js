@@ -1,6 +1,6 @@
 /** this file is used to embed the chatbot in a website
- * the difyChatbotConfig should be defined in the html file before this script is included
- * the difyChatbotConfig should contain the token of the chatbot
+ * the mlchainChatbotConfig should be defined in the html file before this script is included
+ * the mlchainChatbotConfig should contain the token of the chatbot
  * the token can be found in the chatbot settings page
  */
 
@@ -8,9 +8,9 @@
 
 (function () {
   // Constants for DOM element IDs and configuration key
-  const configKey = "difyChatbotConfig";
-  const buttonId = "dify-chatbot-bubble-button";
-  const iframeId = "dify-chatbot-bubble-window";
+  const configKey = "mlchainChatbotConfig";
+  const buttonId = "mlchain-chatbot-bubble-button";
+  const iframeId = "mlchain-chatbot-bubble-window";
 
   // SVG icons for open and close states
   const svgIcons = {
@@ -31,13 +31,13 @@
     }
 
     const baseUrl =
-      config.baseUrl || `https://${config.isDev ? "dev." : ""}udify.app`;
+      config.baseUrl || `https://${config.isDev ? "dev." : ""}umlchain.app`;
 
     // Function to create the iframe for the chatbot
     function createIframe() {
       const iframe = document.createElement("iframe");
       iframe.allow = "fullscreen;microphone";
-      iframe.title = "dify chatbot bubble window";
+      iframe.title = "mlchain chatbot bubble window";
       iframe.id = iframeId;
       iframe.src = `${baseUrl}/chatbot/${config.token}`;
       iframe.style.cssText = `

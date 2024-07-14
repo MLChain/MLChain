@@ -11,7 +11,7 @@ class NovitaLargeLanguageModel(OAIAPICompatLargeLanguageModel):
 
     def _update_endpoint_url(self, credentials: dict):
         credentials['endpoint_url'] = "https://api.novita.ai/v3/openai"
-        credentials['extra_headers'] = { 'X-Novita-Source': 'dify.ai' }
+        credentials['extra_headers'] = { 'X-Novita-Source': 'mlchain.ai' }
         return credentials
 
     def _invoke(self, model: str, credentials: dict,

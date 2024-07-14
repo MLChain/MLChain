@@ -273,13 +273,13 @@ const NormalForm = () => {
             <Link
               className='text-primary-600'
               target='_blank' rel='noopener noreferrer'
-              href='https://dify.ai/terms'
+              href='https://mlchain.ai/terms'
             >{t('login.tos')}</Link>
             &nbsp;&&nbsp;
             <Link
               className='text-primary-600'
               target='_blank' rel='noopener noreferrer'
-              href='https://dify.ai/privacy'
+              href='https://mlchain.ai/privacy'
             >{t('login.pp')}</Link>
           </div>
 

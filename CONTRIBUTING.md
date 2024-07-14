@@ -8,11 +8,11 @@ In terms of licensing, please take a minute to read our short [License and Contr
 
 ## Before you jump in
 
-[Find](https://github.com/langgenius/dify/issues?q=is:issue+is:closed) an existing issue, or [open](https://github.com/langgenius/dify/issues/new/choose) a new one. We categorize issues into 2 types:
+[Find](https://github.com/mlchain/mlchain/issues?q=is:issue+is:closed) an existing issue, or [open](https://github.com/mlchain/mlchain/issues/new/choose) a new one. We categorize issues into 2 types:
 
 ### Feature requests:
 
-* If you're opening a new feature request, we'd like you to explain what the proposed feature achieves, and include as much context as possible. [@perzeusss](https://github.com/perzeuss) has made a solid [Feature Request Copilot](https://udify.app/chat/MK2kVSnw1gakVwMX) that helps you draft out your needs. Feel free to give it a try.
+* If you're opening a new feature request, we'd like you to explain what the proposed feature achieves, and include as much context as possible. [@perzeusss](https://github.com/perzeuss) has made a solid [Feature Request Copilot](https://umlchain.app/chat/MK2kVSnw1gakVwMX) that helps you draft out your needs. Feel free to give it a try.
 
 * If you want to pick one up from the existing issues, simply drop a comment below it saying so.
 
@@ -36,7 +36,7 @@ In terms of licensing, please take a minute to read our short [License and Contr
   | Feature Type                                                 | Priority        |
   | ------------------------------------------------------------ | --------------- |
   | High-Priority Features as being labeled by a team member     | High Priority   |
-  | Popular feature requests from our [community feedback board](https://github.com/langgenius/dify/discussions/categories/feedbacks) | Medium Priority |
+  | Popular feature requests from our [community feedback board](https://github.com/mlchain/mlchain/discussions/categories/feedbacks) | Medium Priority |
   | Non-core features and minor enhancements                     | Low Priority    |
   | Valuable but not immediate                                   | Future-Feature  |
 
@@ -64,7 +64,7 @@ Here are the steps to set up Dify for development:
  Clone the forked repository from your terminal:
 
 ```
-git clone git@github.com:<github_username>/dify.git
+git clone git@github.com:<github_username>/mlchain.git
 ```
 
 ### 3. Verify dependencies
@@ -81,15 +81,15 @@ Dify requires the following dependencies to build, make sure they're installed o
 
 Dify is composed of a backend and a frontend. Navigate to the backend directory by `cd api/`, then follow the [Backend README](api/README.md) to install it. In a separate terminal, navigate to the frontend directory by `cd web/`, then follow the [Frontend README](web/README.md) to install.
 
-Check the [installation FAQ](https://docs.dify.ai/getting-started/faq/install-faq) for a list of common issues and steps to troubleshoot.
+Check the [installation FAQ](https://docs.mlchain.ai/getting-started/faq/install-faq) for a list of common issues and steps to troubleshoot.
 
-### 5. Visit dify in your browser
+### 5. Visit mlchain in your browser
 
 To validate your set up, head over to [http://localhost:3000](http://localhost:3000) (the default, or your self-configured URL and port) in your browser. You should now see Dify up and running. 
 
 ## Developing
 
-If you are adding a model provider, [this guide](https://github.com/langgenius/dify/blob/main/api/core/model_runtime/README.md) is for you.
+If you are adding a model provider, [this guide](https://github.com/mlchain/mlchain/blob/main/api/core/model_runtime/README.md) is for you.
 
 If you are adding a tool provider to Agent or Workflow, [this guide](./api/core/tools/README.md) is for you.
 
@@ -151,7 +151,7 @@ The website is bootstrapped on [Next.js](https://nextjs.org/) boilerplate in Typ
 
 At last, time to open a pull request (PR) to our repo. For major features, we first merge them into the `deploy/dev` branch for testing, before they go into the `main` branch. If you run into issues like merge conflicts or don't know how to open a pull request, check out [GitHub's pull request tutorial](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests). 
 
-And that's it! Once your PR is merged, you will be featured as a contributor in our [README](https://github.com/langgenius/dify/blob/main/README.md).
+And that's it! Once your PR is merged, you will be featured as a contributor in our [README](https://github.com/mlchain/mlchain/blob/main/README.md).
 
 ## Getting Help
 

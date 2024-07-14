@@ -1,31 +1,31 @@
-![cover-v5-optimized](https://github.com/langgenius/dify/assets/13230914/f9e19af5-61ba-4119-b926-d10c4c06ebab)
+![cover-v5-optimized](https://github.com/mlchain/mlchain/assets/13230914/f9e19af5-61ba-4119-b926-d10c4c06ebab)
 
 <p align="center">
-  <a href="https://cloud.dify.ai">Dify Cloud</a> ·
-  <a href="https://docs.dify.ai/getting-started/install-self-hosted">セルフホスティング</a> ·
-  <a href="https://docs.dify.ai">ドキュメント</a> ·
-  <a href="https://cal.com/guchenhe/dify-demo">デモの予約</a>
+  <a href="https://cloud.mlchain.ai">Dify Cloud</a> ·
+  <a href="https://docs.mlchain.ai/getting-started/install-self-hosted">セルフホスティング</a> ·
+  <a href="https://docs.mlchain.ai">ドキュメント</a> ·
+  <a href="https://cal.com/guchenhe/mlchain-demo">デモの予約</a>
 </p>
 
 <p align="center">
-    <a href="https://dify.ai" target="_blank">
+    <a href="https://mlchain.ai" target="_blank">
         <img alt="Static Badge" src="https://img.shields.io/badge/Product-F04438"></a>
-    <a href="https://dify.ai/pricing" target="_blank">
+    <a href="https://mlchain.ai/pricing" target="_blank">
         <img alt="Static Badge" src="https://img.shields.io/badge/free-pricing?logo=free&color=%20%23155EEF&label=pricing&labelColor=%20%23528bff"></a>
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="Discordでチャット"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=dify_ai" target="_blank">
-        <img src="https://img.shields.io/twitter/follow/dify_ai?logo=X&color=%20%23f5f5f5"
+    <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
+        <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
             alt="Twitterでフォロー"></a>
     <a href="https://hub.docker.com/u/langgenius" target="_blank">
-        <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/langgenius/dify-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
-    <a href="https://github.com/langgenius/dify/graphs/commit-activity" target="_blank">
-        <img alt="先月のコミット" src="https://img.shields.io/github/commit-activity/m/langgenius/dify?labelColor=%20%2332b583&color=%20%2312b76a"></a>
-    <a href="https://github.com/langgenius/dify/" target="_blank">
-        <img alt="クローズされた問題" src="https://img.shields.io/github/issues-search?query=repo%3Alanggenius%2Fdify%20is%3Aclosed&label=issues%20closed&labelColor=%20%237d89b0&color=%20%235d6b98"></a>
-    <a href="https://github.com/langgenius/dify/discussions/" target="_blank">
-        <img alt="ディスカッション投稿" src="https://img.shields.io/github/discussions/langgenius/dify?labelColor=%20%239b8afb&color=%20%237a5af8"></a>
+        <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
+    <a href="https://github.com/mlchain/mlchain/graphs/commit-activity" target="_blank">
+        <img alt="先月のコミット" src="https://img.shields.io/github/commit-activity/m/mlchain/mlchain?labelColor=%20%2332b583&color=%20%2312b76a"></a>
+    <a href="https://github.com/mlchain/mlchain/" target="_blank">
+        <img alt="クローズされた問題" src="https://img.shields.io/github/issues-search?query=repo%3Alanggenius%2Fmlchain%20is%3Aclosed&label=issues%20closed&labelColor=%20%237d89b0&color=%20%235d6b98"></a>
+    <a href="https://github.com/mlchain/mlchain/discussions/" target="_blank">
+        <img alt="ディスカッション投稿" src="https://img.shields.io/github/discussions/mlchain/mlchain?labelColor=%20%239b8afb&color=%20%237a5af8"></a>
 </p>
 
 <p align="center">
@@ -41,7 +41,7 @@
 #
 
 <p align="center">
-  <a href="https://trendshift.io/repositories/2152" target="_blank"><img src="https://trendshift.io/api/badge/repositories/2152" alt="langgenius%2Fdify | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+  <a href="https://trendshift.io/repositories/2152" target="_blank"><img src="https://trendshift.io/api/badge/repositories/2152" alt="langgenius%2Fmlchain | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </p>
 
 DifyはオープンソースのLLMアプリケーション開発プラットフォームです。直感的なインターフェイスには、AIワークフロー、RAGパイプライン、エージェント機能、モデル管理、観測機能などが組み合わさっており、プロトタイプから生産まで迅速に進めることができます。以下の機能が含まれます：
@@ -51,14 +51,14 @@ DifyはオープンソースのLLMアプリケーション開発プラットフ�
   強力なAIワークフローをビジュアルキャンバス上で構築し、テストできます。すべての機能、および以下の機能を使用できます。
 
 
-  https://github.com/langgenius/dify/assets/13230914/356df23e-1604-483d-80a6-9517ece318aa
+  https://github.com/mlchain/mlchain/assets/13230914/356df23e-1604-483d-80a6-9517ece318aa
 
 
 
 **2. 総合的なモデルサポート**: 
-  数百ものプロプライエタリ/オープンソースのLLMと、数十もの推論プロバイダーおよびセルフホスティングソリューションとのシームレスな統合を提供します。GPT、Mistral、Llama3、OpenAI APIと互換性のあるすべてのモデルを統合されています。サポートされているモデルプロバイダーの完全なリストは[こちら](https://docs.dify.ai/getting-started/readme/model-providers)をご覧ください。
+  数百ものプロプライエタリ/オープンソースのLLMと、数十もの推論プロバイダーおよびセルフホスティングソリューションとのシームレスな統合を提供します。GPT、Mistral、Llama3、OpenAI APIと互換性のあるすべてのモデルを統合されています。サポートされているモデルプロバイダーの完全なリストは[こちら](https://docs.mlchain.ai/getting-started/readme/model-providers)をご覧ください。
 
-![providers-v5](https://github.com/langgenius/dify/assets/13230914/5a17bdbe-097a-4100-8363-40255b70f6e3)
+![providers-v5](https://github.com/mlchain/mlchain/assets/13230914/5a17bdbe-097a-4100-8363-40255b70f6e3)
 
 
 **3. プロンプトIDE**: 
@@ -147,14 +147,14 @@ DifyはオープンソースのLLMアプリケーション開発プラットフ�
 ## Difyの使用方法
 
 - **クラウド </br>**
-[こちら](https://dify.ai)のDify Cloudサービスを利用して、セットアップ不要で試すことができます。サンドボックスプランには、200回のGPT-4呼び出しが無料で含まれています。
+[こちら](https://mlchain.ai)のDify Cloudサービスを利用して、セットアップ不要で試すことができます。サンドボックスプランには、200回のGPT-4呼び出しが無料で含まれています。
 
 - **Dify Community Editionのセルフホスティング</br>**
 この[スタートガイド](#quick-start)を使用して、ローカル環境でDifyを簡単に実行できます。
-詳しくは[ドキュメント](https://docs.dify.ai)をご覧ください。
+詳しくは[ドキュメント](https://docs.mlchain.ai)をご覧ください。
 
 - **企業/組織向けのDify</br>**
-企業中心の機能を提供しています。[こちらからミーティングを予約](https://cal.com/guchenhe/30min)したり、[メールを送信](mailto:business@dify.ai?subject=[GitHub]Business%20License%20Inquiry)して企業のニーズについて相談してください。 </br>
+企業中心の機能を提供しています。[こちらからミーティングを予約](https://cal.com/guchenhe/30min)したり、[メールを送信](mailto:business@mlchain.ai?subject=[GitHub]Business%20License%20Inquiry)して企業のニーズについて相談してください。 </br>
   > AWSを使用しているスタートアップ企業や中小企業の場合は、[AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6)のDify Premiumをチェックして、ワンクリックで自分のAWS VPCにデプロイできます。さらに、手頃な価格のAMIオファリングどして、ロゴやブランディングをカスタマイズしてアプリケーションを作成するオプションがあります。
 
 
@@ -162,7 +162,7 @@ DifyはオープンソースのLLMアプリケーション開発プラットフ�
 
 GitHub上でDifyにスターを付けることで、Difyに関する新しいニュースを受け取れます。
 
-![star-us](https://github.com/langgenius/dify/assets/13230914/b823edc1-6388-4e25-ad45-2f6b187adbb4)
+![star-us](https://github.com/mlchain/mlchain/assets/13230914/b823edc1-6388-4e25-ad45-2f6b187adbb4)
 
 
 
@@ -184,46 +184,46 @@ docker compose up -d
 
 実行後、ブラウザで[http://localhost/install](http://localhost/install)にアクセスし、初期化プロセスを開始できます。
 
-> Difyに貢献したり、追加の開発を行う場合は、[ソースコードからのデプロイガイド](https://docs.dify.ai/getting-started/install-self-hosted/local-source-code)を参照してください。
+> Difyに貢献したり、追加の開発を行う場合は、[ソースコードからのデプロイガイド](https://docs.mlchain.ai/getting-started/install-self-hosted/local-source-code)を参照してください。
 
 ## 次のステップ
 
-設定をカスタマイズする必要がある場合は、[.env.example](docker/.env.example) ファイルのコメントを参照し、`.env` ファイルの対応する値を更新してください。さらに、デプロイ環境や要件に応じて、`docker-compose.yaml` ファイル自体を調整する必要がある場合があります。たとえば、イメージのバージョン、ポートのマッピング、ボリュームのマウントなどを変更します。変更を加えた後は、`docker-compose up -d` を再実行してください。利用可能な環境変数の全一覧は、[こちら](https://docs.dify.ai/getting-started/install-self-hosted/environments)で確認できます。
+設定をカスタマイズする必要がある場合は、[.env.example](docker/.env.example) ファイルのコメントを参照し、`.env` ファイルの対応する値を更新してください。さらに、デプロイ環境や要件に応じて、`docker-compose.yaml` ファイル自体を調整する必要がある場合があります。たとえば、イメージのバージョン、ポートのマッピング、ボリュームのマウントなどを変更します。変更を加えた後は、`docker-compose up -d` を再実行してください。利用可能な環境変数の全一覧は、[こちら](https://docs.mlchain.ai/getting-started/install-self-hosted/environments)で確認できます。
 
 高可用性設定を設定する必要がある場合、コミュニティは[Helm Charts](https://helm.sh/)とYAMLファイルにより、DifyをKubernetesにデプロイすることができます。
 
-- [Helm Chart by @LeoQuote](https://github.com/douban/charts/tree/master/charts/dify)
-- [Helm Chart by @BorisPolonsky](https://github.com/BorisPolonsky/dify-helm)
-- [YAML file by @Winson-030](https://github.com/Winson-030/dify-kubernetes)
+- [Helm Chart by @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
+- [Helm Chart by @BorisPolonsky](https://github.com/BorisPolonsky/mlchain-helm)
+- [YAML file by @Winson-030](https://github.com/Winson-030/mlchain-kubernetes)
 
 #### Terraformを使用したデプロイ
 
 ##### Azure Global
 [terraform](https://www.terraform.io/) を使用して、AzureにDifyをワンクリックでデプロイします。
-- [nikawangのAzure Terraform](https://github.com/nikawang/dify-azure-terraform)
+- [nikawangのAzure Terraform](https://github.com/nikawang/mlchain-azure-terraform)
 
 
 ## 貢献
 
-コードに貢献したい方は、[Contribution Guide](https://github.com/langgenius/dify/blob/main/CONTRIBUTING.md)を参照してください。
+コードに貢献したい方は、[Contribution Guide](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md)を参照してください。
 同時に、DifyをSNSやイベント、カンファレンスで共有してサポートしていただけると幸いです。
 
 
-> Difyを英語または中国語以外の言語に翻訳してくれる貢献者を募集しています。興味がある場合は、詳細については[i18n README](https://github.com/langgenius/dify/blob/main/web/i18n/README.md)を参照してください。また、[Discordコミュニティサーバー](https://discord.gg/8Tpq4AcN9c)の`global-users`チャンネルにコメントを残してください。
+> Difyを英語または中国語以外の言語に翻訳してくれる貢献者を募集しています。興味がある場合は、詳細については[i18n README](https://github.com/mlchain/mlchain/blob/main/web/i18n/README.md)を参照してください。また、[Discordコミュニティサーバー](https://discord.gg/8Tpq4AcN9c)の`global-users`チャンネルにコメントを残してください。
 
 **貢献者**
 
-<a href="https://github.com/langgenius/dify/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=langgenius/dify" />
+<a href="https://github.com/mlchain/mlchain/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=mlchain/mlchain" />
 </a>
 
 ## コミュニティ & お問い合わせ
 
-* [Github Discussion](https://github.com/langgenius/dify/discussions). 主に: フィードバックの共有や質問。
-* [GitHub Issues](https://github.com/langgenius/dify/issues). 主に: Dify.AIを使用する際に発生するエラーや問題については、[貢献ガイド](CONTRIBUTING_JA.md)を参照してください
-* [Email](mailto:support@dify.ai?subject=[GitHub]Questions%20About%20Dify). 主に: Dify.AIの使用に関する質問。
+* [Github Discussion](https://github.com/mlchain/mlchain/discussions). 主に: フィードバックの共有や質問。
+* [GitHub Issues](https://github.com/mlchain/mlchain/issues). 主に: Dify.AIを使用する際に発生するエラーや問題については、[貢献ガイド](CONTRIBUTING_JA.md)を参照してください
+* [Email](mailto:support@mlchain.ai?subject=[GitHub]Questions%20About%20Dify). 主に: Dify.AIの使用に関する質問。
 * [Discord](https://discord.gg/FngNHpbcY7). 主に: アプリケーションの共有やコミュニティとの交流。
-* [Twitter](https://twitter.com/dify_ai). 主に: アプリケーションの共有やコミュニティとの交流。
+* [Twitter](https://twitter.com/mlchain_ai). 主に: アプリケーションの共有やコミュニティとの交流。
 
 または、直接チームメンバーとミーティングをスケジュール：
 
@@ -239,11 +239,11 @@ docker compose up -d
     <td>無料の30分間のミーティングをスケジュール</td>
   </tr>
   <tr>
-    <td><a href='mailto:support@dify.ai?subject=[GitHub]Technical%20Support'>技術サポート</a></td>
+    <td><a href='mailto:support@mlchain.ai?subject=[GitHub]Technical%20Support'>技術サポート</a></td>
     <td>技術的な問題やサポートに関する質問</td>
   </tr>
   <tr>
-    <td><a href='mailto:business@dify.ai?subject=[GitHub]Business%20License%20Inquiry'>営業担当</a></td>
+    <td><a href='mailto:business@mlchain.ai?subject=[GitHub]Business%20License%20Inquiry'>営業担当</a></td>
     <td>法人ライセンスに関するお問い合わせ</td>
   </tr>
 </table>

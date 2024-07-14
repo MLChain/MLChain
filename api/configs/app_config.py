@@ -26,7 +26,7 @@ class DifyConfig(
     ExtraServiceConfig,
 
     # Enterprise feature configs
-    # **Before using, please contact business@dify.ai by email to inquire about licensing matters.**
+    # **Before using, please contact business@mlchain.ai by email to inquire about licensing matters.**
     EnterpriseFeatureConfig,
 ):
     DEBUG: bool = Field(default=False, description='whether to enable debug mode.')

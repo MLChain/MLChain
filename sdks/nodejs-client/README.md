@@ -3,14 +3,14 @@ This is the Node.js SDK for the Dify API, which allows you to easily integrate D
 
 ## Install
 ```bash
-npm install dify-client
+npm install mlchain-client
 ```
 
 ## Usage
 After installing the SDK, you can use it in your project like this:
 
 ```js
-import { DifyClient, ChatClient, CompletionClient } from 'dify-client'
+import { DifyClient, ChatClient, CompletionClient } from 'mlchain-client'
 
 const API_KEY = 'your-api-key-here'
 const user = `random-user-id`
