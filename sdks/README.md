@@ -2,7 +2,7 @@
 
 ## Java
 
-https://github.com/langgenius/java-client/
+https://github.com/mlchain/java-client/
 
 ## Go
 
@@ -10,7 +10,7 @@ https://github.com/mlchain/mlchain-sdk-go
 
 ## Ruby
 
-https://github.com/langgenius/ruby-sdk
+https://github.com/mlchain/ruby-sdk
 
 ## Python
 

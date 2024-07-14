@@ -6,7 +6,7 @@ Mlchain にコントリビュートしたいとお考えなのですね。それ
 
 このガイドは Mlchain そのものと同様に、継続的に改善されています。実際のプロジェクトに遅れをとることがあるかもしれませんが、ご理解のほどよろしくお願いいたします。
 
-ライセンスに関しては、私たちの短い[ライセンスおよびコントリビューター規約](./LICENSE)をお読みください。また、コミュニティは[行動規範](https://github.com/langgenius/.github/blob/main/CODE_OF_CONDUCT.md)を遵守しています。
+ライセンスに関しては、私たちの短い[ライセンスおよびコントリビューター規約](./LICENSE)をお読みください。また、コミュニティは[行動規範](https://github.com/mlchain/.github/blob/main/CODE_OF_CONDUCT.md)を遵守しています。
 
 ## 飛び込む前に
 

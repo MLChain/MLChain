@@ -1,5 +1,5 @@
 # Variables
-DOCKER_REGISTRY=langgenius
+DOCKER_REGISTRY=mlchain
 WEB_IMAGE=$(DOCKER_REGISTRY)/mlchain-web
 API_IMAGE=$(DOCKER_REGISTRY)/mlchain-api
 VERSION=latest

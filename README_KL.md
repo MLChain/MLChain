@@ -18,12 +18,12 @@
     <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
         <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
             alt="follow on Twitter"></a>
-    <a href="https://hub.docker.com/u/langgenius" target="_blank">
+    <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
     <a href="https://github.com/mlchain/mlchain/graphs/commit-activity" target="_blank">
         <img alt="Commits last month" src="https://img.shields.io/github/commit-activity/m/mlchain/mlchain?labelColor=%20%2332b583&color=%20%2312b76a"></a>
     <a href="https://github.com/mlchain/mlchain/" target="_blank">
-        <img alt="Issues closed" src="https://img.shields.io/github/issues-search?query=repo%3Alanggenius%2Fmlchain%20is%3Aclosed&label=issues%20closed&labelColor=%20%237d89b0&color=%20%235d6b98"></a>
+        <img alt="Issues closed" src="https://img.shields.io/github/issues-search?query=repo%3Amlchain%2Fmlchain%20is%3Aclosed&label=issues%20closed&labelColor=%20%237d89b0&color=%20%235d6b98"></a>
     <a href="https://github.com/mlchain/mlchain/discussions/" target="_blank">
         <img alt="Discussion posts" src="https://img.shields.io/github/discussions/mlchain/mlchain?labelColor=%20%239b8afb&color=%20%237a5af8"></a>
 </p>
@@ -41,7 +41,7 @@
 #
 
 <p align="center">
-  <a href="https://trendshift.io/repositories/2152" target="_blank"><img src="https://trendshift.io/api/badge/repositories/2152" alt="langgenius%2Fmlchain | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+  <a href="https://trendshift.io/repositories/2152" target="_blank"><img src="https://trendshift.io/api/badge/repositories/2152" alt="mlchain%2Fmlchain | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </p>
 Mlchain is an open-source LLM app development platform. Its intuitive interface combines AI workflow, RAG pipeline, agent capabilities, model management, observability features and more, letting you quickly go from prototype to production. Here's a list of the core features:
 </br> </br>
