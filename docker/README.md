@@ -1,6 +1,6 @@
 ## README for docker Deployment
 
-Welcome to the new `docker` directory for deploying Dify using Docker Compose. This README outlines the updates, deployment instructions, and migration details for existing users.
+Welcome to the new `docker` directory for deploying Mlchain using Docker Compose. This README outlines the updates, deployment instructions, and migration details for existing users.
 
 ### What's Updated
 - **Persistent Environment Variables**: Environment variables are now managed through a `.env` file, ensuring that your configurations persist across deployments.
@@ -12,7 +12,7 @@ Welcome to the new `docker` directory for deploying Dify using Docker Compose. T
 - **Mandatory .env File**: A `.env` file is now required to run `docker compose up`. This file is crucial for configuring your deployment and for any custom settings to persist through upgrades.
 - **Legacy Support**: Previous deployment files are now located in the `docker-legacy` directory and will no longer be maintained.
 
-### How to Deploy Dify with `docker-compose.yaml`
+### How to Deploy Mlchain with `docker-compose.yaml`
 1. **Prerequisites**: Ensure Docker and Docker Compose are installed on your system.
 2. **Environment Setup**:
    - Navigate to the `docker` directory.
@@ -22,7 +22,7 @@ Welcome to the new `docker` directory for deploying Dify using Docker Compose. T
    - Execute `docker compose up` from the `docker` directory to start the services.
    - To specify a vector database, set the `VECTOR_store` variable in your `.env` file to your desired vector database service, such as `milvus`, `weaviate`, or `opensearch`.
 
-### How to Deploy Middleware for Developing Dify
+### How to Deploy Middleware for Developing Mlchain
 1. **Middleware Setup**:
    - Use the `docker-compose.middleware.yaml` for setting up essential middleware services like databases and caches.
    - Navigate to the `docker` directory.

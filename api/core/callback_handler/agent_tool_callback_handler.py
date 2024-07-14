@@ -28,7 +28,7 @@ def print_text(
     if file:
         file.flush()  # ensure all printed content are written to file
 
-class DifyAgentCallbackHandler(BaseModel):
+class MlchainAgentCallbackHandler(BaseModel):
     """Callback Handler that prints to std out."""
     color: Optional[str] = ''
     current_loop: int = 1

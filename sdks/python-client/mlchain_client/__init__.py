@@ -1,1 +1,1 @@
-from mlchain_client.client import ChatClient, CompletionClient, DifyClient
+from mlchain_client.client import ChatClient, CompletionClient, MlchainClient

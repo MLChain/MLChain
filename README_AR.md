@@ -1,7 +1,7 @@
 ![cover-v5-optimized](https://github.com/mlchain/mlchain/assets/13230914/f9e19af5-61ba-4119-b926-d10c4c06ebab)
 
 <p align="center">
-  <a href="https://cloud.mlchain.ai">Dify Cloud</a> ·
+  <a href="https://cloud.mlchain.ai">Mlchain Cloud</a> ·
   <a href="https://docs.mlchain.ai/getting-started/install-self-hosted">الاستضافة الذاتية</a> ·
   <a href="https://docs.mlchain.ai">التوثيق</a> ·
   <a href="https://cal.com/guchenhe/60-min-meeting">استفسارات الشركات</a>
@@ -40,7 +40,7 @@
 </p>
 
 <div style="text-align: right;">
-مشروع Dify هو منصة تطوير تطبيقات الذكاء الصناعي مفتوحة المصدر. تجمع واجهته البديهية بين سير العمل الذكي بالذكاء الاصطناعي وخط أنابيب RAG وقدرات الوكيل وإدارة النماذج وميزات الملاحظة وأكثر من ذلك، مما يتيح لك الانتقال بسرعة من المرحلة التجريبية إلى الإنتاج. إليك قائمة بالميزات الأساسية:
+مشروع Mlchain هو منصة تطوير تطبيقات الذكاء الصناعي مفتوحة المصدر. تجمع واجهته البديهية بين سير العمل الذكي بالذكاء الاصطناعي وخط أنابيب RAG وقدرات الوكيل وإدارة النماذج وميزات الملاحظة وأكثر من ذلك، مما يتيح لك الانتقال بسرعة من المرحلة التجريبية إلى الإنتاج. إليك قائمة بالميزات الأساسية:
 </br> </br>
 
 **1. سير العمل**:  قم ببناء واختبار سير عمل الذكاء الاصطناعي القوي على قماش بصري، مستفيدًا من جميع الميزات التالية وأكثر.
@@ -56,16 +56,16 @@
 
 **4. خط أنابيب RAG**: قدرات RAG الواسعة التي تغطي كل شيء من استيعاب الوثائق إلى الاسترجاع، مع الدعم الفوري لاستخراج النص من ملفات PDF و PPT وتنسيقات الوثائق الشائعة الأخرى.
 
-**5. قدرات الوكيل**: يمكنك تعريف الوكلاء بناءً على أمر وظيفة LLM أو ReAct، وإضافة أدوات مدمجة أو مخصصة للوكيل. توفر Dify أكثر من 50 أداة مدمجة لوكلاء الذكاء الاصطناعي، مثل البحث في Google و DELL·E وStable Diffusion و WolframAlpha.
+**5. قدرات الوكيل**: يمكنك تعريف الوكلاء بناءً على أمر وظيفة LLM أو ReAct، وإضافة أدوات مدمجة أو مخصصة للوكيل. توفر Mlchain أكثر من 50 أداة مدمجة لوكلاء الذكاء الاصطناعي، مثل البحث في Google و DELL·E وStable Diffusion و WolframAlpha.
 
 **6. الـ LLMOps**: راقب وتحلل سجلات التطبيق والأداء على مر الزمن. يمكنك تحسين الأوامر والبيانات والنماذج باستمرار استنادًا إلى البيانات الإنتاجية والتعليقات.
 
-**7.الواجهة الخلفية (Backend) كخدمة**: تأتي جميع عروض Dify مع APIs مطابقة، حتى يمكنك دمج Dify بسهولة في منطق أعمالك الخاص.
+**7.الواجهة الخلفية (Backend) كخدمة**: تأتي جميع عروض Mlchain مع APIs مطابقة، حتى يمكنك دمج Mlchain بسهولة في منطق أعمالك الخاص.
 ## مقارنة الميزات
 <table style="width: 100%;">
   <tr>
     <th align="center">الميزة</th>
-    <th align="center">Dify.AI</th>
+    <th align="center">Mlchain.AI</th>
     <th align="center">LangChain</th>
     <th align="center">Flowise</th>
     <th align="center">OpenAI Assistants API</th>
@@ -129,31 +129,31 @@
 </table>
 
 
-## استخدام Dify
+## استخدام Mlchain
 - **سحابة </br>**
-نحن نستضيف [خدمة Dify Cloud](https://mlchain.ai) لأي شخص لتجربتها بدون أي إعدادات. توفر كل قدرات النسخة التي تمت استضافتها ذاتيًا، وتتضمن 200 أمر GPT-4 مجانًا في خطة الصندوق الرملي.
+نحن نستضيف [خدمة Mlchain Cloud](https://mlchain.ai) لأي شخص لتجربتها بدون أي إعدادات. توفر كل قدرات النسخة التي تمت استضافتها ذاتيًا، وتتضمن 200 أمر GPT-4 مجانًا في خطة الصندوق الرملي.
 
-- **استضافة ذاتية لنسخة المجتمع Dify</br>**
-ابدأ سريعًا في تشغيل Dify في بيئتك باستخدام [دليل البدء السريع](#البدء السريع).
+- **استضافة ذاتية لنسخة المجتمع Mlchain</br>**
+ابدأ سريعًا في تشغيل Mlchain في بيئتك باستخدام [دليل البدء السريع](#البدء السريع).
 استخدم [توثيقنا](https://docs.mlchain.ai) للمزيد من المراجع والتعليمات الأعمق.
 
-- **مشروع Dify للشركات / المؤسسات</br>**
+- **مشروع Mlchain للشركات / المؤسسات</br>**
 نحن نوفر ميزات إضافية مركزة على الشركات. [جدول اجتماع معنا](https://cal.com/guchenhe/30min) أو [أرسل لنا بريدًا إلكترونيًا](mailto:business@mlchain.ai?subject=[GitHub]Business%20License%20Inquiry) لمناقشة احتياجات الشركات. </br>
-> بالنسبة للشركات الناشئة والشركات الصغيرة التي تستخدم خدمات AWS، تحقق من [Dify Premium على AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6) ونشرها في شبكتك الخاصة على AWS VPC بنقرة واحدة. إنها عرض AMI بأسعار معقولة مع خيار إنشاء تطبيقات بشعار وعلامة تجارية مخصصة.
+> بالنسبة للشركات الناشئة والشركات الصغيرة التي تستخدم خدمات AWS، تحقق من [Mlchain Premium على AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6) ونشرها في شبكتك الخاصة على AWS VPC بنقرة واحدة. إنها عرض AMI بأسعار معقولة مع خيار إنشاء تطبيقات بشعار وعلامة تجارية مخصصة.
 ## البقاء قدمًا
 
-قم بإضافة نجمة إلى Dify على GitHub وتلق تنبيهًا فوريًا بالإصدارات الجديدة.
+قم بإضافة نجمة إلى Mlchain على GitHub وتلق تنبيهًا فوريًا بالإصدارات الجديدة.
 
 ![نجمنا](https://github.com/mlchain/mlchain/assets/13230914/b823edc1-6388-4e25-ad45-2f6b187adbb4)
 ## البداية السريعة
-> قبل تثبيت Dify، تأكد من أن جهازك يلبي الحد الأدنى من متطلبات النظام التالية:
+> قبل تثبيت Mlchain، تأكد من أن جهازك يلبي الحد الأدنى من متطلبات النظام التالية:
 > 
 >- معالج >= 2 نواة
 >- ذاكرة وصول عشوائي (RAM) >= 4 جيجابايت
 
 </br>
 
-أسهل طريقة لبدء تشغيل خادم Dify هي تشغيل ملف [docker-compose.yml](docker/docker-compose.yaml) الخاص بنا. قبل تشغيل أمر التثبيت، تأكد من تثبيت [Docker](https://docs.docker.com/get-docker/) و [Docker Compose](https://docs.docker.com/compose/install/) على جهازك:
+أسهل طريقة لبدء تشغيل خادم Mlchain هي تشغيل ملف [docker-compose.yml](docker/docker-compose.yaml) الخاص بنا. قبل تشغيل أمر التثبيت، تأكد من تثبيت [Docker](https://docs.docker.com/get-docker/) و [Docker Compose](https://docs.docker.com/compose/install/) على جهازك:
 
 ```bash
 cd docker
@@ -161,15 +161,15 @@ cp .env.example .env
 docker compose up -d
 ```
 
-بعد التشغيل، يمكنك الوصول إلى لوحة تحكم Dify في متصفحك على [http://localhost/install](http://localhost/install) وبدء عملية التهيئة.
+بعد التشغيل، يمكنك الوصول إلى لوحة تحكم Mlchain في متصفحك على [http://localhost/install](http://localhost/install) وبدء عملية التهيئة.
 
-> إذا كنت ترغب في المساهمة في Dify أو القيام بتطوير إضافي، فانظر إلى [دليلنا للنشر من الشفرة (code) المصدرية](https://docs.mlchain.ai/getting-started/install-self-hosted/local-source-code)
+> إذا كنت ترغب في المساهمة في Mlchain أو القيام بتطوير إضافي، فانظر إلى [دليلنا للنشر من الشفرة (code) المصدرية](https://docs.mlchain.ai/getting-started/install-self-hosted/local-source-code)
 
 ## الخطوات التالية
 
 إذا كنت بحاجة إلى تخصيص الإعدادات، فيرجى الرجوع إلى التعليقات في ملف [.env.example](docker/.env.example) وتحديث القيم المقابلة في ملف `.env`. بالإضافة إلى ذلك، قد تحتاج إلى إجراء تعديلات على ملف `docker-compose.yaml` نفسه، مثل تغيير إصدارات الصور أو تعيينات المنافذ أو نقاط تحميل وحدات التخزين، بناءً على بيئة النشر ومتطلباتك الخاصة. بعد إجراء أي تغييرات، يرجى إعادة تشغيل `docker-compose up -d`. يمكنك العثور على قائمة كاملة بمتغيرات البيئة المتاحة [هنا](https://docs.mlchain.ai/getting-started/install-self-hosted/environments).
 
-يوجد مجتمع خاص بـ [Helm Charts](https://helm.sh/) وملفات YAML التي تسمح بتنفيذ Dify على Kubernetes للنظام من الإيجابيات العلوية.
+يوجد مجتمع خاص بـ [Helm Charts](https://helm.sh/) وملفات YAML التي تسمح بتنفيذ Mlchain على Kubernetes للنظام من الإيجابيات العلوية.
 
 - [رسم بياني Helm من قبل @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
 - [رسم بياني Helm من قبل @BorisPolonsky](https://github.com/BorisPolonsky/mlchain-helm)
@@ -178,17 +178,17 @@ docker compose up -d
 #### استخدام Terraform للتوزيع
 
 ##### Azure Global
-استخدم [terraform](https://www.terraform.io/) لنشر Dify على Azure بنقرة واحدة.
+استخدم [terraform](https://www.terraform.io/) لنشر Mlchain على Azure بنقرة واحدة.
 - [Azure Terraform بواسطة @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
 
 
 ## المساهمة
 
 لأولئك الذين يرغبون في المساهمة، انظر إلى [دليل المساهمة](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md) لدينا. 
-في الوقت نفسه، يرجى النظر في دعم Dify عن طريق مشاركته على وسائل التواصل الاجتماعي وفي الفعاليات والمؤتمرات.
+في الوقت نفسه، يرجى النظر في دعم Mlchain عن طريق مشاركته على وسائل التواصل الاجتماعي وفي الفعاليات والمؤتمرات.
 
 
-> نحن نبحث عن مساهمين لمساعدة في ترجمة Dify إلى لغات أخرى غير اللغة الصينية المندرين أو الإنجليزية. إذا كنت مهتمًا بالمساعدة، يرجى الاطلاع على [README للترجمة](https://github.com/mlchain/mlchain/blob/main/web/i18n/README.md) لمزيد من المعلومات، واترك لنا تعليقًا في قناة `global-users` على [خادم المجتمع على Discord](https://discord.gg/8Tpq4AcN9c).
+> نحن نبحث عن مساهمين لمساعدة في ترجمة Mlchain إلى لغات أخرى غير اللغة الصينية المندرين أو الإنجليزية. إذا كنت مهتمًا بالمساعدة، يرجى الاطلاع على [README للترجمة](https://github.com/mlchain/mlchain/blob/main/web/i18n/README.md) لمزيد من المعلومات، واترك لنا تعليقًا في قناة `global-users` على [خادم المجتمع على Discord](https://discord.gg/8Tpq4AcN9c).
 
 **المساهمون**
 
@@ -198,8 +198,8 @@ docker compose up -d
 
 ## المجتمع والاتصال
 * [مناقشة Github](https://github.com/mlchain/mlchain/discussions). الأفضل لـ: مشاركة التعليقات وطرح الأسئلة.
-* [المشكلات على GitHub](https://github.com/mlchain/mlchain/issues). الأفضل لـ: الأخطاء التي تواجهها في استخدام Dify.AI، واقتراحات الميزات. انظر [دليل المساهمة](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
-* [البريد الإلكتروني](mailto:support@mlchain.ai?subject=[GitHub]Questions%20About%20Dify). الأفضل لـ: الأسئلة التي تتعلق باستخدام Dify.AI.
+* [المشكلات على GitHub](https://github.com/mlchain/mlchain/issues). الأفضل لـ: الأخطاء التي تواجهها في استخدام Mlchain.AI، واقتراحات الميزات. انظر [دليل المساهمة](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
+* [البريد الإلكتروني](mailto:support@mlchain.ai?subject=[GitHub]Questions%20About%20Mlchain). الأفضل لـ: الأسئلة التي تتعلق باستخدام Mlchain.AI.
 * [Discord](https://discord.gg/FngNHpbcY7). الأفضل لـ: مشاركة تطبيقاتك والترفيه مع المجتمع.
 * [تويتر](https://twitter.com/mlchain_ai). الأفضل لـ: مشاركة تطبيقاتك والترفيه مع المجتمع.
 
@@ -231,4 +231,4 @@ docker compose up -d
 
 ## الرخصة
 
-هذا المستودع متاح تحت [رخصة البرنامج الحر Dify](LICENSE)، والتي تعتبر بشكل أساسي Apache 2.0 مع بعض القيود الإضافية.
+هذا المستودع متاح تحت [رخصة البرنامج الحر Mlchain](LICENSE)، والتي تعتبر بشكل أساسي Apache 2.0 مع بعض القيود الإضافية.

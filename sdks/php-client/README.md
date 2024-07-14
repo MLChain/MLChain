@@ -1,6 +1,6 @@
-# Dify PHP SDK
+# Mlchain PHP SDK
 
-This is the PHP SDK for the Dify API, which allows you to easily integrate Dify into your PHP applications.
+This is the PHP SDK for the Mlchain API, which allows you to easily integrate Mlchain into your PHP applications.
 
 ## Requirements
 
@@ -16,13 +16,13 @@ After installing the SDK, you can use it in your project like this:
 
 require 'vendor/autoload.php';
 
-use YourVendorName\DifyPHP\DifyClient;
-use YourVendorName\DifyPHP\CompletionClient;
-use YourVendorName\DifyPHP\ChatClient;
+use YourVendorName\MlchainPHP\MlchainClient;
+use YourVendorName\MlchainPHP\CompletionClient;
+use YourVendorName\MlchainPHP\ChatClient;
 
 $apiKey = 'your-api-key-here';
 
-$mlchainClient = new DifyClient($apiKey);
+$mlchainClient = new MlchainClient($apiKey);
 
 // Create a completion client
 $completionClient = new CompletionClient($apiKey);
@@ -77,7 +77,7 @@ $response = $mlchainClient->message_feedback($message_id, $rating, "user_id");
 // - rename_conversation()
 ```
 
-Replace 'your-api-key-here' with your actual Dify API key.
+Replace 'your-api-key-here' with your actual Mlchain API key.
 
 ## License
 

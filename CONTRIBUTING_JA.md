@@ -1,10 +1,10 @@
-Dify にコントリビュートしたいとお考えなのですね。それは素晴らしいことです。
+Mlchain にコントリビュートしたいとお考えなのですね。それは素晴らしいことです。
 私たちは、LLM アプリケーションの構築と管理のための最も直感的なワークフローを設計するという壮大な野望を持っています。人数も資金も限られている新興企業として、コミュニティからの支援は本当に重要です。
 
 私たちは現状を鑑み、機敏かつ迅速に開発をする必要がありますが、同時にあなたのようなコントリビューターの方々に、可能な限りスムーズな貢献体験をしていただきたいと思っています。そのためにこのコントリビュートガイドを作成しました。
 コードベースやコントリビュータの方々と私たちがどのように仕事をしているのかに慣れていただき、楽しいパートにすぐに飛び込めるようにすることが目的です。
 
-このガイドは Dify そのものと同様に、継続的に改善されています。実際のプロジェクトに遅れをとることがあるかもしれませんが、ご理解のほどよろしくお願いいたします。
+このガイドは Mlchain そのものと同様に、継続的に改善されています。実際のプロジェクトに遅れをとることがあるかもしれませんが、ご理解のほどよろしくお願いいたします。
 
 ライセンスに関しては、私たちの短い[ライセンスおよびコントリビューター規約](./LICENSE)をお読みください。また、コミュニティは[行動規範](https://github.com/langgenius/.github/blob/main/CODE_OF_CONDUCT.md)を遵守しています。
 
@@ -54,7 +54,7 @@ Dify にコントリビュートしたいとお考えなのですね。それは
 
 ## インストール
 
-以下の手順で 、Difyのセットアップをしてください。
+以下の手順で 、Mlchainのセットアップをしてください。
 
 ### 1. このリポジトリをフォークする
 
@@ -68,7 +68,7 @@ git clone git@github.com:<github_username>/mlchain.git
 
 ### 3. 依存関係の確認
 
-Dify を構築するには次の依存関係が必要です。それらがシステムにインストールされていることを確認してください。
+Mlchain を構築するには次の依存関係が必要です。それらがシステムにインストールされていることを確認してください。
 
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
@@ -78,7 +78,7 @@ Dify を構築するには次の依存関係が必要です。それらがシス
 
 ### 4. インストール
 
-Dify はバックエンドとフロントエンドから構成されています。
+Mlchain はバックエンドとフロントエンドから構成されています。
 まず`cd api/`でバックエンドのディレクトリに移動し、[Backend README](api/README.md)に従ってインストールします。
 次に別のターミナルで、`cd web/`でフロントエンドのディレクトリに移動し、[Frontend README](web/README.md)に従ってインストールしてください。
 
@@ -86,7 +86,7 @@ Dify はバックエンドとフロントエンドから構成されています
 
 ### 5. ブラウザで mlchain にアクセスする
 
-設定を確認するために、ブラウザで[http://localhost:3000](http://localhost:3000)(デフォルト、または自分で設定した URL とポート)にアクセスしてください。Dify が起動して実行中であることが確認できるはずです。
+設定を確認するために、ブラウザで[http://localhost:3000](http://localhost:3000)(デフォルト、または自分で設定した URL とポート)にアクセスしてください。Mlchain が起動して実行中であることが確認できるはずです。
 
 ## 開発中
 
@@ -94,11 +94,11 @@ Dify はバックエンドとフロントエンドから構成されています
 
 Agent や Workflow にツールプロバイダーを追加する場合は、[このガイド](./api/core/tools/README.md)が役立ちます。
 
-Dify のバックエンドとフロントエンドの概要を簡単に説明します。
+Mlchain のバックエンドとフロントエンドの概要を簡単に説明します。
 
 ### バックエンド
 
-Dify のバックエンドは[Flask](https://flask.palletsprojects.com/en/3.0.x/)を使って Python で書かれています。ORM には[SQLAlchemy](https://www.sqlalchemy.org/)を、タスクキューには[Celery](https://docs.celeryq.dev/en/stable/getting-started/introduction.html)を使っています。認証ロジックは Flask-login 経由で行われます。
+Mlchain のバックエンドは[Flask](https://flask.palletsprojects.com/en/3.0.x/)を使って Python で書かれています。ORM には[SQLAlchemy](https://www.sqlalchemy.org/)を、タスクキューには[Celery](https://docs.celeryq.dev/en/stable/getting-started/introduction.html)を使っています。認証ロジックは Flask-login 経由で行われます。
 
 ```
 [api/]

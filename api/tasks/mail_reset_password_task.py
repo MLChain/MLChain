@@ -30,12 +30,12 @@ def send_reset_password_mail_task(language: str, to: str, token: str):
             html_content = render_template('reset_password_mail_template_zh-CN.html',
                                            to=to,
                                            url=url)
-            mail.send(to=to, subject="重置您的 Dify 密码", html=html_content)
+            mail.send(to=to, subject="重置您的 Mlchain 密码", html=html_content)
         else:
             html_content = render_template('reset_password_mail_template_en-US.html',
                                            to=to,
                                            url=url)
-            mail.send(to=to, subject="Reset Your Dify Password", html=html_content)
+            mail.send(to=to, subject="Reset Your Mlchain Password", html=html_content)
 
         end_at = time.perf_counter()
         logging.info(

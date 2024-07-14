@@ -5,7 +5,7 @@ from flask_restful import Resource, reqparse
 
 from libs.helper import email, get_remote_ip, str_len
 from libs.password import valid_password
-from models.model import DifySetup
+from models.model import MlchainSetup
 from services.account_service import RegisterService, TenantService
 
 from . import api
@@ -78,7 +78,7 @@ def setup_required(view):
 
 def get_setup_status():
     if current_app.config['EDITION'] == 'SELF_HOSTED':
-        return DifySetup.query.first()
+        return MlchainSetup.query.first()
     else:
         return True
 

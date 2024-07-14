@@ -1,3 +1,3 @@
-export const isDify = () => {
+export const isMlchain = () => {
   return document.referrer.includes('mlchain.ai')
 }

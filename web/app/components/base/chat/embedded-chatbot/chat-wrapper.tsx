@@ -7,7 +7,7 @@ import type {
 import { useChat } from '../chat/hooks'
 import { useEmbeddedChatbotContext } from './context'
 import ConfigPanel from './config-panel'
-import { isDify } from './utils'
+import { isMlchain } from './utils'
 import cn from '@/utils/classnames'
 import {
   fetchSuggestedQuestions,
@@ -129,7 +129,7 @@ const ChatWrapper = () => {
       allToolIcons={appMeta?.tool_icons || {}}
       onFeedback={handleFeedback}
       suggestedQuestions={suggestedQuestions}
-      answerIcon={isDify() ? <LogoAvatar className='relative shrink-0' /> : null}
+      answerIcon={isMlchain() ? <LogoAvatar className='relative shrink-0' /> : null}
       hideProcessDetail
       themeBuilder={themeBuilder}
     />

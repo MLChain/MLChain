@@ -8,7 +8,7 @@ class PackagingInfo(BaseSettings):
     """
 
     CURRENT_VERSION: str = Field(
-        description='Dify version',
+        description='Mlchain version',
         default='0.6.13',
     )
 

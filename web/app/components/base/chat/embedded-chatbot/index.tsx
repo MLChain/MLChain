@@ -8,7 +8,7 @@ import {
   useEmbeddedChatbotContext,
 } from './context'
 import { useEmbeddedChatbot } from './hooks'
-import { isDify } from './utils'
+import { isMlchain } from './utils'
 import { useThemeContext } from './theme/theme-context'
 import cn from '@/utils/classnames'
 import { checkOrSetAccessToken } from '@/app/components/share/utils'
@@ -45,7 +45,7 @@ const Chatbot = () => {
       if (customConfig)
         document.title = `${site.title}`
       else
-        document.title = `${site.title} - Powered by Dify`
+        document.title = `${site.title} - Powered by Mlchain`
     }
   }, [site, customConfig])
 
@@ -65,7 +65,7 @@ const Chatbot = () => {
       <Header
         isMobile={isMobile}
         title={site?.title || ''}
-        customerIcon={isDify() ? mlchainIcon : ''}
+        customerIcon={isMlchain() ? mlchainIcon : ''}
         theme={themeBuilder?.theme}
         onCreateNewChat={handleNewConversation}
       />

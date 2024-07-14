@@ -1,13 +1,13 @@
 {
   "name": "mlchain-client",
   "version": "2.3.2",
-  "description": "This is the Node.js SDK for the Dify.AI API, which allows you to easily integrate Dify.AI into your Node.js applications.",
+  "description": "This is the Node.js SDK for the Mlchain.AI API, which allows you to easily integrate Mlchain.AI into your Node.js applications.",
   "main": "index.js",
   "type": "module",
   "types":"index.d.ts",
   "keywords": [
-    "Dify",
-    "Dify.AI",
+    "Mlchain",
+    "Mlchain.AI",
     "LLM"
   ],
   "author": "Joel",

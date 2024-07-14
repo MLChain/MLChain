@@ -61,7 +61,7 @@ else:
     time.tzset()
 
 
-class DifyApp(Flask):
+class MlchainApp(Flask):
     pass
 
 
@@ -82,7 +82,7 @@ def create_flask_app_with_configs() -> Flask:
     create a raw flask app
     with configs loaded from .env file
     """
-    mlchain_app = DifyApp(__name__)
+    mlchain_app = MlchainApp(__name__)
     mlchain_app.config.from_mapping(mlchain_config.model_dump())
 
     # populate configs into system environment variables

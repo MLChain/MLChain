@@ -7,8 +7,8 @@ from typing import Any, Optional, Union
 from yarl import URL
 
 from core.app.entities.app_invoke_entities import InvokeFrom
-from core.callback_handler.agent_tool_callback_handler import DifyAgentCallbackHandler
-from core.callback_handler.workflow_tool_callback_handler import DifyWorkflowCallbackHandler
+from core.callback_handler.agent_tool_callback_handler import MlchainAgentCallbackHandler
+from core.callback_handler.workflow_tool_callback_handler import MlchainWorkflowCallbackHandler
 from core.file.file_obj import FileTransferMethod
 from core.ops.ops_trace_manager import TraceQueueManager
 from core.tools.entities.tool_entities import ToolInvokeMessage, ToolInvokeMessageBinary, ToolInvokeMeta, ToolParameter
@@ -36,7 +36,7 @@ class ToolEngine:
     def agent_invoke(
         tool: Tool, tool_parameters: Union[str, dict],
         user_id: str, tenant_id: str, message: Message, invoke_from: InvokeFrom,
-        agent_tool_callback: DifyAgentCallbackHandler,
+        agent_tool_callback: MlchainAgentCallbackHandler,
         trace_manager: Optional[TraceQueueManager] = None
     ) -> tuple[str, list[tuple[MessageFile, bool]], ToolInvokeMeta]:
         """
@@ -125,7 +125,7 @@ class ToolEngine:
     @staticmethod
     def workflow_invoke(tool: Tool, tool_parameters: dict,
                         user_id: str, workflow_id: str, 
-                        workflow_tool_callback: DifyWorkflowCallbackHandler,
+                        workflow_tool_callback: MlchainWorkflowCallbackHandler,
                         workflow_call_depth: int,
                         ) -> list[ToolInvokeMessage]:
         """

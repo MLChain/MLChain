@@ -29,7 +29,7 @@ class NominatimReverseTool(BuiltinTool):
         
         try:
             headers = {
-                "User-Agent": "DifyNominatimTool/1.0"
+                "User-Agent": "MlchainNominatimTool/1.0"
             }
             s = requests.session()
             response = s.request(

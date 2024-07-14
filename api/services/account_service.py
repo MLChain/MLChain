@@ -18,7 +18,7 @@ from libs.passport import PassportService
 from libs.password import compare_password, hash_password, valid_password
 from libs.rsa import generate_key_pair
 from models.account import *
-from models.model import DifySetup
+from models.model import MlchainSetup
 from services.errors.account import (
     AccountAlreadyInTenantError,
     AccountLoginError,
@@ -523,13 +523,13 @@ class RegisterService:
 
             TenantService.create_owner_tenant_if_not_exist(account)
 
-            mlchain_setup = DifySetup(
+            mlchain_setup = MlchainSetup(
                 version=mlchain_config.CURRENT_VERSION
             )
             db.session.add(mlchain_setup)
             db.session.commit()
         except Exception as e:
-            db.session.query(DifySetup).delete()
+            db.session.query(MlchainSetup).delete()
             db.session.query(TenantAccountJoin).delete()
             db.session.query(Account).delete()
             db.session.query(Tenant).delete()
@@ -609,7 +609,7 @@ class RegisterService:
             language=account.interface_language,
             to=email,
             token=token,
-            inviter_name=inviter.name if inviter else 'Dify',
+            inviter_name=inviter.name if inviter else 'Mlchain',
             workspace_name=tenant.name,
         )
 

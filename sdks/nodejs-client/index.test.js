@@ -1,4 +1,4 @@
-import { DifyClient, BASE_URL, routes } from ".";
+import { MlchainClient, BASE_URL, routes } from ".";
 
 import axios from 'axios'
 
@@ -7,7 +7,7 @@ jest.mock('axios')
 describe('Client', () => {
   let mlchainClient
   beforeEach(() => {
-    mlchainClient = new DifyClient('test')
+    mlchainClient = new MlchainClient('test')
   })
 
   test('should create a client', () => {
@@ -24,7 +24,7 @@ describe('Send Requests', () => {
   let mlchainClient
 
   beforeEach(() => {
-    mlchainClient = new DifyClient('test')
+    mlchainClient = new MlchainClient('test')
   })
 
   afterEach(() => {

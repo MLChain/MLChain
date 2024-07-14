@@ -12,7 +12,7 @@ const translation = {
   datasetDeleted: '知識が削除されました',
   datasetDeleteFailed: '知識の削除に失敗しました',
   didYouKnow: 'ご存知ですか？',
-  intro1: '知識はDifyアプリケーションに統合することができます',
+  intro1: '知識はMlchainアプリケーションに統合することができます',
   intro2: 'コンテキストとして',
   intro3: '、',
   intro4: 'または',

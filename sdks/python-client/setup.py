@@ -6,9 +6,9 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name="mlchain-client",
     version="0.1.10",
-    author="Dify",
+    author="Mlchain",
     author_email="hello@mlchain.ai",
-    description="A package for interacting with the Dify Service-API",
+    description="A package for interacting with the Mlchain Service-API",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/mlchain/mlchain",

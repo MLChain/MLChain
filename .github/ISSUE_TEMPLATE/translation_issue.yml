@@ -18,7 +18,7 @@ body:
           required: true
   - type: input
     attributes:
-      label: Dify version
+      label: Mlchain version
       placeholder: 0.3.21
       description: Hover over system tray icon or look at Settings
     validations:

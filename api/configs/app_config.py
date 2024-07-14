@@ -9,7 +9,7 @@ from configs.middleware import MiddlewareConfig
 from configs.packaging import PackagingInfo
 
 
-class DifyConfig(
+class MlchainConfig(
     # Packaging info
     PackagingInfo,
 

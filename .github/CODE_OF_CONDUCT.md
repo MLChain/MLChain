@@ -1,4 +1,4 @@
-# Dify Code of Conduct
+# Mlchain Code of Conduct
 
 ## Our Pledge
 
