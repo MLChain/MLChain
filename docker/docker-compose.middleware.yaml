@@ -28,7 +28,7 @@ services:
 
   # The MlchainSandbox
   sandbox:
-    image: langgenius/dify-sandbox:0.2.1
+    image: mlchain/mlchain-sandbox:main-amd64
     restart: always
     environment:
       # The MlchainSandbox configurations
