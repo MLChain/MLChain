@@ -12,6 +12,7 @@ const translation = {
     cancel: 'रद्द करें',
     clear: 'साफ करें',
     save: 'सहेजें',
+    saveAndEnable: 'सहेजें और सक्षम करें',
     edit: 'संपादित करें',
     add: 'जोड़ें',
     added: 'जोड़ा गया',
@@ -128,6 +129,7 @@ const translation = {
   },
   userProfile: {
     settings: 'सेटिंग्स',
+    emailSupport: 'सहायता',
     workspace: 'वर्कस्पेस',
     createWorkspace: 'वर्कस्पेस बनाएं',
     helpCenter: 'सहायता',
@@ -162,8 +164,8 @@ const translation = {
     newPassword: 'नया पासवर्ड',
     confirmPassword: 'पासवर्ड की पुष्टि करें',
     notEqual: 'दो पासवर्ड अलग हैं।',
-    langGeniusAccount: 'Mlchain खाता',
-    langGeniusAccountTip: 'आपका Mlchain खाता और संबंधित उपयोगकर्ता डेटा।',
+    mlChainAccount: 'Mlchain खाता',
+    mlChainAccountTip: 'आपका Mlchain खाता और संबंधित उपयोगकर्ता डेटा।',
     editName: 'नाम संपादित करें',
     showAppLength: '{{length}} ऐप्स दिखाएं',
   },
@@ -420,7 +422,7 @@ const translation = {
     title:
       'एपीआई एक्सटेंशन केंद्रीकृत एपीआई प्रबंधन प्रदान करते हैं, जो Mlchain के अनुप्रयोगों में आसान उपयोग के लिए कॉन्फ़िगरेशन को सरल बनाते हैं।',
     link: 'अपना खुद का एपीआई एक्सटेंशन कैसे विकसित करें, यह जानें।',
-    linkUrl: 'https://docs.mlchain.ai/features/extension/api_based_extension',
+    linkUrl: 'https://docs.mlchain.khulnasoft.com/features/extension/api_based_extension',
     add: 'एपीआई एक्सटेंशन जोड़ें',
     selector: {
       title: 'एपीआई एक्सटेंशन',
@@ -453,7 +455,7 @@ const translation = {
     latestAvailable: 'Mlchain {{version}} नवीनतम उपलब्ध संस्करण है।',
   },
   appMenus: {
-    overview: 'अवलोकन',
+    overview: 'निगरानी',
     promptEng: 'समन्वय करें',
     apiAccess: 'API एक्सेस',
     logAndAnn: 'लॉग्स और घोषणाएँ',

@@ -14,6 +14,7 @@ from core.app.app_config.entities import (
     ModelConfigEntity,
     PromptTemplateEntity,
     VariableEntity,
+    VariableEntityType,
 )
 from core.helper import encrypter
 from core.model_runtime.entities.llm_entities import LLMMode
@@ -25,23 +26,24 @@ from services.workflow.workflow_converter import WorkflowConverter
 
 @pytest.fixture
 def default_variables():
-    return [
+    value = [
         VariableEntity(
             variable="text_input",
             label="text-input",
-            type=VariableEntity.Type.TEXT_INPUT
+            type=VariableEntityType.TEXT_INPUT,
         ),
         VariableEntity(
             variable="paragraph",
             label="paragraph",
-            type=VariableEntity.Type.PARAGRAPH
+            type=VariableEntityType.PARAGRAPH,
         ),
         VariableEntity(
             variable="select",
             label="select",
-            type=VariableEntity.Type.SELECT
-        )
+            type=VariableEntityType.SELECT,
+        ),
     ]
+    return value
 
 
 def test__convert_to_start_node(default_variables):
@@ -71,7 +73,7 @@ def test__convert_to_http_request_node_for_chatbot(default_variables):
         id=api_based_extension_id,
         name="api-1",
         api_key="encrypted_api_key",
-        api_endpoint="https://mlchain.ai",
+        api_endpoint="https://mlchain.khulnasoft.com",
     )
 
     workflow_converter = WorkflowConverter()
@@ -141,7 +143,7 @@ def test__convert_to_http_request_node_for_workflow_app(default_variables):
         id=api_based_extension_id,
         name="api-1",
         api_key="encrypted_api_key",
-        api_endpoint="https://mlchain.ai",
+        api_endpoint="https://mlchain.khulnasoft.com",
     )
 
     workflow_converter = WorkflowConverter()
@@ -208,7 +210,8 @@ def test__convert_to_knowledge_retrieval_node_for_chatbot():
             reranking_model={
                 'reranking_provider_name': 'cohere',
                 'reranking_model_name': 'rerank-english-v2.0'
-            }
+            },
+            reranking_enabled=True
         )
     )
 
@@ -251,7 +254,8 @@ def test__convert_to_knowledge_retrieval_node_for_workflow_app():
             reranking_model={
                 'reranking_provider_name': 'cohere',
                 'reranking_model_name': 'rerank-english-v2.0'
-            }
+            },
+            reranking_enabled=True
         )
     )
 

@@ -1,7 +1,6 @@
 name: Run Pytest
 
 on:
-  workflow_dispatch:
   pull_request:
     branches:
       - main
@@ -22,6 +21,7 @@ jobs:
         python-version:
           - "3.10"
           - "3.11"
+          - "3.12"
 
     steps:
       - name: Checkout code
@@ -65,7 +65,7 @@ jobs:
         run: sh .github/workflows/expose_service_ports.sh
 
       - name: Set up Sandbox
-        uses: hoverkraft-tech/compose-action@v2.0.1
+        uses: hoverkraft-tech/compose-action@v2.0.0
         with:
           compose-file: |
             docker/docker-compose.middleware.yaml
@@ -76,8 +76,8 @@ jobs:
       - name: Run Workflow
         run: poetry run -C api bash dev/pytest/pytest_workflow.sh
 
-      - name: Set up Vector Stores (Weaviate, Qdrant, PGVector, Milvus, PgVecto-RS, Chroma, MyScale)
-        uses: hoverkraft-tech/compose-action@v2.0.1
+      - name: Set up Vector Stores (Weaviate, Qdrant, PGVector, Milvus, PgVecto-RS, Chroma, MyScale, ElasticSearch)
+        uses: hoverkraft-tech/compose-action@v2.0.0
         with:
           compose-file: |
             docker/docker-compose.yaml
@@ -90,6 +90,6 @@ jobs:
             pgvecto-rs
             pgvector
             chroma
-            myscale
+            elasticsearch
       - name: Test Vector Stores
         run: poetry run -C api bash dev/pytest/pytest_vdb.sh

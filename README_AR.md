@@ -1,22 +1,22 @@
 ![cover-v5-optimized](https://github.com/mlchain/mlchain/assets/13230914/f9e19af5-61ba-4119-b926-d10c4c06ebab)
 
 <p align="center">
-  <a href="https://cloud.mlchain.ai">Mlchain Cloud</a> ·
-  <a href="https://docs.mlchain.ai/getting-started/install-self-hosted">الاستضافة الذاتية</a> ·
-  <a href="https://docs.mlchain.ai">التوثيق</a> ·
-  <a href="https://cal.com/guchenhe/60-min-meeting">استفسارات الشركات</a>
+  <a href="https://cloud.mlchain.khulnasoft.com">Mlchain Cloud</a> ·
+  <a href="https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted">الاستضافة الذاتية</a> ·
+  <a href="https://docs.mlchain.khulnasoft.com">التوثيق</a> ·
+  <a href="https://udify.app/chat/22L1zSxg6yW1cWQg">استفسار الشركات (للإنجليزية فقط)</a>
 </p>
 
 <p align="center">
-    <a href="https://mlchain.ai" target="_blank">
+    <a href="https://mlchain.khulnasoft.com" target="_blank">
         <img alt="Static Badge" src="https://img.shields.io/badge/Product-F04438"></a>
-    <a href="https://mlchain.ai/pricing" target="_blank">
+    <a href="https://mlchain.khulnasoft.com/pricing" target="_blank">
         <img alt="Static Badge" src="https://img.shields.io/badge/free-pricing?logo=free&color=%20%23155EEF&label=pricing&labelColor=%20%23528bff"></a>
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="chat on Discord"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
-        <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
+    <a href="https://twitter.com/intent/follow?screen_name=khulnasoft" target="_blank">
+        <img src="https://img.shields.io/twitter/follow/khulnasoft?logo=X&color=%20%23f5f5f5"
             alt="follow on Twitter"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
@@ -37,6 +37,8 @@
   <a href="./README_KL.md"><img alt="README tlhIngan Hol" src="https://img.shields.io/badge/Klingon-d9d9d9"></a>
   <a href="./README_KR.md"><img alt="README in Korean" src="https://img.shields.io/badge/한국어-d9d9d9"></a>
   <a href="./README_AR.md"><img alt="README بالعربية" src="https://img.shields.io/badge/العربية-d9d9d9"></a>
+  <a href="./README_TR.md"><img alt="Türkçe README" src="https://img.shields.io/badge/Türkçe-d9d9d9"></a>
+  <a href="./README_VI.md"><img alt="README Tiếng Việt" src="https://img.shields.io/badge/Ti%E1%BA%BFng%20Vi%E1%BB%87t-d9d9d9"></a>
 </p>
 
 <div style="text-align: right;">
@@ -48,7 +50,7 @@
   https://github.com/mlchain/mlchain/assets/13230914/356df23e-1604-483d-80a6-9517ece318aa
 
 
-**2. الدعم الشامل للنماذج**: تكامل سلس مع مئات من LLMs الخاصة / مفتوحة المصدر من عشرات من موفري التحليل والحلول المستضافة ذاتيًا، مما يغطي GPT و Mistral و Llama3 وأي نماذج متوافقة مع واجهة OpenAI API. يمكن العثور على قائمة كاملة بمزودي النموذج المدعومين [هنا](https://docs.mlchain.ai/getting-started/readme/model-providers).
+**2. الدعم الشامل للنماذج**: تكامل سلس مع مئات من LLMs الخاصة / مفتوحة المصدر من عشرات من موفري التحليل والحلول المستضافة ذاتيًا، مما يغطي GPT و Mistral و Llama3 وأي نماذج متوافقة مع واجهة OpenAI API. يمكن العثور على قائمة كاملة بمزودي النموذج المدعومين [هنا](https://docs.mlchain.khulnasoft.com/getting-started/readme/model-providers).
 
 ![providers-v5](https://github.com/mlchain/mlchain/assets/13230914/5a17bdbe-097a-4100-8363-40255b70f6e3)
 
@@ -56,7 +58,7 @@
 
 **4. خط أنابيب RAG**: قدرات RAG الواسعة التي تغطي كل شيء من استيعاب الوثائق إلى الاسترجاع، مع الدعم الفوري لاستخراج النص من ملفات PDF و PPT وتنسيقات الوثائق الشائعة الأخرى.
 
-**5. قدرات الوكيل**: يمكنك تعريف الوكلاء بناءً على أمر وظيفة LLM أو ReAct، وإضافة أدوات مدمجة أو مخصصة للوكيل. توفر Mlchain أكثر من 50 أداة مدمجة لوكلاء الذكاء الاصطناعي، مثل البحث في Google و DELL·E وStable Diffusion و WolframAlpha.
+**5. قدرات الوكيل**: يمكنك تعريف الوكلاء بناءً على أمر وظيفة LLM أو ReAct، وإضافة أدوات مدمجة أو مخصصة للوكيل. توفر Mlchain أكثر من 50 أداة مدمجة لوكلاء الذكاء الاصطناعي، مثل البحث في Google و DALL·E وStable Diffusion و WolframAlpha.
 
 **6. الـ LLMOps**: راقب وتحلل سجلات التطبيق والأداء على مر الزمن. يمكنك تحسين الأوامر والبيانات والنماذج باستمرار استنادًا إلى البيانات الإنتاجية والتعليقات.
 
@@ -131,14 +133,14 @@
 
 ## استخدام Mlchain
 - **سحابة </br>**
-نحن نستضيف [خدمة Mlchain Cloud](https://mlchain.ai) لأي شخص لتجربتها بدون أي إعدادات. توفر كل قدرات النسخة التي تمت استضافتها ذاتيًا، وتتضمن 200 أمر GPT-4 مجانًا في خطة الصندوق الرملي.
+نحن نستضيف [خدمة Mlchain Cloud](https://mlchain.khulnasoft.com) لأي شخص لتجربتها بدون أي إعدادات. توفر كل قدرات النسخة التي تمت استضافتها ذاتيًا، وتتضمن 200 أمر GPT-4 مجانًا في خطة الصندوق الرملي.
 
 - **استضافة ذاتية لنسخة المجتمع Mlchain</br>**
 ابدأ سريعًا في تشغيل Mlchain في بيئتك باستخدام [دليل البدء السريع](#البدء السريع).
-استخدم [توثيقنا](https://docs.mlchain.ai) للمزيد من المراجع والتعليمات الأعمق.
+استخدم [توثيقنا](https://docs.mlchain.khulnasoft.com) للمزيد من المراجع والتعليمات الأعمق.
 
 - **مشروع Mlchain للشركات / المؤسسات</br>**
-نحن نوفر ميزات إضافية مركزة على الشركات. [جدول اجتماع معنا](https://cal.com/guchenhe/30min) أو [أرسل لنا بريدًا إلكترونيًا](mailto:business@mlchain.ai?subject=[GitHub]Business%20License%20Inquiry) لمناقشة احتياجات الشركات. </br>
+نحن نوفر ميزات إضافية مركزة على الشركات. [جدول اجتماع معنا](https://cal.com/guchenhe/30min) أو [أرسل لنا بريدًا إلكترونيًا](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry) لمناقشة احتياجات الشركات. </br>
 > بالنسبة للشركات الناشئة والشركات الصغيرة التي تستخدم خدمات AWS، تحقق من [Mlchain Premium على AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6) ونشرها في شبكتك الخاصة على AWS VPC بنقرة واحدة. إنها عرض AMI بأسعار معقولة مع خيار إنشاء تطبيقات بشعار وعلامة تجارية مخصصة.
 ## البقاء قدمًا
 
@@ -163,11 +165,11 @@ docker compose up -d
 
 بعد التشغيل، يمكنك الوصول إلى لوحة تحكم Mlchain في متصفحك على [http://localhost/install](http://localhost/install) وبدء عملية التهيئة.
 
-> إذا كنت ترغب في المساهمة في Mlchain أو القيام بتطوير إضافي، فانظر إلى [دليلنا للنشر من الشفرة (code) المصدرية](https://docs.mlchain.ai/getting-started/install-self-hosted/local-source-code)
+> إذا كنت ترغب في المساهمة في Mlchain أو القيام بتطوير إضافي، فانظر إلى [دليلنا للنشر من الشفرة (code) المصدرية](https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted/local-source-code)
 
 ## الخطوات التالية
 
-إذا كنت بحاجة إلى تخصيص الإعدادات، فيرجى الرجوع إلى التعليقات في ملف [.env.example](docker/.env.example) وتحديث القيم المقابلة في ملف `.env`. بالإضافة إلى ذلك، قد تحتاج إلى إجراء تعديلات على ملف `docker-compose.yaml` نفسه، مثل تغيير إصدارات الصور أو تعيينات المنافذ أو نقاط تحميل وحدات التخزين، بناءً على بيئة النشر ومتطلباتك الخاصة. بعد إجراء أي تغييرات، يرجى إعادة تشغيل `docker-compose up -d`. يمكنك العثور على قائمة كاملة بمتغيرات البيئة المتاحة [هنا](https://docs.mlchain.ai/getting-started/install-self-hosted/environments).
+إذا كنت بحاجة إلى تخصيص الإعدادات، فيرجى الرجوع إلى التعليقات في ملف [.env.example](docker/.env.example) وتحديث القيم المقابلة في ملف `.env`. بالإضافة إلى ذلك، قد تحتاج إلى إجراء تعديلات على ملف `docker-compose.yaml` نفسه، مثل تغيير إصدارات الصور أو تعيينات المنافذ أو نقاط تحميل وحدات التخزين، بناءً على بيئة النشر ومتطلباتك الخاصة. بعد إجراء أي تغييرات، يرجى إعادة تشغيل `docker-compose up -d`. يمكنك العثور على قائمة كاملة بمتغيرات البيئة المتاحة [هنا](https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted/environments).
 
 يوجد مجتمع خاص بـ [Helm Charts](https://helm.sh/) وملفات YAML التي تسمح بتنفيذ Mlchain على Kubernetes للنظام من الإيجابيات العلوية.
 
@@ -199,26 +201,8 @@ docker compose up -d
 ## المجتمع والاتصال
 * [مناقشة Github](https://github.com/mlchain/mlchain/discussions). الأفضل لـ: مشاركة التعليقات وطرح الأسئلة.
 * [المشكلات على GitHub](https://github.com/mlchain/mlchain/issues). الأفضل لـ: الأخطاء التي تواجهها في استخدام Mlchain.AI، واقتراحات الميزات. انظر [دليل المساهمة](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
-* [البريد الإلكتروني](mailto:support@mlchain.ai?subject=[GitHub]Questions%20About%20Mlchain). الأفضل لـ: الأسئلة التي تتعلق باستخدام Mlchain.AI.
 * [Discord](https://discord.gg/FngNHpbcY7). الأفضل لـ: مشاركة تطبيقاتك والترفيه مع المجتمع.
-* [تويتر](https://twitter.com/mlchain_ai). الأفضل لـ: مشاركة تطبيقاتك والترفيه مع المجتمع.
-
-أو، قم بجدولة اجتماع مباشرة مع أحد أعضاء الفريق:
-
-<table>
-  <tr>
-    <th>نقطة الاتصال</th>
-    <th>الغرض</th>
-  </tr>
-  <tr>
-    <td><a href='https://cal.com/guchenhe/15min' target='_blank'><img class="schedule-button" src='https://github.com/mlchain/mlchain/assets/13230914/9ebcd111-1205-4d71-83d5-948d70b809f5' alt='Git-Hub-README-Button-3x' style="width: 180px; height: auto; object-fit: contain;"/></a></td>
-    <td>استفسارات الأعمال واقتراحات حول المنتج</td>
-  </tr>
-  <tr>
-    <td><a href='https://cal.com/pinkbanana' target='_blank'><img class="schedule-button" src='https://github.com/mlchain/mlchain/assets/13230914/d1edd00a-d7e4-4513-be6c-e57038e143fd' alt='Git-Hub-README-Button-2x' style="width: 180px; height: auto; object-fit: contain;"/></a></td>
-    <td>المساهمات والمشكلات وطلبات الميزات</td>
-  </tr>
-</table>
+* [تويتر](https://twitter.com/khulnasoft). الأفضل لـ: مشاركة تطبيقاتك والترفيه مع المجتمع.
 
 ## تاريخ النجمة
 
@@ -227,7 +211,7 @@ docker compose up -d
 
 ## الكشف عن الأمان
 
-لحماية خصوصيتك، يرجى تجنب نشر مشكلات الأمان على GitHub. بدلاً من ذلك، أرسل أسئلتك إلى security@mlchain.ai وسنقدم لك إجابة أكثر تفصيلاً.
+لحماية خصوصيتك، يرجى تجنب نشر مشكلات الأمان على GitHub. بدلاً من ذلك، أرسل أسئلتك إلى security@mlchain.khulnasoft.com وسنقدم لك إجابة أكثر تفصيلاً.
 
 ## الرخصة
 
