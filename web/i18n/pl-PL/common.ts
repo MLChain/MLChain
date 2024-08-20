@@ -12,6 +12,7 @@ const translation = {
     cancel: 'Anuluj',
     clear: 'Wyczyść',
     save: 'Zapisz',
+    saveAndEnable: 'Zapisz i Włącz',
     edit: 'Edytuj',
     add: 'Dodaj',
     added: 'Dodano',
@@ -124,6 +125,7 @@ const translation = {
   },
   userProfile: {
     settings: 'Ustawienia',
+    emailSupport: 'Wsparcie e-mail',
     workspace: 'Przestrzeń robocza',
     createWorkspace: 'Utwórz przestrzeń roboczą',
     helpCenter: 'Pomoc',
@@ -158,8 +160,8 @@ const translation = {
     newPassword: 'Nowe hasło',
     confirmPassword: 'Potwierdź hasło',
     notEqual: 'Dwa hasła są różne.',
-    langGeniusAccount: 'Konto Mlchain',
-    langGeniusAccountTip: 'Twoje konto Mlchain i powiązane dane użytkownika.',
+    mlChainAccount: 'Konto Mlchain',
+    mlChainAccountTip: 'Twoje konto Mlchain i powiązane dane użytkownika.',
     editName: 'Edytuj nazwę',
     showAppLength: 'Pokaż {{length}} aplikacje',
     delete: 'Usuń konto',
@@ -388,7 +390,7 @@ const translation = {
     title:
       'Rozszerzenia oparte na interfejsie API zapewniają scentralizowane zarządzanie interfejsami API, upraszczając konfigurację dla łatwego użytkowania w aplikacjach Mlchain.',
     link: 'Dowiedz się, jak opracować własne rozszerzenie interfejsu API.',
-    linkUrl: 'https://docs.mlchain.ai/features/extension/api_based_extension',
+    linkUrl: 'https://docs.mlchain.khulnasoft.com/features/extension/api_based_extension',
     add: 'Dodaj rozszerzenie interfejsu API',
     selector: {
       title: 'Rozszerzenie interfejsu API',
@@ -421,7 +423,7 @@ const translation = {
     latestAvailable: 'Mlchain {{version}} jest najnowszą dostępną wersją.',
   },
   appMenus: {
-    overview: 'Przegląd',
+    overview: 'Monitorowanie',
     promptEng: 'Orkiestracja',
     apiAccess: 'Dostęp API',
     logAndAnn: 'Logi i ogł.',

@@ -12,6 +12,7 @@ const translation = {
     cancel: '취소',
     clear: '지우기',
     save: '저장',
+    saveAndEnable: '저장 및 활성화',
     edit: '편집',
     add: '추가',
     added: '추가됨',
@@ -115,6 +116,7 @@ const translation = {
   },
   userProfile: {
     settings: '설정',
+    emailSupport: '이메일 지원',
     workspace: '작업 공간',
     createWorkspace: '작업 공간 만들기',
     helpCenter: '도움말 센터',
@@ -148,8 +150,8 @@ const translation = {
     newPassword: '새 비밀번호',
     confirmPassword: '비밀번호 확인',
     notEqual: '비밀번호가 일치하지 않습니다.',
-    langGeniusAccount: 'Mlchain 계정',
-    langGeniusAccountTip: 'Mlchain 계정과 관련된 사용자 데이터.',
+    mlChainAccount: 'Mlchain 계정',
+    mlChainAccountTip: 'Mlchain 계정과 관련된 사용자 데이터.',
     editName: '이름 편집',
     showAppLength: '{{length}}개의 앱 표시',
     delete: '계정 삭제',
@@ -370,7 +372,7 @@ const translation = {
   apiBasedExtension: {
     title: 'API 기반 확장은 Mlchain 애플리케이션 전체에서 간편한 사용을 위한 설정을 단순화하고 집중적인 API 관리를 제공합니다.',
     link: '사용자 정의 API 기반 확장을 개발하는 방법 배우기',
-    linkUrl: 'https://docs.mlchain.ai/features/extension/api_based_extension',
+    linkUrl: 'https://docs.mlchain.khulnasoft.com/features/extension/api_based_extension',
     add: 'API 기반 확장 추가',
     selector: {
       title: 'API 기반 확장',
@@ -403,7 +405,7 @@ const translation = {
     latestAvailable: 'Mlchain {{version}} 최신 버전입니다.',
   },
   appMenus: {
-    overview: '개요',
+    overview: '모니터링',
     promptEng: '오케스트레이트',
     apiAccess: 'API 액세스',
     logAndAnn: '로그 및 어노테이션',

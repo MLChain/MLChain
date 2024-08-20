@@ -6,12 +6,15 @@ import { createContext, useContext, useContextSelector } from 'use-context-selec
 import type { FC, ReactNode } from 'react'
 import { fetchAppList } from '@/service/apps'
 import Loading from '@/app/components/base/loading'
-import { fetchCurrentWorkspace, fetchLanggeniusVersion, fetchUserProfile } from '@/service/common'
+import { fetchCurrentWorkspace, fetchMlchainVersion, fetchUserProfile } from '@/service/common'
 import type { App } from '@/types/app'
-import type { ICurrentWorkspace, LangGeniusVersionResponse, UserProfileResponse } from '@/models/common'
+import { Theme } from '@/types/app'
+import type { ICurrentWorkspace, MLChainVersionResponse, UserProfileResponse } from '@/models/common'
 import MaintenanceNotice from '@/app/components/header/maintenance-notice'
 
 export type AppContextValue = {
+  theme: Theme
+  setTheme: (theme: Theme) => void
   apps: App[]
   mutateApps: VoidFunction
   userProfile: UserProfileResponse
@@ -23,7 +26,7 @@ export type AppContextValue = {
   isCurrentWorkspaceDatasetOperator: boolean
   mutateCurrentWorkspace: VoidFunction
   pageContainerRef: React.RefObject<HTMLDivElement>
-  langeniusVersionInfo: LangGeniusVersionResponse
+  langeniusVersionInfo: MLChainVersionResponse
   useSelector: typeof useSelector
 }
 
@@ -49,6 +52,8 @@ const initialWorkspaceInfo: ICurrentWorkspace = {
 }
 
 const AppContext = createContext<AppContextValue>({
+  theme: Theme.light,
+  setTheme: () => { },
   apps: [],
   mutateApps: () => { },
   userProfile: {
@@ -86,7 +91,7 @@ export const AppContextProvider: FC<AppContextProviderProps> = ({ children }) =>
   const { data: currentWorkspaceResponse, mutate: mutateCurrentWorkspace } = useSWR({ url: '/workspaces/current', params: {} }, fetchCurrentWorkspace)
 
   const [userProfile, setUserProfile] = useState<UserProfileResponse>()
-  const [langeniusVersionInfo, setLangeniusVersionInfo] = useState<LangGeniusVersionResponse>(initialLangeniusVersionInfo)
+  const [langeniusVersionInfo, setLangeniusVersionInfo] = useState<MLChainVersionResponse>(initialLangeniusVersionInfo)
   const [currentWorkspace, setCurrentWorkspace] = useState<ICurrentWorkspace>(initialWorkspaceInfo)
   const isCurrentWorkspaceManager = useMemo(() => ['owner', 'admin'].includes(currentWorkspace.role), [currentWorkspace.role])
   const isCurrentWorkspaceOwner = useMemo(() => currentWorkspace.role === 'owner', [currentWorkspace.role])
@@ -98,7 +103,7 @@ export const AppContextProvider: FC<AppContextProviderProps> = ({ children }) =>
       setUserProfile(result)
       const current_version = userProfileResponse.headers.get('x-version')
       const current_env = process.env.NODE_ENV === 'development' ? 'DEVELOPMENT' : userProfileResponse.headers.get('x-env')
-      const versionData = await fetchLanggeniusVersion({ url: '/version', params: { current_version } })
+      const versionData = await fetchMlchainVersion({ url: '/version', params: { current_version } })
       setLangeniusVersionInfo({ ...versionData, current_version, latest_version: versionData.version, current_env })
     }
   }, [userProfileResponse])
@@ -112,11 +117,24 @@ export const AppContextProvider: FC<AppContextProviderProps> = ({ children }) =>
       setCurrentWorkspace(currentWorkspaceResponse)
   }, [currentWorkspaceResponse])
 
+  const [theme, setTheme] = useState<Theme>(Theme.light)
+  const handleSetTheme = useCallback((theme: Theme) => {
+    setTheme(theme)
+    globalThis.document.documentElement.setAttribute('data-theme', theme)
+  }, [])
+
+  useEffect(() => {
+    globalThis.document.documentElement.setAttribute('data-theme', theme)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   if (!appList || !userProfile)
     return <Loading type='app' />
 
   return (
     <AppContext.Provider value={{
+      theme,
+      setTheme: handleSetTheme,
       apps: appList.data,
       mutateApps,
       userProfile,
@@ -133,7 +151,7 @@ export const AppContextProvider: FC<AppContextProviderProps> = ({ children }) =>
     }}>
       <div className='flex flex-col h-full overflow-y-auto'>
         {globalThis.document?.body?.getAttribute('data-public-maintenance-notice') && <MaintenanceNotice />}
-        <div ref={pageContainerRef} className='grow relative flex flex-col overflow-y-auto overflow-x-hidden bg-gray-100'>
+        <div ref={pageContainerRef} className='grow relative flex flex-col overflow-y-auto overflow-x-hidden bg-background-body'>
           {children}
         </div>
       </div>

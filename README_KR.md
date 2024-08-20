@@ -1,16 +1,16 @@
 ![cover-v5-optimized](https://github.com/mlchain/mlchain/assets/13230914/f9e19af5-61ba-4119-b926-d10c4c06ebab)
 
 <p align="center">
-  <a href="https://cloud.mlchain.ai">Mlchain 클라우드</a> ·
-  <a href="https://docs.mlchain.ai/getting-started/install-self-hosted">셀프-호스팅</a> ·
-  <a href="https://docs.mlchain.ai">문서</a> ·
-  <a href="https://cal.com/guchenhe/60-min-meeting">기업 문의</a>
+  <a href="https://cloud.mlchain.khulnasoft.com">Mlchain 클라우드</a> ·
+  <a href="https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted">셀프-호스팅</a> ·
+  <a href="https://docs.mlchain.khulnasoft.com">문서</a> ·
+  <a href="https://udify.app/chat/22L1zSxg6yW1cWQg">기업 문의 (영어만 가능)</a>
 </p>
 
 <p align="center">
-    <a href="https://mlchain.ai" target="_blank">
+    <a href="https://mlchain.khulnasoft.com" target="_blank">
         <img alt="Static Badge" src="https://img.shields.io/badge/Product-F04438"></a>
-    <a href="https://mlchain.ai/pricing" target="_blank">
+    <a href="https://mlchain.khulnasoft.com/pricing" target="_blank">
         <img alt="Static Badge" src="https://img.shields.io/badge/free-pricing?logo=free&color=%20%23155EEF&label=pricing&labelColor=%20%23528bff"></a>
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
@@ -35,7 +35,10 @@
   <a href="./README_ES.md"><img alt="README en Español" src="https://img.shields.io/badge/Español-d9d9d9"></a>
   <a href="./README_FR.md"><img alt="README en Français" src="https://img.shields.io/badge/Français-d9d9d9"></a>
   <a href="./README_KL.md"><img alt="README tlhIngan Hol" src="https://img.shields.io/badge/Klingon-d9d9d9"></a>
-  <a href="./README_KR.md"><img alt="한국어 README" src="https://img.shields.io/badge/한국어-d9d9d9"></a>
+  <a href="./README_KR.md"><img alt="README in Korean" src="https://img.shields.io/badge/한국어-d9d9d9"></a>
+  <a href="./README_AR.md"><img alt="README بالعربية" src="https://img.shields.io/badge/العربية-d9d9d9"></a>
+  <a href="./README_TR.md"><img alt="Türkçe README" src="https://img.shields.io/badge/Türkçe-d9d9d9"></a>
+  <a href="./README_VI.md"><img alt="README Tiếng Việt" src="https://img.shields.io/badge/Ti%E1%BA%BFng%20Vi%E1%BB%87t-d9d9d9"></a>
 
 </p>
 
@@ -52,7 +55,7 @@
 
 **2. 포괄적인 모델 지원:**: 
 
-수십 개의 추론 제공업체와 자체 호스팅 솔루션에서 제공하는 수백 개의 독점 및 오픈 소스 LLM과 원활하게 통합되며, GPT, Mistral, Llama3 및 모든 OpenAI API 호환 모델을 포함합니다. 지원되는 모델 제공업체의 전체 목록은 [여기](https://docs.mlchain.ai/getting-started/readme/model-providers)에서 확인할 수 있습니다.
+수십 개의 추론 제공업체와 자체 호스팅 솔루션에서 제공하는 수백 개의 독점 및 오픈 소스 LLM과 원활하게 통합되며, GPT, Mistral, Llama3 및 모든 OpenAI API 호환 모델을 포함합니다. 지원되는 모델 제공업체의 전체 목록은 [여기](https://docs.mlchain.khulnasoft.com/getting-started/readme/model-providers)에서 확인할 수 있습니다.
 ![providers-v5](https://github.com/mlchain/mlchain/assets/13230914/5a17bdbe-097a-4100-8363-40255b70f6e3)
 
 
@@ -63,7 +66,7 @@
   문서 수집부터 검색까지 모든 것을 다루며, PDF, PPT 및 기타 일반적인 문서 형식에서 텍스트 추출을 위한 기본 지원이 포함되어 있는 광범위한 RAG 기능을 제공합니다.
 
 **5. 에이전트 기능**:
-  LLM 함수 호출 또는 ReAct를 기반으로 에이전트를 정의하고 에이전트에 대해 사전 구축된 도구나 사용자 정의 도구를 추가할 수 있습니다. Mlchain는 Google Search, DELL·E, Stable Diffusion, WolframAlpha 등 AI 에이전트를 위한 50개 이상의 내장 도구를 제공합니다.
+  LLM 함수 호출 또는 ReAct를 기반으로 에이전트를 정의하고 에이전트에 대해 사전 구축된 도구나 사용자 정의 도구를 추가할 수 있습니다. Mlchain는 Google Search, DALL·E, Stable Diffusion, WolframAlpha 등 AI 에이전트를 위한 50개 이상의 내장 도구를 제공합니다.
 
 **6. LLMOps**:
   시간 경과에 따른 애플리케이션 로그와 성능을 모니터링하고 분석합니다. 생산 데이터와 주석을 기반으로 프롬프트, 데이터세트, 모델을 지속적으로 개선할 수 있습니다.
@@ -141,14 +144,14 @@
 ## Mlchain 사용하기
 
 - **클라우드 </br>**
-  우리는 누구나 설정이 필요 없이 사용해 볼 수 있도록 [Mlchain 클라우드](https://mlchain.ai) 서비스를 호스팅합니다. 이는 자체 배포 버전의 모든 기능을 제공하며, 샌드박스 플랜에서 무료로 200회의 GPT-4 호출을 포함합니다.
+  우리는 누구나 설정이 필요 없이 사용해 볼 수 있도록 [Mlchain 클라우드](https://mlchain.khulnasoft.com) 서비스를 호스팅합니다. 이는 자체 배포 버전의 모든 기능을 제공하며, 샌드박스 플랜에서 무료로 200회의 GPT-4 호출을 포함합니다.
 
 - **셀프-호스팅 Mlchain 커뮤니티 에디션</br>**
   환경에서 Mlchain를 빠르게 실행하려면 이  [스타터 가이드를](#quick-start) 참조하세요.
-  추가 참조 및 더 심층적인 지침은 [문서](https://docs.mlchain.ai)를 사용하세요.
+  추가 참조 및 더 심층적인 지침은 [문서](https://docs.mlchain.khulnasoft.com)를 사용하세요.
 
 - **기업 / 조직을 위한 Mlchain</br>**
-  우리는 추가적인 기업 중심 기능을 제공합니다. 당사와 [미팅일정](https://cal.com/guchenhe/30min)을 잡거나  [이메일 보내기](mailto:business@mlchain.ai?subject=[GitHub]Business%20License%20Inquiry)를 통해 기업 요구 사항을 논의하십시오. </br>
+  우리는 추가적인 기업 중심 기능을 제공합니다. 잡거나  [이메일 보내기](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry)를 통해 기업 요구 사항을 논의하십시오. </br>
   > AWS를 사용하는 스타트업 및 중소기업의 경우 [AWS Marketplace에서 Mlchain Premium](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6)을 확인하고 한 번의 클릭으로 자체 AWS VPC에 배포하십시오. 맞춤형 로고와 브랜딩이 포함된 앱을 생성할 수 있는 옵션이 포함된 저렴한 AMI 제품입니다.
 
 
@@ -178,11 +181,11 @@ docker compose up -d
 
 실행 후 브라우저의 [http://localhost/install](http://localhost/install) 에서 Mlchain 대시보드에 액세스하고 초기화 프로세스를 시작할 수 있습니다.
 
-> Mlchain에 기여하거나 추가 개발을 하고 싶다면 소스 코드에서 [배포에 대한 가이드](https://docs.mlchain.ai/getting-started/install-self-hosted/local-source-code)를 참조하세요.
+> Mlchain에 기여하거나 추가 개발을 하고 싶다면 소스 코드에서 [배포에 대한 가이드](https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted/local-source-code)를 참조하세요.
 
 ## 다음 단계
 
-구성을 사용자 정의해야 하는 경우 [.env.example](docker/.env.example) 파일의 주석을 참조하고 `.env` 파일에서 해당 값을 업데이트하십시오. 또한 특정 배포 환경 및 요구 사항에 따라 `docker-compose.yaml` 파일 자체를 조정해야 할 수도 있습니다. 예를 들어 이미지 버전, 포트 매핑 또는 볼륨 마운트를 변경합니다. 변경 한 후 `docker-compose up -d`를 다시 실행하십시오. 사용 가능한 환경 변수의 전체 목록은 [여기](https://docs.mlchain.ai/getting-started/install-self-hosted/environments)에서 찾을 수 있습니다.
+구성을 사용자 정의해야 하는 경우 [.env.example](docker/.env.example) 파일의 주석을 참조하고 `.env` 파일에서 해당 값을 업데이트하십시오. 또한 특정 배포 환경 및 요구 사항에 따라 `docker-compose.yaml` 파일 자체를 조정해야 할 수도 있습니다. 예를 들어 이미지 버전, 포트 매핑 또는 볼륨 마운트를 변경합니다. 변경 한 후 `docker-compose up -d`를 다시 실행하십시오. 사용 가능한 환경 변수의 전체 목록은 [여기](https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted/environments)에서 찾을 수 있습니다.
 
 Mlchain를 Kubernetes에 배포하고 프리미엄 스케일링 설정을 구성했다는 커뮤니티가 제공하는 [Helm Charts](https://helm.sh/)와 YAML 파일이 존재합니다.
 
@@ -214,26 +217,9 @@ Mlchain를 Kubernetes에 배포하고 프리미엄 스케일링 설정을 구성
 
 * [Github 토론](https://github.com/mlchain/mlchain/discussions). 피드백 공유 및 질문하기에 적합합니다.
 * [GitHub 이슈](https://github.com/mlchain/mlchain/issues). Mlchain.AI 사용 중 발견한 버그와 기능 제안에 적합합니다. [기여 가이드](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md)를 참조하세요. 
-* [이메일](mailto:support@mlchain.ai?subject=[GitHub]Questions%20About%20Mlchain). Mlchain.AI 사용에 대한 질문하기에 적합합니다.
 * [디스코드](https://discord.gg/FngNHpbcY7). 애플리케이션 공유 및 커뮤니티와 소통하기에 적합합니다.
 * [트위터](https://twitter.com/mlchain_ai). 애플리케이션 공유 및 커뮤니티와 소통하기에 적합합니다.
 
-또는 팀원과 직접 미팅을 예약하세요:
-
-<table>
-  <tr>
-    <th>연락처</th>
-    <th>목적</th>
-  </tr>
-  <tr>
-    <td><a href='https://cal.com/guchenhe/15min' target='_blank'><img class="schedule-button" src='https://github.com/mlchain/mlchain/assets/13230914/9ebcd111-1205-4d71-83d5-948d70b809f5' alt='Git-Hub-README-Button-3x' style="width: 180px; height: auto; object-fit: contain;"/></a></td>
-    <td>비즈니스 문의 및 제품 피드백</td>
-  </tr>
-  <tr>
-    <td><a href='https://cal.com/pinkbanana' target='_blank'><img class="schedule-button" src='https://github.com/mlchain/mlchain/assets/13230914/d1edd00a-d7e4-4513-be6c-e57038e143fd' alt='Git-Hub-README-Button-2x' style="width: 180px; height: auto; object-fit: contain;"/></a></td>
-    <td>기여, 이슈 및 기능 요청</td>
-  </tr>
-</table>
 
 ## Star 히스토리
 
@@ -242,7 +228,7 @@ Mlchain를 Kubernetes에 배포하고 프리미엄 스케일링 설정을 구성
 
 ## 보안 공개
 
-개인정보 보호를 위해 보안 문제를 GitHub에 게시하지 마십시오. 대신 security@mlchain.ai로 질문을 보내주시면 더 자세한 답변을 드리겠습니다.
+개인정보 보호를 위해 보안 문제를 GitHub에 게시하지 마십시오. 대신 security@mlchain.khulnasoft.com로 질문을 보내주시면 더 자세한 답변을 드리겠습니다.
 
 ## 라이선스
 

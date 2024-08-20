@@ -12,6 +12,7 @@ const translation = {
     cancel: 'Anulează',
     clear: 'Șterge',
     save: 'Salvează',
+    saveAndEnable: 'Salvează și Activează',
     edit: 'Editează',
     add: 'Adaugă',
     added: 'Adăugat',
@@ -118,6 +119,7 @@ const translation = {
   },
   userProfile: {
     settings: 'Setări',
+    emailSupport: 'Suport prin email',
     workspace: 'Spațiu de lucru',
     createWorkspace: 'Creează Spațiu de lucru',
     helpCenter: 'Ajutor',
@@ -151,8 +153,8 @@ const translation = {
     newPassword: 'Parolă nouă',
     confirmPassword: 'Confirmă parola',
     notEqual: 'Cele două parole sunt diferite.',
-    langGeniusAccount: 'Cont Mlchain',
-    langGeniusAccountTip: 'Contul Mlchain și datele de utilizator asociate.',
+    mlChainAccount: 'Cont Mlchain',
+    mlChainAccountTip: 'Contul Mlchain și datele de utilizator asociate.',
     editName: 'Editează Nume',
     showAppLength: 'Afișează {{length}} aplicații',
     delete: 'Șterge contul',
@@ -373,7 +375,7 @@ const translation = {
   apiBasedExtension: {
     title: 'Extensiile bazate pe API oferă o gestionare centralizată a API-urilor, simplificând configurația pentru o utilizare ușoară în aplicațiile Mlchain.',
     link: 'Aflați cum să dezvoltați propria extensie bazată pe API.',
-    linkUrl: 'https://docs.mlchain.ai/features/extension/api_based_extension',
+    linkUrl: 'https://docs.mlchain.khulnasoft.com/features/extension/api_based_extension',
     add: 'Adăugați extensie API',
     selector: {
       title: 'Extensie API',
@@ -406,7 +408,7 @@ const translation = {
     latestAvailable: 'Mlchain {{version}} este ultima versiune disponibilă.',
   },
   appMenus: {
-    overview: 'Prezentare generală',
+    overview: 'Monitorizare',
     promptEng: 'Orchestrare',
     apiAccess: 'Acces API',
     logAndAnn: 'Jurnale și Ann.',

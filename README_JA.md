@@ -1,16 +1,16 @@
 ![cover-v5-optimized](https://github.com/mlchain/mlchain/assets/13230914/f9e19af5-61ba-4119-b926-d10c4c06ebab)
 
 <p align="center">
-  <a href="https://cloud.mlchain.ai">Mlchain Cloud</a> ·
-  <a href="https://docs.mlchain.ai/getting-started/install-self-hosted">セルフホスティング</a> ·
-  <a href="https://docs.mlchain.ai">ドキュメント</a> ·
-  <a href="https://cal.com/guchenhe/mlchain-demo">デモの予約</a>
+  <a href="https://cloud.mlchain.khulnasoft.com">Mlchain Cloud</a> ·
+  <a href="https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted">セルフホスティング</a> ·
+  <a href="https://docs.mlchain.khulnasoft.com">ドキュメント</a> ·
+  <a href="https://udify.app/chat/22L1zSxg6yW1cWQg">企業のお問い合わせ（英語のみ）</a>
 </p>
 
 <p align="center">
-    <a href="https://mlchain.ai" target="_blank">
+    <a href="https://mlchain.khulnasoft.com" target="_blank">
         <img alt="Static Badge" src="https://img.shields.io/badge/Product-F04438"></a>
-    <a href="https://mlchain.ai/pricing" target="_blank">
+    <a href="https://mlchain.khulnasoft.com/pricing" target="_blank">
         <img alt="Static Badge" src="https://img.shields.io/badge/free-pricing?logo=free&color=%20%23155EEF&label=pricing&labelColor=%20%23528bff"></a>
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
@@ -29,13 +29,16 @@
 </p>
 
 <p align="center">
-  <a href="./README.md"><img alt="先月のコミット" src="https://img.shields.io/badge/English-d9d9d9"></a>
-  <a href="./README_CN.md"><img alt="先月のコミット" src="https://img.shields.io/badge/简体中文-d9d9d9"></a>
-  <a href="./README_JA.md"><img alt="先月のコミット" src="https://img.shields.io/badge/日本語-d9d9d9"></a>
-  <a href="./README_ES.md"><img alt="先月のコミット" src="https://img.shields.io/badge/Español-d9d9d9"></a>
-  <a href="./README_KL.md"><img alt="先月のコミット" src="https://img.shields.io/badge/Français-d9d9d9"></a>
-  <a href="./README_FR.md"><img alt="先月のコミット" src="https://img.shields.io/badge/Klingon-d9d9d9"></a>
-  <a href="./README_KR.md"><img alt="先月のコミット" src="https://img.shields.io/badge/한국어-d9d9d9"></a>
+  <a href="./README.md"><img alt="README in English" src="https://img.shields.io/badge/English-d9d9d9"></a>
+  <a href="./README_CN.md"><img alt="简体中文版自述文件" src="https://img.shields.io/badge/简体中文-d9d9d9"></a>
+  <a href="./README_JA.md"><img alt="日本語のREADME" src="https://img.shields.io/badge/日本語-d9d9d9"></a>
+  <a href="./README_ES.md"><img alt="README en Español" src="https://img.shields.io/badge/Español-d9d9d9"></a>
+  <a href="./README_FR.md"><img alt="README en Français" src="https://img.shields.io/badge/Français-d9d9d9"></a>
+  <a href="./README_KL.md"><img alt="README tlhIngan Hol" src="https://img.shields.io/badge/Klingon-d9d9d9"></a>
+  <a href="./README_KR.md"><img alt="README in Korean" src="https://img.shields.io/badge/한국어-d9d9d9"></a>
+  <a href="./README_AR.md"><img alt="README بالعربية" src="https://img.shields.io/badge/العربية-d9d9d9"></a>
+  <a href="./README_TR.md"><img alt="Türkçe README" src="https://img.shields.io/badge/Türkçe-d9d9d9"></a>
+  <a href="./README_VI.md"><img alt="README Tiếng Việt" src="https://img.shields.io/badge/Ti%E1%BA%BFng%20Vi%E1%BB%87t-d9d9d9"></a>
 </p>
 
 #
@@ -56,7 +59,7 @@ MlchainはオープンソースのLLMアプリケーション開発プラット�
 
 
 **2. 総合的なモデルサポート**: 
-  数百ものプロプライエタリ/オープンソースのLLMと、数十もの推論プロバイダーおよびセルフホスティングソリューションとのシームレスな統合を提供します。GPT、Mistral、Llama3、OpenAI APIと互換性のあるすべてのモデルを統合されています。サポートされているモデルプロバイダーの完全なリストは[こちら](https://docs.mlchain.ai/getting-started/readme/model-providers)をご覧ください。
+  数百ものプロプライエタリ/オープンソースのLLMと、数十もの推論プロバイダーおよびセルフホスティングソリューションとのシームレスな統合を提供します。GPT、Mistral、Llama3、OpenAI APIと互換性のあるすべてのモデルを統合されています。サポートされているモデルプロバイダーの完全なリストは[こちら](https://docs.mlchain.khulnasoft.com/getting-started/readme/model-providers)をご覧ください。
 
 ![providers-v5](https://github.com/mlchain/mlchain/assets/13230914/5a17bdbe-097a-4100-8363-40255b70f6e3)
 
@@ -68,7 +71,7 @@ MlchainはオープンソースのLLMアプリケーション開発プラット�
   ドキュメントの取り込みから検索までをカバーする広範なRAG機能ができます。ほかにもPDF、PPT、その他の一般的なドキュメントフォーマットからのテキスト抽出のサーポイントも提供します。
 
 **5. エージェント機能**: 
-  LLM Function CallingやReActに基づくエージェントの定義が可能で、AIエージェント用のプリビルトまたはカスタムツールを追加できます。Mlchainには、Google検索、DELL·E、Stable Diffusion、WolframAlphaなどのAIエージェント用の50以上の組み込みツールが提供します。
+  LLM Function CallingやReActに基づくエージェントの定義が可能で、AIエージェント用のプリビルトまたはカスタムツールを追加できます。Mlchainには、Google検索、DALL·E、Stable Diffusion、WolframAlphaなどのAIエージェント用の50以上の組み込みツールが提供します。
 
 **6. LLMOps**: 
   アプリケーションのログやパフォーマンスを監視と分析し、生産のデータと注釈に基づいて、プロンプト、データセット、モデルを継続的に改善できます。
@@ -147,14 +150,14 @@ MlchainはオープンソースのLLMアプリケーション開発プラット�
 ## Mlchainの使用方法
 
 - **クラウド </br>**
-[こちら](https://mlchain.ai)のMlchain Cloudサービスを利用して、セットアップ不要で試すことができます。サンドボックスプランには、200回のGPT-4呼び出しが無料で含まれています。
+[こちら](https://mlchain.khulnasoft.com)のMlchain Cloudサービスを利用して、セットアップ不要で試すことができます。サンドボックスプランには、200回のGPT-4呼び出しが無料で含まれています。
 
 - **Mlchain Community Editionのセルフホスティング</br>**
 この[スタートガイド](#quick-start)を使用して、ローカル環境でMlchainを簡単に実行できます。
-詳しくは[ドキュメント](https://docs.mlchain.ai)をご覧ください。
+詳しくは[ドキュメント](https://docs.mlchain.khulnasoft.com)をご覧ください。
 
 - **企業/組織向けのMlchain</br>**
-企業中心の機能を提供しています。[こちらからミーティングを予約](https://cal.com/guchenhe/30min)したり、[メールを送信](mailto:business@mlchain.ai?subject=[GitHub]Business%20License%20Inquiry)して企業のニーズについて相談してください。 </br>
+企業中心の機能を提供しています。[メールを送信](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry)して企業のニーズについて相談してください。 </br>
   > AWSを使用しているスタートアップ企業や中小企業の場合は、[AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6)のMlchain Premiumをチェックして、ワンクリックで自分のAWS VPCにデプロイできます。さらに、手頃な価格のAMIオファリングどして、ロゴやブランディングをカスタマイズしてアプリケーションを作成するオプションがあります。
 
 
@@ -184,11 +187,11 @@ docker compose up -d
 
 実行後、ブラウザで[http://localhost/install](http://localhost/install)にアクセスし、初期化プロセスを開始できます。
 
-> Mlchainに貢献したり、追加の開発を行う場合は、[ソースコードからのデプロイガイド](https://docs.mlchain.ai/getting-started/install-self-hosted/local-source-code)を参照してください。
+> Mlchainに貢献したり、追加の開発を行う場合は、[ソースコードからのデプロイガイド](https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted/local-source-code)を参照してください。
 
 ## 次のステップ
 
-設定をカスタマイズする必要がある場合は、[.env.example](docker/.env.example) ファイルのコメントを参照し、`.env` ファイルの対応する値を更新してください。さらに、デプロイ環境や要件に応じて、`docker-compose.yaml` ファイル自体を調整する必要がある場合があります。たとえば、イメージのバージョン、ポートのマッピング、ボリュームのマウントなどを変更します。変更を加えた後は、`docker-compose up -d` を再実行してください。利用可能な環境変数の全一覧は、[こちら](https://docs.mlchain.ai/getting-started/install-self-hosted/environments)で確認できます。
+設定をカスタマイズする必要がある場合は、[.env.example](docker/.env.example) ファイルのコメントを参照し、`.env` ファイルの対応する値を更新してください。さらに、デプロイ環境や要件に応じて、`docker-compose.yaml` ファイル自体を調整する必要がある場合があります。たとえば、イメージのバージョン、ポートのマッピング、ボリュームのマウントなどを変更します。変更を加えた後は、`docker-compose up -d` を再実行してください。利用可能な環境変数の全一覧は、[こちら](https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted/environments)で確認できます。
 
 高可用性設定を設定する必要がある場合、コミュニティは[Helm Charts](https://helm.sh/)とYAMLファイルにより、MlchainをKubernetesにデプロイすることができます。
 
@@ -221,32 +224,9 @@ docker compose up -d
 
 * [Github Discussion](https://github.com/mlchain/mlchain/discussions). 主に: フィードバックの共有や質問。
 * [GitHub Issues](https://github.com/mlchain/mlchain/issues). 主に: Mlchain.AIを使用する際に発生するエラーや問題については、[貢献ガイド](CONTRIBUTING_JA.md)を参照してください
-* [Email](mailto:support@mlchain.ai?subject=[GitHub]Questions%20About%20Mlchain). 主に: Mlchain.AIの使用に関する質問。
 * [Discord](https://discord.gg/FngNHpbcY7). 主に: アプリケーションの共有やコミュニティとの交流。
 * [Twitter](https://twitter.com/mlchain_ai). 主に: アプリケーションの共有やコミュニティとの交流。
 
-または、直接チームメンバーとミーティングをスケジュール：
-
-<table>
-  <tr>
-    <th>連絡先</th>
-    <th>目的</th>
-  </tr>
-  <tr>
-    <td><a href='https://cal.com
-
-/guchenhe/30min'>ミーティング</a></td>
-    <td>無料の30分間のミーティングをスケジュール</td>
-  </tr>
-  <tr>
-    <td><a href='mailto:support@mlchain.ai?subject=[GitHub]Technical%20Support'>技術サポート</a></td>
-    <td>技術的な問題やサポートに関する質問</td>
-  </tr>
-  <tr>
-    <td><a href='mailto:business@mlchain.ai?subject=[GitHub]Business%20License%20Inquiry'>営業担当</a></td>
-    <td>法人ライセンスに関するお問い合わせ</td>
-  </tr>
-</table>
 
 
 ## ライセンス

@@ -5,11 +5,11 @@ from pydantic_settings import BaseSettings
 class EnterpriseFeatureConfig(BaseSettings):
     """
     Enterprise feature configs.
-    **Before using, please contact business@mlchain.ai by email to inquire about licensing matters.**
+    **Before using, please contact business@mlchain.khulnasoft.com by email to inquire about licensing matters.**
     """
     ENTERPRISE_ENABLED: bool = Field(
         description='whether to enable enterprise features.'
-                    'Before using, please contact business@mlchain.ai by email to inquire about licensing matters.',
+                    'Before using, please contact business@mlchain.khulnasoft.com by email to inquire about licensing matters.',
         default=False,
     )
 

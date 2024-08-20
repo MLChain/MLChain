@@ -11,7 +11,7 @@ import docStyle from '../documents/detail/completed/style.module.css'
 import Textarea from './textarea'
 import s from './style.module.css'
 import HitDetail from './hit-detail'
-import MomlchainRetrievalModal from './modify-retrieval-modal'
+import ModifyRetrievalModal from './modify-retrieval-modal'
 import cn from '@/utils/classnames'
 import type { HitTestingResponse, HitTesting as HitTestingType } from '@/models/datasets'
 import Loading from '@/app/components/base/loading'
@@ -69,7 +69,7 @@ const HitTesting: FC<Props> = ({ datasetId }: Props) => {
   const { dataset: currentDataset } = useContext(DatasetDetailContext)
 
   const [retrievalConfig, setRetrievalConfig] = useState(currentDataset?.retrieval_model_dict as RetrievalConfig)
-  const [isShowMomlchainRetrievalModal, setIsShowMomlchainRetrievalModal] = useState(false)
+  const [isShowModifyRetrievalModal, setIsShowModifyRetrievalModal] = useState(false)
   const [isShowRightPanel, { setTrue: showRightPanel, setFalse: hideRightPanel, set: setShowRightPanel }] = useBoolean(!isMobile)
 
   useEffect(() => {
@@ -92,7 +92,7 @@ const HitTesting: FC<Props> = ({ datasetId }: Props) => {
           setLoading={setSubmitLoading}
           setText={setText}
           text={text}
-          onClickRetrievalMethod={() => setIsShowMomlchainRetrievalModal(true)}
+          onClickRetrievalMethod={() => setIsShowModifyRetrievalModal(true)}
           retrievalConfig={retrievalConfig}
           isEconomy={currentDataset?.indexing_technique === 'economy'}
         />
@@ -201,15 +201,15 @@ const HitTesting: FC<Props> = ({ datasetId }: Props) => {
           segInfo={currParagraph.paraInfo?.segment}
         />}
       </Modal>
-      <Drawer isOpen={isShowMomlchainRetrievalModal} onClose={() => setIsShowMomlchainRetrievalModal(false)} footer={null} mask={isMobile} panelClassname='mt-16 mx-2 sm:mr-2 mb-3 !p-0 !max-w-[640px] rounded-xl'>
-        <MomlchainRetrievalModal
+      <Drawer isOpen={isShowModifyRetrievalModal} onClose={() => setIsShowModifyRetrievalModal(false)} footer={null} mask={isMobile} panelClassname='mt-16 mx-2 sm:mr-2 mb-3 !p-0 !max-w-[640px] rounded-xl'>
+        <ModifyRetrievalModal
           indexMethod={currentDataset?.indexing_technique || ''}
           value={retrievalConfig}
-          isShow={isShowMomlchainRetrievalModal}
-          onHide={() => setIsShowMomlchainRetrievalModal(false)}
+          isShow={isShowModifyRetrievalModal}
+          onHide={() => setIsShowModifyRetrievalModal(false)}
           onSave={(value) => {
             setRetrievalConfig(value)
-            setIsShowMomlchainRetrievalModal(false)
+            setIsShowModifyRetrievalModal(false)
           }}
         />
       </Drawer>

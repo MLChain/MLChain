@@ -6,7 +6,7 @@ export const NUM_INFINITE = 99999999
 export const contractSales = 'contractSales'
 export const unAvailable = 'unAvailable'
 
-export const contactSalesUrl = 'mailto:business@mlchain.ai'
+export const contactSalesUrl = 'mailto:business@mlchain.khulnasoft.com'
 
 export const ALL_PLANS: Record<Plan, PlanInfo> = {
   sandbox: {

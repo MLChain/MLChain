@@ -12,6 +12,7 @@ const translation = {
     cancel: 'Abbrechen',
     clear: 'Leeren',
     save: 'Speichern',
+    saveAndEnable: 'Speichern und Aktivieren',
     edit: 'Bearbeiten',
     add: 'Hinzufügen',
     added: 'Hinzugefügt',
@@ -119,6 +120,7 @@ const translation = {
   },
   userProfile: {
     settings: 'Einstellungen',
+    emailSupport: 'E-Mail-Support',
     workspace: 'Arbeitsbereich',
     createWorkspace: 'Arbeitsbereich erstellen',
     helpCenter: 'Hilfe',
@@ -152,8 +154,8 @@ const translation = {
     newPassword: 'Neues Passwort',
     confirmPassword: 'Passwort bestätigen',
     notEqual: 'Die Passwörter sind unterschiedlich.',
-    langGeniusAccount: 'Mlchain-Konto',
-    langGeniusAccountTip: 'Ihr Mlchain-Konto und zugehörige Benutzerdaten.',
+    mlChainAccount: 'Mlchain-Konto',
+    mlChainAccountTip: 'Ihr Mlchain-Konto und zugehörige Benutzerdaten.',
     editName: 'Namen bearbeiten',
     showAppLength: '{{length}} Apps anzeigen',
     delete: 'Konto löschen',
@@ -374,7 +376,7 @@ const translation = {
   apiBasedExtension: {
     title: 'API-Erweiterungen bieten zentralisiertes API-Management und vereinfachen die Konfiguration für eine einfache Verwendung in Mlchains Anwendungen.',
     link: 'Erfahren Sie, wie Sie Ihre eigene API-Erweiterung entwickeln.',
-    linkUrl: 'https://docs.mlchain.ai/features/extension/api_based_extension',
+    linkUrl: 'https://docs.mlchain.khulnasoft.com/features/extension/api_based_extension',
     add: 'API-Erweiterung hinzufügen',
     selector: {
       title: 'API-Erweiterung',

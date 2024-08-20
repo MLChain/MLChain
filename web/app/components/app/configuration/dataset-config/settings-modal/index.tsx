@@ -198,7 +198,7 @@ const SettingsModal: FC<SettingsModalProps> = ({
               className='block px-3 py-2 w-full h-[88px] rounded-lg bg-gray-100 text-sm outline-none appearance-none resize-none'
               placeholder={t('datasetSettings.form.descPlaceholder') || ''}
             />
-            <a className='mt-2 flex items-center h-[18px] px-3 text-xs text-gray-500' href="https://docs.mlchain.ai/features/datasets#how-to-write-a-good-dataset-description" target='_blank' rel='noopener noreferrer'>
+            <a className='mt-2 flex items-center h-[18px] px-3 text-xs text-gray-500' href="https://docs.mlchain.khulnasoft.com/features/datasets#how-to-write-a-good-dataset-description" target='_blank' rel='noopener noreferrer'>
               <BookOpenIcon className='w-3 h-[18px] mr-1' />
               {t('datasetSettings.form.descWrite')}
             </a>
@@ -259,16 +259,16 @@ const SettingsModal: FC<SettingsModalProps> = ({
 
         {/* Retrieval Method Config */}
         <div className={rowClass}>
-          <div className={labelClass}>
+          <div className={cn(labelClass, 'w-auto min-w-[168px]')}>
             <div>
               <div>{t('datasetSettings.form.retrievalSetting.title')}</div>
               <div className='leading-[18px] text-xs font-normal text-gray-500'>
-                <a target='_blank' rel='noopener noreferrer' href='https://docs.mlchain.ai/guides/knowledge-base/create-knowledge-and-upload-documents#id-6-retrieval-settings' className='text-[#155eef]'>{t('datasetSettings.form.retrievalSetting.learnMore')}</a>
+                <a target='_blank' rel='noopener noreferrer' href='https://docs.mlchain.khulnasoft.com/guides/knowledge-base/create-knowledge-and-upload-documents#id-6-retrieval-settings' className='text-[#155eef]'>{t('datasetSettings.form.retrievalSetting.learnMore')}</a>
                 {t('datasetSettings.form.retrievalSetting.description')}
               </div>
             </div>
           </div>
-          <div className='w-[480px]'>
+          <div>
             {indexMethod === 'high_quality'
               ? (
                 <RetrievalMethodConfig

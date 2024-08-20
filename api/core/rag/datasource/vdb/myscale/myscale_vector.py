@@ -5,9 +5,9 @@ from enum import Enum
 from typing import Any
 
 from clickhouse_connect import get_client
-from flask import current_app
 from pydantic import BaseModel
 
+from configs import mlchain_config
 from core.rag.datasource.entity.embedding import Embeddings
 from core.rag.datasource.vdb.vector_base import BaseVector
 from core.rag.datasource.vdb.vector_factory import AbstractVectorFactory
@@ -93,7 +93,7 @@ class MyScaleVector(BaseVector):
 
     @staticmethod
     def escape_str(value: Any) -> str:
-        return "".join(f"\\{c}" if c in ("\\", "'") else c for c in str(value))
+        return "".join(" " if c in ("\\", "'") else c for c in str(value))
 
     def text_exists(self, id: str) -> bool:
         results = self._client.query(f"SELECT id FROM {self._config.database}.{self._collection_name} WHERE id='{id}'")
@@ -118,7 +118,7 @@ class MyScaleVector(BaseVector):
         return self._search(f"distance(vector, {str(query_vector)})", self._vec_order, **kwargs)
 
     def search_by_full_text(self, query: str, **kwargs: Any) -> list[Document]:
-        return self._search(f"TextSearch(text, '{query}')", SortOrder.DESC, **kwargs)
+        return self._search(f"TextSearch('enable_nlq=false')(text, '{query}')", SortOrder.DESC, **kwargs)
 
     def _search(self, dist: str, order: SortOrder, **kwargs: Any) -> list[Document]:
         top_k = kwargs.get("top_k", 5)
@@ -126,13 +126,14 @@ class MyScaleVector(BaseVector):
         where_str = f"WHERE dist < {1 - score_threshold}" if \
             self._metric.upper() == "COSINE" and order == SortOrder.ASC and score_threshold > 0.0 else ""
         sql = f"""
-            SELECT text, metadata, {dist} as dist FROM {self._config.database}.{self._collection_name}
+            SELECT text, vector, metadata, {dist} as dist FROM {self._config.database}.{self._collection_name}
             {where_str} ORDER BY dist {order.value} LIMIT {top_k}
         """
         try:
             return [
                 Document(
                     page_content=r["text"],
+                    vector=r['vector'],
                     metadata=r["metadata"],
                 )
                 for r in self._client.query(sql).named_results()
@@ -156,15 +157,14 @@ class MyScaleVectorFactory(AbstractVectorFactory):
             dataset.index_struct = json.dumps(
                 self.gen_index_struct_dict(VectorType.MYSCALE, collection_name))
 
-        config = current_app.config
         return MyScaleVector(
             collection_name=collection_name,
             config=MyScaleConfig(
-                host=config.get("MYSCALE_HOST", "localhost"),
-                port=int(config.get("MYSCALE_PORT", 8123)),
-                user=config.get("MYSCALE_USER", "default"),
-                password=config.get("MYSCALE_PASSWORD", ""),
-                database=config.get("MYSCALE_DATABASE", "default"),
-                fts_params=config.get("MYSCALE_FTS_PARAMS", ""),
+                host=mlchain_config.MYSCALE_HOST,
+                port=mlchain_config.MYSCALE_PORT,
+                user=mlchain_config.MYSCALE_USER,
+                password=mlchain_config.MYSCALE_PASSWORD,
+                database=mlchain_config.MYSCALE_DATABASE,
+                fts_params=mlchain_config.MYSCALE_FTS_PARAMS,
             ),
         )

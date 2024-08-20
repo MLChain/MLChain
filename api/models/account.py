@@ -4,7 +4,8 @@ import json
 from flask_login import UserMixin
 
 from extensions.ext_database import db
-from models import StringUUID
+
+from .types import StringUUID
 
 
 class AccountStatus(str, enum.Enum):
@@ -48,7 +49,7 @@ class Account(UserMixin, db.Model):
         return self._current_tenant
 
     @current_tenant.setter
-    def current_tenant(self, value):
+    def current_tenant(self, value: "Tenant"):
         tenant = value
         ta = TenantAccountJoin.query.filter_by(tenant_id=tenant.id, account_id=self.id).first()
         if ta:
@@ -62,7 +63,7 @@ class Account(UserMixin, db.Model):
         return self._current_tenant.id
 
     @current_tenant_id.setter
-    def current_tenant_id(self, value):
+    def current_tenant_id(self, value: str):
         try:
             tenant_account_join = db.session.query(Tenant, TenantAccountJoin) \
                 .filter(Tenant.id == value) \

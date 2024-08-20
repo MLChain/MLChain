@@ -62,7 +62,7 @@ const translation = {
       run: 'Run',
       firecrawlTitle: 'Extract web content with 🔥Firecrawl',
       firecrawlDoc: 'Firecrawl docs',
-      firecrawlDocLink: 'https://docs.mlchain.ai/guides/knowledge-base/sync_from_website',
+      firecrawlDocLink: 'https://docs.mlchain.khulnasoft.com/guides/knowledge-base/sync-from-website',
       options: 'Options',
       crawlSubPage: 'Crawl sub-pages',
       limit: 'Limit',

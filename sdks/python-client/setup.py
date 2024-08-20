@@ -7,7 +7,7 @@ setup(
     name="mlchain-client",
     version="0.1.10",
     author="Mlchain",
-    author_email="hello@mlchain.ai",
+    author_email="hello@mlchain.khulnasoft.com",
     description="A package for interacting with the Mlchain Service-API",
     long_description=long_description,
     long_description_content_type="text/markdown",
