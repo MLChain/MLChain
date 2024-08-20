@@ -15,8 +15,8 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="chat on Discord"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
-        <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
+    <a href="https://twitter.com/intent/follow?screen_name=khulnasoft" target="_blank">
+        <img src="https://img.shields.io/twitter/follow/khulnasoft?logo=X&color=%20%23f5f5f5"
             alt="follow on Twitter"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
@@ -218,7 +218,7 @@ Mlchain를 Kubernetes에 배포하고 프리미엄 스케일링 설정을 구성
 * [Github 토론](https://github.com/mlchain/mlchain/discussions). 피드백 공유 및 질문하기에 적합합니다.
 * [GitHub 이슈](https://github.com/mlchain/mlchain/issues). Mlchain.AI 사용 중 발견한 버그와 기능 제안에 적합합니다. [기여 가이드](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md)를 참조하세요. 
 * [디스코드](https://discord.gg/FngNHpbcY7). 애플리케이션 공유 및 커뮤니티와 소통하기에 적합합니다.
-* [트위터](https://twitter.com/mlchain_ai). 애플리케이션 공유 및 커뮤니티와 소통하기에 적합합니다.
+* [트위터](https://twitter.com/khulnasoft). 애플리케이션 공유 및 커뮤니티와 소통하기에 적합합니다.
 
 
 ## Star 히스토리

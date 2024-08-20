@@ -15,8 +15,8 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="chat on Discord"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
-        <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
+    <a href="https://twitter.com/intent/follow?screen_name=khulnasoft" target="_blank">
+        <img src="https://img.shields.io/twitter/follow/khulnasoft?logo=X&color=%20%23f5f5f5"
             alt="follow on Twitter"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
@@ -232,7 +232,7 @@ docker compose up -d
 - [GitHub Issues](https://github.com/mlchain/mlchain/issues)。👉：使用 Mlchain.AI 时遇到的错误和问题，请参阅[贡献指南](CONTRIBUTING.md)。
 - [电子邮件支持](mailto:hello@mlchain.khulnasoft.com?subject=[GitHub]Questions%20About%20Mlchain)。👉：关于使用 Mlchain.AI 的问题。
 - [Discord](https://discord.gg/FngNHpbcY7)。👉：分享您的应用程序并与社区交流。
-- [Twitter](https://twitter.com/mlchain_ai)。👉：分享您的应用程序并与社区交流。
+- [Twitter](https://twitter.com/khulnasoft)。👉：分享您的应用程序并与社区交流。
 - [商业许可](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry)。👉：有关商业用途许可 Mlchain.AI 的商业咨询。
  - [微信]() 👉：扫描下方二维码，添加微信好友，备注 Mlchain，我们将邀请您加入 Mlchain 社区。  
 <img src="./images/wechat.png" alt="wechat" width="100"/>

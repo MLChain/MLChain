@@ -15,8 +15,8 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="chat en Discord"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
-        <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
+    <a href="https://twitter.com/intent/follow?screen_name=khulnasoft" target="_blank">
+        <img src="https://img.shields.io/twitter/follow/khulnasoft?logo=X&color=%20%23f5f5f5"
             alt="seguir en Twitter"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Descargas de Docker" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
@@ -228,7 +228,7 @@ Al mismo tiempo, considera apoyar a Mlchain compartiéndolo en redes sociales y 
 * [Discusión en GitHub](https://github.com/mlchain/mlchain/discussions). Lo mejor para: compartir comentarios y hacer preguntas.
 * [Reporte de problemas en GitHub](https://github.com/mlchain/mlchain/issues). Lo mejor para: errores que encuentres usando Mlchain.AI y propuestas de características. Consulta nuestra [Guía de contribución](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
 * [Discord](https://discord.gg/FngNHpbcY7). Lo mejor para: compartir tus aplicaciones y pasar el rato con la comunidad.
-* [Twitter](https://twitter.com/mlchain_ai). Lo mejor para: compartir tus aplicaciones y pasar el rato con la comunidad.
+* [Twitter](https://twitter.com/khulnasoft). Lo mejor para: compartir tus aplicaciones y pasar el rato con la comunidad.
 
 ## Historial de Estrellas
 

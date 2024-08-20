@@ -15,8 +15,8 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="chat trên Discord"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
-        <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
+    <a href="https://twitter.com/intent/follow?screen_name=khulnasoft" target="_blank">
+        <img src="https://img.shields.io/twitter/follow/khulnasoft?logo=X&color=%20%23f5f5f5"
             alt="theo dõi trên Twitter"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
@@ -219,7 +219,7 @@ Triển khai Mlchain lên Azure chỉ với một cú nhấp chuột bằng các
 * [Thảo luận GitHub](https://github.com/mlchain/mlchain/discussions). Tốt nhất cho: chia sẻ phản hồi và đặt câu hỏi.
 * [Vấn đề GitHub](https://github.com/mlchain/mlchain/issues). Tốt nhất cho: lỗi bạn gặp phải khi sử dụng Mlchain.AI và đề xuất tính năng. Xem [Hướng dẫn Đóng góp](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md) của chúng tôi.
 * [Discord](https://discord.gg/FngNHpbcY7). Tốt nhất cho: chia sẻ ứng dụng của bạn và giao lưu với cộng đồng.
-* [Twitter](https://twitter.com/mlchain_ai). Tốt nhất cho: chia sẻ ứng dụng của bạn và giao lưu với cộng đồng.
+* [Twitter](https://twitter.com/khulnasoft). Tốt nhất cho: chia sẻ ứng dụng của bạn và giao lưu với cộng đồng.
 
 ## Lịch sử Yêu thích
 

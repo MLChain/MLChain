@@ -15,8 +15,8 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="chat on Discord"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
-        <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
+    <a href="https://twitter.com/intent/follow?screen_name=khulnasoft" target="_blank">
+        <img src="https://img.shields.io/twitter/follow/khulnasoft?logo=X&color=%20%23f5f5f5"
             alt="follow on Twitter"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
@@ -202,7 +202,7 @@ docker compose up -d
 * [مناقشة Github](https://github.com/mlchain/mlchain/discussions). الأفضل لـ: مشاركة التعليقات وطرح الأسئلة.
 * [المشكلات على GitHub](https://github.com/mlchain/mlchain/issues). الأفضل لـ: الأخطاء التي تواجهها في استخدام Mlchain.AI، واقتراحات الميزات. انظر [دليل المساهمة](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
 * [Discord](https://discord.gg/FngNHpbcY7). الأفضل لـ: مشاركة تطبيقاتك والترفيه مع المجتمع.
-* [تويتر](https://twitter.com/mlchain_ai). الأفضل لـ: مشاركة تطبيقاتك والترفيه مع المجتمع.
+* [تويتر](https://twitter.com/khulnasoft). الأفضل لـ: مشاركة تطبيقاتك والترفيه مع المجتمع.
 
 ## تاريخ النجمة
 
