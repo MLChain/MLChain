@@ -1,13 +1,13 @@
 # MLCHAIN
 
-<p align="center">
+<p>
   <a href="https://cloud.mlchain.khulnasoft.com">Mlchain Cloud</a> ·
   <a href="https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted">Self-hosting</a> ·
   <a href="https://docs.mlchain.khulnasoft.com">Documentation</a> ·
   <a href="https://udify.app/chat/22L1zSxg6yW1cWQg">Enterprise inquiry</a>
 </p>
 
-<p align="center">
+<p>
     <a href="https://mlchain.khulnasoft.com" target="_blank">
         <img alt="Static Badge" src="https://img.shields.io/badge/Product-F04438"></a>
     <a href="https://mlchain.khulnasoft.com/pricing" target="_blank">
@@ -28,7 +28,7 @@
         <img alt="Discussion posts" src="https://img.shields.io/github/discussions/mlchain/mlchain?labelColor=%20%239b8afb&color=%20%237a5af8"></a>
 </p>
 
-<p align="center">
+<p>
   <a href="./README.md"><img alt="README in English" src="https://img.shields.io/badge/English-d9d9d9"></a>
   <a href="./README_CN.md"><img alt="简体中文版自述文件" src="https://img.shields.io/badge/简体中文-d9d9d9"></a>
   <a href="./README_JA.md"><img alt="日本語のREADME" src="https://img.shields.io/badge/日本語-d9d9d9"></a>
