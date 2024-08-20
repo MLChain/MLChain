@@ -1,4 +1,4 @@
-![cover-v5-optimized](https://github.com/mlchain/mlchain/assets/13230914/f9e19af5-61ba-4119-b926-d10c4c06ebab)
+# MLCHAIN
 
 <p align="center">
   <a href="https://cloud.mlchain.khulnasoft.com">Mlchain Cloud</a> ·
