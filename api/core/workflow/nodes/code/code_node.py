@@ -14,7 +14,7 @@ from models.workflow import WorkflowNodeExecutionStatus
 MAX_NUMBER = mlchain_config.CODE_MAX_NUMBER
 MIN_NUMBER = mlchain_config.CODE_MIN_NUMBER
 MAX_PRECISION = mlchain_config.CODE_MAX_PRECISION
-MAX_DEPTH = 5
+MAX_DEPTH = mlchain_config.CODE_MAX_DEPTH
 MAX_STRING_LENGTH = mlchain_config.CODE_MAX_STRING_LENGTH
 MAX_STRING_ARRAY_LENGTH = mlchain_config.CODE_MAX_STRING_ARRAY_LENGTH
 MAX_OBJECT_ARRAY_LENGTH = mlchain_config.CODE_MAX_OBJECT_ARRAY_LENGTH
