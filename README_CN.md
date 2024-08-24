@@ -196,8 +196,8 @@ docker compose up -d
 
 使用 [Helm Chart](https://helm.sh/) 版本或者 YAML 文件，可以在 Kubernetes 上部署 Mlchain。
 
-- [Helm Chart by @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [Helm Chart by @BorisPolonsky](https://github.com/BorisPolonsky/mlchain-helm)
+
+
 - [YAML 文件 by @Winson-030](https://github.com/Winson-030/mlchain-kubernetes)
 
 #### 使用 Terraform 部署

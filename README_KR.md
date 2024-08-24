@@ -189,9 +189,9 @@ docker compose up -d
 
 Mlchain를 Kubernetes에 배포하고 프리미엄 스케일링 설정을 구성했다는 커뮤니티가 제공하는 [Helm Charts](https://helm.sh/)와 YAML 파일이 존재합니다.
 
-- [Helm Chart by @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [Helm Chart by @BorisPolonsky](https://github.com/BorisPolonsky/mlchain-helm)
-- [YAML file by @Winson-030](https://github.com/Winson-030/mlchain-kubernetes)
+
+
+
 
 #### Terraform을 사용한 배포
 

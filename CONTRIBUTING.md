@@ -28,7 +28,7 @@ In terms of licensing, please take a minute to read our short [License and Contr
   | [@jyong](https://github.com/JohnJyong)                       | RAG pipeline design                                  |
   | [@GarfieldDai](https://github.com/GarfieldDai)               | Building workflow orchestrations                     |
   | [@iamjoel](https://github.com/iamjoel) & [@zxhlyh](https://github.com/zxhlyh) | Making our frontend a breeze to use                  |
-  | [@guchenhe](https://github.com/guchenhe) & [@crazywoola](https://github.com/crazywoola) | Developer experience, points of contact for anything |
+  | [@guchenhe](https://github.com/guchenhe) & [@gitworkflows](https://github.com/gitworkflows) | Developer experience, points of contact for anything |
   | [@takatost](https://github.com/takatost)                     | Overall product direction and architecture           |
 
   How we prioritize:

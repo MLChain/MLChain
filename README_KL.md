@@ -196,9 +196,9 @@ If you need to customize the configuration, please refer to the comments in our 
 
 If you'd like to configure a highly-available setup, there are community-contributed [Helm Charts](https://helm.sh/) and YAML files which allow Mlchain to be deployed on Kubernetes.
 
-- [Helm Chart by @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [Helm Chart by @BorisPolonsky](https://github.com/BorisPolonsky/mlchain-helm)
-- [YAML file by @Winson-030](https://github.com/Winson-030/mlchain-kubernetes)
+
+
+
 
 #### Terraform atorlugu pilersitsineq
 

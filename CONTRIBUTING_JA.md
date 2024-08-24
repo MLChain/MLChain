@@ -28,7 +28,7 @@ Mlchain にコントリビュートしたいとお考えなのですね。それ
 | [@jyong](https://github.com/JohnJyong)                                                  | RAG パイプライン設計                 |
 | [@GarfieldDai](https://github.com/GarfieldDai)                                          | workflow orchestrations の構築       |
 | [@iamjoel](https://github.com/iamjoel) & [@zxhlyh](https://github.com/zxhlyh)           | フロントエンドを使いやすくする       |
-| [@guchenhe](https://github.com/guchenhe) & [@crazywoola](https://github.com/crazywoola) | 開発者体験、何でも相談できる窓口     |
+| [@guchenhe](https://github.com/guchenhe) & [@gitworkflows](https://github.com/gitworkflows) | 開発者体験、何でも相談できる窓口     |
 | [@takatost](https://github.com/takatost)                                                | 全体的な製品の方向性とアーキテクチャ |
 
 優先順位の付け方:
