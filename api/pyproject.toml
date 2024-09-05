@@ -129,7 +129,7 @@ cos-python-sdk-v5 = "1.9.30"
 dashscope = { version = "~1.17.0", extras = ["tokenizer"] }
 flask = "~3.0.1"
 flask-compress = "~1.14"
-flask-cors = "~4.0.0"
+flask-cors = "~5.0.0"
 flask-login = "~0.6.3"
 flask-migrate = "~4.0.5"
 flask-restful = "~0.3.10"
