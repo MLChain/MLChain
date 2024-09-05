@@ -79,7 +79,7 @@ class HostedAzureOpenAiConfig(BaseSettings):
         default=False,
     )
 
-    HOSTED_OPENAI_API_KEY: Optional[str] = Field(
+    HOSTED_AZURE_OPENAI_API_KEY: Optional[str] = Field(
         description='',
         default=None,
     )
@@ -189,7 +189,7 @@ class HostedFetchAppTemplateConfig(BaseSettings):
 
     HOSTED_FETCH_APP_TEMPLATES_REMOTE_DOMAIN: str = Field(
         description='the domain for fetching remote app templates',
-        default='https://tmpl.mlchain.ai',
+        default='https://tmpl.mlchain.khulnasoft.com',
     )
 
 

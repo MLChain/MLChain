@@ -12,6 +12,7 @@ const translation = {
     cancel: 'Скасувати',
     clear: 'Очистити',
     save: 'Зберегти',
+    saveAndEnable: 'Зберегти та Увімкнути',
     edit: 'Редагувати',
     add: 'Додати',
     added: 'Додано',
@@ -119,6 +120,7 @@ const translation = {
   },
   userProfile: {
     settings: 'Налаштування',
+    emailSupport: 'Підтримка по електронній пошті',
     workspace: 'Робочий простір',
     createWorkspace: 'Створити робочий простір',
     helpCenter: 'Довідковий центр',
@@ -152,8 +154,8 @@ const translation = {
     newPassword: 'Новий пароль',
     confirmPassword: 'Підтвердіть пароль',
     notEqual: 'Два паролі різняться.',
-    langGeniusAccount: 'Обліковий запис Mlchain',
-    langGeniusAccountTip: 'Ваш обліковий запис Mlchain та пов’язані з ним дані користувача.',
+    mlChainAccount: 'Обліковий запис Mlchain',
+    mlChainAccountTip: 'Ваш обліковий запис Mlchain та пов’язані з ним дані користувача.',
     editName: 'Редагувати ім\'я',
     showAppLength: 'Показати {{length}} програм',
     delete: 'Видалити обліковий запис',
@@ -374,7 +376,7 @@ const translation = {
   apiBasedExtension: {
     title: 'API-розширення забезпечують централізоване керування API, спрощуючи конфігурацію для зручного використання в різних програмах Mlchain.',
     link: 'Дізнайтеся, як розробити власне розширення API.',
-    linkUrl: 'https://docs.mlchain.ai/features/extension/api_based_extension',
+    linkUrl: 'https://docs.mlchain.khulnasoft.com/features/extension/api_based_extension',
     add: 'Додати розширення API',
     selector: {
       title: 'Розширення API',
@@ -407,7 +409,7 @@ const translation = {
     latestAvailable: 'Mlchain {{version}} – це найновіша доступна версія.',
   },
   appMenus: {
-    overview: 'Огляд',
+    overview: 'Моніторинг',
     promptEng: 'Налаштування',
     apiAccess: 'Доступ до API',
     logAndAnn: 'Журнали та Повідомлення.',

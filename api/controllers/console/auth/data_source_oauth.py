@@ -17,8 +17,6 @@ from ..wraps import account_initialization_required
 
 def get_oauth_providers():
     with current_app.app_context():
-        if not mlchain_config.NOTION_CLIENT_ID or not mlchain_config.NOTION_CLIENT_SECRET:
-            return {}
         notion_oauth = NotionOAuth(client_id=mlchain_config.NOTION_CLIENT_ID,
                                    client_secret=mlchain_config.NOTION_CLIENT_SECRET,
                                    redirect_uri=mlchain_config.CONSOLE_API_URL + '/console/api/oauth/data-source/callback/notion')

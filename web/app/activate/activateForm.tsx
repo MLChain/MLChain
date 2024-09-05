@@ -110,7 +110,7 @@ const ActivateForm = () => {
           </div>
           <div className="w-full mx-auto mt-6">
             <Button variant='primary' className='w-full !text-sm'>
-              <a href="https://mlchain.ai">{t('login.explore')}</a>
+              <a href="https://mlchain.khulnasoft.com">{t('login.explore')}</a>
             </Button>
           </div>
         </div>
@@ -208,7 +208,7 @@ const ActivateForm = () => {
                 <Link
                   className='text-primary-600'
                   target='_blank' rel='noopener noreferrer'
-                  href={`https://docs.mlchain.ai/${language !== LanguagesSupported[1] ? 'user-agreement' : `v/${locale.toLowerCase()}/policies`}/open-source`}
+                  href={`https://docs.mlchain.khulnasoft.com/${language !== LanguagesSupported[1] ? 'user-agreement' : `v/${locale.toLowerCase()}/policies`}/open-source`}
                 >{t('login.license.link')}</Link>
               </div>
             </div>

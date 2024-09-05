@@ -9,7 +9,7 @@ class PackagingInfo(BaseSettings):
 
     CURRENT_VERSION: str = Field(
         description='Mlchain version',
-        default='0.6.13',
+        default='0.7.1',
     )
 
     COMMIT_SHA: str = Field(

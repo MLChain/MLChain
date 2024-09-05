@@ -124,6 +124,7 @@ const translation = {
   },
   userProfile: {
     settings: '设置',
+    emailSupport: '邮件支持',
     workspace: '工作空间',
     createWorkspace: '创建工作空间',
     helpCenter: '帮助文档',
@@ -157,8 +158,8 @@ const translation = {
     newPassword: '新密码',
     notEqual: '两个密码不相同',
     confirmPassword: '确认密码',
-    langGeniusAccount: 'Mlchain 账号',
-    langGeniusAccountTip: '您的 Mlchain 账号和相关的用户数据。',
+    mlChainAccount: 'Mlchain 账号',
+    mlChainAccountTip: '您的 Mlchain 账号和相关的用户数据。',
     editName: '编辑名字',
     showAppLength: '显示 {{length}} 个应用',
     delete: '删除账户',
@@ -405,7 +406,7 @@ const translation = {
   apiBasedExtension: {
     title: 'API 扩展提供了一个集中式的 API 管理，在此统一添加 API 配置后，方便在 Mlchain 上的各类应用中直接使用。',
     link: '了解如何开发您自己的 API 扩展。',
-    linkUrl: 'https://docs.mlchain.ai/v/zh-hans/advanced/api_based_extension',
+    linkUrl: 'https://docs.mlchain.khulnasoft.com/v/zh-hans/advanced/api_based_extension',
     add: '新增 API 扩展',
     selector: {
       title: 'API 扩展',

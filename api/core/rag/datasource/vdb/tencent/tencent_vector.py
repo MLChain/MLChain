@@ -1,13 +1,13 @@
 import json
 from typing import Any, Optional
 
-from flask import current_app
 from pydantic import BaseModel
 from tcvectordb import VectorDBClient
 from tcvectordb.model import document, enum
 from tcvectordb.model import index as vdb_index
 from tcvectordb.model.document import Filter
 
+from configs import mlchain_config
 from core.rag.datasource.entity.embedding import Embeddings
 from core.rag.datasource.vdb.vector_base import BaseVector
 from core.rag.datasource.vdb.vector_factory import AbstractVectorFactory
@@ -198,8 +198,6 @@ class TencentVector(BaseVector):
         self._db.drop_collection(name=self._collection_name)
 
 
-
-
 class TencentVectorFactory(AbstractVectorFactory):
     def init_vector(self, dataset: Dataset, attributes: list, embeddings: Embeddings) -> TencentVector:
 
@@ -212,16 +210,15 @@ class TencentVectorFactory(AbstractVectorFactory):
             dataset.index_struct = json.dumps(
                 self.gen_index_struct_dict(VectorType.TENCENT, collection_name))
 
-        config = current_app.config
         return TencentVector(
             collection_name=collection_name,
             config=TencentConfig(
-                url=config.get('TENCENT_VECTOR_DB_URL'),
-                api_key=config.get('TENCENT_VECTOR_DB_API_KEY'),
-                timeout=config.get('TENCENT_VECTOR_DB_TIMEOUT'),
-                username=config.get('TENCENT_VECTOR_DB_USERNAME'),
-                database=config.get('TENCENT_VECTOR_DB_DATABASE'),
-                shard=config.get('TENCENT_VECTOR_DB_SHARD'),
-                replicas=config.get('TENCENT_VECTOR_DB_REPLICAS'),
+                url=mlchain_config.TENCENT_VECTOR_DB_URL,
+                api_key=mlchain_config.TENCENT_VECTOR_DB_API_KEY,
+                timeout=mlchain_config.TENCENT_VECTOR_DB_TIMEOUT,
+                username=mlchain_config.TENCENT_VECTOR_DB_USERNAME,
+                database=mlchain_config.TENCENT_VECTOR_DB_DATABASE,
+                shard=mlchain_config.TENCENT_VECTOR_DB_SHARD,
+                replicas=mlchain_config.TENCENT_VECTOR_DB_REPLICAS,
             )
         )

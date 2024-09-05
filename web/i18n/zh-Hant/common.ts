@@ -12,6 +12,7 @@ const translation = {
     cancel: '取消',
     clear: '清空',
     save: '儲存',
+    saveAndEnable: '儲存並啟用',
     edit: '編輯',
     add: '新增',
     added: '已新增',
@@ -119,6 +120,7 @@ const translation = {
   },
   userProfile: {
     settings: '設定',
+    emailSupport: '電子郵件支援',
     workspace: '工作空間',
     createWorkspace: '建立工作空間',
     helpCenter: '幫助文件',
@@ -152,8 +154,8 @@ const translation = {
     newPassword: '新密碼',
     notEqual: '兩個密碼不相同',
     confirmPassword: '確認密碼',
-    langGeniusAccount: 'Mlchain 賬號',
-    langGeniusAccountTip: '您的 Mlchain 賬號和相關的使用者資料。',
+    mlChainAccount: 'Mlchain 賬號',
+    mlChainAccountTip: '您的 Mlchain 賬號和相關的使用者資料。',
     editName: '編輯名字',
     showAppLength: '顯示 {{length}} 個應用',
     delete: '刪除帳戶',
@@ -374,7 +376,7 @@ const translation = {
   apiBasedExtension: {
     title: 'API 擴充套件提供了一個集中式的 API 管理，在此統一新增 API 配置後，方便在 Mlchain 上的各類應用中直接使用。',
     link: '瞭解如何開發您自己的 API 擴充套件。',
-    linkUrl: 'https://docs.mlchain.ai/v/zh-hans/advanced/api_based_extension',
+    linkUrl: 'https://docs.mlchain.khulnasoft.com/v/zh-hans/advanced/api_based_extension',
     add: '新增 API 擴充套件',
     selector: {
       title: 'API 擴充套件',
@@ -407,7 +409,7 @@ const translation = {
     latestAvailable: 'Mlchain {{version}} 已是最新版本。',
   },
   appMenus: {
-    overview: '概覽',
+    overview: '監控',
     promptEng: '編排',
     apiAccess: '訪問 API',
     logAndAnn: '日誌與標註',

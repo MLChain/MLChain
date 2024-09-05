@@ -6,9 +6,9 @@ export const useNodeHelpLink = (nodeType: BlockEnum) => {
   const language = useGetLanguage()
   const prefixLink = useMemo(() => {
     if (language === 'zh_Hans')
-      return 'https://docs.mlchain.ai/v/zh-hans/guides/workflow/node/'
+      return 'https://docs.mlchain.khulnasoft.com/v/zh-hans/guides/workflow/node/'
 
-    return 'https://docs.mlchain.ai/guides/workflow/node/'
+    return 'https://docs.mlchain.khulnasoft.com/guides/workflow/node/'
   }, [language])
   const linkMap = useMemo(() => {
     if (language === 'zh_Hans') {
@@ -24,6 +24,7 @@ export const useNodeHelpLink = (nodeType: BlockEnum) => {
         [BlockEnum.TemplateTransform]: 'template',
         [BlockEnum.VariableAssigner]: 'variable_assigner',
         [BlockEnum.VariableAggregator]: 'variable_assigner',
+        [BlockEnum.Assigner]: 'variable_assignment',
         [BlockEnum.Iteration]: 'iteration',
         [BlockEnum.ParameterExtractor]: 'parameter_extractor',
         [BlockEnum.HttpRequest]: 'http_request',
@@ -43,6 +44,7 @@ export const useNodeHelpLink = (nodeType: BlockEnum) => {
       [BlockEnum.TemplateTransform]: 'template',
       [BlockEnum.VariableAssigner]: 'variable-assigner',
       [BlockEnum.VariableAggregator]: 'variable-assigner',
+      [BlockEnum.Assigner]: 'variable-assignment',
       [BlockEnum.Iteration]: 'iteration',
       [BlockEnum.ParameterExtractor]: 'parameter-extractor',
       [BlockEnum.HttpRequest]: 'http-request',

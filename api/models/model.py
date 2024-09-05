@@ -4,17 +4,19 @@ import uuid
 from enum import Enum
 from typing import Optional
 
-from flask import current_app, request
+from flask import request
 from flask_login import UserMixin
 from sqlalchemy import Float, func, text
+from sqlalchemy.orm import Mapped, mapped_column
 
+from configs import mlchain_config
 from core.file.tool_file_parser import ToolFileParser
 from core.file.upload_file_parser import UploadFileParser
 from extensions.ext_database import db
 from libs.helper import generate_string
 
-from . import StringUUID
 from .account import Account, Tenant
+from .types import StringUUID
 
 
 class MlchainSetup(db.Model):
@@ -49,6 +51,10 @@ class AppMode(Enum):
         raise ValueError(f'invalid mode value {value}')
 
 
+class IconType(Enum):
+    IMAGE = "image"
+    EMOJI = "emoji"
+
 class App(db.Model):
     __tablename__ = 'apps'
     __table_args__ = (
@@ -61,6 +67,7 @@ class App(db.Model):
     name = db.Column(db.String(255), nullable=False)
     description = db.Column(db.Text, nullable=False, server_default=db.text("''::character varying"))
     mode = db.Column(db.String(255), nullable=False)
+    icon_type = db.Column(db.String(255), nullable=True)
     icon = db.Column(db.String(255))
     icon_background = db.Column(db.String(255))
     app_model_config_id = db.Column(StringUUID, nullable=True)
@@ -111,7 +118,7 @@ class App(db.Model):
 
     @property
     def api_base_url(self):
-        return (current_app.config['SERVICE_API_URL'] if current_app.config['SERVICE_API_URL']
+        return (mlchain_config.SERVICE_API_URL if mlchain_config.SERVICE_API_URL
                 else request.host_url.rstrip('/')) + '/v1'
 
     @property
@@ -327,7 +334,9 @@ class AppModelConfig(db.Model):
                 return {'retrieval_model': 'single'}
             else:
                 return dataset_configs
-        return {'retrieval_model': 'single'}
+        return {
+                'retrieval_model': 'multiple',
+            }
 
     @property
     def file_upload_dict(self) -> dict:
@@ -509,12 +518,12 @@ class Conversation(db.Model):
     from_account_id = db.Column(StringUUID)
     read_at = db.Column(db.DateTime)
     read_account_id = db.Column(StringUUID)
+    dialogue_count: Mapped[int] = mapped_column(default=0)
     created_at = db.Column(db.DateTime, nullable=False, server_default=db.text('CURRENT_TIMESTAMP(0)'))
     updated_at = db.Column(db.DateTime, nullable=False, server_default=db.text('CURRENT_TIMESTAMP(0)'))
 
     messages = db.relationship("Message", backref="conversation", lazy='select', passive_deletes="all")
-    message_annotations = db.relationship("MessageAnnotation", backref="conversation", lazy='select',
-                                          passive_deletes="all")
+    message_annotations = db.relationship("MessageAnnotation", backref="conversation", lazy='select', passive_deletes="all")
 
     is_deleted = db.Column(db.Boolean, nullable=False, server_default=db.text('false'))
 
@@ -1083,6 +1092,7 @@ class Site(db.Model):
     id = db.Column(StringUUID, server_default=db.text('uuid_generate_v4()'))
     app_id = db.Column(StringUUID, nullable=False)
     title = db.Column(db.String(255), nullable=False)
+    icon_type = db.Column(db.String(255), nullable=True)
     icon = db.Column(db.String(255))
     icon_background = db.Column(db.String(255))
     description = db.Column(db.Text)
@@ -1113,7 +1123,7 @@ class Site(db.Model):
     @property
     def app_base_url(self):
         return (
-            current_app.config['APP_WEB_URL'] if current_app.config['APP_WEB_URL'] else request.host_url.rstrip('/'))
+            mlchain_config.APP_WEB_URL if  mlchain_config.APP_WEB_URL else request.url_root.rstrip('/'))
 
 
 class ApiToken(db.Model):
@@ -1312,9 +1322,7 @@ class MessageAgentThought(db.Model):
                 }
         except Exception as e:
             if self.observation:
-                return {
-                    tool: self.observation for tool in tools
-                }
+                return dict.fromkeys(tools, self.observation)
 
 
 class DatasetRetrieverResource(db.Model):
@@ -1382,7 +1390,7 @@ class TraceAppConfig(db.Model):
     __tablename__ = 'trace_app_config'
     __table_args__ = (
         db.PrimaryKeyConstraint('id', name='tracing_app_config_pkey'),
-        db.Index('tracing_app_config_app_id_idx', 'app_id'),
+        db.Index('trace_app_config_app_id_idx', 'app_id'),
     )
 
     id = db.Column(StringUUID, server_default=db.text('uuid_generate_v4()'))

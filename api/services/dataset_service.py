@@ -27,6 +27,7 @@ from models.dataset import (
     Dataset,
     DatasetCollectionBinding,
     DatasetPermission,
+    DatasetPermissionEnum,
     DatasetProcessRule,
     DatasetQuery,
     Document,
@@ -80,21 +81,21 @@ class DatasetService:
                 if permitted_dataset_ids:
                     query = query.filter(
                         db.or_(
-                            Dataset.permission == 'all_team_members',
-                            db.and_(Dataset.permission == 'only_me', Dataset.created_by == user.id),
-                            db.and_(Dataset.permission == 'partial_members', Dataset.id.in_(permitted_dataset_ids))
+                            Dataset.permission == DatasetPermissionEnum.ALL_TEAM,
+                            db.and_(Dataset.permission == DatasetPermissionEnum.ONLY_ME, Dataset.created_by == user.id),
+                            db.and_(Dataset.permission == DatasetPermissionEnum.PARTIAL_TEAM, Dataset.id.in_(permitted_dataset_ids))
                         )
                     )
                 else:
                     query = query.filter(
                         db.or_(
-                            Dataset.permission == 'all_team_members',
-                            db.and_(Dataset.permission == 'only_me', Dataset.created_by == user.id)
+                            Dataset.permission == DatasetPermissionEnum.ALL_TEAM,
+                            db.and_(Dataset.permission == DatasetPermissionEnum.ONLY_ME, Dataset.created_by == user.id)
                         )
                     )
         else:
             # if no user, only show datasets that are shared with all team members
-            query = query.filter(Dataset.permission == 'all_team_members')
+            query = query.filter(Dataset.permission == DatasetPermissionEnum.ALL_TEAM)
 
         if search:
             query = query.filter(Dataset.name.ilike(f'%{search}%'))
@@ -196,6 +197,28 @@ class DatasetService:
                     f"The dataset in unavailable, due to: "
                     f"{ex.description}"
                 )
+
+    @staticmethod
+    def check_embedding_model_setting(tenant_id: str, embedding_model_provider: str, embedding_model:str):
+        try:
+            model_manager = ModelManager()
+            model_manager.get_model_instance(
+                tenant_id=tenant_id,
+                provider=embedding_model_provider,
+                model_type=ModelType.TEXT_EMBEDDING,
+                model=embedding_model
+            )
+        except LLMBadRequestError:
+            raise ValueError(
+                "No Embedding Model available. Please configure a valid provider "
+                "in the Settings -> Model Provider."
+            )
+        except ProviderTokenNotInitError as ex:
+            raise ValueError(
+                f"The dataset in unavailable, due to: "
+                f"{ex.description}"
+            )
+
 
     @staticmethod
     def update_dataset(dataset_id, data, user):
@@ -308,7 +331,7 @@ class DatasetService:
             raise NoPermissionError(
                 'You do not have permission to access this dataset.'
             )
-        if dataset.permission == 'only_me' and dataset.created_by != user.id:
+        if dataset.permission == DatasetPermissionEnum.ONLY_ME and dataset.created_by != user.id:
             logging.debug(
                 f'User {user.id} does not have permission to access dataset {dataset.id}'
             )
@@ -329,11 +352,11 @@ class DatasetService:
 
     @staticmethod
     def check_dataset_operator_permission(user: Account = None, dataset: Dataset = None):
-        if dataset.permission == 'only_me':
+        if dataset.permission == DatasetPermissionEnum.ONLY_ME:
             if dataset.created_by != user.id:
                 raise NoPermissionError('You do not have permission to access this dataset.')
 
-        elif dataset.permission == 'partial_members':
+        elif dataset.permission == DatasetPermissionEnum.PARTIAL_TEAM:
             if not any(
                 dp.dataset_id == dataset.id for dp in DatasetPermission.query.filter_by(account_id=user.id).all()
             ):
@@ -524,7 +547,14 @@ class DocumentService:
     @staticmethod
     def delete_document(document):
         # trigger document_was_deleted signal
-        document_was_deleted.send(document.id, dataset_id=document.dataset_id, doc_form=document.doc_form)
+        file_id = None
+        if document.data_source_type == 'upload_file':
+            if document.data_source_info:
+                data_source_info = document.data_source_info_dict
+                if data_source_info and 'upload_file_id' in data_source_info:
+                    file_id = data_source_info['upload_file_id']
+        document_was_deleted.send(document.id, dataset_id=document.dataset_id,
+                                  doc_form=document.doc_form, file_id=file_id)
 
         db.session.delete(document)
         db.session.commit()
@@ -681,7 +711,7 @@ class DocumentService:
                 dataset.collection_binding_id = dataset_collection_binding.id
                 if not dataset.retrieval_model:
                     default_retrieval_model = {
-                        'search_method': RetrievalMethod.SEMANTIC_SEARCH,
+                        'search_method': RetrievalMethod.SEMANTIC_SEARCH.value,
                         'reranking_enable': False,
                         'reranking_model': {
                             'reranking_provider_name': '',
@@ -838,13 +868,17 @@ class DocumentService:
                         'only_main_content': website_info.get('only_main_content', False),
                         'mode': 'crawl',
                     }
+                    if len(url) > 255:
+                        document_name = url[:200] + '...'
+                    else:
+                        document_name = url
                     document = DocumentService.build_document(
                         dataset, dataset_process_rule.id,
                         document_data["data_source"]["type"],
                         document_data["doc_form"],
                         document_data["doc_language"],
                         data_source_info, created_from, position,
-                        account, url, batch
+                        account, document_name, batch
                     )
                     db.session.add(document)
                     db.session.flush()
@@ -1052,7 +1086,7 @@ class DocumentService:
                 retrieval_model = document_data['retrieval_model']
             else:
                 default_retrieval_model = {
-                    'search_method': RetrievalMethod.SEMANTIC_SEARCH,
+                    'search_method': RetrievalMethod.SEMANTIC_SEARCH.value,
                     'reranking_enable': False,
                     'reranking_model': {
                         'reranking_provider_name': '',
@@ -1396,7 +1430,10 @@ class SegmentService:
                 segment_data_list.append(segment_document)
 
                 pre_segment_data_list.append(segment_document)
-                keywords_list.append(segment_item['keywords'])
+                if 'keywords' in segment_item:
+                    keywords_list.append(segment_item['keywords'])
+                else:
+                    keywords_list.append(None)
 
             try:
                 # save vector index
@@ -1449,7 +1486,7 @@ class SegmentService:
                 db.session.add(segment)
                 db.session.commit()
                 # update segment index task
-                if args['keywords']:
+                if 'keywords' in args:
                     keyword = Keyword(dataset)
                     keyword.delete_by_ids([segment.index_node_id])
                     document = RAGDocument(

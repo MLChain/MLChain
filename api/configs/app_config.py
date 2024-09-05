@@ -12,21 +12,16 @@ from configs.packaging import PackagingInfo
 class MlchainConfig(
     # Packaging info
     PackagingInfo,
-
     # Deployment configs
     DeploymentConfig,
-
     # Feature configs
     FeatureConfig,
-
     # Middleware configs
     MiddlewareConfig,
-
     # Extra service configs
     ExtraServiceConfig,
-
     # Enterprise feature configs
-    # **Before using, please contact business@mlchain.ai by email to inquire about licensing matters.**
+    # **Before using, please contact business@mlchain.khulnasoft.com by email to inquire about licensing matters.**
     EnterpriseFeatureConfig,
 ):
     DEBUG: bool = Field(default=False, description='whether to enable debug mode.')
@@ -36,7 +31,6 @@ class MlchainConfig(
         env_file='.env',
         env_file_encoding='utf-8',
         frozen=True,
-
         # ignore extra attributes
         extra='ignore',
     )
@@ -65,3 +59,7 @@ class MlchainConfig(
 
     SSRF_PROXY_HTTP_URL: str | None = None
     SSRF_PROXY_HTTPS_URL: str | None = None
+
+    MODERATION_BUFFER_SIZE: int = Field(default=300, description='The buffer size for moderation.')
+
+    MAX_VARIABLE_SIZE: int = Field(default=5 * 1024, description='The maximum size of a variable. default is 5KB.')

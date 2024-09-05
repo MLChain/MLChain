@@ -45,9 +45,9 @@ services:
       CLUSTER_HOSTNAME: 'node1'
       AUTHENTICATION_APIKEY_ENABLED: 'true'
       AUTHENTICATION_APIKEY_ALLOWED_KEYS: 'WVF5YThaHlkYwhGUSmCRgsX3tD5ngdN8pkih'
-      AUTHENTICATION_APIKEY_USERS: 'hello@mlchain.ai'
+      AUTHENTICATION_APIKEY_USERS: 'hello@mlchain.khulnasoft.com'
       AUTHORIZATION_ADMINLIST_ENABLED: 'true'
-      AUTHORIZATION_ADMINLIST_USERS: 'hello@mlchain.ai'
+      AUTHORIZATION_ADMINLIST_USERS: 'hello@mlchain.khulnasoft.com'
     ports:
       - "8080:8080"
 
@@ -73,7 +73,7 @@ services:
 
   # ssrf_proxy server
   # for more information, please refer to
-  # https://docs.mlchain.ai/getting-started/install-self-hosted/install-faq#id-16.-why-is-ssrf_proxy-needed
+  # https://docs.mlchain.khulnasoft.com/learn-more/faq/self-host-faq#id-18.-why-is-ssrf_proxy-needed
   ssrf_proxy:
     image: ubuntu/squid:latest
     restart: always

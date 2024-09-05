@@ -38,7 +38,7 @@ export type UserProfileOriginResponse = {
   headers: any
 }
 
-export type LangGeniusVersionResponse = {
+export type MLChainVersionResponse = {
   current_version: string
   latest_version: string
   version: string

@@ -1,7 +1,7 @@
 Mlchain にコントリビュートしたいとお考えなのですね。それは素晴らしいことです。
 私たちは、LLM アプリケーションの構築と管理のための最も直感的なワークフローを設計するという壮大な野望を持っています。人数も資金も限られている新興企業として、コミュニティからの支援は本当に重要です。
 
-私たちは現状を鑑み、機敏かつ迅速に開発をする必要がありますが、同時にあなたのようなコントリビューターの方々に、可能な限りスムーズな貢献体験をしていただきたいと思っています。そのためにこのコントリビュートガイドを作成しました。
+私たちは現状を鑑み、機敏かつ迅速に開発をする必要がありますが、同時にあなた様のようなコントリビューターの方々に、可能な限りスムーズな貢献体験をしていただきたいと思っています。そのためにこのコントリビュートガイドを作成しました。
 コードベースやコントリビュータの方々と私たちがどのように仕事をしているのかに慣れていただき、楽しいパートにすぐに飛び込めるようにすることが目的です。
 
 このガイドは Mlchain そのものと同様に、継続的に改善されています。実際のプロジェクトに遅れをとることがあるかもしれませんが、ご理解のほどよろしくお願いいたします。
@@ -14,13 +14,13 @@ Mlchain にコントリビュートしたいとお考えなのですね。それ
 
 ### 機能リクエスト
 
-* 新しい機能要望を出す場合は、提案する機能が何を実現するものなのかを説明し、可能な限り多くのコンテキストを含めてください。[@perzeusss](https://github.com/perzeuss)は、あなたの要望を書き出すのに役立つ [Feature Request Copilot](https://umlchain.app/chat/MK2kVSnw1gakVwMX) を作ってくれました。気軽に試してみてください。
+* 新しい機能要望を出す場合は、提案する機能が何を実現するものなのかを説明し、可能な限り多くのコンテキストを含めてください。[@perzeusss](https://github.com/perzeuss)は、あなた様の要望を書き出すのに役立つ [Feature Request Copilot](https://udify.app/chat/MK2kVSnw1gakVwMX) を作ってくれました。気軽に試してみてください。
 
 * 既存の課題から 1 つ選びたい場合は、その下にコメントを書いてください。
 
-  関連する方向で作業しているチームメンバーが参加します。すべてが良好であれば、コーディングを開始する許可が与えられます。私たちが変更を提案した場合にあなたの作業が無駄になることがないよう、それまでこの機能の作業を控えていただくようお願いいたします。
+  関連する方向で作業しているチームメンバーが参加します。すべてが良好であれば、コーディングを開始する許可が与えられます。私たちが変更を提案した場合にあなた様の作業が無駄になることがないよう、それまでこの機能の作業を控えていただくようお願いいたします。
 
-  提案された機能がどの分野に属するかによって、あなたは異なるチーム・メンバーと話をするかもしれません。以下は、各チームメンバーが現在取り組んでいる分野の概要です。
+  提案された機能がどの分野に属するかによって、あなた様は異なるチーム・メンバーと話をするかもしれません。以下は、各チームメンバーが現在取り組んでいる分野の概要です。
 
 | Member                                                                                  | Scope                                |
 | --------------------------------------------------------------------------------------- | ------------------------------------ |
@@ -28,7 +28,7 @@ Mlchain にコントリビュートしたいとお考えなのですね。それ
 | [@jyong](https://github.com/JohnJyong)                                                  | RAG パイプライン設計                 |
 | [@GarfieldDai](https://github.com/GarfieldDai)                                          | workflow orchestrations の構築       |
 | [@iamjoel](https://github.com/iamjoel) & [@zxhlyh](https://github.com/zxhlyh)           | フロントエンドを使いやすくする       |
-| [@guchenhe](https://github.com/guchenhe) & [@crazywoola](https://github.com/crazywoola) | 開発者体験、何でも相談できる窓口     |
+| [@guchenhe](https://github.com/guchenhe) & [@gitworkflows](https://github.com/gitworkflows) | 開発者体験、何でも相談できる窓口     |
 | [@takatost](https://github.com/takatost)                                                | 全体的な製品の方向性とアーキテクチャ |
 
 優先順位の付け方:
@@ -82,7 +82,7 @@ Mlchain はバックエンドとフロントエンドから構成されていま
 まず`cd api/`でバックエンドのディレクトリに移動し、[Backend README](api/README.md)に従ってインストールします。
 次に別のターミナルで、`cd web/`でフロントエンドのディレクトリに移動し、[Frontend README](web/README.md)に従ってインストールしてください。
 
-よくある問題とトラブルシューティングの手順については、[installation FAQ](https://docs.mlchain.ai/getting-started/faq/install-faq) を確認してください。
+よくある問題とトラブルシューティングの手順については、[installation FAQ](https://docs.mlchain.khulnasoft.com/v/japanese/learn-more/faq/install-faq) を確認してください。
 
 ### 5. ブラウザで mlchain にアクセスする
 
@@ -153,7 +153,7 @@ Mlchain のバックエンドは[Flask](https://flask.palletsprojects.com/en/3.0
 いよいよ、私たちのリポジトリにプルリクエスト (PR) を提出する時が来ました。主要な機能については、まず `deploy/dev` ブランチにマージしてテストしてから `main` ブランチにマージします。
 マージ競合などの問題が発生した場合、またはプル リクエストを開く方法がわからない場合は、[GitHub's pull request tutorial](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests) をチェックしてみてください。
 
-これで完了です！あなたの PR がマージされると、[README](https://github.com/mlchain/mlchain/blob/main/README.md) にコントリビューターとして紹介されます。
+これで完了です！あなた様の PR がマージされると、[README](https://github.com/mlchain/mlchain/blob/main/README.md) にコントリビューターとして紹介されます。
 
 ## ヘルプを得る
 
