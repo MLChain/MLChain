@@ -6,7 +6,7 @@ import requests
 import weaviate
 from pydantic import BaseModel, model_validator
 
-from configs import dify_config
+from configs import Mlchain_config
 from core.rag.datasource.entity.embedding import Embeddings
 from core.rag.datasource.vdb.field import Field
 from core.rag.datasource.vdb.vector_base import BaseVector
@@ -275,9 +275,9 @@ class WeaviateVectorFactory(AbstractVectorFactory):
         return WeaviateVector(
             collection_name=collection_name,
             config=WeaviateConfig(
-                endpoint=dify_config.WEAVIATE_ENDPOINT,
-                api_key=dify_config.WEAVIATE_API_KEY,
-                batch_size=dify_config.WEAVIATE_BATCH_SIZE,
+                endpoint=mlchain_config.WEAVIATE_ENDPOINT,
+                api_key=mlchain_config.WEAVIATE_API_KEY,
+                batch_size=mlchain_config.WEAVIATE_BATCH_SIZE,
             ),
             attributes=attributes,
         )

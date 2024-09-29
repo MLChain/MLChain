@@ -12,7 +12,7 @@ const translation = {
   datasetDeleted: 'База знаний удалена',
   datasetDeleteFailed: 'Не удалось удалить базу знаний',
   didYouKnow: 'Знаете ли вы?',
-  intro1: 'Базу знаний можно интегрировать в приложение Dify ',
+  intro1: 'Базу знаний можно интегрировать в приложение Mlchain ',
   intro2: 'в качестве контекста',
   intro3: ',',
   intro4: 'или ее ',

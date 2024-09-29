@@ -7,7 +7,7 @@ import psycopg2.extras
 import psycopg2.pool
 from pydantic import BaseModel, model_validator
 
-from configs import dify_config
+from configs import Mlchain_config
 from core.rag.datasource.entity.embedding import Embeddings
 from core.rag.datasource.vdb.vector_base import BaseVector
 from core.rag.datasource.vdb.vector_factory import AbstractVectorFactory
@@ -216,12 +216,12 @@ class PGVectorFactory(AbstractVectorFactory):
         return PGVector(
             collection_name=collection_name,
             config=PGVectorConfig(
-                host=dify_config.PGVECTOR_HOST,
-                port=dify_config.PGVECTOR_PORT,
-                user=dify_config.PGVECTOR_USER,
-                password=dify_config.PGVECTOR_PASSWORD,
-                database=dify_config.PGVECTOR_DATABASE,
-                min_connection=dify_config.PGVECTOR_MIN_CONNECTION,
-                max_connection=dify_config.PGVECTOR_MAX_CONNECTION,
+                host=mlchain_config.PGVECTOR_HOST,
+                port=mlchain_config.PGVECTOR_PORT,
+                user=mlchain_config.PGVECTOR_USER,
+                password=mlchain_config.PGVECTOR_PASSWORD,
+                database=mlchain_config.PGVECTOR_DATABASE,
+                min_connection=mlchain_config.PGVECTOR_MIN_CONNECTION,
+                max_connection=mlchain_config.PGVECTOR_MAX_CONNECTION,
             ),
         )

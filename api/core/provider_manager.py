@@ -5,7 +5,7 @@ from typing import Optional
 
 from sqlalchemy.exc import IntegrityError
 
-from configs import dify_config
+from configs import Mlchain_config
 from core.entities.model_entities import DefaultModelEntity, DefaultModelProviderEntity
 from core.entities.provider_configuration import ProviderConfiguration, ProviderConfigurations, ProviderModelBundle
 from core.entities.provider_entities import (
@@ -116,8 +116,8 @@ class ProviderManager:
         for provider_entity in provider_entities:
             # handle include, exclude
             if is_filtered(
-                include_set=dify_config.POSITION_PROVIDER_INCLUDES_SET,
-                exclude_set=dify_config.POSITION_PROVIDER_EXCLUDES_SET,
+                include_set=mlchain_config.POSITION_PROVIDER_INCLUDES_SET,
+                exclude_set=mlchain_config.POSITION_PROVIDER_EXCLUDES_SET,
                 data=provider_entity,
                 name_func=lambda x: x.provider,
             ):

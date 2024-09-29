@@ -5,7 +5,7 @@ import time
 import click
 from celery import shared_task
 
-from configs import dify_config
+from configs import Mlchain_config
 from core.indexing_runner import DocumentIsPausedError, IndexingRunner
 from extensions.ext_database import db
 from models.dataset import Dataset, Document
@@ -32,7 +32,7 @@ def document_indexing_task(dataset_id: str, document_ids: list):
         if features.billing.enabled:
             vector_space = features.vector_space
             count = len(document_ids)
-            batch_upload_limit = int(dify_config.BATCH_UPLOAD_LIMIT)
+            batch_upload_limit = int(mlchain_config.BATCH_UPLOAD_LIMIT)
             if count > batch_upload_limit:
                 raise ValueError(f"You have reached the batch upload limit of {batch_upload_limit}.")
             if 0 < vector_space.limit <= vector_space.size:

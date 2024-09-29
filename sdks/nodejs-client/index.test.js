@@ -1,30 +1,30 @@
-import { DifyClient, BASE_URL, routes } from ".";
+import { MlchainClient, BASE_URL, routes } from ".";
 
 import axios from 'axios'
 
 jest.mock('axios')
 
 describe('Client', () => {
-  let difyClient
+  let MlchainClient
   beforeEach(() => {
-    difyClient = new DifyClient('test')
+    MlchainClient = new MlchainClient('test')
   })
 
   test('should create a client', () => {
-    expect(difyClient).toBeDefined();
+    expect(mlchainClient).toBeDefined();
   })
   // test updateApiKey
   test('should update the api key', () => {
-    difyClient.updateApiKey('test2');
-    expect(difyClient.apiKey).toBe('test2');
+    MlchainClient.updateApiKey('test2');
+    expect(mlchainClient.apiKey).toBe('test2');
   })
 });
 
 describe('Send Requests', () => {
-  let difyClient
+  let MlchainClient
 
   beforeEach(() => {
-    difyClient = new DifyClient('test')
+    MlchainClient = new MlchainClient('test')
   })
 
   afterEach(() => {
@@ -37,14 +37,14 @@ describe('Send Requests', () => {
     const expectedResponse = { data: 'response' }
     axios.mockResolvedValue(expectedResponse)
 
-    await difyClient.sendRequest(method, endpoint)
+    await MlchainClient.sendRequest(method, endpoint)
 
     expect(axios).toHaveBeenCalledWith({
       method,
       url: `${BASE_URL}${endpoint}`,
       params: null,
       headers: {
-        Authorization: `Bearer ${difyClient.apiKey}`,
+        Authorization: `Bearer ${mlchainClient.apiKey}`,
         'Content-Type': 'application/json',
       },
       responseType: 'json',
@@ -58,7 +58,7 @@ describe('Send Requests', () => {
     const errorMessage = 'Request failed with status code 404'
     axios.mockRejectedValue(new Error(errorMessage))
 
-    await expect(difyClient.sendRequest(method, endpoint)).rejects.toThrow(
+    await expect(mlchainClient.sendRequest(method, endpoint)).rejects.toThrow(
       errorMessage
     )
   })

@@ -7,7 +7,7 @@ from httpx import Timeout, post
 from pydantic import BaseModel
 from yarl import URL
 
-from configs import dify_config
+from configs import Mlchain_config
 from core.helper.code_executor.javascript.javascript_transformer import NodeJsTemplateTransformer
 from core.helper.code_executor.jinja2.jinja2_transformer import Jinja2TemplateTransformer
 from core.helper.code_executor.python3.python3_transformer import Python3TemplateTransformer
@@ -62,9 +62,9 @@ class CodeExecutor:
         :param code: code
         :return:
         """
-        url = URL(str(dify_config.CODE_EXECUTION_ENDPOINT)) / "v1" / "sandbox" / "run"
+        url = URL(str(mlchain_config.CODE_EXECUTION_ENDPOINT)) / "v1" / "sandbox" / "run"
 
-        headers = {"X-Api-Key": dify_config.CODE_EXECUTION_API_KEY}
+        headers = {"X-Api-Key": Mlchain_config.CODE_EXECUTION_API_KEY}
 
         data = {
             "language": cls.code_language_to_running_language.get(language),
@@ -79,9 +79,9 @@ class CodeExecutor:
                 json=data,
                 headers=headers,
                 timeout=Timeout(
-                    connect=dify_config.CODE_EXECUTION_CONNECT_TIMEOUT,
-                    read=dify_config.CODE_EXECUTION_READ_TIMEOUT,
-                    write=dify_config.CODE_EXECUTION_WRITE_TIMEOUT,
+                    connect=mlchain_config.CODE_EXECUTION_CONNECT_TIMEOUT,
+                    read=mlchain_config.CODE_EXECUTION_READ_TIMEOUT,
+                    write=mlchain_config.CODE_EXECUTION_WRITE_TIMEOUT,
                     pool=None,
                 ),
             )

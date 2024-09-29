@@ -184,7 +184,7 @@ const Form = () => {
             value={description}
             onChange={e => setDescription(e.target.value)}
           />
-          <a className='flex items-center h-[18px] px-3 text-xs text-gray-500' href="https://docs.dify.ai/features/datasets#how-to-write-a-good-dataset-description" target='_blank' rel='noopener noreferrer'>
+          <a className='flex items-center h-[18px] px-3 text-xs text-gray-500' href="https://docs-mlchain.khulnasoft.com/features/datasets#how-to-write-a-good-dataset-description" target='_blank' rel='noopener noreferrer'>
             <BookOpenIcon className='w-3 h-[18px] mr-1' />
             {t('datasetSettings.form.descWrite')}
           </a>
@@ -245,7 +245,7 @@ const Form = () => {
           <div>
             <div>{t('datasetSettings.form.retrievalSetting.title')}</div>
             <div className='leading-[18px] text-xs font-normal text-gray-500'>
-              <a target='_blank' rel='noopener noreferrer' href='https://docs.dify.ai/guides/knowledge-base/create-knowledge-and-upload-documents#id-4-retrieval-settings' className='text-[#155eef]'>{t('datasetSettings.form.retrievalSetting.learnMore')}</a>
+              <a target='_blank' rel='noopener noreferrer' href='https://docs-mlchain.khulnasoft.com/guides/knowledge-base/create-knowledge-and-upload-documents#id-4-retrieval-settings' className='text-[#155eef]'>{t('datasetSettings.form.retrievalSetting.learnMore')}</a>
               {t('datasetSettings.form.retrievalSetting.description')}
             </div>
           </div>

@@ -73,20 +73,20 @@ class ResetPasswordApi(Resource):
         # AccountService.update_password(account, new_password)
 
         # todo: Send email
-        # MAILCHIMP_API_KEY = dify_config.MAILCHIMP_TRANSACTIONAL_API_KEY
+        # MAILCHIMP_API_KEY = Mlchain_config.MAILCHIMP_TRANSACTIONAL_API_KEY
         # mailchimp = MailchimpTransactional(MAILCHIMP_API_KEY)
 
         # message = {
         #     'from_email': 'noreply@example.com',
         #     'to': [{'email': account['email']}],
-        #     'subject': 'Reset your Dify password',
+        #     'subject': 'Reset your Mlchain password',
         #     'html': """
         #         <p>Dear User,</p>
-        #         <p>The Dify team has generated a new password for you, details as follows:</p>
+        #         <p>The Mlchain team has generated a new password for you, details as follows:</p>
         #         <p><strong>{new_password}</strong></p>
         #         <p>Please change your password to log in as soon as possible.</p>
         #         <p>Regards,</p>
-        #         <p>The Dify Team</p>
+        #         <p>The Mlchain Team</p>
         #     """
         # }
 
@@ -94,7 +94,7 @@ class ResetPasswordApi(Resource):
         #     'message': message,
         #     # required for transactional email
         #     ' settings': {
-        #         'sandbox_mode': dify_config.MAILCHIMP_SANDBOX_MODE,
+        #         'sandbox_mode': Mlchain_config.MAILCHIMP_SANDBOX_MODE,
         #     },
         # })
 

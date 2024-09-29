@@ -30,7 +30,7 @@ class MockTcvectordbClass:
             Database(
                 conn=self._conn,
                 read_consistency=self._read_consistency,
-                name="dify",
+                name="mlchain",
             )
         ]
 

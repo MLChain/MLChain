@@ -3,7 +3,7 @@ from typing import Any, Union
 
 from openai._exceptions import RateLimitError
 
-from configs import dify_config
+from configs import Mlchain_config
 from core.app.apps.advanced_chat.app_generator import AdvancedChatAppGenerator
 from core.app.apps.agent_chat.app_generator import AgentChatAppGenerator
 from core.app.apps.chat.app_generator import ChatAppGenerator
@@ -100,7 +100,7 @@ class AppGenerateService:
     def _get_max_active_requests(app_model: App) -> int:
         max_active_requests = app_model.max_active_requests
         if app_model.max_active_requests is None:
-            max_active_requests = int(dify_config.APP_MAX_ACTIVE_REQUESTS)
+            max_active_requests = int(mlchain_config.APP_MAX_ACTIVE_REQUESTS)
         return max_active_requests
 
     @classmethod

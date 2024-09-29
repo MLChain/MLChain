@@ -4,7 +4,7 @@ from mimetypes import guess_extension
 from os import path
 from typing import Any, cast
 
-from configs import dify_config
+from configs import Mlchain_config
 from core.app.segments import parser
 from core.file.file_obj import FileTransferMethod, FileType, FileVar
 from core.tools.tool_file_manager import ToolFileManager
@@ -18,9 +18,9 @@ from core.workflow.nodes.http_request.http_executor import HttpExecutor, HttpExe
 from models.workflow import WorkflowNodeExecutionStatus
 
 HTTP_REQUEST_DEFAULT_TIMEOUT = HttpRequestNodeTimeout(
-    connect=dify_config.HTTP_REQUEST_MAX_CONNECT_TIMEOUT,
-    read=dify_config.HTTP_REQUEST_MAX_READ_TIMEOUT,
-    write=dify_config.HTTP_REQUEST_MAX_WRITE_TIMEOUT,
+    connect=mlchain_config.HTTP_REQUEST_MAX_CONNECT_TIMEOUT,
+    read=mlchain_config.HTTP_REQUEST_MAX_READ_TIMEOUT,
+    write=mlchain_config.HTTP_REQUEST_MAX_WRITE_TIMEOUT,
 )
 
 
@@ -40,9 +40,9 @@ class HttpRequestNode(BaseNode):
                 "body": {"type": "none"},
                 "timeout": {
                     **HTTP_REQUEST_DEFAULT_TIMEOUT.model_dump(),
-                    "max_connect_timeout": dify_config.HTTP_REQUEST_MAX_CONNECT_TIMEOUT,
-                    "max_read_timeout": dify_config.HTTP_REQUEST_MAX_READ_TIMEOUT,
-                    "max_write_timeout": dify_config.HTTP_REQUEST_MAX_WRITE_TIMEOUT,
+                    "max_connect_timeout": Mlchain_config.HTTP_REQUEST_MAX_CONNECT_TIMEOUT,
+                    "max_read_timeout": Mlchain_config.HTTP_REQUEST_MAX_READ_TIMEOUT,
+                    "max_write_timeout": Mlchain_config.HTTP_REQUEST_MAX_WRITE_TIMEOUT,
                 },
             },
         }

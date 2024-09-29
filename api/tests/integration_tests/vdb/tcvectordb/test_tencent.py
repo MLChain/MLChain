@@ -12,13 +12,13 @@ class TencentVectorTest(AbstractVectorTest):
     def __init__(self):
         super().__init__()
         self.vector = TencentVector(
-            "dify",
+            "mlchain",
             TencentConfig(
                 url="http://127.0.0.1",
-                api_key="dify",
+                api_key="mlchain",
                 timeout=30,
-                username="dify",
-                database="dify",
+                username="mlchain",
+                database="mlchain",
                 shard=1,
                 replicas=2,
             ),

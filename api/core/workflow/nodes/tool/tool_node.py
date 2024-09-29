@@ -3,7 +3,7 @@ from os import path
 from typing import Any, cast
 
 from core.app.segments import ArrayAnySegment, ArrayAnyVariable, parser
-from core.callback_handler.workflow_tool_callback_handler import DifyWorkflowCallbackHandler
+from core.callback_handler.workflow_tool_callback_handler import MlchainWorkflowCallbackHandler
 from core.file.file_obj import FileTransferMethod, FileType, FileVar
 from core.tools.entities.tool_entities import ToolInvokeMessage, ToolParameter
 from core.tools.tool_engine import ToolEngine
@@ -66,7 +66,7 @@ class ToolNode(BaseNode):
                 tool=tool_runtime,
                 tool_parameters=parameters,
                 user_id=self.user_id,
-                workflow_tool_callback=DifyWorkflowCallbackHandler(),
+                workflow_tool_callback=MlchainWorkflowCallbackHandler(),
                 workflow_call_depth=self.workflow_call_depth,
                 thread_pool_id=self.thread_pool_id,
             )

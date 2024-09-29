@@ -12,7 +12,7 @@ const translation = {
   datasetDeleted: 'Conocimiento eliminado',
   datasetDeleteFailed: 'Error al eliminar el Conocimiento',
   didYouKnow: '¿Sabías?',
-  intro1: 'El Conocimiento se puede integrar en la aplicación Dify ',
+  intro1: 'El Conocimiento se puede integrar en la aplicación Mlchain ',
   intro2: 'como contexto',
   intro3: ',',
   intro4: 'o ',

@@ -56,7 +56,7 @@ def test_inference_endpoints_validate_credentials():
             credentials={
                 "huggingfacehub_api_type": "inference_endpoints",
                 "huggingfacehub_api_token": "invalid_key",
-                "huggingface_namespace": "Dify-AI",
+                "huggingface_namespace": "Mlchain-AI",
                 "huggingfacehub_endpoint_url": os.environ.get("HUGGINGFACE_EMBEDDINGS_ENDPOINT_URL"),
                 "task_type": "feature-extraction",
             },
@@ -67,7 +67,7 @@ def test_inference_endpoints_validate_credentials():
         credentials={
             "huggingfacehub_api_type": "inference_endpoints",
             "huggingfacehub_api_token": os.environ.get("HUGGINGFACE_API_KEY"),
-            "huggingface_namespace": "Dify-AI",
+            "huggingface_namespace": "Mlchain-AI",
             "huggingfacehub_endpoint_url": os.environ.get("HUGGINGFACE_EMBEDDINGS_ENDPOINT_URL"),
             "task_type": "feature-extraction",
         },
@@ -82,7 +82,7 @@ def test_inference_endpoints_invoke_model():
         credentials={
             "huggingfacehub_api_type": "inference_endpoints",
             "huggingfacehub_api_token": os.environ.get("HUGGINGFACE_API_KEY"),
-            "huggingface_namespace": "Dify-AI",
+            "huggingface_namespace": "Mlchain-AI",
             "huggingfacehub_endpoint_url": os.environ.get("HUGGINGFACE_EMBEDDINGS_ENDPOINT_URL"),
             "task_type": "feature-extraction",
         },
@@ -102,7 +102,7 @@ def test_get_num_tokens():
         credentials={
             "huggingfacehub_api_type": "inference_endpoints",
             "huggingfacehub_api_token": os.environ.get("HUGGINGFACE_API_KEY"),
-            "huggingface_namespace": "Dify-AI",
+            "huggingface_namespace": "Mlchain-AI",
             "huggingfacehub_endpoint_url": os.environ.get("HUGGINGFACE_EMBEDDINGS_ENDPOINT_URL"),
             "task_type": "feature-extraction",
         },

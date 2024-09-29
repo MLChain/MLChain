@@ -1,5 +1,5 @@
-from core.callback_handler.agent_tool_callback_handler import DifyAgentCallbackHandler
+from core.callback_handler.agent_tool_callback_handler import MlchainAgentCallbackHandler
 
 
-class DifyWorkflowCallbackHandler(DifyAgentCallbackHandler):
+class MlchainWorkflowCallbackHandler(MlchainAgentCallbackHandler):
     """Callback Handler that prints to std out."""

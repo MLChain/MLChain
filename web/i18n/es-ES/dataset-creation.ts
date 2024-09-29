@@ -62,7 +62,7 @@ const translation = {
       run: 'Ejecutar',
       firecrawlTitle: 'Extraer contenido web con 🔥Firecrawl',
       firecrawlDoc: 'Documentación de Firecrawl',
-      firecrawlDocLink: 'https://docs.dify.ai/guides/knowledge-base/sync-from-website',
+      firecrawlDocLink: 'https://docs-mlchain.khulnasoft.com/guides/knowledge-base/sync-from-website',
       options: 'Opciones',
       crawlSubPage: 'Rastrear subpáginas',
       limit: 'Límite',

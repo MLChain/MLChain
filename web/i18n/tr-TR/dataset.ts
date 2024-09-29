@@ -12,7 +12,7 @@ const translation = {
   datasetDeleted: 'Bilgi silindi',
   datasetDeleteFailed: 'Bilgi silinemedi',
   didYouKnow: 'Biliyor muydunuz?',
-  intro1: 'Bilgi, Dify uygulamasına ',
+  intro1: 'Bilgi, Mlchain uygulamasına ',
   intro2: 'bağlam olarak',
   intro3: ' entegre edilebilir,',
   intro4: 'veya ',

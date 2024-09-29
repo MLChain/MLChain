@@ -9,7 +9,7 @@ from flask_login import UserMixin
 from sqlalchemy import Float, func, text
 from sqlalchemy.orm import Mapped, mapped_column
 
-from configs import dify_config
+from configs import Mlchain_config
 from core.file.tool_file_parser import ToolFileParser
 from core.file.upload_file_parser import UploadFileParser
 from extensions.ext_database import db
@@ -19,9 +19,9 @@ from .account import Account, Tenant
 from .types import StringUUID
 
 
-class DifySetup(db.Model):
-    __tablename__ = "dify_setups"
-    __table_args__ = (db.PrimaryKeyConstraint("version", name="dify_setup_pkey"),)
+class MlchainSetup(db.Model):
+    __tablename__ = "mlchain_setups"
+    __table_args__ = (db.PrimaryKeyConstraint("version", name="mlchain_setup_pkey"),)
 
     version = db.Column(db.String(255), nullable=False)
     setup_at = db.Column(db.DateTime, nullable=False, server_default=db.text("CURRENT_TIMESTAMP(0)"))
@@ -118,7 +118,7 @@ class App(db.Model):
 
     @property
     def api_base_url(self):
-        return (dify_config.SERVICE_API_URL or request.host_url.rstrip("/")) + "/v1"
+        return (mlchain_config.SERVICE_API_URL or request.host_url.rstrip("/")) + "/v1"
 
     @property
     def tenant(self):
@@ -1213,7 +1213,7 @@ class Site(db.Model):
 
     @property
     def app_base_url(self):
-        return dify_config.APP_WEB_URL or request.url_root.rstrip("/")
+        return Mlchain_config.APP_WEB_URL or request.url_root.rstrip("/")
 
 
 class ApiToken(db.Model):

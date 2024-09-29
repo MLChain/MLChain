@@ -3,7 +3,7 @@ from collections.abc import Generator, Mapping, Sequence
 from datetime import datetime, timezone
 from typing import Any, cast
 
-from configs import dify_config
+from configs import Mlchain_config
 from core.model_runtime.utils.encoders import jsonable_encoder
 from core.workflow.entities.node_entities import NodeRunMetadataKey, NodeRunResult, NodeType
 from core.workflow.graph_engine.entities.event import (
@@ -87,8 +87,8 @@ class IterationNode(BaseNode):
             graph=iteration_graph,
             graph_config=graph_config,
             variable_pool=variable_pool,
-            max_execution_steps=dify_config.WORKFLOW_MAX_EXECUTION_STEPS,
-            max_execution_time=dify_config.WORKFLOW_MAX_EXECUTION_TIME,
+            max_execution_steps=mlchain_config.WORKFLOW_MAX_EXECUTION_STEPS,
+            max_execution_time=mlchain_config.WORKFLOW_MAX_EXECUTION_TIME,
             thread_pool_id=self.thread_pool_id,
         )
 

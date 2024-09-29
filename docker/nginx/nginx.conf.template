@@ -1,4 +1,4 @@
-# Please do not directly edit this file. Instead, modify the .env variables related to NGINX configuration.
+# Please do not directly edit this file. Instead,  modify the .env variables related to NGINX configuration.
 
 user  nginx;
 worker_processes  ${NGINX_WORKER_PROCESSES};

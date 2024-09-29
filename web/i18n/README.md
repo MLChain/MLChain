@@ -37,7 +37,7 @@ This directory contains the internationalization (i18n) files for this project.
 
 We use English as the default language. The i18n files are organized by language and then by module. For example, the English translation for the `app` module is in `en-US/app.ts`.
 
-If you want to add a new language or modify an existing translation, you can create a new file for the language or modify the existing file. The file name should be the language code (e.g., `zh-CN` for Chinese) and the file extension should be `.ts`.
+If you want to add a new language or  modify an existing translation, you can create a new file for the language or  modify the existing file. The file name should be the language code (e.g., `zh-CN` for Chinese) and the file extension should be `.ts`.
 
 For example, if you want to add french translation, you can create a new folder `fr-FR` and add the translation files in it.
 
@@ -80,79 +80,79 @@ export const languages = [
   {
     value: 'en-US',
     name: 'English(United States)',
-    example: 'Hello, Dify!',
+    example: 'Hello, Mlchain!',
     supported: true,
   },
   {
     value: 'zh-Hans',
     name: '简体中文',
-    example: '你好，Dify！',
+    example: '你好，Mlchain！',
     supported: true,
   },
   {
     value: 'pt-BR',
     name: 'Português(Brasil)',
-    example: 'Olá, Dify!',
+    example: 'Olá, Mlchain!',
     supported: true,
   },
   {
     value: 'es-ES',
     name: 'Español(España)',
-    example: 'Saluton, Dify!',
+    example: 'Saluton, Mlchain!',
     supported: false,
   },
   {
     value: 'fr-FR',
     name: 'Français(France)',
-    example: 'Bonjour, Dify!',
+    example: 'Bonjour, Mlchain!',
     supported: false,
   },
   {
     value: 'de-DE',
     name: 'Deutsch(Deutschland)',
-    example: 'Hallo, Dify!',
+    example: 'Hallo, Mlchain!',
     supported: false,
   },
   {
     value: 'ja-JP',
     name: '日本語(日本)',
-    example: 'こんにちは、Dify!',
+    example: 'こんにちは、Mlchain!',
     supported: false,
   },
   {
     value: 'ko-KR',
     name: '한국어(대한민국)',
-    example: '안녕, Dify!',
+    example: '안녕, Mlchain!',
     supported: true,
   },
   {
     value: 'ru-RU',
     name: 'Русский(Россия)',
-    example: ' Привет, Dify!',
+    example: ' Привет, Mlchain!',
     supported: false,
   },
   {
     value: 'it-IT',
     name: 'Italiano(Italia)',
-    example: 'Ciao, Dify!',
+    example: 'Ciao, Mlchain!',
     supported: false,
   },
   {
     value: 'th-TH',
     name: 'ไทย(ประเทศไทย)',
-    example: 'สวัสดี Dify!',
+    example: 'สวัสดี Mlchain!',
     supported: false,
   },
   {
     value: 'id-ID',
     name: 'Bahasa Indonesia',
-    example: 'Saluto, Dify!',
+    example: 'Saluto, Mlchain!',
     supported: false,
   },
   {
     value: 'uk-UA',
     name: 'Українська(Україна)',
-    example: 'Привет, Dify!',
+    example: 'Привет, Mlchain!',
     supported: true,
   },
   // Add your language here 👇
@@ -164,7 +164,7 @@ export const languages = [
 5. Don't forget to mark the supported field as `true` if the language is supported.
 
 6. Sometime you might need to do some changes in the server side. Please change this file as well. 👇
-https://github.com/mlchain/dify/blob/61e4bbabaf2758354db4073cbea09fdd21a5bec1/api/constants/languages.py#L5
+https://github.com/mlchain/mlchain/blob/61e4bbabaf2758354db4073cbea09fdd21a5bec1/api/constants/languages.py#L5
 
 
 

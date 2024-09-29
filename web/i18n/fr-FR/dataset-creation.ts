@@ -60,7 +60,7 @@ const translation = {
       preview: 'Aperçu',
       crawlSubPage: 'Explorer les sous-pages',
       configure: 'Configurer',
-      firecrawlDocLink: 'https://docs.dify.ai/guides/knowledge-base/sync-from-website',
+      firecrawlDocLink: 'https://docs-mlchain.khulnasoft.com/guides/knowledge-base/sync-from-website',
       maxDepth: 'Profondeur maximale',
       fireCrawlNotConfigured: 'Firecrawl n’est pas configuré',
       firecrawlTitle: 'Extraire du contenu web avec 🔥Firecrawl',

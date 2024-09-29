@@ -4,14 +4,14 @@ require 'vendor/autoload.php';
 
 use GuzzleHttp\Client;
 
-class DifyClient {
+class MlchainClient {
     protected $api_key;
     protected $base_url;
     protected $client;
 
     public function __construct($api_key, $base_url = null) {
         $this->api_key = $api_key;
-        $this->base_url = $base_url ?? "https://api.dify.ai/v1/";
+        $this->base_url = $base_url ?? "https://api-mlchain.khulnasoft.com/v1/";
         $this->client = new Client([
             'base_uri' => $this->base_url,
             'headers' => [
@@ -101,7 +101,7 @@ class DifyClient {
     }
 }
 
-class CompletionClient extends DifyClient {
+class CompletionClient extends MlchainClient {
     public function create_completion_message($inputs, $response_mode, $user, $files = null) {
         $data = [
             'inputs' => $inputs,
@@ -113,7 +113,7 @@ class CompletionClient extends DifyClient {
     }
 }
 
-class ChatClient extends DifyClient {
+class ChatClient extends MlchainClient {
     public function create_chat_message($inputs, $query, $user, $response_mode = 'blocking', $conversation_id = null, $files = null) {
         $data = [
             'inputs' => $inputs,
@@ -196,7 +196,7 @@ class ChatClient extends DifyClient {
 
 }
 
-class WorkflowClient extends DifyClient{
+class WorkflowClient extends MlchainClient{
     public function run($inputs, $response_mode, $user) {
         $data = [
             'inputs' => $inputs,

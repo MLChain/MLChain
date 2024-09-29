@@ -6,7 +6,7 @@ from pydantic import BaseModel, model_validator
 from pymilvus import MilvusClient, MilvusException
 from pymilvus.milvus_client import IndexParams
 
-from configs import dify_config
+from configs import Mlchain_config
 from core.rag.datasource.entity.embedding import Embeddings
 from core.rag.datasource.vdb.field import Field
 from core.rag.datasource.vdb.vector_base import BaseVector
@@ -217,10 +217,10 @@ class MilvusVectorFactory(AbstractVectorFactory):
         return MilvusVector(
             collection_name=collection_name,
             config=MilvusConfig(
-                uri=dify_config.MILVUS_URI,
-                token=dify_config.MILVUS_TOKEN,
-                user=dify_config.MILVUS_USER,
-                password=dify_config.MILVUS_PASSWORD,
-                database=dify_config.MILVUS_DATABASE,
+                uri=mlchain_config.MILVUS_URI,
+                token=mlchain_config.MILVUS_TOKEN,
+                user=mlchain_config.MILVUS_USER,
+                password=mlchain_config.MILVUS_PASSWORD,
+                database=mlchain_config.MILVUS_DATABASE,
             ),
         )

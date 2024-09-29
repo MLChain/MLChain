@@ -12,7 +12,7 @@ const translation = {
   datasetDeleted: 'دانش حذف شد',
   datasetDeleteFailed: 'حذف دانش ناموفق بود',
   didYouKnow: 'آیا می‌دانستید؟',
-  intro1: 'دانش می‌تواند در برنامه Dify ',
+  intro1: 'دانش می‌تواند در برنامه Mlchain ',
   intro2: 'به عنوان یک زمینه',
   intro3: 'ادغام شود',
   intro4: 'یا می‌تواند ',

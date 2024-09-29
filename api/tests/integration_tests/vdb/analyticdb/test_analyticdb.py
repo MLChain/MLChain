@@ -17,8 +17,8 @@ class AnalyticdbVectorTest(AbstractVectorTest):
                 instance_id="test_id",
                 account="test_account",
                 account_password="test_passwd",
-                namespace="difytest_namespace",
-                collection="difytest_collection",
+                namespace="mlchaintest_namespace",
+                collection="mlchaintest_collection",
                 namespace_password="test_passwd",
             ),
         )

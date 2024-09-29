@@ -26,7 +26,7 @@ class SerplyApi:
             "X-API-KEY": self.serply_api_key,
             "X-User-Agent": kwargs.get("device", "desktop"),
             "X-Proxy-Location": location,
-            "User-Agent": "Dify",
+            "User-Agent": "Mlchain",
         }
 
         url = f"{self.base_url}{urlencode(params)}"

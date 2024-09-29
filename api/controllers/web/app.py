@@ -1,6 +1,6 @@
 from flask_restful import fields, marshal_with
 
-from configs import dify_config
+from configs import Mlchain_config
 from controllers.web import api
 from controllers.web.error import AppUnavailableError
 from controllers.web.wraps import WebApiResource
@@ -80,7 +80,7 @@ class AppParameterApi(WebApiResource):
                     }
                 },
             ),
-            "system_parameters": {"image_file_size_limit": dify_config.UPLOAD_IMAGE_FILE_SIZE_LIMIT},
+            "system_parameters": {"image_file_size_limit": Mlchain_config.UPLOAD_IMAGE_FILE_SIZE_LIMIT},
         }
 
 

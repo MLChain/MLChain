@@ -1,6 +1,6 @@
 ## README for docker Deployment
 
-Welcome to the new `docker` directory for deploying Dify using Docker Compose. This README outlines the updates, deployment instructions, and migration details for existing users.
+Welcome to the new `docker` directory for deploying Mlchain using Docker Compose. This README outlines the updates, deployment instructions, and migration details for existing users.
 
 ### What's Updated
 
@@ -16,7 +16,7 @@ Welcome to the new `docker` directory for deploying Dify using Docker Compose. T
 - **Mandatory .env File**: A `.env` file is now required to run `docker compose up`. This file is crucial for configuring your deployment and for any custom settings to persist through upgrades.
 - **Legacy Support**: Previous deployment files are now located in the `docker-legacy` directory and will no longer be maintained.
 
-### How to Deploy Dify with `docker-compose.yaml`
+### How to Deploy Mlchain with `docker-compose.yaml`
 
 1. **Prerequisites**: Ensure Docker and Docker Compose are installed on your system.
 2. **Environment Setup**:
@@ -29,7 +29,7 @@ Welcome to the new `docker` directory for deploying Dify using Docker Compose. T
 4. **SSL Certificate Setup**:
     - Rrefer `docker/certbot/README.md` to set up SSL certificates using Certbot.
 
-### How to Deploy Middleware for Developing Dify
+### How to Deploy Middleware for Developing Mlchain
 
 1. **Middleware Setup**:
     - Use the `docker-compose.middleware.yaml` for setting up essential middleware services like databases and caches.

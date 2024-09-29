@@ -9,7 +9,7 @@ from typing import Any, Optional
 from sqlalchemy import func
 from werkzeug.exceptions import Unauthorized
 
-from configs import dify_config
+from configs import Mlchain_config
 from constants.languages import language_timezone_mapping, languages
 from events.tenant_event import tenant_was_created
 from extensions.ext_redis import redis_client
@@ -18,7 +18,7 @@ from libs.passport import PassportService
 from libs.password import compare_password, hash_password, valid_password
 from libs.rsa import generate_key_pair
 from models.account import *
-from models.model import DifySetup
+from models.model import MlchainSetup
 from services.errors.account import (
     AccountAlreadyInTenantError,
     AccountLoginError,
@@ -77,7 +77,7 @@ class AccountService:
         payload = {
             "user_id": account.id,
             "exp": datetime.now(timezone.utc).replace(tzinfo=None) + exp,
-            "iss": dify_config.EDITION,
+            "iss": Mlchain_config.EDITION,
             "sub": "Console API Passport",
         }
 
@@ -495,7 +495,7 @@ class RegisterService:
     @classmethod
     def setup(cls, email: str, name: str, password: str, ip_address: str) -> None:
         """
-        Setup dify
+        Setup Mlchain
 
         :param email: email
         :param name: username
@@ -516,11 +516,11 @@ class RegisterService:
 
             TenantService.create_owner_tenant_if_not_exist(account)
 
-            dify_setup = DifySetup(version=dify_config.CURRENT_VERSION)
-            db.session.add(dify_setup)
+            Mlchain_setup = MlchainSetup(version=mlchain_config.CURRENT_VERSION)
+            db.session.add(mlchain_setup)
             db.session.commit()
         except Exception as e:
-            db.session.query(DifySetup).delete()
+            db.session.query(MlchainSetup).delete()
             db.session.query(TenantAccountJoin).delete()
             db.session.query(Account).delete()
             db.session.query(Tenant).delete()
@@ -551,7 +551,7 @@ class RegisterService:
 
             if open_id is not None or provider is not None:
                 AccountService.link_account_integrate(provider, open_id, account)
-            if dify_config.EDITION != "SELF_HOSTED":
+            if Mlchain_config.EDITION != "SELF_HOSTED":
                 tenant = TenantService.create_tenant(f"{account.name}'s Workspace")
 
                 TenantService.create_tenant_member(tenant, account, role="owner")
@@ -600,7 +600,7 @@ class RegisterService:
             language=account.interface_language,
             to=email,
             token=token,
-            inviter_name=inviter.name if inviter else "Dify",
+            inviter_name=inviter.name if inviter else "Mlchain",
             workspace_name=tenant.name,
         )
 
@@ -614,7 +614,7 @@ class RegisterService:
             "email": account.email,
             "workspace_id": tenant.id,
         }
-        expiry_hours = dify_config.INVITE_EXPIRY_HOURS
+        expiry_hours = Mlchain_config.INVITE_EXPIRY_HOURS
         redis_client.setex(cls._get_invitation_token_key(token), expiry_hours * 60 * 60, json.dumps(invitation_data))
         return token
 

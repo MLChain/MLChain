@@ -5,12 +5,12 @@ from pydantic_settings import BaseSettings
 class EnterpriseFeatureConfig(BaseSettings):
     """
     Configuration for enterprise-level features.
-    **Before using, please contact business@dify.ai by email to inquire about licensing matters.**
+    **Before using, please contact business@mlchain.khulnasoft.com by email to inquire about licensing matters.**
     """
 
     ENTERPRISE_ENABLED: bool = Field(
         description="Enable or disable enterprise-level features."
-        "Before using, please contact business@dify.ai by email to inquire about licensing matters.",
+        "Before using, please contact business@mlchain.khulnasoft.com by email to inquire about licensing matters.",
         default=False,
     )
 

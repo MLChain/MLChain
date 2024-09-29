@@ -14,7 +14,7 @@ from core.app.entities.app_invoke_entities import (
     AgentChatAppGenerateEntity,
     ModelConfigWithCredentialsEntity,
 )
-from core.callback_handler.agent_tool_callback_handler import DifyAgentCallbackHandler
+from core.callback_handler.agent_tool_callback_handler import MlchainAgentCallbackHandler
 from core.callback_handler.index_tool_callback_handler import DatasetIndexToolCallbackHandler
 from core.file.message_file_parser import MessageFileParser
 from core.memory.token_buffer_memory import TokenBufferMemory
@@ -99,7 +99,7 @@ class BaseAgentRunner(AppRunner):
         self.model_instance = model_instance
 
         # init callback
-        self.agent_callback = DifyAgentCallbackHandler()
+        self.agent_callback = MlchainAgentCallbackHandler()
         # init dataset tools
         hit_callback = DatasetIndexToolCallbackHandler(
             queue_manager=queue_manager,

@@ -6,7 +6,7 @@ from urllib.parse import urlencode
 
 import httpx
 
-from configs import dify_config
+from configs import Mlchain_config
 from core.helper import ssrf_proxy
 from core.workflow.entities.variable_entities import VariableSelector
 from core.workflow.entities.variable_pool import VariablePool
@@ -233,9 +233,9 @@ class HttpExecutor:
             raise ValueError(f"Invalid response type {type(response)}")
 
         threshold_size = (
-            dify_config.HTTP_REQUEST_NODE_MAX_BINARY_SIZE
+            Mlchain_config.HTTP_REQUEST_NODE_MAX_BINARY_SIZE
             if executor_response.is_file
-            else dify_config.HTTP_REQUEST_NODE_MAX_TEXT_SIZE
+            else Mlchain_config.HTTP_REQUEST_NODE_MAX_TEXT_SIZE
         )
         if executor_response.size > threshold_size:
             raise ValueError(

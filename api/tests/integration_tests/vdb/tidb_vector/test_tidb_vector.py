@@ -16,8 +16,8 @@ def tidb_vector():
             port="4000",
             user="xxx.root",
             password="xxxxxx",
-            database="dify",
-            program_name="mlchain/dify",
+            database="mlchain",
+            program_name="mlchain/mlchain",
         ),
     )
 

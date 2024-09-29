@@ -64,7 +64,7 @@ const translation = {
       firecrawlTitle: 'Extrageți conținut web cu 🔥Firecrawl',
       unknownError: 'Eroare necunoscută',
       scrapTimeInfo: 'Pagini răzuite {{total}} în total în {{timp}}s',
-      firecrawlDocLink: 'https://docs.dify.ai/guides/knowledge-base/sync-from-website',
+      firecrawlDocLink: 'https://docs-mlchain.khulnasoft.com/guides/knowledge-base/sync-from-website',
       excludePaths: 'Excluderea căilor',
       resetAll: 'Resetați toate',
       extractOnlyMainContent: 'Extrageți doar conținutul principal (fără anteturi, navigări, subsoluri etc.)',

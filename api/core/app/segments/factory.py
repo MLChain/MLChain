@@ -1,7 +1,7 @@
 from collections.abc import Mapping
 from typing import Any
 
-from configs import dify_config
+from configs import Mlchain_config
 
 from .exc import VariableError
 from .segments import (
@@ -55,8 +55,8 @@ def build_variable_from_mapping(mapping: Mapping[str, Any], /) -> Variable:
             result = ArrayObjectVariable.model_validate(mapping)
         case _:
             raise VariableError(f"not supported value type {value_type}")
-    if result.size > dify_config.MAX_VARIABLE_SIZE:
-        raise VariableError(f"variable size {result.size} exceeds limit {dify_config.MAX_VARIABLE_SIZE}")
+    if result.size > Mlchain_config.MAX_VARIABLE_SIZE:
+        raise VariableError(f"variable size {result.size} exceeds limit {mlchain_config.MAX_VARIABLE_SIZE}")
     return result
 
 

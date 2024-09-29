@@ -31,7 +31,7 @@ def print_text(text: str, color: Optional[str] = None, end: str = "", file: Opti
         file.flush()  # ensure all printed content are written to file
 
 
-class DifyAgentCallbackHandler(BaseModel):
+class MlchainAgentCallbackHandler(BaseModel):
     """Callback Handler that prints to std out."""
 
     color: Optional[str] = ""

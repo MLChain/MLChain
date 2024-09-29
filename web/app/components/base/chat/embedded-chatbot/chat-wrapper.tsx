@@ -9,7 +9,7 @@ import { useChat } from '../chat/hooks'
 import { getLastAnswer } from '../utils'
 import { useEmbeddedChatbotContext } from './context'
 import ConfigPanel from './config-panel'
-import { isDify } from './utils'
+import { isMlchain } from './utils'
 import cn from '@/utils/classnames'
 import {
   fetchSuggestedQuestions,
@@ -138,7 +138,7 @@ const ChatWrapper = () => {
     return null
   }, [currentConversationId, inputsForms, isMobile])
 
-  const answerIcon = isDify()
+  const answerIcon = isMlchain()
     ? <LogoAvatar className='relative shrink-0' />
     : (appData?.site && appData.site.use_icon_as_answer_icon)
       ? <AnswerIcon

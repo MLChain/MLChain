@@ -284,7 +284,7 @@ However, some vendors may support different parameters for different models. For
 
 - Exception Error Mapping
 
-When a model invocation error occurs, it should be mapped to the runtime's specified `InvokeError` type, enabling Dify to handle different errors appropriately.
+When a model invocation error occurs, it should be mapped to the runtime's specified `InvokeError` type, enabling Mlchain to handle different errors appropriately.
 
 Runtime Errors:
 
@@ -307,4 +307,4 @@ Runtime Errors:
       """
 ```
 
-For interface method details, see: [Interfaces](./interfaces.md). For specific implementations, refer to: [llm.py](https://github.com/mlchain/dify-runtime/blob/main/lib/model_providers/anthropic/llm/llm.py).
+For interface method details, see: [Interfaces](./interfaces.md). For specific implementations, refer to: [llm.py](https://github.com/mlchain/mlchain-runtime/blob/main/lib/model_providers/anthropic/llm/llm.py).

@@ -21,7 +21,7 @@ else if (
 }
 else {
   // const domainParts = globalThis.location?.host?.split('.');
-  // in production env, the host is dify.app . In other env, the host is [dev].dify.app
+  // in production env, the host is Mlchain.app . In other env, the host is [dev].mlchain.khulnasoft.com
   // const env = domainParts.length === 2 ? 'ai' : domainParts?.[0];
   apiPrefix = 'http://localhost:5001/console/api'
   publicApiPrefix = 'http://localhost:5001/api' // avoid browser private mode api cross origin

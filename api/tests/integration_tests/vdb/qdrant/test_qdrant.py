@@ -14,7 +14,7 @@ class QdrantVectorTest(AbstractVectorTest):
             group_id=self.dataset_id,
             config=QdrantConfig(
                 endpoint="http://localhost:6333",
-                api_key="difyai123456",
+                api_key="mlchainai123456",
             ),
         )
 

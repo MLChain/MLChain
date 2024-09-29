@@ -1,20 +1,20 @@
-Dify にコントリビュートしたいとお考えなのですね。それは素晴らしいことです。
+Mlchain にコントリビュートしたいとお考えなのですね。それは素晴らしいことです。
 私たちは、LLM アプリケーションの構築と管理のための最も直感的なワークフローを設計するという壮大な野望を持っています。人数も資金も限られている新興企業として、コミュニティからの支援は本当に重要です。
 
 私たちは現状を鑑み、機敏かつ迅速に開発をする必要がありますが、同時にあなた様のようなコントリビューターの方々に、可能な限りスムーズな貢献体験をしていただきたいと思っています。そのためにこのコントリビュートガイドを作成しました。
 コードベースやコントリビュータの方々と私たちがどのように仕事をしているのかに慣れていただき、楽しいパートにすぐに飛び込めるようにすることが目的です。
 
-このガイドは Dify そのものと同様に、継続的に改善されています。実際のプロジェクトに遅れをとることがあるかもしれませんが、ご理解のほどよろしくお願いいたします。
+このガイドは Mlchain そのものと同様に、継続的に改善されています。実際のプロジェクトに遅れをとることがあるかもしれませんが、ご理解のほどよろしくお願いいたします。
 
 ライセンスに関しては、私たちの短い[ライセンスおよびコントリビューター規約](./LICENSE)をお読みください。また、コミュニティは[行動規範](https://github.com/mlchain/.github/blob/main/CODE_OF_CONDUCT.md)を遵守しています。
 
 ## 飛び込む前に
 
-[既存の Issue](https://github.com/mlchain/dify/issues?q=is:issue+is:open) を探すか、[新しい Issue](https://github.com/mlchain/dify/issues/new/choose) を作成してください。私たちは Issue を 2 つのタイプに分類しています。
+[既存の Issue](https://github.com/mlchain/mlchain/issues?q=is:issue+is:open) を探すか、[新しい Issue](https://github.com/mlchain/mlchain/issues/new/choose) を作成してください。私たちは Issue を 2 つのタイプに分類しています。
 
 ### 機能リクエスト
 
-* 新しい機能要望を出す場合は、提案する機能が何を実現するものなのかを説明し、可能な限り多くのコンテキストを含めてください。[@perzeusss](https://github.com/perzeuss)は、あなた様の要望を書き出すのに役立つ [Feature Request Copilot](https://udify.app/chat/MK2kVSnw1gakVwMX) を作ってくれました。気軽に試してみてください。
+* 新しい機能要望を出す場合は、提案する機能が何を実現するものなのかを説明し、可能な限り多くのコンテキストを含めてください。[@perzeusss](https://github.com/perzeuss)は、あなた様の要望を書き出すのに役立つ [Feature Request Copilot](https://mlchain.khulnasoft.com/chat/MK2kVSnw1gakVwMX) を作ってくれました。気軽に試してみてください。
 
 * 既存の課題から 1 つ選びたい場合は、その下にコメントを書いてください。
 
@@ -36,7 +36,7 @@ Dify にコントリビュートしたいとお考えなのですね。それは
 | Feature Type                                                                                                          | Priority        |
 | --------------------------------------------------------------------------------------------------------------------- | --------------- |
 | チームメンバーによってラベル付けされた優先度の高い機能                                                                | High Priority   |
-| [community feedback board](https://github.com/mlchain/dify/discussions/categories/feedbacks)の人気の機能リクエスト | Medium Priority |
+| [community feedback board](https://github.com/mlchain/mlchain/discussions/categories/feedbacks)の人気の機能リクエスト | Medium Priority |
 | 非コア機能とマイナーな機能強化                                                                                        | Low Priority    |
 | 価値はあるが即効性はない                                                                                              | Future-Feature  |
 
@@ -54,7 +54,7 @@ Dify にコントリビュートしたいとお考えなのですね。それは
 
 ## インストール
 
-以下の手順で 、Difyのセットアップをしてください。
+以下の手順で 、Mlchainのセットアップをしてください。
 
 ### 1. このリポジトリをフォークする
 
@@ -63,12 +63,12 @@ Dify にコントリビュートしたいとお考えなのですね。それは
 フォークしたリポジトリをターミナルからクローンします。
 
 ```
-git clone git@github.com:<github_username>/dify.git
+git clone git@github.com:<github_username>/mlchain.git
 ```
 
 ### 3. 依存関係の確認
 
-Dify を構築するには次の依存関係が必要です。それらがシステムにインストールされていることを確認してください。
+Mlchain を構築するには次の依存関係が必要です。それらがシステムにインストールされていることを確認してください。
 
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
@@ -78,27 +78,27 @@ Dify を構築するには次の依存関係が必要です。それらがシス
 
 ### 4. インストール
 
-Dify はバックエンドとフロントエンドから構成されています。
+Mlchain はバックエンドとフロントエンドから構成されています。
 まず`cd api/`でバックエンドのディレクトリに移動し、[Backend README](api/README.md)に従ってインストールします。
 次に別のターミナルで、`cd web/`でフロントエンドのディレクトリに移動し、[Frontend README](web/README.md)に従ってインストールしてください。
 
-よくある問題とトラブルシューティングの手順については、[installation FAQ](https://docs.dify.ai/v/japanese/learn-more/faq/install-faq) を確認してください。
+よくある問題とトラブルシューティングの手順については、[installation FAQ](https://docs-mlchain.khulnasoft.com/v/japanese/learn-more/faq/install-faq) を確認してください。
 
-### 5. ブラウザで dify にアクセスする
+### 5. ブラウザで Mlchain にアクセスする
 
-設定を確認するために、ブラウザで[http://localhost:3000](http://localhost:3000)(デフォルト、または自分で設定した URL とポート)にアクセスしてください。Dify が起動して実行中であることが確認できるはずです。
+設定を確認するために、ブラウザで[http://localhost:3000](http://localhost:3000)(デフォルト、または自分で設定した URL とポート)にアクセスしてください。Mlchain が起動して実行中であることが確認できるはずです。
 
 ## 開発中
 
-モデルプロバイダーを追加する場合は、[このガイド](https://github.com/mlchain/dify/blob/main/api/core/model_runtime/README.md)が役立ちます。
+モデルプロバイダーを追加する場合は、[このガイド](https://github.com/mlchain/mlchain/blob/main/api/core/model_runtime/README.md)が役立ちます。
 
 Agent や Workflow にツールプロバイダーを追加する場合は、[このガイド](./api/core/tools/README.md)が役立ちます。
 
-Dify のバックエンドとフロントエンドの概要を簡単に説明します。
+Mlchain のバックエンドとフロントエンドの概要を簡単に説明します。
 
 ### バックエンド
 
-Dify のバックエンドは[Flask](https://flask.palletsprojects.com/en/3.0.x/)を使って Python で書かれています。ORM には[SQLAlchemy](https://www.sqlalchemy.org/)を、タスクキューには[Celery](https://docs.celeryq.dev/en/stable/getting-started/introduction.html)を使っています。認証ロジックは Flask-login 経由で行われます。
+Mlchain のバックエンドは[Flask](https://flask.palletsprojects.com/en/3.0.x/)を使って Python で書かれています。ORM には[SQLAlchemy](https://www.sqlalchemy.org/)を、タスクキューには[Celery](https://docs.celeryq.dev/en/stable/getting-started/introduction.html)を使っています。認証ロジックは Flask-login 経由で行われます。
 
 ```
 [api/]
@@ -153,7 +153,7 @@ Dify のバックエンドは[Flask](https://flask.palletsprojects.com/en/3.0.x/
 いよいよ、私たちのリポジトリにプルリクエスト (PR) を提出する時が来ました。主要な機能については、まず `deploy/dev` ブランチにマージしてテストしてから `main` ブランチにマージします。
 マージ競合などの問題が発生した場合、またはプル リクエストを開く方法がわからない場合は、[GitHub's pull request tutorial](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests) をチェックしてみてください。
 
-これで完了です！あなた様の PR がマージされると、[README](https://github.com/mlchain/dify/blob/main/README.md) にコントリビューターとして紹介されます。
+これで完了です！あなた様の PR がマージされると、[README](https://github.com/mlchain/mlchain/blob/main/README.md) にコントリビューターとして紹介されます。
 
 ## ヘルプを得る
 

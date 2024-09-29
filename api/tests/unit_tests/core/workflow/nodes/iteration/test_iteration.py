@@ -148,7 +148,7 @@ def test_run():
     # construct variable pool
     pool = VariablePool(
         system_variables={
-            SystemVariableKey.QUERY: "dify",
+            SystemVariableKey.QUERY: "mlchain",
             SystemVariableKey.FILES: [],
             SystemVariableKey.CONVERSATION_ID: "abababa",
             SystemVariableKey.USER_ID: "1",
@@ -156,7 +156,7 @@ def test_run():
         user_inputs={},
         environment_variables=[],
     )
-    pool.add(["pe", "list_output"], ["dify-1", "dify-2"])
+    pool.add(["pe", "list_output"], ["mlchain-1", "mlchain-2"])
 
     iteration_node = IterationNode(
         id=str(uuid.uuid4()),
@@ -180,8 +180,8 @@ def test_run():
     def tt_generator(self):
         return NodeRunResult(
             status=WorkflowNodeExecutionStatus.SUCCEEDED,
-            inputs={"iterator_selector": "dify"},
-            outputs={"output": "dify 123"},
+            inputs={"iterator_selector": "mlchain"},
+            outputs={"output": "mlchain 123"},
         )
 
     # print("")
@@ -196,7 +196,7 @@ def test_run():
             count += 1
             if isinstance(item, RunCompletedEvent):
                 assert item.run_result.status == WorkflowNodeExecutionStatus.SUCCEEDED
-                assert item.run_result.outputs == {"output": ["dify 123", "dify 123"]}
+                assert item.run_result.outputs == {"output": ["mlchain 123", "mlchain 123"]}
 
         assert count == 20
 
@@ -367,7 +367,7 @@ def test_run_parallel():
     # construct variable pool
     pool = VariablePool(
         system_variables={
-            SystemVariableKey.QUERY: "dify",
+            SystemVariableKey.QUERY: "mlchain",
             SystemVariableKey.FILES: [],
             SystemVariableKey.CONVERSATION_ID: "abababa",
             SystemVariableKey.USER_ID: "1",
@@ -375,7 +375,7 @@ def test_run_parallel():
         user_inputs={},
         environment_variables=[],
     )
-    pool.add(["pe", "list_output"], ["dify-1", "dify-2"])
+    pool.add(["pe", "list_output"], ["mlchain-1", "mlchain-2"])
 
     iteration_node = IterationNode(
         id=str(uuid.uuid4()),
@@ -399,8 +399,8 @@ def test_run_parallel():
     def tt_generator(self):
         return NodeRunResult(
             status=WorkflowNodeExecutionStatus.SUCCEEDED,
-            inputs={"iterator_selector": "dify"},
-            outputs={"output": "dify 123"},
+            inputs={"iterator_selector": "mlchain"},
+            outputs={"output": "mlchain 123"},
         )
 
     # print("")
@@ -415,6 +415,6 @@ def test_run_parallel():
             count += 1
             if isinstance(item, RunCompletedEvent):
                 assert item.run_result.status == WorkflowNodeExecutionStatus.SUCCEEDED
-                assert item.run_result.outputs == {"output": ["dify 123", "dify 123"]}
+                assert item.run_result.outputs == {"output": ["mlchain 123", "mlchain 123"]}
 
         assert count == 32

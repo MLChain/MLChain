@@ -1,7 +1,7 @@
 # Variables
 DOCKER_REGISTRY=mlchain
-WEB_IMAGE=$(DOCKER_REGISTRY)/dify-web
-API_IMAGE=$(DOCKER_REGISTRY)/dify-api
+WEB_IMAGE=$(DOCKER_REGISTRY)/mlchain-web
+API_IMAGE=$(DOCKER_REGISTRY)/mlchain-api
 VERSION=latest
 
 # Build Docker images

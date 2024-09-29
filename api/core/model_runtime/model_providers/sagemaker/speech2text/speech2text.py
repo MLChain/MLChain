@@ -63,7 +63,7 @@ class SageMakerSpeech2TextModel(Speech2TextModel):
                     self.sagemaker_client = boto3.client("sagemaker-runtime")
                     self.s3_client = boto3.client("s3")
 
-            s3_prefix = "dify/speech2text/"
+            s3_prefix = "mlchain/speech2text/"
             sagemaker_endpoint = credentials.get("sagemaker_endpoint")
             bucket = credentials.get("audio_s3_cache_bucket")
 

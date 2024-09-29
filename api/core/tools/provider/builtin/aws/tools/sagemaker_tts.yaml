@@ -8,10 +8,10 @@ identity:
   icon: icon.svg
 description:
   human:
-    en_US: A tool for Speech synthesis - https://github.com/aws-samples/dify-aws-tool
-    zh_Hans: Sagemaker语音合成工具, 请参考 Github Repo - https://github.com/aws-samples/dify-aws-tool上的部署脚本
+    en_US: A tool for Speech synthesis - https://github.com/aws-samples/mlchain-aws-tool
+    zh_Hans: Sagemaker语音合成工具, 请参考 Github Repo - https://github.com/aws-samples/mlchain-aws-tool上的部署脚本
     pt_BR: A tool for Speech synthesis.
-  llm: A tool for Speech synthesis. You can find deploy notebook on Github Repo - https://github.com/aws-samples/dify-aws-tool
+  llm: A tool for Speech synthesis. You can find deploy notebook on Github Repo - https://github.com/aws-samples/mlchain-aws-tool
 parameters:
   - name: sagemaker_endpoint
     type: string

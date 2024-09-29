@@ -2,11 +2,11 @@ import os
 import time
 import unittest
 
-from dify_client.client import ChatClient, CompletionClient, DifyClient, KnowledgeBaseClient
+from Mlchain_client.client import ChatClient, CompletionClient, MlchainClient, KnowledgeBaseClient
 
 API_KEY = os.environ.get("API_KEY")
 APP_ID = os.environ.get("APP_ID")
-API_BASE_URL = os.environ.get("API_BASE_URL", "https://api.dify.ai/v1")
+API_BASE_URL = os.environ.get("API_BASE_URL", "https://api-mlchain.khulnasoft.com/v1")
 FILE_PATH_BASE = os.path.dirname(__file__)
 
 
@@ -219,16 +219,16 @@ class TestCompletionClient(unittest.TestCase):
         self.assertIn("answer", response.text)
 
 
-class TestDifyClient(unittest.TestCase):
+class TestMlchainClient(unittest.TestCase):
     def setUp(self):
-        self.dify_client = DifyClient(API_KEY)
+        self.mlchain_client = MlchainClient(API_KEY)
 
     def test_message_feedback(self):
-        response = self.dify_client.message_feedback("your_message_id", 'like', "test_user")
+        response = self.mlchain_client.message_feedback("your_message_id", 'like', "test_user")
         self.assertIn("success", response.text)
 
     def test_get_application_parameters(self):
-        response = self.dify_client.get_application_parameters("test_user")
+        response = self.mlchain_client.get_application_parameters("test_user")
         self.assertIn("user_input_form", response.text)
 
     def test_file_upload(self):
@@ -240,7 +240,7 @@ class TestDifyClient(unittest.TestCase):
             files = {
                 "file": (file_name, file, mime_type)
             }
-            response = self.dify_client.file_upload("test_user", files)
+            response = self.mlchain_client.file_upload("test_user", files)
             self.assertIn("name", response.text)
 
 

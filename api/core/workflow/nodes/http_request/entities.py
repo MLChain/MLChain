@@ -2,7 +2,7 @@ from typing import Literal, Optional, Union
 
 from pydantic import BaseModel, ValidationInfo, field_validator
 
-from configs import dify_config
+from configs import Mlchain_config
 from core.workflow.entities.base_node_data_entities import BaseNodeData
 
 
@@ -37,9 +37,9 @@ class HttpRequestNodeBody(BaseModel):
 
 
 class HttpRequestNodeTimeout(BaseModel):
-    connect: int = dify_config.HTTP_REQUEST_MAX_CONNECT_TIMEOUT
-    read: int = dify_config.HTTP_REQUEST_MAX_READ_TIMEOUT
-    write: int = dify_config.HTTP_REQUEST_MAX_WRITE_TIMEOUT
+    connect: int = Mlchain_config.HTTP_REQUEST_MAX_CONNECT_TIMEOUT
+    read: int = Mlchain_config.HTTP_REQUEST_MAX_READ_TIMEOUT
+    write: int = Mlchain_config.HTTP_REQUEST_MAX_WRITE_TIMEOUT
 
 
 class HttpRequestNodeData(BaseNodeData):

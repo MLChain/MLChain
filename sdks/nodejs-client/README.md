@@ -1,16 +1,16 @@
-# Dify Node.js SDK
-This is the Node.js SDK for the Dify API, which allows you to easily integrate Dify into your Node.js applications.
+# Mlchain Node.js SDK
+This is the Node.js SDK for the Mlchain API, which allows you to easily integrate Mlchain into your Node.js applications.
 
 ## Install
 ```bash
-npm install dify-client
+npm install Mlchain-client
 ```
 
 ## Usage
 After installing the SDK, you can use it in your project like this:
 
 ```js
-import { DifyClient, ChatClient, CompletionClient } from 'dify-client'
+import { MlchainClient, ChatClient, CompletionClient } from 'mlchain-client'
 
 const API_KEY = 'your-api-key-here'
 const user = `random-user-id`
@@ -49,7 +49,7 @@ chatClient.getConversationMessages(conversationId, user)
 chatClient.renameConversation(conversationId, name, user)
 
 
-const client = new DifyClient(API_KEY)
+const client = new MlchainClient(API_KEY)
 // Fetch application parameters
 client.getApplicationParameters(user)
 // Provide feedback for a message
@@ -57,7 +57,7 @@ client.messageFeedback(messageId, rating, user)
 
 ```
 
-Replace 'your-api-key-here' with your actual Dify API key.Replace 'your-app-id-here' with your actual Dify APP ID.
+Replace 'your-api-key-here' with your actual Mlchain API key.Replace 'your-app-id-here' with your actual Mlchain APP ID.
 
 ## License
 This SDK is released under the MIT License.

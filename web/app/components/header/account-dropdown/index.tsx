@@ -123,7 +123,7 @@ export default function AppSelector({ isMobile }: IAppSelector) {
                     <Menu.Item>
                       <Link
                         className={classNames(itemClassName, 'group justify-between')}
-                        href='https://github.com/mlchain/dify/discussions/categories/feedbacks'
+                        href='https://github.com/mlchain/mlchain/discussions/categories/feedbacks'
                         target='_blank' rel='noopener noreferrer'>
                         <div>{t('common.userProfile.communityFeedback')}</div>
                         <ArrowUpRight className='hidden w-[14px] h-[14px] text-gray-500 group-hover:flex' />
@@ -142,7 +142,7 @@ export default function AppSelector({ isMobile }: IAppSelector) {
                       <Link
                         className={classNames(itemClassName, 'group justify-between')}
                         href={
-                          locale !== LanguagesSupported[1] ? 'https://docs.dify.ai/' : `https://docs.dify.ai/v/${locale.toLowerCase()}/`
+                          locale !== LanguagesSupported[1] ? 'https://docs-mlchain.khulnasoft.com/' : `https://docs-mlchain.khulnasoft.com/v/${locale.toLowerCase()}/`
                         }
                         target='_blank' rel='noopener noreferrer'>
                         <div>{t('common.userProfile.helpCenter')}</div>
@@ -152,7 +152,7 @@ export default function AppSelector({ isMobile }: IAppSelector) {
                     <Menu.Item>
                       <Link
                         className={classNames(itemClassName, 'group justify-between')}
-                        href='https://roadmap.dify.ai'
+                        href='https://roadmap.mlchain.khulnasoft.com'
                         target='_blank' rel='noopener noreferrer'>
                         <div>{t('common.userProfile.roadmap')}</div>
                         <ArrowUpRight className='hidden w-[14px] h-[14px] text-gray-500 group-hover:flex' />

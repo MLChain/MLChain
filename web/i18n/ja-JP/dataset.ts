@@ -12,7 +12,7 @@ const translation = {
   datasetDeleted: 'ナレッジが削除されました',
   datasetDeleteFailed: 'ナレッジの削除に失敗しました',
   didYouKnow: 'ご存知ですか？',
-  intro1: 'ナレッジはDifyアプリケーションに統合することができます',
+  intro1: 'ナレッジはMlchainアプリケーションに統合することができます',
   intro2: 'コンテキストとして',
   intro3: '、',
   intro4: 'または',

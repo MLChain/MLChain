@@ -3,10 +3,10 @@ from functools import wraps
 from flask import request
 from flask_restful import Resource, reqparse
 
-from configs import dify_config
+from configs import Mlchain_config
 from libs.helper import StrLen, email, get_remote_ip
 from libs.password import valid_password
-from models.model import DifySetup
+from models.model import MlchainSetup
 from services.account_service import RegisterService, TenantService
 
 from . import api
@@ -17,7 +17,7 @@ from .wraps import only_edition_self_hosted
 
 class SetupApi(Resource):
     def get(self):
-        if dify_config.EDITION == "SELF_HOSTED":
+        if Mlchain_config.EDITION == "SELF_HOSTED":
             setup_status = get_setup_status()
             if setup_status:
                 return {"step": "finished", "setup_at": setup_status.setup_at.isoformat()}
@@ -68,8 +68,8 @@ def setup_required(view):
 
 
 def get_setup_status():
-    if dify_config.EDITION == "SELF_HOSTED":
-        return DifySetup.query.first()
+    if Mlchain_config.EDITION == "SELF_HOSTED":
+        return MlchainSetup.query.first()
     else:
         return True
 

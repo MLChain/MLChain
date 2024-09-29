@@ -6,7 +6,7 @@ from os import listdir, path
 from threading import Lock
 from typing import Any, Union
 
-from configs import dify_config
+from configs import Mlchain_config
 from core.agent.entities import AgentToolEntity
 from core.app.entities.app_invoke_entities import InvokeFrom
 from core.helper.module_import_helper import load_single_subclass_from_source
@@ -443,8 +443,8 @@ class ToolManager:
             for provider in builtin_providers:
                 # handle include, exclude
                 if is_filtered(
-                    include_set=dify_config.POSITION_TOOL_INCLUDES_SET,
-                    exclude_set=dify_config.POSITION_TOOL_EXCLUDES_SET,
+                    include_set=mlchain_config.POSITION_TOOL_INCLUDES_SET,
+                    exclude_set=mlchain_config.POSITION_TOOL_EXCLUDES_SET,
                     data=provider,
                     name_func=lambda x: x.identity.name,
                 ):
@@ -611,7 +611,7 @@ class ToolManager:
         provider_id = provider_id
         if provider_type == "builtin":
             return (
-                dify_config.CONSOLE_API_URL
+                Mlchain_config.CONSOLE_API_URL
                 + "/console/api/workspaces/current/tool-provider/builtin/"
                 + provider_id
                 + "/icon"

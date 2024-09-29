@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Union
 from urllib.parse import unquote
 
-from configs import dify_config
+from configs import Mlchain_config
 from core.helper import ssrf_proxy
 from core.rag.extractor.csv_extractor import CSVExtractor
 from core.rag.extractor.entity.datasource_type import DatasourceType
@@ -94,9 +94,9 @@ class ExtractProcessor:
                     storage.download(upload_file.key, file_path)
                 input_file = Path(file_path)
                 file_extension = input_file.suffix.lower()
-                etl_type = dify_config.ETL_TYPE
-                unstructured_api_url = dify_config.UNSTRUCTURED_API_URL
-                unstructured_api_key = dify_config.UNSTRUCTURED_API_KEY
+                etl_type = Mlchain_config.ETL_TYPE
+                unstructured_api_url = Mlchain_config.UNSTRUCTURED_API_URL
+                unstructured_api_key = Mlchain_config.UNSTRUCTURED_API_KEY
                 if etl_type == "Unstructured":
                     if file_extension in {".xlsx", ".xls"}:
                         extractor = ExcelExtractor(file_path)

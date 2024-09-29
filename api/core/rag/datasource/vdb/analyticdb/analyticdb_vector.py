@@ -8,7 +8,7 @@ _import_err_msg = (
     "please run `pip install alibabacloud_gpdb20160503 alibabacloud_tea_openapi`"
 )
 
-from configs import dify_config
+from configs import Mlchain_config
 from core.rag.datasource.entity.embedding import Embeddings
 from core.rag.datasource.vdb.vector_base import BaseVector
 from core.rag.datasource.vdb.vector_factory import AbstractVectorFactory
@@ -25,7 +25,7 @@ class AnalyticdbConfig(BaseModel):
     instance_id: str
     account: str
     account_password: str
-    namespace: str = ("dify",)
+    namespace: str = ("mlchain",)
     namespace_password: str = (None,)
     metrics: str = ("cosine",)
     read_timeout: int = 60000
@@ -48,7 +48,7 @@ class AnalyticdbVector(BaseVector):
         except:
             raise ImportError(_import_err_msg)
         self.config = config
-        self._client_config = open_api_models.Config(user_agent="dify", **config.to_analyticdb_client_params())
+        self._client_config = open_api_models.Config(user_agent="mlchain", **config.to_analyticdb_client_params())
         self._client = Client(self._client_config)
         self._initialize()
 
@@ -314,32 +314,32 @@ class AnalyticdbVectorFactory(AbstractVectorFactory):
             dataset.index_struct = json.dumps(self.gen_index_struct_dict(VectorType.ANALYTICDB, collection_name))
 
         # handle optional params
-        if dify_config.ANALYTICDB_KEY_ID is None:
+        if Mlchain_config.ANALYTICDB_KEY_ID is None:
             raise ValueError("ANALYTICDB_KEY_ID should not be None")
-        if dify_config.ANALYTICDB_KEY_SECRET is None:
+        if Mlchain_config.ANALYTICDB_KEY_SECRET is None:
             raise ValueError("ANALYTICDB_KEY_SECRET should not be None")
-        if dify_config.ANALYTICDB_REGION_ID is None:
+        if Mlchain_config.ANALYTICDB_REGION_ID is None:
             raise ValueError("ANALYTICDB_REGION_ID should not be None")
-        if dify_config.ANALYTICDB_INSTANCE_ID is None:
+        if Mlchain_config.ANALYTICDB_INSTANCE_ID is None:
             raise ValueError("ANALYTICDB_INSTANCE_ID should not be None")
-        if dify_config.ANALYTICDB_ACCOUNT is None:
+        if Mlchain_config.ANALYTICDB_ACCOUNT is None:
             raise ValueError("ANALYTICDB_ACCOUNT should not be None")
-        if dify_config.ANALYTICDB_PASSWORD is None:
+        if Mlchain_config.ANALYTICDB_PASSWORD is None:
             raise ValueError("ANALYTICDB_PASSWORD should not be None")
-        if dify_config.ANALYTICDB_NAMESPACE is None:
+        if Mlchain_config.ANALYTICDB_NAMESPACE is None:
             raise ValueError("ANALYTICDB_NAMESPACE should not be None")
-        if dify_config.ANALYTICDB_NAMESPACE_PASSWORD is None:
+        if Mlchain_config.ANALYTICDB_NAMESPACE_PASSWORD is None:
             raise ValueError("ANALYTICDB_NAMESPACE_PASSWORD should not be None")
         return AnalyticdbVector(
             collection_name,
             AnalyticdbConfig(
-                access_key_id=dify_config.ANALYTICDB_KEY_ID,
-                access_key_secret=dify_config.ANALYTICDB_KEY_SECRET,
-                region_id=dify_config.ANALYTICDB_REGION_ID,
-                instance_id=dify_config.ANALYTICDB_INSTANCE_ID,
-                account=dify_config.ANALYTICDB_ACCOUNT,
-                account_password=dify_config.ANALYTICDB_PASSWORD,
-                namespace=dify_config.ANALYTICDB_NAMESPACE,
-                namespace_password=dify_config.ANALYTICDB_NAMESPACE_PASSWORD,
+                access_key_id=mlchain_config.ANALYTICDB_KEY_ID,
+                access_key_secret=mlchain_config.ANALYTICDB_KEY_SECRET,
+                region_id=mlchain_config.ANALYTICDB_REGION_ID,
+                instance_id=mlchain_config.ANALYTICDB_INSTANCE_ID,
+                account=mlchain_config.ANALYTICDB_ACCOUNT,
+                account_password=mlchain_config.ANALYTICDB_PASSWORD,
+                namespace=mlchain_config.ANALYTICDB_NAMESPACE,
+                namespace_password=mlchain_config.ANALYTICDB_NAMESPACE_PASSWORD,
             ),
         )

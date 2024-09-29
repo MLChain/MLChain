@@ -24,7 +24,7 @@ class NominatimLookupTool(BuiltinTool):
         base_url = self.runtime.credentials.get("base_url", "https://nominatim.openstreetmap.org")
 
         try:
-            headers = {"User-Agent": "DifyNominatimTool/1.0"}
+            headers = {"User-Agent": "MlchainNominatimTool/1.0"}
             s = requests.session()
             response = s.request(method="GET", headers=headers, url=f"{base_url}/{endpoint}", params=params)
             response_data = response.json()

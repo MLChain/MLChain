@@ -13,7 +13,7 @@ from xml.etree import ElementTree
 import requests
 from docx import Document as DocxDocument
 
-from configs import dify_config
+from configs import Mlchain_config
 from core.rag.extractor.extractor_base import BaseExtractor
 from core.rag.models.document import Document
 from extensions.ext_database import db
@@ -105,7 +105,7 @@ class WordExtractor(BaseExtractor):
                 # save file to db
                 upload_file = UploadFile(
                     tenant_id=self.tenant_id,
-                    storage_type=dify_config.STORAGE_TYPE,
+                    storage_type=mlchain_config.STORAGE_TYPE,
                     key=file_key,
                     name=file_key,
                     size=0,
@@ -121,7 +121,7 @@ class WordExtractor(BaseExtractor):
                 db.session.add(upload_file)
                 db.session.commit()
                 image_map[rel.target_part] = (
-                    f"![image]({dify_config.CONSOLE_API_URL}/files/{upload_file.id}/image-preview)"
+                    f"![image]({mlchain_config.CONSOLE_API_URL}/files/{upload_file.id}/image-preview)"
                 )
 
         return image_map

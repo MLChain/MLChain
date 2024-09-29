@@ -14,9 +14,9 @@ from services.workflow_service import WorkflowService
 logger = logging.getLogger(__name__)
 
 current_dsl_version = "0.1.2"
-dsl_to_dify_version_mapping: dict[str, str] = {
+dsl_to_mlchain_version_mapping: dict[str, str] = {
     "0.1.2": "0.8.0",
-    "0.1.1": "0.6.0",  # dsl version -> from dify version
+    "0.1.1": "0.6.0",  # dsl version -> from Mlchain version
 }
 
 
@@ -204,7 +204,7 @@ class AppDslService:
             logger.warning(
                 f"DSL version {import_data.get('version')} is not compatible "
                 f"with current version {current_dsl_version}, related to "
-                f"Dify version {dsl_to_dify_version_mapping.get(current_dsl_version)}."
+                f"Mlchain version {dsl_to_mlchain_version_mapping.get(current_dsl_version)}."
             )
 
         return import_data

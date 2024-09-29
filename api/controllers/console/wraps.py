@@ -4,7 +4,7 @@ from functools import wraps
 from flask import abort, request
 from flask_login import current_user
 
-from configs import dify_config
+from configs import Mlchain_config
 from controllers.console.workspace.error import AccountNotInitializedError
 from services.feature_service import FeatureService
 from services.operation_service import OperationService
@@ -27,7 +27,7 @@ def account_initialization_required(view):
 def only_edition_cloud(view):
     @wraps(view)
     def decorated(*args, **kwargs):
-        if dify_config.EDITION != "CLOUD":
+        if Mlchain_config.EDITION != "CLOUD":
             abort(404)
 
         return view(*args, **kwargs)
@@ -38,7 +38,7 @@ def only_edition_cloud(view):
 def only_edition_self_hosted(view):
     @wraps(view)
     def decorated(*args, **kwargs):
-        if dify_config.EDITION != "SELF_HOSTED":
+        if Mlchain_config.EDITION != "SELF_HOSTED":
             abort(404)
 
         return view(*args, **kwargs)
@@ -95,7 +95,7 @@ def cloud_edition_billing_knowledge_limit_check(resource: str):
                     if features.billing.subscription.plan == "sandbox":
                         abort(
                             403,
-                            "To unlock this feature and elevate your Dify experience, please upgrade to a paid plan.",
+                            "To unlock this feature and elevate your Mlchain experience, please upgrade to a paid plan.",
                         )
                 else:
                     return view(*args, **kwargs)

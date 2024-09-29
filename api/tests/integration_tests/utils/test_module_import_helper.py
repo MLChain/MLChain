@@ -30,5 +30,5 @@ def test_lazy_loading_subclass_from_source():
         parent_type=ParentClass,
         use_lazy_loader=True,
     )
-    instance = clz("dify")
-    assert instance.get_name() == "dify"
+    instance = clz("mlchain")
+    assert instance.get_name() == "mlchain"

@@ -15,8 +15,8 @@ help:
     en_US: How to deploy customized model on Sagemaker
     zh_Hans: 如何在Sagemaker上的私有化部署的模型
   url:
-    en_US: https://github.com/aws-samples/dify-aws-tool/blob/main/README.md#how-to-deploy-sagemaker-endpoint
-    zh_Hans: https://github.com/aws-samples/dify-aws-tool/blob/main/README_ZH.md#%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2sagemaker%E6%8E%A8%E7%90%86%E7%AB%AF%E7%82%B9
+    en_US: https://github.com/aws-samples/mlchain-aws-tool/blob/main/README.md#how-to-deploy-sagemaker-endpoint
+    zh_Hans: https://github.com/aws-samples/mlchain-aws-tool/blob/main/README_ZH.md#%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2sagemaker%E6%8E%A8%E7%90%86%E7%AB%AF%E7%82%B9
 supported_model_types:
   - llm
   - text-embedding

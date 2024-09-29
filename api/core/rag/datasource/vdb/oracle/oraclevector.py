@@ -12,7 +12,7 @@ import oracledb
 from nltk.corpus import stopwords
 from pydantic import BaseModel, model_validator
 
-from configs import dify_config
+from configs import Mlchain_config
 from core.rag.datasource.entity.embedding import Embeddings
 from core.rag.datasource.vdb.vector_base import BaseVector
 from core.rag.datasource.vdb.vector_factory import AbstractVectorFactory
@@ -292,10 +292,10 @@ class OracleVectorFactory(AbstractVectorFactory):
         return OracleVector(
             collection_name=collection_name,
             config=OracleVectorConfig(
-                host=dify_config.ORACLE_HOST,
-                port=dify_config.ORACLE_PORT,
-                user=dify_config.ORACLE_USER,
-                password=dify_config.ORACLE_PASSWORD,
-                database=dify_config.ORACLE_DATABASE,
+                host=mlchain_config.ORACLE_HOST,
+                port=mlchain_config.ORACLE_PORT,
+                user=mlchain_config.ORACLE_USER,
+                password=mlchain_config.ORACLE_PASSWORD,
+                database=mlchain_config.ORACLE_DATABASE,
             ),
         )

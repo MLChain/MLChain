@@ -6,7 +6,7 @@ https://github.com/mlchain/java-client/
 
 ## Go
 
-https://github.com/mlchain/dify-sdk-go
+https://github.com/mlchain/mlchain-sdk-go
 
 ## Ruby
 

@@ -4,7 +4,7 @@ import uuid
 from collections.abc import Generator, Mapping, Sequence
 from typing import Any, Optional, cast
 
-from configs import dify_config
+from configs import Mlchain_config
 from core.app.app_config.entities import FileExtraConfig
 from core.app.apps.base_app_queue_manager import GenerateTaskStoppedError
 from core.app.entities.app_invoke_entities import InvokeFrom
@@ -63,7 +63,7 @@ class WorkflowEntry:
         :param thread_pool_id: thread pool id
         """
         # check call depth
-        workflow_call_max_depth = dify_config.WORKFLOW_CALL_MAX_DEPTH
+        workflow_call_max_depth = Mlchain_config.WORKFLOW_CALL_MAX_DEPTH
         if call_depth > workflow_call_max_depth:
             raise ValueError("Max workflow call depth {} reached.".format(workflow_call_max_depth))
 
@@ -80,8 +80,8 @@ class WorkflowEntry:
             graph=graph,
             graph_config=graph_config,
             variable_pool=variable_pool,
-            max_execution_steps=dify_config.WORKFLOW_MAX_EXECUTION_STEPS,
-            max_execution_time=dify_config.WORKFLOW_MAX_EXECUTION_TIME,
+            max_execution_steps=mlchain_config.WORKFLOW_MAX_EXECUTION_STEPS,
+            max_execution_time=mlchain_config.WORKFLOW_MAX_EXECUTION_TIME,
             thread_pool_id=thread_pool_id,
         )
 
