@@ -6,12 +6,12 @@ import { RiCloseLine } from '@remixicon/react'
 import s from './index.module.css'
 import classNames from '@/utils/classnames'
 import Modal from '@/app/components/base/modal'
-import type { MLChainVersionResponse } from '@/models/common'
+import type { MlChainVersionResponse } from '@/models/common'
 import { IS_CE_EDITION } from '@/config'
 import LogoSite from '@/app/components/base/logo/logo-site'
 
 type IAccountSettingProps = {
-  langeniusVersionInfo: MLChainVersionResponse
+  langeniusVersionInfo: MlChainVersionResponse
   onCancel: () => void
 }
 const buttonClassName = `
@@ -39,14 +39,14 @@ export default function AccountAbout({
           <LogoSite className='mx-auto mb-2' />
           <div className='mb-3 text-center text-xs font-normal text-gray-500'>Version {langeniusVersionInfo?.current_version}</div>
           <div className='mb-4 text-center text-xs font-normal text-gray-700'>
-            <div>© {dayjs().year()} MLChain, Inc., Contributors.</div>
+            <div>© {dayjs().year()} MlChain, Inc., Contributors.</div>
             <div className='text-[#1C64F2]'>
               {
                 IS_CE_EDITION
-                  ? <Link href={'https://github.com/mlchain/mlchain/blob/main/LICENSE'} target='_blank' rel='noopener noreferrer'>Open Source License</Link>
+                  ? <Link href={'https://github.com/mlchain/dify/blob/main/LICENSE'} target='_blank' rel='noopener noreferrer'>Open Source License</Link>
                   : <>
-                    <Link href='https://mlchain.khulnasoft.com/privacy' target='_blank' rel='noopener noreferrer'>Privacy Policy</Link>,<span> </span>
-                    <Link href='https://mlchain.khulnasoft.com/terms' target='_blank' rel='noopener noreferrer'>Terms of Service</Link>
+                    <Link href='https://dify.ai/privacy' target='_blank' rel='noopener noreferrer'>Privacy Policy</Link>,<span> </span>
+                    <Link href='https://dify.ai/terms' target='_blank' rel='noopener noreferrer'>Terms of Service</Link>
                   </>
               }
             </div>
@@ -64,7 +64,7 @@ export default function AccountAbout({
           <div className='flex items-center'>
             <Link
               className={classNames(buttonClassName, 'mr-2')}
-              href={'https://github.com/mlchain/mlchain/releases'}
+              href={'https://github.com/mlchain/dify/releases'}
               target='_blank' rel='noopener noreferrer'
             >
               {t('common.about.changeLog')}

@@ -6,7 +6,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
 <div>
   ### Authentication
 
-  Service API of Mlchain authenticates using an `API-Key`.
+  Service API of Dify authenticates using an `API-Key`.
 
   It is suggested that developers store the `API-Key` in the backend instead of sharing or storing it in the client side to avoid the leakage of the `API-Key`, which may lead to property loss.
 
@@ -148,7 +148,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
         - original_document_id Source document ID (optional)
           - Used to re-upload the document or modify the document cleaning and segmentation configuration. The missing information is copied from the source document
           - The source document cannot be an archived document
-          - When original_document_id is passed in, the update operation is performed on behalf of the document. process_rule is a fillable item. If not filled in, the segmentation method of the source document will be used by defaul
+          - When original_document_id is passed in, the update operation is performed on behalf of the document. process_rule is a fillable item. If not filled in, the segmentation method of the source document will be used by default
           - When original_document_id is not passed in, the new operation is performed on behalf of the document, and process_rule is required
 
         - indexing_technique Index mode
@@ -183,7 +183,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
     ```bash {{ title: 'cURL' }}
     curl --location --request POST '${props.apiBaseUrl}/datasets/{dataset_id}/document/create_by_file' \
     --header 'Authorization: Bearer {api_key}' \
-    --form 'data="{\"name\":\"Mlchain\",\"indexing_technique\":\"high_quality\",\"process_rule\":{\"rules\":{\"pre_processing_rules\":[{\"id\":\"remove_extra_spaces\",\"enabled\":true},{\"id\":\"remove_urls_emails\",\"enabled\":true}],\"segmentation\":{\"separator\":\"###\",\"max_tokens\":500}},\"mode\":\"custom\"}}";type=text/plain' \
+    --form 'data="{\"name\":\"Dify\",\"indexing_technique\":\"high_quality\",\"process_rule\":{\"rules\":{\"pre_processing_rules\":[{\"id\":\"remove_extra_spaces\",\"enabled\":true},{\"id\":\"remove_urls_emails\",\"enabled\":true}],\"segmentation\":{\"separator\":\"###\",\"max_tokens\":500}},\"mode\":\"custom\"}}";type=text/plain' \
     --form 'file=@"/path/to/file"'
     ```
     </CodeGroup>
@@ -198,7 +198,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
           "upload_file_id": ""
         },
         "dataset_process_rule_id": "",
-        "name": "Mlchain.txt",
+        "name": "Dify.txt",
         "created_from": "api",
         "created_by": "",
         "created_at": 1695308667,
@@ -535,12 +535,12 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
       title="Request"
       tag="POST"
       label="/datasets/{dataset_id}/documents/{document_id}/update_by_file"
-      targetCode={`curl --location --request POST '${props.apiBaseUrl}/datasets/{dataset_id}/documents/{document_id}/update_by_file' \\\n--header 'Authorization: Bearer {api_key}' \\\n--form 'data="{"name":"Mlchain","indexing_technique":"high_quality","process_rule":{"rules":{"pre_processing_rules":[{"id":"remove_extra_spaces","enabled":true},{"id":"remove_urls_emails","enabled":true}],"segmentation":{"separator":"###","max_tokens":500}},"mode":"custom"}}";type=text/plain' \\\n--form 'file=@"/path/to/file"'`}
+      targetCode={`curl --location --request POST '${props.apiBaseUrl}/datasets/{dataset_id}/documents/{document_id}/update_by_file' \\\n--header 'Authorization: Bearer {api_key}' \\\n--form 'data="{"name":"Dify","indexing_technique":"high_quality","process_rule":{"rules":{"pre_processing_rules":[{"id":"remove_extra_spaces","enabled":true},{"id":"remove_urls_emails","enabled":true}],"segmentation":{"separator":"###","max_tokens":500}},"mode":"custom"}}";type=text/plain' \\\n--form 'file=@"/path/to/file"'`}
     >
     ```bash {{ title: 'cURL' }}
     curl --location --request POST '${props.apiBaseUrl}/datasets/{dataset_id}/documents/{document_id}/update_by_file' \
     --header 'Authorization: Bearer {api_key}' \
-    --form 'data="{\"name\":\"Mlchain\",\"indexing_technique\":\"high_quality\",\"process_rule\":{\"rules\":{\"pre_processing_rules\":[{\"id\":\"remove_extra_spaces\",\"enabled\":true},{\"id\":\"remove_urls_emails\",\"enabled\":true}],\"segmentation\":{\"separator\":\"###\",\"max_tokens\":500}},\"mode\":\"custom\"}}";type=text/plain' \
+    --form 'data="{\"name\":\"Dify\",\"indexing_technique\":\"high_quality\",\"process_rule\":{\"rules\":{\"pre_processing_rules\":[{\"id\":\"remove_extra_spaces\",\"enabled\":true},{\"id\":\"remove_urls_emails\",\"enabled\":true}],\"segmentation\":{\"separator\":\"###\",\"max_tokens\":500}},\"mode\":\"custom\"}}";type=text/plain' \
     --form 'file=@"/path/to/file"'
     ```
     </CodeGroup>
@@ -555,7 +555,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
           "upload_file_id": ""
         },
         "dataset_process_rule_id": "",
-        "name": "Mlchain.txt",
+        "name": "Dify.txt",
         "created_from": "api",
         "created_by": "",
         "created_at": 1695308667,
@@ -727,7 +727,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
           "data_source_type": "file_upload",
           "data_source_info": null,
           "dataset_process_rule_id": null,
-          "name": "mlchain",
+          "name": "dify",
           "created_from": "",
           "created_by": "",
           "created_at": 1681623639,
@@ -985,7 +985,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
 
     ### Request Body
     <Properties>
-      <Property name='segment' type='object list' key='segment'>
+      <Property name='segment' type='object' key='segment'>
         - <code>content</code> (text) text content/question content，required
         - <code>answer</code> (text) Answer content, not required, passed if the Knowledge is in qa mode
         - <code>keywords</code> (list) keyword, not required

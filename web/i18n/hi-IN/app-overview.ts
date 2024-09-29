@@ -28,7 +28,7 @@ const translation = {
     callTimes: 'कॉल समय',
     usedToken: 'उपयोग किया गया टोकन',
     setAPIBtn: 'मॉडल प्रदाता सेटअप पर जाएं',
-    tryCloud: 'या मुफ्त कोटा के साथ Mlchain का क्लाउड संस्करण आज़माएं',
+    tryCloud: 'या मुफ्त कोटा के साथ Dify का क्लाउड संस्करण आज़माएं',
   },
   overview: {
     title: 'अवलोकन',
@@ -52,6 +52,8 @@ const translation = {
           title: 'वर्कफ़्लो स्टेप्स',
           show: 'दिखाएं',
           hide: 'छुपाएं',
+          subTitle: 'कार्यप्रवाह विवरण',
+          showDesc: 'WebApp में वर्कफ़्लो विवरण दिखाएँ या छुपाएँ',
         },
         chatColorTheme: 'चैटबॉट का रंग थीम',
         chatColorThemeDesc: 'चैटबॉट का रंग थीम निर्धारित करें',
@@ -64,11 +66,17 @@ const translation = {
           privacyPolicy: 'गोपनीयता नीति',
           privacyPolicyPlaceholder: 'गोपनीयता नीति लिंक दर्ज करें',
           privacyPolicyTip:
-            'आगंतुकों को यह समझने में मदद करता है कि एप्लिकेशन कौन सा डेटा एकत्र करता है, देखें Mlchain की <privacyPolicyLink>गोपनीयता नीति</privacyPolicyLink>।',
+            'आगंतुकों को यह समझने में मदद करता है कि एप्लिकेशन कौन सा डेटा एकत्र करता है, देखें Dify की <privacyPolicyLink>गोपनीयता नीति</privacyPolicyLink>।',
           customDisclaimer: 'कस्टम अस्वीकरण',
           customDisclaimerPlaceholder: 'कस्टम अस्वीकरण टेक्स्ट दर्ज करें',
           customDisclaimerTip:
             'कस्टम अस्वीकरण टेक्स्ट क्लाइंट साइड पर प्रदर्शित होगा, जो एप्लिकेशन के बारे में अतिरिक्त जानकारी प्रदान करेगा',
+        },
+        sso: {
+          title: 'वेबएप एसएसओ',
+          label: 'SSO प्रमाणीकरण',
+          description: 'WebApp का उपयोग करने से पहले सभी उपयोगकर्ताओं को SSO के साथ लॉगिन करना आवश्यक है',
+          tooltip: 'WebApp SSO को सक्षम करने के लिए व्यवस्थापक से संपर्क करें',
         },
       },
       embedded: {
@@ -79,7 +87,7 @@ const translation = {
           'अपनी वेबसाइट के किसी भी हिस्से पर चैट ऐप जोड़ने के लिए, इस iframe को अपने HTML कोड में जोड़ें।',
         scripts:
           'अपनी वेबसाइट के निचले दाएं कोने में चैट ऐप जोड़ने के लिए इस कोड को अपने HTML में जोड़ें।',
-        chromePlugin: 'Mlchain चैटबॉट क्रोम एक्सटेंशन इंस्टॉल करें',
+        chromePlugin: 'Dify चैटबॉट क्रोम एक्सटेंशन इंस्टॉल करें',
         copied: 'कॉपी किया गया',
         copy: 'कॉपी करें',
       },
@@ -99,7 +107,7 @@ const translation = {
           step1: 'क्लाइंट कोड को फोर्क करें और संशोधित करें',
           step1Tip:
             'स्रोत कोड को अपने GitHub खाते में फोर्क करने और कोड संशोधित करने के लिए यहां क्लिक करें',
-          step1Operation: 'Mlchain-WebClient',
+          step1Operation: 'Dify-WebClient',
           step2: 'Vercel पर डिप्लॉय करें',
           step2Tip:
             'भंडार को Vercel में आयात करने और डिप्लॉय करने के लिए यहां क्लिक करें',
@@ -130,8 +138,11 @@ const translation = {
     tokenPS: 'टोकन/से.',
     totalMessages: {
       title: 'कुल संदेश',
-      explanation:
-        'दैनिक एआई इंटरैक्शन की गिनती; प्रॉम्प्ट इंजीनियरिंग/डीबगिंग को शामिल नहीं किया गया।',
+      explanation: 'दैनिक AI इंटरैक्शन की गिनती।',
+    },
+    totalConversations: {
+      title: 'कुल वार्तालाप',
+      explanation: 'दैनिक AI वार्तालाप की गिनती; प्रॉम्प्ट इंजीनियरिंग/डीबगिंग शामिल नहीं।',
     },
     activeUsers: {
       title: 'सक्रिय उपयोगकर्ता',

@@ -27,7 +27,7 @@ class SerplyApi:
             "X-API-KEY": self.serply_api_key,
             "X-User-Agent": kwargs.get("device", "desktop"),
             "X-Proxy-Location": location,
-            "User-Agent": "Mlchain",
+            "User-Agent": "Dify",
         }
 
         url = f"{BASE_URL}{urlencode(params)}"
@@ -50,14 +50,16 @@ class SerplyApi:
         for job in jobs[:10]:
             try:
                 string.append(
-                    "\n".join([
-                        f"Position: {job['position']}",
-                        f"Employer: {job['employer']}",
-                        f"Location: {job['location']}",
-                        f"Link: {job['link']}",
-                        f"""Highest: {", ".join(list(job["highlights"]))}""",
-                        "---",
-                    ])
+                    "\n".join(
+                        [
+                            f"Position: {job['position']}",
+                            f"Employer: {job['employer']}",
+                            f"Location: {job['location']}",
+                            f"Link: {job['link']}",
+                            f"""Highest: {", ".join(list(job["highlights"]))}""",
+                            "---",
+                        ]
+                    )
                 )
             except KeyError:
                 continue

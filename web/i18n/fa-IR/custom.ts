@@ -6,7 +6,7 @@ const translation = {
   },
   webapp: {
     title: 'سفارشی سازی برند وب اپ',
-    removeBrand: 'حذف "Powered by Mlchain"',
+    removeBrand: 'حذف "Powered by Dify"',
     changeLogo: 'تغییر تصویر برند "Powered by"',
     changeLogoTip: 'فرمت SVG یا PNG با حداقل اندازه 40x40px',
   },

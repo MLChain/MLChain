@@ -201,7 +201,7 @@ const translation = {
   },
   automatic: {
     title: '자동 어플리케이션 오케스트레이션',
-    description: '시나리오를 설명하세요. Mlchain가 어플리케이션을 자동으로 오케스트레이션 합니다.',
+    description: '시나리오를 설명하세요. Dify가 어플리케이션을 자동으로 오케스트레이션 합니다.',
     intendedAudience: '누가 대상이 되는지 설명하세요.',
     intendedAudiencePlaceHolder: '예: 학생',
     solveProblem: '어떤 문제를 AI가 해결할 것으로 예상하나요?',
@@ -248,18 +248,18 @@ const translation = {
     typeSelect: '선택',
   },
   varKeyError: {
-    canNoBeEmpty: '변수 키를 비울 수 없습니다',
-    tooLong: '변수 키: {{key}}가 너무 깁니다. 30자를 넘을 수 없습니다',
-    notValid: '변수 키: {{key}}가 유효하지 않습니다. 문자, 숫자, 밑줄만 포함할 수 있습니다',
-    notStartWithNumber: '변수 키: {{key}}는 숫자로 시작할 수 없습니다',
-    keyAlreadyExists: '변수 키: {{key}}는 이미 존재합니다',
+    canNoBeEmpty: '{{key}}가 필요합니다',
+    tooLong: '{{key}}가 너무 깁니다. 30자를 넘을 수 없습니다',
+    notValid: '{{key}}가 유효하지 않습니다. 문자, 숫자, 밑줄만 포함할 수 있습니다',
+    notStartWithNumber: '{{key}}는 숫자로 시작할 수 없습니다',
+    keyAlreadyExists: '{{key}}는 이미 존재합니다',
   },
   otherError: {
     promptNoBeEmpty: '프롬프트를 비울 수 없습니다',
     historyNoBeEmpty: '프롬프트에 대화 기록을 설정해야 합니다',
     queryNoBeEmpty: '프롬프트에 쿼리를 설정해야 합니다',
   },
-  variableConig: {
+  variableConfig: {
     'addModalTitle': '입력 필드 추가',
     'editModalTitle': '입력 필드 편집',
     'description': '{{varName}} 변수 설정',

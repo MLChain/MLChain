@@ -7,7 +7,7 @@ const translation = {
     nameError: '이름은 비워둘 수 없습니다',
     desc: '지식 설명',
     descInfo: '지식 내용을 개괄하는 명확한 텍스트 설명을 작성하세요. 이 설명은 여러 지식 중에서 선택하는 기준으로 사용됩니다.',
-    descPlaceholder: '이 지식에 포함된 내용을 설명하세요. 자세한 설명은 AI가 지식 내용에 빠르게 접근할 수 있도록 합니다. 비어 있으면 Mlchain가 기본 검색 전략을 사용합니다.',
+    descPlaceholder: '이 지식에 포함된 내용을 설명하세요. 자세한 설명은 AI가 지식 내용에 빠르게 접근할 수 있도록 합니다. 비어 있으면 Dify가 기본 검색 전략을 사용합니다.',
     descWrite: '좋은 지식 설명 작성 방법 배우기',
     permissions: '권한',
     permissionsOnlyMe: '나만',
@@ -27,6 +27,8 @@ const translation = {
       longDescription: ' 검색 방법에 대한 자세한 내용은 언제든지 지식 설정에서 변경할 수 있습니다.',
     },
     save: '저장',
+    permissionsInvitedMembers: '부분 팀 구성원',
+    me: '(당신)',
   },
 }
 

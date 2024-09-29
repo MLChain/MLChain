@@ -110,7 +110,7 @@ const ActivateForm = () => {
           </div>
           <div className="w-full mx-auto mt-6">
             <Button variant='primary' className='w-full !text-sm'>
-              <a href="https://mlchain.khulnasoft.com">{t('login.explore')}</a>
+              <a href="https://dify.ai">{t('login.explore')}</a>
             </Button>
           </div>
         </div>
@@ -143,6 +143,7 @@ const ActivateForm = () => {
                     onChange={e => setName(e.target.value)}
                     placeholder={t('login.namePlaceholder') || ''}
                     className={'appearance-none block w-full rounded-lg pl-[14px] px-3 py-2 border border-gray-200 hover:border-gray-300 hover:shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500 placeholder-gray-400 caret-primary-600 sm:text-sm pr-10'}
+                    tabIndex={1}
                   />
                 </div>
               </div>
@@ -159,6 +160,7 @@ const ActivateForm = () => {
                     onChange={e => setPassword(e.target.value)}
                     placeholder={t('login.passwordPlaceholder') || ''}
                     className={'appearance-none block w-full rounded-lg pl-[14px] px-3 py-2 border border-gray-200 hover:border-gray-300 hover:shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500 placeholder-gray-400 caret-primary-600 sm:text-sm pr-10'}
+                    tabIndex={2}
                   />
                 </div>
                 <div className='mt-1 text-xs text-gray-500'>{t('login.error.passwordInvalid')}</div>
@@ -208,7 +210,7 @@ const ActivateForm = () => {
                 <Link
                   className='text-primary-600'
                   target='_blank' rel='noopener noreferrer'
-                  href={`https://docs.mlchain.khulnasoft.com/${language !== LanguagesSupported[1] ? 'user-agreement' : `v/${locale.toLowerCase()}/policies`}/open-source`}
+                  href={`https://docs.dify.ai/${language !== LanguagesSupported[1] ? 'user-agreement' : `v/${locale.toLowerCase()}/policies`}/open-source`}
                 >{t('login.license.link')}</Link>
               </div>
             </div>

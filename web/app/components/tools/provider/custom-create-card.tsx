@@ -27,8 +27,8 @@ const Contribute = ({ onRefreshData }: Props) => {
 
   const linkUrl = useMemo(() => {
     if (language.startsWith('zh_'))
-      return 'https://docs.mlchain.khulnasoft.com/v/zh-hans/guides/gong-ju/quick-tool-integration'
-    return 'https://docs.mlchain.khulnasoft.com/tutorials/quick-tool-integration'
+      return 'https://docs.dify.ai/v/zh-hans/guides/gong-ju/quick-tool-integration'
+    return 'https://docs.dify.ai/tutorials/quick-tool-integration'
   }, [language])
 
   const [isShowEditCollectionToolModal, setIsShowEditCustomCollectionModal] = useState(false)

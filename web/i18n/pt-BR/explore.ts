@@ -16,7 +16,7 @@ const translation = {
     },
   },
   apps: {
-    title: 'Explorar Aplicações por Mlchain',
+    title: 'Explorar Aplicações por Dify',
     description: 'Use esses aplicativos modelo instantaneamente ou personalize seus próprios aplicativos com base nos modelos.',
     allCategories: 'Recomendado',
   },

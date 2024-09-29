@@ -1,7 +1,7 @@
 const translation = {
   title: 'Tools',
   createCustomTool: 'Create Custom Tool',
-  customToolTip: 'Learn more about Mlchain custom tools',
+  customToolTip: 'Learn more about Dify custom tools',
   type: {
     all: 'All',
     builtIn: 'Built-in',
@@ -10,7 +10,7 @@ const translation = {
   },
   contribute: {
     line1: 'I\'m interested in ',
-    line2: 'contributing tools to Mlchain.',
+    line2: 'contributing tools to Dify.',
     viewGuide: 'View the guide',
   },
   author: 'By',

@@ -1,13 +1,13 @@
-# mlchain-client
+# dify-client
 
-A Mlchain App Service-API Client, using for build a webapp by request Service-API
+A Dify App Service-API Client, using for build a webapp by request Service-API
 
 ## Usage
 
-First, install `mlchain-client` python sdk package:
+First, install `dify-client` python sdk package:
 
 ```
-pip install mlchain-client
+pip install dify-client
 ```
 
 Write your code with sdk:
@@ -15,7 +15,7 @@ Write your code with sdk:
 - completion generate with `blocking` response_mode
 
 ```python
-from mlchain_client import CompletionClient
+from dify_client import CompletionClient
 
 api_key = "your_api_key"
 
@@ -35,7 +35,7 @@ print(result.get('answer'))
 - completion using vision model, like gpt-4-vision
 
 ```python
-from mlchain_client import CompletionClient
+from dify_client import CompletionClient
 
 api_key = "your_api_key"
 
@@ -68,7 +68,7 @@ print(result.get('answer'))
 
 ```python
 import json
-from mlchain_client import ChatClient
+from dify_client import ChatClient
 
 api_key = "your_api_key"
 
@@ -89,7 +89,7 @@ for line in chat_response.iter_lines(decode_unicode=True):
 - chat using vision model, like gpt-4-vision
 
 ```python
-from mlchain_client import ChatClient
+from dify_client import ChatClient
 
 api_key = "your_api_key"
 
@@ -121,12 +121,12 @@ print(result.get("answer"))
 - upload file when using vision model
 
 ```python
-from mlchain_client import MlchainClient
+from dify_client import DifyClient
 
 api_key = "your_api_key"
 
 # Initialize Client
-mlchain_client = MlchainClient(api_key)
+dify_client = DifyClient(api_key)
 
 file_path = "your_image_file_path"
 file_name = "panda.jpeg"
@@ -136,7 +136,7 @@ with open(file_path, "rb") as file:
     files = {
         "file": (file_name, file, mime_type)
     }
-    response = mlchain_client.file_upload("user_id", files)
+    response = dify_client.file_upload("user_id", files)
 
     result = response.json()
     print(f'upload_file_id: {result.get("id")}')
@@ -147,7 +147,7 @@ with open(file_path, "rb") as file:
 - Others
 
 ```python
-from mlchain_client import ChatClient
+from dify_client import ChatClient
 
 api_key = "your_api_key"
 

@@ -201,7 +201,7 @@ const translation = {
   },
   automatic: {
     title: 'Orquestração Automatizada de Aplicativos',
-    description: 'Descreva o seu cenário, o Mlchain irá orquestrar um aplicativo para você.',
+    description: 'Descreva o seu cenário, o Dify irá orquestrar um aplicativo para você.',
     intendedAudience: 'Qual é o público-alvo?',
     intendedAudiencePlaceHolder: 'ex: Estudante',
     solveProblem: 'Quais problemas eles esperam que a IA possa resolver para eles?',
@@ -254,18 +254,18 @@ const translation = {
     typeSelect: 'Selecionar',
   },
   varKeyError: {
-    canNoBeEmpty: 'A chave da variável não pode estar vazia',
-    tooLong: 'A chave da variável: {{key}} é muito longa. Não pode ter mais de 30 caracteres',
-    notValid: 'A chave da variável: {{key}} é inválida. Pode conter apenas letras, números e sublinhados',
-    notStartWithNumber: 'A chave da variável: {{key}} não pode começar com um número',
-    keyAlreadyExists: 'A chave da variável: :{{key}} já existe',
+    canNoBeEmpty: '{{key}} é obrigatório',
+    tooLong: '{{key}} é muito longa. Não pode ter mais de 30 caracteres',
+    notValid: '{{key}} é inválida. Pode conter apenas letras, números e sublinhados',
+    notStartWithNumber: '{{key}} não pode começar com um número',
+    keyAlreadyExists: '{{key}} já existe',
   },
   otherError: {
     promptNoBeEmpty: 'A solicitação não pode estar vazia',
     historyNoBeEmpty: 'O histórico da conversa deve ser definido na solicitação',
     queryNoBeEmpty: 'A consulta deve ser definida na solicitação',
   },
-  variableConig: {
+  variableConfig: {
     'addModalTitle': 'Adicionar Campo de Entrada',
     'editModalTitle': 'Editar Campo de Entrada',
     'description': 'Configuração para a variável {{varName}}',

@@ -16,7 +16,7 @@ const translation = {
     },
   },
   apps: {
-    title: 'Mlchainによるアプリの探索',
+    title: 'Difyによるアプリの探索',
     description: 'これらのテンプレートアプリを即座に使用するか、テンプレートに基づいて独自のアプリをカスタマイズしてください。',
     allCategories: 'おすすめ',
   },

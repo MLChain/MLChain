@@ -15,13 +15,13 @@ class MyScaleVectorTest(AbstractVectorTest):
                 port=8123,
                 user="default",
                 password="",
-                database="mlchain",
+                database="dify",
                 fts_params="",
             ),
         )
 
     def get_ids_by_metadata_field(self):
-        ids = self.vector.get_ids_by_metadata_field(key='document_id', value=self.example_doc_id)
+        ids = self.vector.get_ids_by_metadata_field(key="document_id", value=self.example_doc_id)
         assert len(ids) == 1
 
 

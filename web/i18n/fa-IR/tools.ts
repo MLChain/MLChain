@@ -1,7 +1,7 @@
 const translation = {
   title: 'ابزارها',
   createCustomTool: 'ایجاد ابزار سفارشی',
-  customToolTip: 'بیشتر در مورد ابزارهای سفارشی Mlchain بیاموزید',
+  customToolTip: 'بیشتر در مورد ابزارهای سفارشی Dify بیاموزید',
   type: {
     all: 'همه',
     builtIn: 'سفارشی شده',
@@ -10,7 +10,7 @@ const translation = {
   },
   contribute: {
     line1: 'من علاقه‌مند به ',
-    line2: 'مشارکت در ابزارهای Mlchain هستم.',
+    line2: 'مشارکت در ابزارهای Dify هستم.',
     viewGuide: 'مشاهده راهنما',
   },
   author: 'توسط',

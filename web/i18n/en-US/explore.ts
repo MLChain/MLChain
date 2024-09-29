@@ -16,7 +16,7 @@ const translation = {
     },
   },
   apps: {
-    title: 'Explore Apps by Mlchain',
+    title: 'Explore Apps by Dify',
     description: 'Use these template apps instantly or customize your own apps based on the templates.',
     allCategories: 'Recommended',
   },

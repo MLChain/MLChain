@@ -11,7 +11,7 @@ import type {
   IWorkspace,
   InitValidateStatusResponse,
   InvitationResponse,
-  MLChainVersionResponse,
+  MlChainVersionResponse,
   Member,
   ModerateResponse,
   OauthResponse,
@@ -70,8 +70,8 @@ export const logout: Fetcher<CommonResponse, { url: string; params: Record<strin
   return get<CommonResponse>(url, params)
 }
 
-export const fetchMlchainVersion: Fetcher<MLChainVersionResponse, { url: string; params: Record<string, any> }> = ({ url, params }) => {
-  return get<MLChainVersionResponse>(url, { params })
+export const fetchMlchainVersion: Fetcher<MlChainVersionResponse, { url: string; params: Record<string, any> }> = ({ url, params }) => {
+  return get<MlChainVersionResponse>(url, { params })
 }
 
 export const oauth: Fetcher<OauthResponse, { url: string; params: Record<string, any> }> = ({ url, params }) => {

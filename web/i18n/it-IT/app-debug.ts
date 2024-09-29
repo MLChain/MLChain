@@ -220,7 +220,7 @@ const translation = {
   automatic: {
     title: 'Orchestrazione automatizzata delle applicazioni',
     description:
-      'Descrivi il tuo scenario, Mlchain orchestrerà un\'applicazione per te.',
+      'Descrivi il tuo scenario, Dify orchestrerà un\'applicazione per te.',
     intendedAudience: 'Chi è il pubblico di destinazione?',
     intendedAudiencePlaceHolder: 'es. Studente',
     solveProblem: 'Quali problemi sperano che l\'IA possa risolvere per loro?',
@@ -278,14 +278,14 @@ const translation = {
     typeSelect: 'Seleziona',
   },
   varKeyError: {
-    canNoBeEmpty: 'La chiave della variabile non può essere vuota',
+    canNoBeEmpty: '{{key}} è obbligatorio',
     tooLong:
-      'La chiave della variabile: {{key}} è troppo lunga. Non può essere più lunga di 30 caratteri',
+      '{{key}} è troppo lunga. Non può essere più lunga di 30 caratteri',
     notValid:
-      'La chiave della variabile: {{key}} non è valida. Può contenere solo lettere, numeri e underscore',
+      '{{key}} non è valida. Può contenere solo lettere, numeri e underscore',
     notStartWithNumber:
-      'La chiave della variabile: {{key}} non può iniziare con un numero',
-    keyAlreadyExists: 'La chiave della variabile: {{key}} esiste già',
+      '{{key}} non può iniziare con un numero',
+    keyAlreadyExists: '{{key}} esiste già',
   },
   otherError: {
     promptNoBeEmpty: 'Il prompt non può essere vuoto',
@@ -293,7 +293,7 @@ const translation = {
       'La cronologia delle conversazioni deve essere impostata nel prompt',
     queryNoBeEmpty: 'La query deve essere impostata nel prompt',
   },
-  variableConig: {
+  variableConfig: {
     'addModalTitle': 'Aggiungi Campo Input',
     'editModalTitle': 'Modifica Campo Input',
     'description': 'Impostazione per la variabile {{varName}}',

@@ -17,8 +17,8 @@ class AnalyticdbVectorTest(AbstractVectorTest):
                 instance_id="test_id",
                 account="test_account",
                 account_password="test_passwd",
-                namespace="mlchaintest_namespace",
-                collection="mlchaintest_collection",
+                namespace="difytest_namespace",
+                collection="difytest_collection",
                 namespace_password="test_passwd",
             ),
         )
@@ -26,6 +26,7 @@ class AnalyticdbVectorTest(AbstractVectorTest):
     def run_all_tests(self):
         self.vector.delete()
         return super().run_all_tests()
-    
+
+
 def test_chroma_vector(setup_mock_redis):
     AnalyticdbVectorTest().run_all_tests()

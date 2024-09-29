@@ -14,7 +14,7 @@ interface HeaderParams {
 interface User {
 }
 
-export declare class MlchainClient {
+export declare class DifyClient {
   constructor(apiKey: string, baseUrl?: string);
 
   updateApiKey(apiKey: string): void;
@@ -39,7 +39,7 @@ export declare class MlchainClient {
   getMeta(user: User): Promise<any>;
 }
 
-export declare class CompletionClient extends MlchainClient {
+export declare class CompletionClient extends DifyClient {
   createCompletionMessage(
     inputs: any,
     user: User,
@@ -48,7 +48,7 @@ export declare class CompletionClient extends MlchainClient {
   ): Promise<any>;
 }
 
-export declare class ChatClient extends MlchainClient {
+export declare class ChatClient extends DifyClient {
   createChatMessage(
     inputs: any,
     query: string,
@@ -84,7 +84,7 @@ export declare class ChatClient extends MlchainClient {
   audioToText(data: FormData): Promise<any>;
 }
 
-export declare class WorkflowClient extends MlchainClient {
+export declare class WorkflowClient extends DifyClient {
   run(inputs: any, user: User, stream?: boolean,): Promise<any>;
 
   stop(task_id: string, user: User): Promise<any>;

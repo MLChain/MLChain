@@ -1,7 +1,7 @@
 const translation = {
   list: {
     title: 'Documente',
-    desc: 'Toate fișierele din Cunoștințe sunt afișate aici, iar întreaga Cunoaștere poate fi legată de citări Mlchain sau indexată prin intermediul pluginului Chat.',
+    desc: 'Toate fișierele din Cunoștințe sunt afișate aici, iar întreaga Cunoaștere poate fi legată de citări Dify sau indexată prin intermediul pluginului Chat.',
     addFile: 'adaugă fișier',
     addPages: 'Adaugă pagini',
     table: {
@@ -13,6 +13,8 @@ const translation = {
         status: 'STARE',
         action: 'ACȚIUNE',
       },
+      name: 'Nume',
+      rename: 'Redenumire',
     },
     action: {
       uploadFile: 'Încarcă un fișier nou',
@@ -49,7 +51,7 @@ const translation = {
         tip: 'Puteți încărca fișiere, sincroniza de pe site-ul web sau din aplicații web precum Notion, GitHub etc.',
       },
       sync: {
-        tip: 'Mlchain va descărca periodic fișiere din Notion și va finaliza procesarea.',
+        tip: 'Dify va descărca periodic fișiere din Notion și va finaliza procesarea.',
       },
     },
     delete: {
@@ -74,6 +76,7 @@ const translation = {
       error: 'Eroare la import',
       ok: 'OK',
     },
+    addUrl: 'Adăugați adresa URL',
   },
   metadata: {
     title: 'Metadate',

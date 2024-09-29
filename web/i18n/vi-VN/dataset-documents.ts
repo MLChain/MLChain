@@ -1,7 +1,7 @@
 const translation = {
   list: {
     title: 'Tài liệu',
-    desc: 'Tất cả các tệp của Kiến thức được hiển thị ở đây. Toàn bộ Kiến thức có thể được liên kết với trích dẫn của Mlchain hoặc được lập chỉ mục thông qua plugin Chat.',
+    desc: 'Tất cả các tệp của Kiến thức được hiển thị ở đây. Toàn bộ Kiến thức có thể được liên kết với trích dẫn của Dify hoặc được lập chỉ mục thông qua plugin Chat.',
     addFile: 'Thêm tệp',
     addPages: 'Thêm trang',
     table: {
@@ -13,6 +13,8 @@ const translation = {
         status: 'TRẠNG THÁI',
         action: 'THAO TÁC',
       },
+      rename: 'Rename',
+      name: 'Tên',
     },
     action: {
       uploadFile: 'Tải lên tệp mới',
@@ -49,7 +51,7 @@ const translation = {
         tip: 'Bạn có thể tải lên tệp, đồng bộ từ trang web, hoặc từ ứng dụng web như Notion, GitHub, v.v.',
       },
       sync: {
-        tip: 'Mlchain sẽ định kỳ tải xuống tệp từ Notion của bạn và hoàn tất xử lý.',
+        tip: 'Dify sẽ định kỳ tải xuống tệp từ Notion của bạn và hoàn tất xử lý.',
       },
     },
     delete: {
@@ -74,6 +76,7 @@ const translation = {
       error: 'Lỗi nhập',
       ok: 'OK',
     },
+    addUrl: 'Thêm URL',
   },
   metadata: {
     title: 'Siêu dữ liệu',

@@ -1,3 +1,3 @@
-from .app_config import MlchainConfig
+from .app_config import DifyConfig
 
-mlchain_config = MlchainConfig()
+dify_config = DifyConfig()

@@ -80,79 +80,79 @@ export const languages = [
   {
     value: 'en-US',
     name: 'English(United States)',
-    example: 'Hello, Mlchain!',
+    example: 'Hello, Dify!',
     supported: true,
   },
   {
     value: 'zh-Hans',
     name: '简体中文',
-    example: '你好，Mlchain！',
+    example: '你好，Dify！',
     supported: true,
   },
   {
     value: 'pt-BR',
     name: 'Português(Brasil)',
-    example: 'Olá, Mlchain!',
+    example: 'Olá, Dify!',
     supported: true,
   },
   {
     value: 'es-ES',
     name: 'Español(España)',
-    example: 'Saluton, Mlchain!',
+    example: 'Saluton, Dify!',
     supported: false,
   },
   {
     value: 'fr-FR',
     name: 'Français(France)',
-    example: 'Bonjour, Mlchain!',
+    example: 'Bonjour, Dify!',
     supported: false,
   },
   {
     value: 'de-DE',
     name: 'Deutsch(Deutschland)',
-    example: 'Hallo, Mlchain!',
+    example: 'Hallo, Dify!',
     supported: false,
   },
   {
     value: 'ja-JP',
     name: '日本語(日本)',
-    example: 'こんにちは、Mlchain!',
+    example: 'こんにちは、Dify!',
     supported: false,
   },
   {
     value: 'ko-KR',
     name: '한국어(대한민국)',
-    example: '안녕, Mlchain!',
+    example: '안녕, Dify!',
     supported: true,
   },
   {
     value: 'ru-RU',
     name: 'Русский(Россия)',
-    example: ' Привет, Mlchain!',
+    example: ' Привет, Dify!',
     supported: false,
   },
   {
     value: 'it-IT',
     name: 'Italiano(Italia)',
-    example: 'Ciao, Mlchain!',
+    example: 'Ciao, Dify!',
     supported: false,
   },
   {
     value: 'th-TH',
     name: 'ไทย(ประเทศไทย)',
-    example: 'สวัสดี Mlchain!',
+    example: 'สวัสดี Dify!',
     supported: false,
   },
   {
     value: 'id-ID',
     name: 'Bahasa Indonesia',
-    example: 'Saluto, Mlchain!',
+    example: 'Saluto, Dify!',
     supported: false,
   },
   {
     value: 'uk-UA',
     name: 'Українська(Україна)',
-    example: 'Привет, Mlchain!',
+    example: 'Привет, Dify!',
     supported: true,
   },
   // Add your language here 👇
@@ -164,7 +164,7 @@ export const languages = [
 5. Don't forget to mark the supported field as `true` if the language is supported.
 
 6. Sometime you might need to do some changes in the server side. Please change this file as well. 👇
-https://github.com/mlchain/mlchain/blob/61e4bbabaf2758354db4073cbea09fdd21a5bec1/api/constants/languages.py#L5
+https://github.com/mlchain/dify/blob/61e4bbabaf2758354db4073cbea09fdd21a5bec1/api/constants/languages.py#L5
 
 
 

@@ -33,7 +33,7 @@ const OPTION_MAP = {
   scripts: {
     getContent: (url: string, token: string, primaryColor: string, isTestEnv?: boolean) =>
       `<script>
- window.mlchainChatbotConfig = {
+ window.difyChatbotConfig = {
   token: '${token}'${isTestEnv
   ? `,
   isDev: true`
@@ -49,7 +49,7 @@ const OPTION_MAP = {
  defer>
 </script>
 <style>
-  #mlchain-chatbot-bubble-button {
+  #dify-chatbot-bubble-button {
     background-color: ${primaryColor} !important;
   }
 </style>`,
@@ -99,7 +99,7 @@ const Embedded = ({ siteInfo, isShow, onClose, appBaseUrl, accessToken, classNam
   }
 
   const navigateToChromeUrl = () => {
-    window.open('https://chrome.google.com/webstore/detail/mlchain-chatbot/ceehdapohffmjmkdcifjofadiaoeggaf', '_blank')
+    window.open('https://chrome.google.com/webstore/detail/dify-chatbot/ceehdapohffmjmkdcifjofadiaoeggaf', '_blank')
   }
 
   useEffect(() => {
@@ -153,8 +153,7 @@ const Embedded = ({ siteInfo, isShow, onClose, appBaseUrl, accessToken, classNam
           </div>
           <div className="flex items-center justify-center gap-1 p-2 rounded-lg">
             <Tooltip
-              selector={'code-copy-feedback'}
-              content={(isCopied[option] ? t(`${prefixEmbedded}.copied`) : t(`${prefixEmbedded}.copy`)) || ''}
+              popupContent={(isCopied[option] ? t(`${prefixEmbedded}.copied`) : t(`${prefixEmbedded}.copy`)) || ''}
             >
               <div className="w-8 h-8 rounded-lg cursor-pointer hover:bg-gray-100">
                 <div onClick={onClickCopy} className={`w-full h-full ${copyStyle.copyIcon} ${isCopied[option] ? copyStyle.copied : ''}`}></div>

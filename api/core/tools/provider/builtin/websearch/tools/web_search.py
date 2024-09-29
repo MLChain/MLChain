@@ -26,7 +26,7 @@ class SerplyApi:
             "X-API-KEY": self.serply_api_key,
             "X-User-Agent": kwargs.get("device", "desktop"),
             "X-Proxy-Location": location,
-            "User-Agent": "Mlchain",
+            "User-Agent": "Dify",
         }
 
         url = f"{self.base_url}{urlencode(params)}"
@@ -49,12 +49,14 @@ class SerplyApi:
         for result in results:
             try:
                 string.append(
-                    "\n".join([
-                        f"Title: {result['title']}",
-                        f"Link: {result['link']}",
-                        f"Description: {result['description'].strip()}",
-                        "---",
-                    ])
+                    "\n".join(
+                        [
+                            f"Title: {result['title']}",
+                            f"Link: {result['link']}",
+                            f"Description: {result['description'].strip()}",
+                            "---",
+                        ]
+                    )
                 )
             except KeyError:
                 continue

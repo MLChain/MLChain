@@ -12,7 +12,7 @@ const translation = {
   datasetDeleted: 'دانش حذف شد',
   datasetDeleteFailed: 'حذف دانش ناموفق بود',
   didYouKnow: 'آیا می‌دانستید؟',
-  intro1: 'دانش می‌تواند در برنامه Mlchain ',
+  intro1: 'دانش می‌تواند در برنامه Dify ',
   intro2: 'به عنوان یک زمینه',
   intro3: 'ادغام شود',
   intro4: 'یا می‌تواند ',
@@ -71,6 +71,7 @@ const translation = {
   nTo1RetrievalLegacy: 'بازیابی N-to-1 از سپتامبر به طور رسمی منسوخ خواهد شد. توصیه می‌شود از بازیابی چند مسیر جدید استفاده کنید تا نتایج بهتری بدست آورید.',
   nTo1RetrievalLegacyLink: 'بیشتر بدانید',
   nTo1RetrievalLegacyLinkText: ' بازیابی N-to-1 از سپتامبر به طور رسمی منسوخ خواهد شد.',
+  defaultRetrievalTip: 'بازیابی چند مسیره به طور پیش فرض استفاده می شود. دانش از چندین پایگاه دانش بازیابی می شود و سپس دوباره رتبه بندی می شود.',
 }
 
 export default translation

@@ -90,7 +90,7 @@ export default function AccountPage() {
     setPassword('')
     setConfirmPassword('')
   }
-  const handleSavePassowrd = async () => {
+  const handleSavePassword = async () => {
     if (!valid())
       return
     try {
@@ -235,7 +235,7 @@ export default function AccountPage() {
             <Button
               disabled={editing}
               variant='primary'
-              onClick={handleSavePassowrd}
+              onClick={handleSavePassword}
             >
               {userProfile.is_password_set ? t('common.operation.reset') : t('common.operation.save')}
             </Button>
@@ -259,7 +259,7 @@ export default function AccountPage() {
                 <span>{t('common.account.deleteConfirmTip')}</span>
                 <a
                   className='text-primary-600 cursor'
-                  href={`mailto:support@mlchain.khulnasoft.com?subject=Delete Account Request&body=Delete Account: ${userProfile.email}`}
+                  href={`mailto:support@dify.ai?subject=Delete Account Request&body=Delete Account: ${userProfile.email}`}
                   target='_blank'
                   rel='noreferrer noopener'
                   onClick={(e) => {
@@ -267,7 +267,7 @@ export default function AccountPage() {
                     window.location.href = e.currentTarget.href
                   }}
                 >
-                  support@mlchain.khulnasoft.com
+                  support@dify.ai
                 </a>
               </div>
               <div className='my-2 px-3 py-2 rounded-lg bg-gray-100 text-sm font-medium leading-5 text-gray-800'>{`${t('common.account.delete')}: ${userProfile.email}`}</div>

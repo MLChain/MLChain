@@ -28,7 +28,7 @@ const translation = {
     callTimes: 'Liczba wywołań',
     usedToken: 'Zużyty token',
     setAPIBtn: 'Przejdź do konfiguracji dostawcy modelu',
-    tryCloud: 'Lub wypróbuj wersję chmurową Mlchain z darmowym limitem',
+    tryCloud: 'Lub wypróbuj wersję chmurową Dify z darmowym limitem',
   },
   overview: {
     title: 'Przegląd',
@@ -52,6 +52,8 @@ const translation = {
           title: 'Kroki przepływu pracy',
           show: 'Pokaż',
           hide: 'Ukryj',
+          subTitle: 'Szczegóły przepływu pracy',
+          showDesc: 'Pokazywanie lub ukrywanie szczegółów przepływu pracy w aplikacji internetowej',
         },
         chatColorTheme: 'Motyw kolorystyczny czatu',
         chatColorThemeDesc: 'Ustaw motyw kolorystyczny czatu',
@@ -64,10 +66,16 @@ const translation = {
           privacyPolicy: 'Polityka prywatności',
           privacyPolicyPlaceholder: 'Wprowadź link do polityki prywatności',
           privacyPolicyTip:
-            'Pomaga odwiedzającym zrozumieć, jakie dane zbiera aplikacja, zobacz <privacyPolicyLink>Politykę prywatności Mlchain</privacyPolicyLink>.',
+            'Pomaga odwiedzającym zrozumieć, jakie dane zbiera aplikacja, zobacz <privacyPolicyLink>Politykę prywatności Dify</privacyPolicyLink>.',
           customDisclaimer: 'Oświadczenie o ochronie danych',
           customDisclaimerPlaceholder: 'Wprowadź oświadczenie o ochronie danych',
           customDisclaimerTip: 'Niestandardowy tekst oświadczenia będzie wyświetlany po stronie klienta, dostarczając dodatkowych informacji o aplikacji.',
+        },
+        sso: {
+          tooltip: 'Skontaktuj się z administratorem, aby włączyć logowanie jednokrotne w aplikacji internetowej',
+          title: 'Logowanie jednokrotne w aplikacji internetowej',
+          label: 'Uwierzytelnianie logowania jednokrotnego',
+          description: 'Wszyscy użytkownicy muszą zalogować się za pomocą logowania jednokrotnego przed użyciem aplikacji internetowej',
         },
       },
       embedded: {
@@ -79,7 +87,7 @@ const translation = {
           'Aby dodać aplikację czatu w dowolnym miejscu na swojej stronie internetowej, dodaj ten kod iframe do swojego kodu HTML.',
         scripts:
           'Aby dodać aplikację czatu w prawym dolnym rogu swojej strony internetowej, dodaj ten kod do swojego HTML.',
-        chromePlugin: 'Zainstaluj rozszerzenie Chrome Mlchain Chatbot',
+        chromePlugin: 'Zainstaluj rozszerzenie Chrome Dify Chatbot',
         copied: 'Skopiowane',
         copy: 'Kopiuj',
       },
@@ -99,7 +107,7 @@ const translation = {
           step1: 'Skopiuj kod klienta i zmodyfikuj go',
           step1Tip:
             'Kliknij tutaj, aby skopiować kod źródłowy na swoje konto GitHub i zmodyfikować kod',
-          step1Operation: 'Mlchain-WebClient',
+          step1Operation: 'Dify-WebClient',
           step2: 'Wdroż na Vercel',
           step2Tip:
             'Kliknij tutaj, aby zaimportować repozytorium do Vercel i wdrożyć',
@@ -130,8 +138,11 @@ const translation = {
     tokenPS: 'Tokeny/s',
     totalMessages: {
       title: 'Łączna liczba wiadomości',
-      explanation:
-        'Dzienna liczba interakcji z AI; inżynieria i debugowanie monitów wykluczone.',
+      explanation: 'Liczba dziennych interakcji z AI.',
+    },
+    totalConversations: {
+      title: 'Całkowita liczba rozmów',
+      explanation: 'Liczba dziennych rozmów z AI; inżynieria/debugowanie promptów wykluczone.',
     },
     activeUsers: {
       title: 'Aktywni użytkownicy',

@@ -25,7 +25,7 @@ const translation = {
     callTimes: 'Aufrufzeiten',
     usedToken: 'Verwendetes Token',
     setAPIBtn: 'Zum Einrichten des Modellanbieters gehen',
-    tryCloud: 'Oder probieren Sie die Cloud-Version von Mlchain mit kostenlosem Angebot aus',
+    tryCloud: 'Oder probieren Sie die Cloud-Version von Dify mit kostenlosem Angebot aus',
   },
   overview: {
     title: 'Übersicht',
@@ -48,6 +48,8 @@ const translation = {
           title: 'Workflow-Schritte',
           show: 'Anzeigen',
           hide: 'Verbergen',
+          subTitle: 'Details zum Arbeitsablauf',
+          showDesc: 'Ein- oder Ausblenden von Workflow-Details in der WebApp',
         },
         chatColorTheme: 'Chat-Farbschema',
         chatColorThemeDesc: 'Legen Sie das Farbschema des Chatbots fest',
@@ -59,10 +61,16 @@ const translation = {
           copyRightPlaceholder: 'Geben Sie den Namen des Autors oder der Organisation ein',
           privacyPolicy: 'Datenschutzrichtlinie',
           privacyPolicyPlaceholder: 'Geben Sie den Link zur Datenschutzrichtlinie ein',
-          privacyPolicyTip: 'Hilft Besuchern zu verstehen, welche Daten die Anwendung sammelt, siehe Mlchains <privacyPolicyLink>Datenschutzrichtlinie</privacyPolicyLink>.',
+          privacyPolicyTip: 'Hilft Besuchern zu verstehen, welche Daten die Anwendung sammelt, siehe Difys <privacyPolicyLink>Datenschutzrichtlinie</privacyPolicyLink>.',
           customDisclaimer: 'Benutzerdefinierte Haftungsausschluss',
           customDisclaimerPlaceholder: 'Geben Sie den benutzerdefinierten Haftungsausschluss-Text ein',
           customDisclaimerTip: 'Der ben userdefinierte Haftungsausschluss-Text wird auf der Clientseite angezeigt und bietet zusätzliche Informationen über die Anwendung',
+        },
+        sso: {
+          title: 'WebApp-SSO',
+          description: 'Alle Benutzer müssen sich mit SSO anmelden, bevor sie WebApp verwenden können',
+          label: 'SSO-Authentifizierung',
+          tooltip: 'Wenden Sie sich an den Administrator, um WebApp-SSO zu aktivieren',
         },
       },
       embedded: {
@@ -71,7 +79,7 @@ const translation = {
         explanation: 'Wählen Sie die Art und Weise, wie die Chat-App auf Ihrer Website eingebettet wird',
         iframe: 'Um die Chat-App an einer beliebigen Stelle auf Ihrer Website hinzuzufügen, fügen Sie diesen iframe in Ihren HTML-Code ein.',
         scripts: 'Um eine Chat-App unten rechts auf Ihrer Website hinzuzufügen, fügen Sie diesen Code in Ihren HTML-Code ein.',
-        chromePlugin: 'Installieren Sie die Mlchain Chatbot Chrome-Erweiterung',
+        chromePlugin: 'Installieren Sie die Dify Chatbot Chrome-Erweiterung',
         copied: 'Kopiert',
         copy: 'Kopieren',
       },
@@ -89,7 +97,7 @@ const translation = {
           name: 'Forken Sie den Client-Code, ändern Sie ihn und deployen Sie ihn auf Vercel (empfohlen)',
           step1: 'Forken Sie den Client-Code und ändern Sie ihn',
           step1Tip: 'Klicken Sie hier, um den Quellcode in Ihr GitHub-Konto zu forken und den Code zu ändern',
-          step1Operation: 'Mlchain-WebClient',
+          step1Operation: 'Dify-WebClient',
           step2: 'Deployen auf Vercel',
           step2Tip: 'Klicken Sie hier, um das Repository in Vercel zu importieren und zu deployen',
           step2Operation: 'Repository importieren',
@@ -119,7 +127,11 @@ const translation = {
     tokenPS: 'Token/s',
     totalMessages: {
       title: 'Gesamtnachrichten',
-      explanation: 'Tägliche AI-Interaktionszählung; Prompt-Engineering/Debugging ausgenommen.',
+      explanation: 'Tägliche Anzahl der KI-Interaktionen.',
+    },
+    totalConversations: {
+      title: 'Gesamte Konversationen',
+      explanation: 'Tägliche Anzahl der KI-Konversationen; Prompt-Engineering/Debugging ausgeschlossen.',
     },
     activeUsers: {
       title: 'Aktive Benutzer',
@@ -145,6 +157,10 @@ const translation = {
     tps: {
       title: 'Token-Ausgabegeschwindigkeit',
       explanation: 'Misst die Leistung des LLM. Zählt die Token-Ausgabegeschwindigkeit des LLM vom Beginn der Anfrage bis zum Abschluss der Ausgabe.',
+    },
+    avgUserInteractions: {
+      explanation: 'Spiegelt die tägliche Nutzungshäufigkeit der Benutzer wider. Diese Metrik spiegelt die Bindung der Benutzer wider.',
+      title: 'Durchschnittliche Benutzerinteraktionen',
     },
   },
 }

@@ -65,6 +65,8 @@ const translation = {
       bulkUpload: 'Masowe przesyłanie dokumentów',
       agentMode: 'Tryb agenta',
       workflow: 'Przepływ pracy',
+      llmLoadingBalancing: 'Równoważenie obciążenia LLM',
+      llmLoadingBalancingTooltip: 'Dodaj wiele kluczy API do modeli, skutecznie omijając limity szybkości interfejsu API.',
     },
     comingSoon: 'Wkrótce dostępne',
     member: 'Członek',
@@ -80,9 +82,10 @@ const translation = {
         'Ręczna edycja i adnotacja odpowiedzi zapewniają możliwość dostosowania wysokiej jakości odpowiedzi na pytania dla aplikacji. (Stosowane tylko w aplikacjach czatowych)',
     },
     ragAPIRequestTooltip:
-      'Odnosi się do liczby wywołań API wykorzystujących tylko zdolności przetwarzania bazy wiedzy Mlchain.',
+      'Odnosi się do liczby wywołań API wykorzystujących tylko zdolności przetwarzania bazy wiedzy Dify.',
     receiptInfo:
       'Tylko właściciel zespołu i administrator zespołu mogą subskrybować i przeglądać informacje o rozliczeniach',
+    annotationQuota: 'Przydział adnotacji',
   },
   plans: {
     sandbox: {

@@ -10,14 +10,14 @@ import {
   useEmbeddedChatbotContext,
 } from './context'
 import { useEmbeddedChatbot } from './hooks'
-import { isMlchain } from './utils'
+import { isDify } from './utils'
 import { useThemeContext } from './theme/theme-context'
 import cn from '@/utils/classnames'
 import { checkOrSetAccessToken } from '@/app/components/share/utils'
 import AppUnavailable from '@/app/components/base/app-unavailable'
 import useBreakpoints, { MediaType } from '@/hooks/use-breakpoints'
 import Loading from '@/app/components/base/loading'
-import LogoHeader from '@/app/components/base/logo/logo-embeded-chat-header'
+import LogoHeader from '@/app/components/base/logo/logo-embedded-chat-header'
 import Header from '@/app/components/base/chat/embedded-chatbot/header'
 import ConfigPanel from '@/app/components/base/chat/embedded-chatbot/config-panel'
 import ChatWrapper from '@/app/components/base/chat/embedded-chatbot/chat-wrapper'
@@ -41,7 +41,7 @@ const Chatbot = () => {
   const customConfig = appData?.custom_config
   const site = appData?.site
 
-  const mlchainIcon = <LogoHeader />
+  const difyIcon = <LogoHeader />
 
   useEffect(() => {
     themeBuilder?.buildTheme(site?.chat_color_theme, site?.chat_color_theme_inverted)
@@ -49,7 +49,7 @@ const Chatbot = () => {
       if (customConfig)
         document.title = `${site.title}`
       else
-        document.title = `${site.title} - Powered by Mlchain`
+        document.title = `${site.title} - Powered by Dify`
     }
   }, [site, customConfig, themeBuilder])
 
@@ -69,7 +69,7 @@ const Chatbot = () => {
       <Header
         isMobile={isMobile}
         title={site?.title || ''}
-        customerIcon={isMlchain() ? mlchainIcon : ''}
+        customerIcon={isDify() ? difyIcon : ''}
         theme={themeBuilder?.theme}
         onCreateNewChat={handleNewConversation}
       />
@@ -88,9 +88,7 @@ const Chatbot = () => {
               {!isMobile && (
                 <div className='absolute top-2.5 right-3 z-20'>
                   <Tooltip
-                    selector={'embed-scene-restart-button'}
-                    htmlContent={t('share.chat.resetChat')}
-                    position='top'
+                    popupContent={t('share.chat.resetChat')}
                   >
                     <div className='p-1.5 bg-white border-[0.5px] border-gray-100 rounded-lg shadow-md cursor-pointer' onClick={handleNewConversation}>
                       <RiLoopLeftLine className="h-4 w-4 text-gray-500"/>

@@ -1,6 +1,6 @@
 identity:
   name: job_search
-  author: Mlchain
+  author: Dify
   label:
     en_US: Job Search API
     zh_Hans: Job Search API

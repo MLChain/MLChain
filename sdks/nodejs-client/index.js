@@ -1,5 +1,5 @@
 import axios from "axios";
-export const BASE_URL = "https://api.mlchain.khulnasoft.com/v1";
+export const BASE_URL = "https://api.dify.ai/v1";
 
 export const routes = {
   //  app's
@@ -76,7 +76,7 @@ export const routes = {
 
 };
 
-export class MlchainClient {
+export class DifyClient {
   constructor(apiKey, baseUrl = BASE_URL) {
     this.apiKey = apiKey;
     this.baseUrl = baseUrl;
@@ -188,7 +188,7 @@ export class MlchainClient {
   }
 }
 
-export class CompletionClient extends MlchainClient {
+export class CompletionClient extends DifyClient {
   createCompletionMessage(inputs, user, stream = false, files = null) {
     const data = {
       inputs,
@@ -221,7 +221,7 @@ export class CompletionClient extends MlchainClient {
   }
 }
 
-export class ChatClient extends MlchainClient {
+export class ChatClient extends DifyClient {
   createChatMessage(
     inputs,
     query,
@@ -332,7 +332,7 @@ export class ChatClient extends MlchainClient {
 
 }
 
-export class WorkflowClient extends MlchainClient {
+export class WorkflowClient extends DifyClient {
   run(inputs,user,stream) {
     const data = { 
       inputs, 

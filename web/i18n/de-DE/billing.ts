@@ -60,6 +60,8 @@ const translation = {
       bulkUpload: 'Massenupload von Dokumenten',
       agentMode: 'Agentenmodus',
       workflow: 'Workflow',
+      llmLoadingBalancing: 'LLM-Lastausgleich',
+      llmLoadingBalancingTooltip: 'Fügen Sie Modellen mehrere API-Schlüssel hinzu, um die API-Ratenlimits effektiv zu umgehen.',
     },
     comingSoon: 'Demnächst',
     member: 'Mitglied',
@@ -72,8 +74,9 @@ const translation = {
       title: 'Kontingentgrenzen für Annotationen',
       tooltip: 'Manuelle Bearbeitung und Annotation von Antworten bieten anpassbare, hochwertige Frage-Antwort-Fähigkeiten für Apps. (Nur anwendbar in Chat-Apps)',
     },
-    ragAPIRequestTooltip: 'Bezieht sich auf die Anzahl der API-Aufrufe, die nur die Wissensdatenbankverarbeitungsfähigkeiten von Mlchain aufrufen.',
+    ragAPIRequestTooltip: 'Bezieht sich auf die Anzahl der API-Aufrufe, die nur die Wissensdatenbankverarbeitungsfähigkeiten von Dify aufrufen.',
     receiptInfo: 'Nur der Teaminhaber und der Teamadministrator können abonnieren und Abrechnungsinformationen einsehen',
+    annotationQuota: 'Kontingent für Anmerkungen',
   },
   plans: {
     sandbox: {

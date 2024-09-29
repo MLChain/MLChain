@@ -15,6 +15,7 @@ import VariableAssignerDefault from './nodes/variable-assigner/default'
 import AssignerDefault from './nodes/assigner/default'
 import EndNodeDefault from './nodes/end/default'
 import IterationDefault from './nodes/iteration/default'
+import IterationStartDefault from './nodes/iteration-start/default'
 
 type NodesExtraData = {
   author: string
@@ -27,7 +28,7 @@ type NodesExtraData = {
 }
 export const NODES_EXTRA_DATA: Record<BlockEnum, NodesExtraData> = {
   [BlockEnum.Start]: {
-    author: 'Mlchain',
+    author: 'Dify',
     about: '',
     availablePrevNodes: [],
     availableNextNodes: [],
@@ -36,7 +37,7 @@ export const NODES_EXTRA_DATA: Record<BlockEnum, NodesExtraData> = {
     checkValid: StartNodeDefault.checkValid,
   },
   [BlockEnum.End]: {
-    author: 'Mlchain',
+    author: 'Dify',
     about: '',
     availablePrevNodes: [],
     availableNextNodes: [],
@@ -45,7 +46,7 @@ export const NODES_EXTRA_DATA: Record<BlockEnum, NodesExtraData> = {
     checkValid: EndNodeDefault.checkValid,
   },
   [BlockEnum.Answer]: {
-    author: 'Mlchain',
+    author: 'Dify',
     about: '',
     availablePrevNodes: [],
     availableNextNodes: [],
@@ -54,7 +55,7 @@ export const NODES_EXTRA_DATA: Record<BlockEnum, NodesExtraData> = {
     checkValid: AnswerDefault.checkValid,
   },
   [BlockEnum.LLM]: {
-    author: 'Mlchain',
+    author: 'Dify',
     about: '',
     availablePrevNodes: [],
     availableNextNodes: [],
@@ -63,7 +64,7 @@ export const NODES_EXTRA_DATA: Record<BlockEnum, NodesExtraData> = {
     checkValid: LLMDefault.checkValid,
   },
   [BlockEnum.KnowledgeRetrieval]: {
-    author: 'Mlchain',
+    author: 'Dify',
     about: '',
     availablePrevNodes: [],
     availableNextNodes: [],
@@ -72,7 +73,7 @@ export const NODES_EXTRA_DATA: Record<BlockEnum, NodesExtraData> = {
     checkValid: KnowledgeRetrievalDefault.checkValid,
   },
   [BlockEnum.IfElse]: {
-    author: 'Mlchain',
+    author: 'Dify',
     about: '',
     availablePrevNodes: [],
     availableNextNodes: [],
@@ -81,7 +82,7 @@ export const NODES_EXTRA_DATA: Record<BlockEnum, NodesExtraData> = {
     checkValid: IfElseDefault.checkValid,
   },
   [BlockEnum.Iteration]: {
-    author: 'Mlchain',
+    author: 'Dify',
     about: '',
     availablePrevNodes: [],
     availableNextNodes: [],
@@ -89,8 +90,17 @@ export const NODES_EXTRA_DATA: Record<BlockEnum, NodesExtraData> = {
     getAvailableNextNodes: IterationDefault.getAvailableNextNodes,
     checkValid: IterationDefault.checkValid,
   },
+  [BlockEnum.IterationStart]: {
+    author: 'Dify',
+    about: '',
+    availablePrevNodes: [],
+    availableNextNodes: [],
+    getAvailablePrevNodes: IterationStartDefault.getAvailablePrevNodes,
+    getAvailableNextNodes: IterationStartDefault.getAvailableNextNodes,
+    checkValid: IterationStartDefault.checkValid,
+  },
   [BlockEnum.Code]: {
-    author: 'Mlchain',
+    author: 'Dify',
     about: '',
     availablePrevNodes: [],
     availableNextNodes: [],
@@ -99,7 +109,7 @@ export const NODES_EXTRA_DATA: Record<BlockEnum, NodesExtraData> = {
     checkValid: CodeDefault.checkValid,
   },
   [BlockEnum.TemplateTransform]: {
-    author: 'Mlchain',
+    author: 'Dify',
     about: '',
     availablePrevNodes: [],
     availableNextNodes: [],
@@ -108,7 +118,7 @@ export const NODES_EXTRA_DATA: Record<BlockEnum, NodesExtraData> = {
     checkValid: TemplateTransformDefault.checkValid,
   },
   [BlockEnum.QuestionClassifier]: {
-    author: 'Mlchain',
+    author: 'Dify',
     about: '',
     availablePrevNodes: [],
     availableNextNodes: [],
@@ -117,7 +127,7 @@ export const NODES_EXTRA_DATA: Record<BlockEnum, NodesExtraData> = {
     checkValid: QuestionClassifierDefault.checkValid,
   },
   [BlockEnum.HttpRequest]: {
-    author: 'Mlchain',
+    author: 'Dify',
     about: '',
     availablePrevNodes: [],
     availableNextNodes: [],
@@ -126,7 +136,7 @@ export const NODES_EXTRA_DATA: Record<BlockEnum, NodesExtraData> = {
     checkValid: HttpRequestDefault.checkValid,
   },
   [BlockEnum.VariableAssigner]: {
-    author: 'Mlchain',
+    author: 'Dify',
     about: '',
     availablePrevNodes: [],
     availableNextNodes: [],
@@ -135,7 +145,7 @@ export const NODES_EXTRA_DATA: Record<BlockEnum, NodesExtraData> = {
     checkValid: VariableAssignerDefault.checkValid,
   },
   [BlockEnum.Assigner]: {
-    author: 'Mlchain',
+    author: 'Dify',
     about: '',
     availablePrevNodes: [],
     availableNextNodes: [],
@@ -144,7 +154,7 @@ export const NODES_EXTRA_DATA: Record<BlockEnum, NodesExtraData> = {
     checkValid: AssignerDefault.checkValid,
   },
   [BlockEnum.VariableAggregator]: {
-    author: 'Mlchain',
+    author: 'Dify',
     about: '',
     availablePrevNodes: [],
     availableNextNodes: [],
@@ -153,7 +163,7 @@ export const NODES_EXTRA_DATA: Record<BlockEnum, NodesExtraData> = {
     checkValid: VariableAssignerDefault.checkValid,
   },
   [BlockEnum.ParameterExtractor]: {
-    author: 'Mlchain',
+    author: 'Dify',
     about: '',
     availablePrevNodes: [],
     availableNextNodes: [],
@@ -162,7 +172,7 @@ export const NODES_EXTRA_DATA: Record<BlockEnum, NodesExtraData> = {
     checkValid: ParameterExtractorDefault.checkValid,
   },
   [BlockEnum.Tool]: {
-    author: 'Mlchain',
+    author: 'Dify',
     about: '',
     availablePrevNodes: [],
     availableNextNodes: [],
@@ -221,6 +231,12 @@ export const NODES_INITIAL_DATA = {
     title: '',
     desc: '',
     ...IterationDefault.defaultValue,
+  },
+  [BlockEnum.IterationStart]: {
+    type: BlockEnum.IterationStart,
+    title: '',
+    desc: '',
+    ...IterationStartDefault.defaultValue,
   },
   [BlockEnum.Code]: {
     type: BlockEnum.Code,
@@ -305,11 +321,13 @@ export const AUTO_LAYOUT_OFFSET = {
 export const ITERATION_NODE_Z_INDEX = 1
 export const ITERATION_CHILDREN_Z_INDEX = 1002
 export const ITERATION_PADDING = {
-  top: 85,
+  top: 65,
   right: 16,
   bottom: 20,
   left: 16,
 }
+export const PARALLEL_LIMIT = 10
+export const PARALLEL_DEPTH_LIMIT = 3
 
 export const RETRIEVAL_OUTPUT_STRUCT = `{
   "content": "",
@@ -412,4 +430,5 @@ export const PARAMETER_EXTRACTOR_COMMON_STRUCT: Var[] = [
 
 export const WORKFLOW_DATA_UPDATE = 'WORKFLOW_DATA_UPDATE'
 export const CUSTOM_NODE = 'custom'
+export const CUSTOM_EDGE = 'custom'
 export const DSL_EXPORT_CHECK = 'DSL_EXPORT_CHECK'

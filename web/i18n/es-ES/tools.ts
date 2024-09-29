@@ -1,7 +1,7 @@
 const translation = {
   title: 'Herramientas',
   createCustomTool: 'Crear Herramienta Personalizada',
-  customToolTip: 'Aprende más sobre las herramientas personalizadas de Mlchain',
+  customToolTip: 'Aprende más sobre las herramientas personalizadas de Dify',
   type: {
     all: 'Todas',
     builtIn: 'Incorporadas',
@@ -10,7 +10,7 @@ const translation = {
   },
   contribute: {
     line1: 'Estoy interesado en ',
-    line2: 'contribuir herramientas a Mlchain.',
+    line2: 'contribuir herramientas a Dify.',
     viewGuide: 'Ver la guía',
   },
   author: 'Por',

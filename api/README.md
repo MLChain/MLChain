@@ -1,9 +1,9 @@
-# Mlchain Backend API
+# Dify Backend API
 
 ## Usage
 
 > [!IMPORTANT]
-> In the v0.6.12 release, we deprecated `pip` as the package management tool for Mlchain API Backend service and replaced it with `poetry`.
+> In the v0.6.12 release, we deprecated `pip` as the package management tool for Dify API Backend service and replaced it with `poetry`.
 
 1. Start the docker-compose stack
 
@@ -13,7 +13,7 @@
    cd ../docker
    cp middleware.env.example middleware.env
    # change the profile to other vector database if you are not using weaviate
-   docker compose -f docker-compose.middleware.yaml --profile weaviate -p mlchain up -d
+   docker compose -f docker-compose.middleware.yaml --profile weaviate -p dify up -d
    cd ../api
    ```
 
@@ -32,7 +32,7 @@
 
 4. Create environment.
 
-   Mlchain API service uses [Poetry](https://python-poetry.org/docs/) to manage dependencies. You can execute `poetry shell` to activate the environment.
+   Dify API service uses [Poetry](https://python-poetry.org/docs/) to manage dependencies. You can execute `poetry shell` to activate the environment.
 
 5. Install dependencies
 
@@ -63,15 +63,13 @@
    poetry run python -m flask run --host 0.0.0.0 --port=5001 --debug
    ```
 
-8. Start Mlchain [web](../web) service.
+8. Start Dify [web](../web) service.
 9. Setup your application by visiting `http://localhost:3000`...
-10. If you need to debug local async processing, please start the worker service.
+10. If you need to handle and debug the async tasks (e.g. dataset importing and documents indexing), please start the worker service.
 
    ```bash
    poetry run python -m celery -A app.celery worker -P gevent -c 1 --loglevel INFO -Q dataset,generation,mail,ops_trace,app_deletion
    ```
-
-   The started celery app handles the async tasks, e.g. dataset importing and documents indexing.
 
 ## Testing
 

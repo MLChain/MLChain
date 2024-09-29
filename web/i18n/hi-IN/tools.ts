@@ -1,7 +1,7 @@
 const translation = {
   title: 'उपकरण',
   createCustomTool: 'कस्टम उपकरण बनाएं',
-  customToolTip: 'Mlchain कस्टम उपकरणों के बारे में और जानें',
+  customToolTip: 'Dify कस्टम उपकरणों के बारे में और जानें',
   type: {
     all: 'सभी',
     builtIn: 'निर्मित',
@@ -10,7 +10,7 @@ const translation = {
   },
   contribute: {
     line1: 'मैं रुचि रखता हूं ',
-    line2: 'Mlchain में उपकरण दान करने में।',
+    line2: 'Dify में उपकरण दान करने में।',
     viewGuide: 'गाइड देखें',
   },
   author: 'द्वारा',
@@ -103,6 +103,7 @@ const translation = {
       label: 'टैग',
       labelPlaceholder: 'टैग चुनें(वैकल्पिक)',
       description: 'पैरामीटर के अर्थ का विवरण',
+      descriptionPlaceholder: 'पैरामीटर के अर्थ का विवरण',
     },
     customDisclaimer: 'कस्टम अस्वीकरण',
     customDisclaimerPlaceholder: 'कस्टम अस्वीकरण दर्ज करें',

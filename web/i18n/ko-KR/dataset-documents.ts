@@ -1,7 +1,7 @@
 const translation = {
   list: {
     title: '문서',
-    desc: '지식의 모든 파일이 여기에 표시되며, 전체 지식이 Mlchain의 인용문이나 챗 플러그인을 통해 링크되거나 색인화될 수 있습니다.',
+    desc: '지식의 모든 파일이 여기에 표시되며, 전체 지식이 Dify의 인용문이나 챗 플러그인을 통해 링크되거나 색인화될 수 있습니다.',
     addFile: '파일 추가',
     addPages: '페이지 추가',
     table: {
@@ -13,6 +13,8 @@ const translation = {
         status: '상태',
         action: '동작',
       },
+      name: '이름',
+      rename: '이름 바꾸기',
     },
     action: {
       uploadFile: '새 파일 업로드',
@@ -49,7 +51,7 @@ const translation = {
         tip: '파일을 업로드하거나 웹 사이트에서 동기화하거나 Notion이나 GitHub 같은 웹 앱에서 동기화할 수 있습니다.',
       },
       sync: {
-        tip: 'Mlchain는 정기적으로 Notion에서 파일을 다운로드하고 처리합니다.',
+        tip: 'Dify는 정기적으로 Notion에서 파일을 다운로드하고 처리합니다.',
       },
     },
     delete: {
@@ -74,6 +76,7 @@ const translation = {
       error: '가져오기 오류',
       ok: '확인',
     },
+    addUrl: 'URL 추가',
   },
   metadata: {
     title: '메타데이터',

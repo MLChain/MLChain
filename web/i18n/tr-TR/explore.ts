@@ -16,7 +16,7 @@ const translation = {
     },
   },
   apps: {
-    title: 'Mlchain Tarafından Keşfet Uygulamaları',
+    title: 'Dify Tarafından Keşfet Uygulamaları',
     description: 'Bu şablon uygulamalarını anında kullanın veya şablonlara dayalı kendi uygulamalarınızı özelleştirin.',
     allCategories: 'Önerilen',
   },

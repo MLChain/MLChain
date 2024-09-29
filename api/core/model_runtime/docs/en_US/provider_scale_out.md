@@ -58,11 +58,11 @@ provider_credential_schema:  # Provider credential rules, as Anthropic only supp
       en_US: Enter your API URL
 ```
 
-You can also refer to the YAML configuration information under other provider directories in `model_providers`. The complete YAML rules are available at: [Schema](schema.md#Provider).
+You can also refer to the YAML configuration information under other provider directories in `model_providers`. The complete YAML rules are available at: [Schema](schema.md#provider).
 
 ### Implementing Provider Code
 
-Providers need to inherit the `__base.model_provider.ModelProvider` base class and implement the `validate_provider_credentials` method for unified provider credential verification. For reference, see [AnthropicProvider](https://github.com/mlchain/mlchain-runtime/blob/main/lib/model_providers/anthropic/anthropic.py).
+Providers need to inherit the `__base.model_provider.ModelProvider` base class and implement the `validate_provider_credentials` method for unified provider credential verification. For reference, see [AnthropicProvider](https://github.com/mlchain/dify-runtime/blob/main/lib/model_providers/anthropic/anthropic.py).
 > If the provider is the type of `customizable-model`, there is no need to implement the `validate_provider_credentials` method.
 
 ```python
@@ -214,7 +214,7 @@ In `llm.py`, create an Anthropic LLM class, which we name `AnthropicLargeLanguag
 
 - Invocation Error Mapping Table
 
-  When there is an exception in model invocation, it needs to be mapped to the `InvokeError` type specified by Runtime. This facilitates Mlchain's ability to handle different errors with appropriate follow-up actions.
+  When there is an exception in model invocation, it needs to be mapped to the `InvokeError` type specified by Runtime. This facilitates Dify's ability to handle different errors with appropriate follow-up actions.
 
   Runtime Errors:
 
@@ -237,7 +237,7 @@ In `llm.py`, create an Anthropic LLM class, which we name `AnthropicLargeLanguag
       """
   ```
 
-For details on the interface methods, see: [Interfaces](interfaces.md). For specific implementations, refer to: [llm.py](https://github.com/mlchain/mlchain-runtime/blob/main/lib/model_providers/anthropic/llm/llm.py).
+For details on the interface methods, see: [Interfaces](interfaces.md). For specific implementations, refer to: [llm.py](https://github.com/mlchain/dify-runtime/blob/main/lib/model_providers/anthropic/llm/llm.py).
 
 ### Testing
 

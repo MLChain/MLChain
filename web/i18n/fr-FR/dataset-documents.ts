@@ -1,7 +1,7 @@
 const translation = {
   list: {
     title: 'Documents',
-    desc: 'Tous les fichiers de la Connaissance sont affichés ici, et l\'ensemble de la Connaissance peut être lié aux citations Mlchain ou indexé via le plugin Chat.',
+    desc: 'Tous les fichiers de la Connaissance sont affichés ici, et l\'ensemble de la Connaissance peut être lié aux citations Dify ou indexé via le plugin Chat.',
     addFile: 'ajouter un fichier',
     addPages: 'Ajouter des Pages',
     table: {
@@ -13,6 +13,8 @@ const translation = {
         status: 'STATUT',
         action: 'ACTION',
       },
+      rename: 'Renommer',
+      name: 'Nom',
     },
     action: {
       uploadFile: 'Télécharger un nouveau fichier',
@@ -49,7 +51,7 @@ const translation = {
         tip: 'Vous pouvez télécharger des fichiers, synchroniser à partir du site web, ou à partir d\'applications web comme Notion, GitHub, etc.',
       },
       sync: {
-        tip: 'Mlchain téléchargera périodiquement des fichiers de votre Notion et terminera le traitement.',
+        tip: 'Dify téléchargera périodiquement des fichiers de votre Notion et terminera le traitement.',
       },
     },
     delete: {
@@ -74,6 +76,7 @@ const translation = {
       error: 'Erreur d\'Importation',
       ok: 'D\'accord',
     },
+    addUrl: 'Ajouter une URL',
   },
   metadata: {
     title: 'Métadonnées',

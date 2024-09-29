@@ -27,7 +27,7 @@ class SerplyApi:
             "X-API-KEY": self.serply_api_key,
             "X-User-Agent": kwargs.get("device", "desktop"),
             "X-Proxy-Location": location,
-            "User-Agent": "Mlchain",
+            "User-Agent": "Dify",
         }
 
         url = f"{BASE_URL}{urlencode(params)}"
@@ -53,13 +53,15 @@ class SerplyApi:
                 r = requests.get(entry["link"])
                 final_link = r.history[-1].headers["Location"]
                 string.append(
-                    "\n".join([
-                        f"Title: {entry['title']}",
-                        f"Link: {final_link}",
-                        f"Source: {entry['source']['title']}",
-                        f"Published: {entry['published']}",
-                        "---",
-                    ])
+                    "\n".join(
+                        [
+                            f"Title: {entry['title']}",
+                            f"Link: {final_link}",
+                            f"Source: {entry['source']['title']}",
+                            f"Published: {entry['published']}",
+                            "---",
+                        ]
+                    )
                 )
             except KeyError:
                 continue

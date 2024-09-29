@@ -1,4 +1,4 @@
-# Mlchain Frontend
+# Dify Frontend
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -18,6 +18,10 @@ yarn install --frozen-lockfile
 
 Then, configure the environment variables. Create a file named `.env.local` in the current directory and copy the contents from `.env.example`. Modify the values of these environment variables according to your requirements:
 
+```bash
+cp .env.example .env.local
+```
+
 ```
 # For production release, change this to PRODUCTION
 NEXT_PUBLIC_DEPLOY_ENV=DEVELOPMENT
@@ -25,7 +29,7 @@ NEXT_PUBLIC_DEPLOY_ENV=DEVELOPMENT
 NEXT_PUBLIC_EDITION=SELF_HOSTED
 # The base URL of console application, refers to the Console base URL of WEB service if console domain is
 # different from api or web app domain.
-# example: http://cloud.mlchain.khulnasoft.com/console/api
+# example: http://cloud.dify.ai/console/api
 NEXT_PUBLIC_API_PREFIX=http://localhost:5001/console/api
 # The URL for Web APP, refers to the Web App base URL of WEB service if web app domain is different from
 # console or api domain.
@@ -78,7 +82,7 @@ If your IDE is VSCode, rename `web/.vscode/settings.example.json` to `web/.vscod
 
 We start to use [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for Unit Testing.
 
-You can create a test file with a suffix of `.spec` beside the file that to be tested. For example, if you want to test a file named `util.ts`. The test file name should be `util.spec.ts`. 
+You can create a test file with a suffix of `.spec` beside the file that to be tested. For example, if you want to test a file named `util.ts`. The test file name should be `util.spec.ts`.
 
 Run test:
 
@@ -95,8 +99,8 @@ If you are not familiar with writing tests, here is some code to refer to:
 
 ## Documentation
 
-Visit <https://docs.mlchain.khulnasoft.com/getting-started/readme> to view the full documentation.
+Visit <https://docs.dify.ai/getting-started/readme> to view the full documentation.
 
 ## Community
 
-The Mlchain community can be found on [Discord community](https://discord.gg/5AEfbxcd9k), where you can ask questions, voice ideas, and share your projects.
+The Dify community can be found on [Discord community](https://discord.gg/5AEfbxcd9k), where you can ask questions, voice ideas, and share your projects.

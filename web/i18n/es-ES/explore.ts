@@ -16,7 +16,7 @@ const translation = {
     },
   },
   apps: {
-    title: 'Explorar aplicaciones de Mlchain',
+    title: 'Explorar aplicaciones de Dify',
     description: 'Utiliza estas aplicaciones de plantilla al instante o personaliza tus propias aplicaciones basadas en las plantillas.',
     allCategories: 'Recomendado',
   },

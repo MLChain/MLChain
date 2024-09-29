@@ -8,11 +8,11 @@ body:
       label: Self Checks
       description: "To make sure we get to you in time, please check the following :)"
       options:
-        - label: This is only for bug report, if you would like to ask a question, please head to [Discussions](https://github.com/mlchain/mlchain/discussions/categories/general).
+        - label: This is only for bug report, if you would like to ask a question, please head to [Discussions](https://github.com/mlchain/dify/discussions/categories/general).
           required: true
-        - label: I have searched for existing issues [search for existing issues](https://github.com/mlchain/mlchain/issues), including closed ones.
+        - label: I have searched for existing issues [search for existing issues](https://github.com/mlchain/dify/issues), including closed ones.
           required: true
-        - label: I confirm that I am using English to submit this report (我已阅读并同意 [Language Policy](https://github.com/mlchain/mlchain/issues/1542)).
+        - label: I confirm that I am using English to submit this report (我已阅读并同意 [Language Policy](https://github.com/mlchain/dify/issues/1542)).
           required: true
         - label: "[FOR CHINESE USERS] 请务必使用英文提交 Issue，否则会被关闭。谢谢！:）"
           required: true
@@ -21,15 +21,15 @@ body:
 
   - type: input
     attributes:
-      label: Mlchain version
-      description: See about section in Mlchain console
+      label: Dify version
+      description: See about section in Dify console
     validations:
       required: true
 
   - type: dropdown
     attributes:
       label: Cloud or Self Hosted
-      description: How / Where was Mlchain installed from?
+      description: How / Where was Dify installed from?
       multiple: true
       options:
         - Cloud

@@ -60,6 +60,8 @@ const translation = {
       bulkUpload: 'Téléchargement en masse de documents',
       agentMode: 'Mode Agent',
       workflow: 'Flux de travail',
+      llmLoadingBalancingTooltip: 'Ajoutez plusieurs clés API aux modèles, en contournant efficacement les limites de débit de l’API.',
+      llmLoadingBalancing: 'Équilibrage de charge LLM',
     },
     comingSoon: 'Bientôt disponible',
     member: 'Membre',
@@ -72,8 +74,9 @@ const translation = {
       title: 'Limites de quota d\'annotation',
       tooltip: 'L\'édition manuelle et l\'annotation des réponses fournissent des capacités de réponse aux questions de haute qualité personnalisables pour les applications. (Applicable uniquement dans les applications de chat)',
     },
-    ragAPIRequestTooltip: 'Fait référence au nombre d\'appels API invoquant uniquement les capacités de traitement de la base de connaissances de Mlchain.',
+    ragAPIRequestTooltip: 'Fait référence au nombre d\'appels API invoquant uniquement les capacités de traitement de la base de connaissances de Dify.',
     receiptInfo: 'Seuls le propriétaire de l\'équipe et l\'administrateur de l\'équipe peuvent s\'abonner et consulter les informations de facturation',
+    annotationQuota: 'Quota d’annotation',
   },
   plans: {
     sandbox: {

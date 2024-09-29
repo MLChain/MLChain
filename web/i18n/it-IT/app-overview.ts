@@ -28,7 +28,7 @@ const translation = {
     callTimes: 'Numero di chiamate',
     usedToken: 'Token utilizzati',
     setAPIBtn: 'Vai a configurare il fornitore di modelli',
-    tryCloud: 'O prova la versione cloud di Mlchain con quota gratuita',
+    tryCloud: 'O prova la versione cloud di Dify con quota gratuita',
   },
   overview: {
     title: 'Panoramica',
@@ -52,6 +52,8 @@ const translation = {
           title: 'Fasi del Workflow',
           show: 'Mostra',
           hide: 'Nascondi',
+          subTitle: 'Dettagli del flusso di lavoro',
+          showDesc: 'Mostrare o nascondere i dettagli del flusso di lavoro in WebApp',
         },
         chatColorTheme: 'Tema colore chat',
         chatColorThemeDesc: 'Imposta il tema colore del chatbot',
@@ -65,12 +67,18 @@ const translation = {
           privacyPolicy: 'Privacy Policy',
           privacyPolicyPlaceholder: 'Inserisci il link alla privacy policy',
           privacyPolicyTip:
-            'Aiuta i visitatori a capire i dati raccolti dall\'applicazione, vedi la <privacyPolicyLink>Privacy Policy</privacyPolicyLink> di Mlchain.',
+            'Aiuta i visitatori a capire i dati raccolti dall\'applicazione, vedi la <privacyPolicyLink>Privacy Policy</privacyPolicyLink> di Dify.',
           customDisclaimer: 'Disclaimer Personalizzato',
           customDisclaimerPlaceholder:
             'Inserisci il testo del disclaimer personalizzato',
           customDisclaimerTip:
             'Il testo del disclaimer personalizzato verrà visualizzato sul lato client, fornendo informazioni aggiuntive sull\'applicazione',
+        },
+        sso: {
+          label: 'Autenticazione SSO',
+          title: 'WebApp SSO',
+          description: 'Tutti gli utenti devono effettuare l\'accesso con SSO prima di utilizzare WebApp',
+          tooltip: 'Contattare l\'amministratore per abilitare l\'SSO di WebApp',
         },
       },
       embedded: {
@@ -81,7 +89,7 @@ const translation = {
           'Per aggiungere l\'app chat ovunque sul tuo sito web, aggiungi questo iframe al tuo codice HTML.',
         scripts:
           'Per aggiungere un\'app chat in basso a destra del tuo sito web, aggiungi questo codice al tuo HTML.',
-        chromePlugin: 'Installa l\'estensione Chrome di Mlchain Chatbot',
+        chromePlugin: 'Installa l\'estensione Chrome di Dify Chatbot',
         copied: 'Copiato',
         copy: 'Copia',
       },
@@ -101,7 +109,7 @@ const translation = {
           step1: 'Fork il codice client e modificalo',
           step1Tip:
             'Clicca qui per fork il codice sorgente nel tuo account GitHub e modifica il codice',
-          step1Operation: 'Mlchain-WebClient',
+          step1Operation: 'Dify-WebClient',
           step2: 'Distribuisci su Vercel',
           step2Tip:
             'Clicca qui per importare il repository su Vercel e distribuisci',
@@ -132,8 +140,11 @@ const translation = {
     tokenPS: 'Token/s',
     totalMessages: {
       title: 'Totale Messaggi',
-      explanation:
-        'Conteggio delle interazioni giornaliere con l\'AI; ingegneria dei prompt/debug esclusi.',
+      explanation: 'Conteggio delle interazioni giornaliere con l\'IA.',
+    },
+    totalConversations: {
+      title: 'Conversazioni totali',
+      explanation: 'Conteggio delle conversazioni giornaliere con l\'IA; ingegneria/debug dei prompt esclusi.',
     },
     activeUsers: {
       title: 'Utenti Attivi',

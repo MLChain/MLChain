@@ -82,7 +82,7 @@ const Apps = () => {
   ]
 
   useEffect(() => {
-    document.title = `${t('common.menus.apps')} -  Mlchain`
+    document.title = `${t('common.menus.apps')} -  Dify`
     if (localStorage.getItem(NEED_REFRESH_APP_LIST_KEY) === '1') {
       localStorage.removeItem(NEED_REFRESH_APP_LIST_KEY)
       mutate()
@@ -139,7 +139,7 @@ const Apps = () => {
       <nav className='grid content-start grid-cols-1 gap-4 px-12 pt-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grow shrink-0'>
         {isCurrentWorkspaceEditor
           && <NewAppCard onSuccess={mutate} />}
-        {data?.map(({ data: apps }: any) => apps.map((app: any) => (
+        {data?.map(({ data: apps }) => apps.map(app => (
           <AppCard key={app.id} app={app} onRefresh={mutate} />
         )))}
         <CheckModal />

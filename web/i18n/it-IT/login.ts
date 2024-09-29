@@ -1,6 +1,6 @@
 const translation = {
   pageTitle: 'Ehi, iniziamo!👋',
-  welcome: 'Benvenuto su Mlchain, per favore accedi per continuare.',
+  welcome: 'Benvenuto su Dify, per favore accedi per continuare.',
   email: 'Indirizzo email',
   emailPlaceholder: 'La tua email',
   password: 'Password',
@@ -22,7 +22,7 @@ const translation = {
   invitationCodePlaceholder: 'Il tuo codice di invito',
   interfaceLanguage: 'Lingua dell\'interfaccia',
   timezone: 'Fuso orario',
-  go: 'Vai a Mlchain',
+  go: 'Vai a Dify',
   sendUsMail:
     'Inviaci una email con la tua presentazione e gestiremo la richiesta di invito.',
   acceptPP: 'Ho letto e accetto l\'informativa sulla privacy',
@@ -38,7 +38,7 @@ const translation = {
   tosDesc: 'Iscrivendoti, accetti i nostri',
   goToInit:
     'Se non hai inizializzato l\'account, vai alla pagina di inizializzazione',
-  donthave: 'Non hai?',
+  dontHave: 'Non hai?',
   invalidInvitationCode: 'Codice di invito non valido',
   accountAlreadyInited: 'Account già inizializzato',
   forgotPassword: 'Hai dimenticato la password?',
@@ -67,14 +67,14 @@ const translation = {
       'La password deve contenere lettere e numeri, e la lunghezza deve essere maggiore di 8',
   },
   license: {
-    tip: 'Prima di avviare Mlchain Community Edition, leggi su GitHub',
+    tip: 'Prima di avviare Dify Community Edition, leggi su GitHub',
     link: 'Licenza open-source',
   },
   join: 'Unisciti',
   joinTipStart: 'Invitato a unirti al',
-  joinTipEnd: 'team su Mlchain',
+  joinTipEnd: 'team su Dify',
   invalid: 'Il link è scaduto',
-  explore: 'Esplora Mlchain',
+  explore: 'Esplora Dify',
   activatedTipStart: 'Sei entrato nel team',
   activatedTipEnd: '',
   activated: 'Accedi ora',

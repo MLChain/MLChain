@@ -14,7 +14,7 @@ help:
     en_US: Get your API key from novita.ai
     zh_Hans: 从 novita.ai 获取 API Key
   url:
-    en_US: https://novita.ai/settings#key-management?utm_source=mlchain&utm_medium=ch&utm_campaign=api
+    en_US: https://novita.ai/settings#key-management?utm_source=dify&utm_medium=ch&utm_campaign=api
 supported_model_types:
   - llm
 configurate_methods:

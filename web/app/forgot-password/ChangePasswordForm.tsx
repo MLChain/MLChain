@@ -90,7 +90,7 @@ const ChangePasswordForm = () => {
           </div>
           <div className="w-full mx-auto mt-6">
             <Button variant='primary' className='w-full !text-sm'>
-              <a href="https://mlchain.khulnasoft.com">{t('login.explore')}</a>
+              <a href="https://dify.ai">{t('login.explore')}</a>
             </Button>
           </div>
         </div>

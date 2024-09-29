@@ -60,6 +60,8 @@ const translation = {
       bulkUpload: 'Tải lên tài liệu hàng loạt',
       agentMode: 'Chế độ Đại lý',
       workflow: 'Quy trình làm việc',
+      llmLoadingBalancing: 'Cân bằng tải LLM',
+      llmLoadingBalancingTooltip: 'Thêm nhiều khóa API vào mô hình, vượt qua giới hạn tốc độ API một cách hiệu quả.',
     },
     comingSoon: 'Sắp ra mắt',
     member: 'Thành viên',
@@ -72,8 +74,9 @@ const translation = {
       title: 'Hạn Mức Quota Phản hồi Đã được Ghi chú',
       tooltip: 'Chỉnh sửa và ghi chú thủ công các phản hồi cung cấp khả năng trả lời câu hỏi chất lượng cao có thể tùy chỉnh cho các ứng dụng. (Chỉ áp dụng trong các ứng dụng trò chuyện)',
     },
-    ragAPIRequestTooltip: 'Đề cập đến số lượng cuộc gọi API triệu hồi chỉ khả năng xử lý cơ sở kiến thức của Mlchain.',
+    ragAPIRequestTooltip: 'Đề cập đến số lượng cuộc gọi API triệu hồi chỉ khả năng xử lý cơ sở kiến thức của Dify.',
     receiptInfo: 'Chỉ chủ nhóm và quản trị viên nhóm có thể đăng ký và xem thông tin thanh toán',
+    annotationQuota: 'Hạn ngạch chú thích',
   },
   plans: {
     sandbox: {

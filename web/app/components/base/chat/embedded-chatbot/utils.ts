@@ -1,3 +1,3 @@
-export const isMlchain = () => {
-  return document.referrer.includes('mlchain.khulnasoft.com')
+export const isDify = () => {
+  return document.referrer.includes('dify.ai')
 }
