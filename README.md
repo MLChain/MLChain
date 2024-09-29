@@ -1,13 +1,13 @@
 ![cover-v5-optimized](https://github.com/mlchain/mlchain/assets/13230914/f9e19af5-61ba-4119-b926-d10c4c06ebab)
 
-<p align="center">
+<p>
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">Self-hosting</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">Documentation</a> ·
   <a href="https://mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">Enterprise inquiry</a>
 </p>
 
-<p align="center">
+<p>
     <a href="https://mlchain.khulnasoft.com" target="_blank">
         <img alt="Static Badge" src="https://img.shields.io/badge/Product-F04438"></a>
     <a href="https://mlchain.khulnasoft.com/pricing" target="_blank">
@@ -28,7 +28,7 @@
         <img alt="Discussion posts" src="https://img.shields.io/github/discussions/mlchain/mlchain?labelColor=%20%239b8afb&color=%20%237a5af8"></a>
 </p>
 
-<p align="center">
+<p>
   <a href="./README.md"><img alt="README in English" src="https://img.shields.io/badge/English-d9d9d9"></a>
   <a href="./README_CN.md"><img alt="简体中文版自述文件" src="https://img.shields.io/badge/简体中文-d9d9d9"></a>
   <a href="./README_JA.md"><img alt="日本語のREADME" src="https://img.shields.io/badge/日本語-d9d9d9"></a>
@@ -78,67 +78,67 @@ Mlchain is an open-source LLM app development platform. Its intuitive interface 
 ## Feature comparison
 <table style="width: 100%;">
   <tr>
-    <th align="center">Feature</th>
-    <th align="center">MLChain</th>
-    <th align="center">LangChain</th>
-    <th align="center">Flowise</th>
-    <th align="center">OpenAI Assistants API</th>
+    <th>Feature</th>
+    <th>MLChain</th>
+    <th>LangChain</th>
+    <th>Flowise</th>
+    <th>OpenAI Assistants API</th>
   </tr>
   <tr>
-    <td align="center">Programming Approach</td>
-    <td align="center">API + App-oriented</td>
-    <td align="center">Python Code</td>
-    <td align="center">App-oriented</td>
-    <td align="center">API-oriented</td>
+    <td>Programming Approach</td>
+    <td>API + App-oriented</td>
+    <td>Python Code</td>
+    <td>App-oriented</td>
+    <td>API-oriented</td>
   </tr>
   <tr>
-    <td align="center">Supported LLMs</td>
-    <td align="center">Rich Variety</td>
-    <td align="center">Rich Variety</td>
-    <td align="center">Rich Variety</td>
-    <td align="center">OpenAI-only</td>
+    <td>Supported LLMs</td>
+    <td>Rich Variety</td>
+    <td>Rich Variety</td>
+    <td>Rich Variety</td>
+    <td>OpenAI-only</td>
   </tr>
   <tr>
-    <td align="center">RAG Engine</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
+    <td>RAG Engine</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
   </tr>
   <tr>
-    <td align="center">Agent</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-    <td align="center">❌</td>
-    <td align="center">✅</td>
+    <td>Agent</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>✅</td>
   </tr>
   <tr>
-    <td align="center">Workflow</td>
-    <td align="center">✅</td>
-    <td align="center">❌</td>
-    <td align="center">✅</td>
-    <td align="center">❌</td>
+    <td>Workflow</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>✅</td>
+    <td>❌</td>
   </tr>
   <tr>
-    <td align="center">Observability</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-    <td align="center">❌</td>
-    <td align="center">❌</td>
+    <td>Observability</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>❌</td>
   </tr>
   <tr>
-    <td align="center">Enterprise Features (SSO/Access control)</td>
-    <td align="center">✅</td>
-    <td align="center">❌</td>
-    <td align="center">❌</td>
-    <td align="center">❌</td>
+    <td>Enterprise Features (SSO/Access control)</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>❌</td>
   </tr>
   <tr>
-    <td align="center">Local Deployment</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-    <td align="center">❌</td>
+    <td>Local Deployment</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>❌</td>
   </tr>
 </table>
 
