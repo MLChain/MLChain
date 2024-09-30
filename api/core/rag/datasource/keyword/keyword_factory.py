@@ -1,6 +1,6 @@
 from typing import Any
 
-from configs import mlchain_config
+from configs import Mlchain_config
 from core.rag.datasource.keyword.jieba.jieba import Jieba
 from core.rag.datasource.keyword.keyword_base import BaseKeyword
 from core.rag.models.document import Document
@@ -13,16 +13,14 @@ class Keyword:
         self._keyword_processor = self._init_keyword()
 
     def _init_keyword(self) -> BaseKeyword:
-        config = mlchain_config
+        config = Mlchain_config
         keyword_type = config.KEYWORD_STORE
 
         if not keyword_type:
             raise ValueError("Keyword store must be specified.")
 
         if keyword_type == "jieba":
-            return Jieba(
-                dataset=self._dataset
-            )
+            return Jieba(dataset=self._dataset)
         else:
             raise ValueError(f"Keyword store {keyword_type} is not supported.")
 
@@ -41,10 +39,7 @@ class Keyword:
     def delete(self) -> None:
         self._keyword_processor.delete()
 
-    def search(
-            self, query: str,
-            **kwargs: Any
-    ) -> list[Document]:
+    def search(self, query: str, **kwargs: Any) -> list[Document]:
         return self._keyword_processor.search(query, **kwargs)
 
     def __getattr__(self, name):

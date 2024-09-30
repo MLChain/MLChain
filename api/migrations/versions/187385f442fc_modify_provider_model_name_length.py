@@ -1,4 +1,4 @@
-"""modify provider model name length
+""" modify provider model name length
 
 Revision ID: 187385f442fc
 Revises: 88072f0caa04

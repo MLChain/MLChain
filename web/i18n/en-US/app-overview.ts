@@ -45,14 +45,22 @@ const translation = {
         webDescPlaceholder: 'Enter the description of the WebApp',
         language: 'Language',
         workflow: {
-          title: 'Workflow Steps',
+          title: 'Workflow',
+          subTitle: 'Workflow Details',
           show: 'Show',
           hide: 'Hide',
+          showDesc: 'Show or hide workflow details in WebApp',
         },
         chatColorTheme: 'Chat color theme',
         chatColorThemeDesc: 'Set the color theme of the chatbot',
         chatColorThemeInverted: 'Inverted',
         invalidHexMessage: 'Invalid hex value',
+        sso: {
+          label: 'SSO Authentication',
+          title: 'WebApp SSO',
+          description: 'All users are required to login with SSO before using WebApp',
+          tooltip: 'Contact the administrator to enable WebApp SSO',
+        },
         more: {
           entry: 'Show more settings',
           copyright: 'Copyright',
@@ -86,9 +94,9 @@ const translation = {
         title: 'Customize AI WebApp',
         explanation: 'You can customize the frontend of the Web App to fit your scenario and style needs.',
         way1: {
-          name: 'Fork the client code, modify it and deploy to Vercel (recommended)',
-          step1: 'Fork the client code and modify it',
-          step1Tip: 'Click here to fork the source code into your GitHub account and modify the code',
+          name: 'Fork the client code,  modify it and deploy to Vercel (recommended)',
+          step1: 'Fork the client code and  modify it',
+          step1Tip: 'Click here to fork the source code into your GitHub account and  modify the code',
           step1Operation: 'Mlchain-WebClient',
           step2: 'Deploy to Vercel',
           step2Tip: 'Click here to import the repository into Vercel and deploy',
@@ -119,7 +127,11 @@ const translation = {
     tokenPS: 'Token/s',
     totalMessages: {
       title: 'Total Messages',
-      explanation: 'Daily AI interactions count; prompt engineering/debugging excluded.',
+      explanation: 'Daily AI interactions count.',
+    },
+    totalConversations: {
+      title: 'Total Conversations',
+      explanation: 'Daily AI conversations count; prompt engineering/debugging excluded.',
     },
     activeUsers: {
       title: 'Active Users',

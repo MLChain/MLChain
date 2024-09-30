@@ -1,6 +1,6 @@
 from flask_restful import Resource
 
-from configs import mlchain_config
+from configs import Mlchain_config
 from controllers.service_api import api
 
 
@@ -9,8 +9,8 @@ class IndexApi(Resource):
         return {
             "welcome": "Mlchain OpenAPI",
             "api_version": "v1",
-            "server_version": mlchain_config.CURRENT_VERSION,
+            "server_version": Mlchain_config.CURRENT_VERSION,
         }
 
 
-api.add_resource(IndexApi, '/')
+api.add_resource(IndexApi, "/")

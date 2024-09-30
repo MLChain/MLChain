@@ -38,7 +38,7 @@ export type UserProfileOriginResponse = {
   headers: any
 }
 
-export type MLChainVersionResponse = {
+export type MlChainVersionResponse = {
   current_version: string
   latest_version: string
   version: string

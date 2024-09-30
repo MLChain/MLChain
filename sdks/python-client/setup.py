@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="mlchain-client",
-    version="0.1.10",
+    version="0.1.12",
     author="Mlchain",
     author_email="hello@mlchain.khulnasoft.com",
     description="A package for interacting with the Mlchain Service-API",

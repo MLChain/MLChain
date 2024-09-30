@@ -6,9 +6,9 @@ services:
     environment:
       PGUSER: postgres
       # The password for the default postgres user.
-      POSTGRES_PASSWORD: mlchainai123456
+      POSTGRES_PASSWORD: Mlchainai123456
       # The name of the default postgres database.
-      POSTGRES_DB: mlchain
+      POSTGRES_DB: Mlchain
       # postgres data directory
       PGDATA: /var/lib/postgresql/data/pgdata
     volumes:

@@ -1,10 +1,10 @@
 ![cover-v5-optimized](https://github.com/mlchain/mlchain/assets/13230914/f9e19af5-61ba-4119-b926-d10c4c06ebab)
 
 <div align="center">
-  <a href="https://cloud.mlchain.khulnasoft.com">Mlchain 云服务</a> ·
-  <a href="https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted">自托管</a> ·
-  <a href="https://docs.mlchain.khulnasoft.com">文档</a> ·
-  <a href="https://udify.app/chat/22L1zSxg6yW1cWQg">（需用英文）常见问题解答 / 联系团队</a>
+  <a href="https://cloud-mlchain.khulnasoft.com">Mlchain 云服务</a> ·
+  <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">自托管</a> ·
+  <a href="https://docs-mlchain.khulnasoft.com">文档</a> ·
+  <a href="https://mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">（需用英文）常见问题解答 / 联系团队</a>
 </div>
 
 <p align="center">
@@ -15,8 +15,8 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="chat on Discord"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=khulnasoft" target="_blank">
-        <img src="https://img.shields.io/twitter/follow/khulnasoft?logo=X&color=%20%23f5f5f5"
+    <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
+        <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
             alt="follow on Twitter"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
@@ -60,7 +60,7 @@ Mlchain 是一个开源的 LLM 应用开发平台。其直观的界面结合了 
 
 
 **2. 全面的模型支持**: 
-  与数百种专有/开源 LLMs 以及数十种推理提供商和自托管解决方案无缝集成，涵盖 GPT、Mistral、Llama3 以及任何与 OpenAI API 兼容的模型。完整的支持模型提供商列表可在[此处](https://docs.mlchain.khulnasoft.com/getting-started/readme/model-providers)找到。
+  与数百种专有/开源 LLMs 以及数十种推理提供商和自托管解决方案无缝集成，涵盖 GPT、Mistral、Llama3 以及任何与 OpenAI API 兼容的模型。完整的支持模型提供商列表可在[此处](https://docs-mlchain.khulnasoft.com/getting-started/readme/model-providers)找到。
 
 ![providers-v5](https://github.com/mlchain/mlchain/assets/13230914/5a17bdbe-097a-4100-8363-40255b70f6e3)
 
@@ -85,7 +85,7 @@ Mlchain 是一个开源的 LLM 应用开发平台。其直观的界面结合了 
 <table style="width: 100%;">
   <tr>
     <th align="center">功能</th>
-    <th align="center">Mlchain.AI</th>
+    <th align="center">MLChain</th>
     <th align="center">LangChain</th>
     <th align="center">Flowise</th>
     <th align="center">OpenAI Assistant API</th>
@@ -155,7 +155,7 @@ Mlchain 是一个开源的 LLM 应用开发平台。其直观的界面结合了 
 
 - **自托管 Mlchain 社区版</br>**
 使用这个[入门指南](#quick-start)快速在您的环境中运行 Mlchain。
-使用我们的[文档](https://docs.mlchain.khulnasoft.com)进行进一步的参考和更深入的说明。
+使用我们的[文档](https://docs-mlchain.khulnasoft.com)进行进一步的参考和更深入的说明。
 
 - **面向企业/组织的 Mlchain</br>**
 我们提供额外的面向企业的功能。[给我们发送电子邮件](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry)讨论企业需求。 </br>
@@ -190,7 +190,7 @@ docker compose up -d
 
 ### 自定义配置
 
-如果您需要自定义配置，请参考 [.env.example](docker/.env.example) 文件中的注释，并更新 `.env` 文件中对应的值。此外，您可能需要根据您的具体部署环境和需求对 `docker-compose.yaml` 文件本身进行调整，例如更改镜像版本、端口映射或卷挂载。完成任何更改后，请重新运行 `docker-compose up -d`。您可以在[此处](https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted/environments)找到可用环境变量的完整列表。
+如果您需要自定义配置，请参考 [.env.example](docker/.env.example) 文件中的注释，并更新 `.env` 文件中对应的值。此外，您可能需要根据您的具体部署环境和需求对 `docker-compose.yaml` 文件本身进行调整，例如更改镜像版本、端口映射或卷挂载。完成任何更改后，请重新运行 `docker-compose up -d`。您可以在[此处](https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted/environments)找到可用环境变量的完整列表。
 
 #### 使用 Helm Chart 部署
 
@@ -229,11 +229,11 @@ docker compose up -d
 我们欢迎您为 Mlchain 做出贡献，以帮助改善 Mlchain。包括：提交代码、问题、新想法，或分享您基于 Mlchain 创建的有趣且有用的 AI 应用程序。同时，我们也欢迎您在不同的活动、会议和社交媒体上分享 Mlchain。
 
 - [Github Discussion](https://github.com/mlchain/mlchain/discussions). 👉：分享您的应用程序并与社区交流。
-- [GitHub Issues](https://github.com/mlchain/mlchain/issues)。👉：使用 Mlchain.AI 时遇到的错误和问题，请参阅[贡献指南](CONTRIBUTING.md)。
-- [电子邮件支持](mailto:hello@mlchain.khulnasoft.com?subject=[GitHub]Questions%20About%20Mlchain)。👉：关于使用 Mlchain.AI 的问题。
+- [GitHub Issues](https://github.com/mlchain/mlchain/issues)。👉：使用 MLChain 时遇到的错误和问题，请参阅[贡献指南](CONTRIBUTING.md)。
+- [电子邮件支持](mailto:hello@mlchain.khulnasoft.com?subject=[GitHub]Questions%20About%20Mlchain)。👉：关于使用 MLChain 的问题。
 - [Discord](https://discord.gg/FngNHpbcY7)。👉：分享您的应用程序并与社区交流。
-- [Twitter](https://twitter.com/khulnasoft)。👉：分享您的应用程序并与社区交流。
-- [商业许可](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry)。👉：有关商业用途许可 Mlchain.AI 的商业咨询。
+- [Twitter](https://twitter.com/mlchain_ai)。👉：分享您的应用程序并与社区交流。
+- [商业许可](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry)。👉：有关商业用途许可 MLChain 的商业咨询。
  - [微信]() 👉：扫描下方二维码，添加微信好友，备注 Mlchain，我们将邀请您加入 Mlchain 社区。  
 <img src="./images/wechat.png" alt="wechat" width="100"/>
 

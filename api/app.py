@@ -23,7 +23,7 @@ from werkzeug.exceptions import Unauthorized
 
 import contexts
 from commands import register_commands
-from configs import mlchain_config
+from configs import Mlchain_config
 
 # DO NOT REMOVE BELOW
 from events import event_handlers
@@ -53,11 +53,9 @@ from services.account_service import AccountService
 
 warnings.simplefilter("ignore", ResourceWarning)
 
-# fix windows platform
-if os.name == "nt":
-    os.system('tzutil /s "UTC"')
-else:
-    os.environ["TZ"] = "UTC"
+os.environ["TZ"] = "UTC"
+# windows platform not support tzset
+if hasattr(time, "tzset"):
     time.tzset()
 
 
@@ -83,11 +81,11 @@ def create_flask_app_with_configs() -> Flask:
     create a raw flask app
     with configs loaded from .env file
     """
-    mlchain_app = MlchainApp(__name__)
-    mlchain_app.config.from_mapping(mlchain_config.model_dump())
+    Mlchain_app = MlchainApp(__name__)
+    Mlchain_app.config.from_mapping(mlchain_config.model_dump())
 
     # populate configs into system environment variables
-    for key, value in mlchain_app.config.items():
+    for key, value in Mlchain_app.config.items():
         if isinstance(value, str):
             os.environ[key] = value
         elif isinstance(value, int | float | bool):
@@ -95,7 +93,7 @@ def create_flask_app_with_configs() -> Flask:
         elif value is None:
             os.environ[key] = ""
 
-    return mlchain_app
+    return Mlchain_app
 
 
 def create_app() -> Flask:
@@ -164,7 +162,7 @@ def initialize_extensions(app):
 @login_manager.request_loader
 def load_user_from_request(request_from_flask_login):
     """Load user based on the request."""
-    if request.blueprint not in ["console", "inner_api"]:
+    if request.blueprint not in {"console", "inner_api"}:
         return None
     # Check if the user_id contains a dot, indicating the old format
     auth_header = request.headers.get("Authorization", "")

@@ -18,7 +18,7 @@ import { SimpleSelect } from '@/app/components/base/select'
 import Loading from '@/app/components/base/loading'
 import AutoHeightTextarea from '@/app/components/base/auto-height-textarea'
 import { asyncRunSafe, getTextWidthWithCanvas } from '@/utils'
-import { modifyDocMetadata } from '@/service/datasets'
+import {  modifyDocMetadata } from '@/service/datasets'
 import type { CommonResponse } from '@/models/common'
 import type { DocType, FullDocumentDetail } from '@/models/datasets'
 import { CUSTOMIZABLE_DOC_TYPES } from '@/models/datasets'
@@ -79,7 +79,7 @@ export const FieldInfo: FC<IFieldInfoProps> = ({
               />
               : <Input
                 className={s.input}
-                onChange={onUpdate}
+                onChange={e => onUpdate?.(e.target.value)}
                 value={value}
                 defaultValue={defaultValue}
                 placeholder={`${t('datasetDocuments.metadata.placeholder.add')}${label}`}
@@ -102,7 +102,9 @@ const IconButton: FC<{
   const metadataMap = useMetadataMap()
 
   return (
-    <Tooltip content={metadataMap[type].text} selector={`doc-metadata-${type}`}>
+    <Tooltip
+      popupContent={metadataMap[type].text}
+    >
       <button className={cn(s.iconWrapper, 'group', isChecked ? s.iconCheck : '')}>
         <TypeIcon
           iconName={metadataMap[type].iconName || ''}
@@ -288,7 +290,7 @@ const Metadata: FC<IMetadataProps> = ({ docDetail, loading, onUpdate }) => {
 
   const onSave = async () => {
     setSaveLoading(true)
-    const [e] = await asyncRunSafe<CommonResponse>(modifyDocMetadata({
+    const [e] = await asyncRunSafe<CommonResponse>( modifyDocMetadata({
       datasetId,
       documentId,
       body: {

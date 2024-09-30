@@ -1,10 +1,10 @@
 ![cover-v5-optimized](https://github.com/mlchain/mlchain/assets/13230914/f9e19af5-61ba-4119-b926-d10c4c06ebab)
 
 <p align="center">
-  <a href="https://cloud.mlchain.khulnasoft.com">Mlchain Cloud</a> ·
-  <a href="https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted">الاستضافة الذاتية</a> ·
-  <a href="https://docs.mlchain.khulnasoft.com">التوثيق</a> ·
-  <a href="https://udify.app/chat/22L1zSxg6yW1cWQg">استفسار الشركات (للإنجليزية فقط)</a>
+  <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
+  <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">الاستضافة الذاتية</a> ·
+  <a href="https://docs-mlchain.khulnasoft.com">التوثيق</a> ·
+  <a href="https://mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">استفسار الشركات (للإنجليزية فقط)</a>
 </p>
 
 <p align="center">
@@ -15,8 +15,8 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="chat on Discord"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=khulnasoft" target="_blank">
-        <img src="https://img.shields.io/twitter/follow/khulnasoft?logo=X&color=%20%23f5f5f5"
+    <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
+        <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
             alt="follow on Twitter"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
@@ -50,7 +50,7 @@
   https://github.com/mlchain/mlchain/assets/13230914/356df23e-1604-483d-80a6-9517ece318aa
 
 
-**2. الدعم الشامل للنماذج**: تكامل سلس مع مئات من LLMs الخاصة / مفتوحة المصدر من عشرات من موفري التحليل والحلول المستضافة ذاتيًا، مما يغطي GPT و Mistral و Llama3 وأي نماذج متوافقة مع واجهة OpenAI API. يمكن العثور على قائمة كاملة بمزودي النموذج المدعومين [هنا](https://docs.mlchain.khulnasoft.com/getting-started/readme/model-providers).
+**2. الدعم الشامل للنماذج**: تكامل سلس مع مئات من LLMs الخاصة / مفتوحة المصدر من عشرات من موفري التحليل والحلول المستضافة ذاتيًا، مما يغطي GPT و Mistral و Llama3 وأي نماذج متوافقة مع واجهة OpenAI API. يمكن العثور على قائمة كاملة بمزودي النموذج المدعومين [هنا](https://docs-mlchain.khulnasoft.com/getting-started/readme/model-providers).
 
 ![providers-v5](https://github.com/mlchain/mlchain/assets/13230914/5a17bdbe-097a-4100-8363-40255b70f6e3)
 
@@ -67,7 +67,7 @@
 <table style="width: 100%;">
   <tr>
     <th align="center">الميزة</th>
-    <th align="center">Mlchain.AI</th>
+    <th align="center">MLChain</th>
     <th align="center">LangChain</th>
     <th align="center">Flowise</th>
     <th align="center">OpenAI Assistants API</th>
@@ -137,7 +137,7 @@
 
 - **استضافة ذاتية لنسخة المجتمع Mlchain</br>**
 ابدأ سريعًا في تشغيل Mlchain في بيئتك باستخدام [دليل البدء السريع](#البدء السريع).
-استخدم [توثيقنا](https://docs.mlchain.khulnasoft.com) للمزيد من المراجع والتعليمات الأعمق.
+استخدم [توثيقنا](https://docs-mlchain.khulnasoft.com) للمزيد من المراجع والتعليمات الأعمق.
 
 - **مشروع Mlchain للشركات / المؤسسات</br>**
 نحن نوفر ميزات إضافية مركزة على الشركات. [جدول اجتماع معنا](https://cal.com/guchenhe/30min) أو [أرسل لنا بريدًا إلكترونيًا](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry) لمناقشة احتياجات الشركات. </br>
@@ -165,11 +165,11 @@ docker compose up -d
 
 بعد التشغيل، يمكنك الوصول إلى لوحة تحكم Mlchain في متصفحك على [http://localhost/install](http://localhost/install) وبدء عملية التهيئة.
 
-> إذا كنت ترغب في المساهمة في Mlchain أو القيام بتطوير إضافي، فانظر إلى [دليلنا للنشر من الشفرة (code) المصدرية](https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted/local-source-code)
+> إذا كنت ترغب في المساهمة في Mlchain أو القيام بتطوير إضافي، فانظر إلى [دليلنا للنشر من الشفرة (code) المصدرية](https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted/local-source-code)
 
 ## الخطوات التالية
 
-إذا كنت بحاجة إلى تخصيص الإعدادات، فيرجى الرجوع إلى التعليقات في ملف [.env.example](docker/.env.example) وتحديث القيم المقابلة في ملف `.env`. بالإضافة إلى ذلك، قد تحتاج إلى إجراء تعديلات على ملف `docker-compose.yaml` نفسه، مثل تغيير إصدارات الصور أو تعيينات المنافذ أو نقاط تحميل وحدات التخزين، بناءً على بيئة النشر ومتطلباتك الخاصة. بعد إجراء أي تغييرات، يرجى إعادة تشغيل `docker-compose up -d`. يمكنك العثور على قائمة كاملة بمتغيرات البيئة المتاحة [هنا](https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted/environments).
+إذا كنت بحاجة إلى تخصيص الإعدادات، فيرجى الرجوع إلى التعليقات في ملف [.env.example](docker/.env.example) وتحديث القيم المقابلة في ملف `.env`. بالإضافة إلى ذلك، قد تحتاج إلى إجراء تعديلات على ملف `docker-compose.yaml` نفسه، مثل تغيير إصدارات الصور أو تعيينات المنافذ أو نقاط تحميل وحدات التخزين، بناءً على بيئة النشر ومتطلباتك الخاصة. بعد إجراء أي تغييرات، يرجى إعادة تشغيل `docker-compose up -d`. يمكنك العثور على قائمة كاملة بمتغيرات البيئة المتاحة [هنا](https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted/environments).
 
 يوجد مجتمع خاص بـ [Helm Charts](https://helm.sh/) وملفات YAML التي تسمح بتنفيذ Mlchain على Kubernetes للنظام من الإيجابيات العلوية.
 
@@ -200,9 +200,9 @@ docker compose up -d
 
 ## المجتمع والاتصال
 * [مناقشة Github](https://github.com/mlchain/mlchain/discussions). الأفضل لـ: مشاركة التعليقات وطرح الأسئلة.
-* [المشكلات على GitHub](https://github.com/mlchain/mlchain/issues). الأفضل لـ: الأخطاء التي تواجهها في استخدام Mlchain.AI، واقتراحات الميزات. انظر [دليل المساهمة](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
+* [المشكلات على GitHub](https://github.com/mlchain/mlchain/issues). الأفضل لـ: الأخطاء التي تواجهها في استخدام MLChain، واقتراحات الميزات. انظر [دليل المساهمة](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
 * [Discord](https://discord.gg/FngNHpbcY7). الأفضل لـ: مشاركة تطبيقاتك والترفيه مع المجتمع.
-* [تويتر](https://twitter.com/khulnasoft). الأفضل لـ: مشاركة تطبيقاتك والترفيه مع المجتمع.
+* [تويتر](https://twitter.com/mlchain_ai). الأفضل لـ: مشاركة تطبيقاتك والترفيه مع المجتمع.
 
 ## تاريخ النجمة
 
