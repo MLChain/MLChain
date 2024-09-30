@@ -195,9 +195,9 @@ docker compose up -d
 
 高可用性設定を設定する必要がある場合、コミュニティは[Helm Charts](https://helm.sh/)とYAMLファイルにより、MlchainをKubernetesにデプロイすることができます。
 
-- [Helm Chart by @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [Helm Chart by @BorisPolonsky](https://github.com/BorisPolonsky/mlchain-helm)
-- [YAML file by @Winson-030](https://github.com/Winson-030/mlchain-kubernetes)
+
+
+
 
 #### Terraformを使用したデプロイ
 

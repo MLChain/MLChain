@@ -26,7 +26,7 @@
   | [@jyong](https://github.com/JohnJyong)                       | RAG 流水线设计                                  |
   | [@GarfieldDai](https://github.com/GarfieldDai)               | 构建 workflow 编排                     |
   | [@iamjoel](https://github.com/iamjoel) & [@zxhlyh](https://github.com/zxhlyh) | 让我们的前端更易用                  |
-  | [@guchenhe](https://github.com/guchenhe) & [@crazywoola](https://github.com/crazywoola) | 开发人员体验, 综合事项联系人 |
+  | [@guchenhe](https://github.com/guchenhe) & [@gitworkflows](https://github.com/gitworkflows) | 开发人员体验, 综合事项联系人 |
   | [@takatost](https://github.com/takatost)                     | 产品整体方向和架构           |
 
   事项优先级：
