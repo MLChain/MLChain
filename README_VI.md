@@ -4,7 +4,7 @@
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">Tự triển khai</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">Tài liệu</a> ·
-  <a href="https://mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">Yêu cầu doanh nghiệp</a>
+  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">Yêu cầu doanh nghiệp</a>
 </p>
 
 <p align="center">
@@ -152,7 +152,7 @@ Nhanh chóng chạy Mlchain trong môi trường của bạn với [hướng d�
 Sử dụng [tài liệu](https://docs-mlchain.khulnasoft.com) của chúng tôi để tham khảo thêm và nhận hướng dẫn chi tiết hơn.
 
 - **Mlchain cho doanh nghiệp / tổ chức</br>**
-Chúng tôi cung cấp các tính năng bổ sung tập trung vào doanh nghiệp. [Ghi lại câu hỏi của bạn cho chúng tôi thông qua chatbot này](https://mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg) hoặc [gửi email cho chúng tôi](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry) để thảo luận về nhu cầu doanh nghiệp. </br>
+Chúng tôi cung cấp các tính năng bổ sung tập trung vào doanh nghiệp. [Ghi lại câu hỏi của bạn cho chúng tôi thông qua chatbot này](https://umlchain.app/chat/22L1zSxg6yW1cWQg) hoặc [gửi email cho chúng tôi](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry) để thảo luận về nhu cầu doanh nghiệp. </br>
   > Đối với các công ty khởi nghiệp và doanh nghiệp nhỏ sử dụng AWS, hãy xem [Mlchain Premium trên AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6) và triển khai nó vào AWS VPC của riêng bạn chỉ với một cú nhấp chuột. Đây là một AMI giá cả phải chăng với tùy chọn tạo ứng dụng với logo và thương hiệu tùy chỉnh.
 
 

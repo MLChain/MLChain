@@ -4,7 +4,7 @@
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain 클라우드</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">셀프-호스팅</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">문서</a> ·
-  <a href="https://mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">기업 문의 (영어만 가능)</a>
+  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">기업 문의 (영어만 가능)</a>
 </p>
 
 <p align="center">
@@ -189,9 +189,9 @@ docker compose up -d
 
 Mlchain를 Kubernetes에 배포하고 프리미엄 스케일링 설정을 구성했다는 커뮤니티가 제공하는 [Helm Charts](https://helm.sh/)와 YAML 파일이 존재합니다.
 
-
-
-
+- [Helm Chart by @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
+- [Helm Chart by @BorisPolonsky](https://github.com/BorisPolonsky/mlchain-helm)
+- [YAML file by @Winson-030](https://github.com/Winson-030/mlchain-kubernetes)
 
 #### Terraform을 사용한 배포
 

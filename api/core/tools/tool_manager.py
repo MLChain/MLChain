@@ -6,7 +6,7 @@ from os import listdir, path
 from threading import Lock
 from typing import Any, Union
 
-from configs import Mlchain_config
+from configs import mlchain_config
 from core.agent.entities import AgentToolEntity
 from core.app.entities.app_invoke_entities import InvokeFrom
 from core.helper.module_import_helper import load_single_subclass_from_source
@@ -611,7 +611,7 @@ class ToolManager:
         provider_id = provider_id
         if provider_type == "builtin":
             return (
-                Mlchain_config.CONSOLE_API_URL
+                mlchain_config.CONSOLE_API_URL
                 + "/console/api/workspaces/current/tool-provider/builtin/"
                 + provider_id
                 + "/icon"

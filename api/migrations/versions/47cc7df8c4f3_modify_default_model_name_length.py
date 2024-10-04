@@ -1,4 +1,4 @@
-""" modify default model name length
+"""modify default model name length
 
 Revision ID: 47cc7df8c4f3
 Revises: 3c7cac9521c6

@@ -14,7 +14,7 @@ Mlchain にコントリビュートしたいとお考えなのですね。それ
 
 ### 機能リクエスト
 
-* 新しい機能要望を出す場合は、提案する機能が何を実現するものなのかを説明し、可能な限り多くのコンテキストを含めてください。[@perzeusss](https://github.com/perzeuss)は、あなた様の要望を書き出すのに役立つ [Feature Request Copilot](https://mlchain.khulnasoft.com/chat/MK2kVSnw1gakVwMX) を作ってくれました。気軽に試してみてください。
+* 新しい機能要望を出す場合は、提案する機能が何を実現するものなのかを説明し、可能な限り多くのコンテキストを含めてください。[@perzeusss](https://github.com/perzeuss)は、あなた様の要望を書き出すのに役立つ [Feature Request Copilot](https://umlchain.app/chat/MK2kVSnw1gakVwMX) を作ってくれました。気軽に試してみてください。
 
 * 既存の課題から 1 つ選びたい場合は、その下にコメントを書いてください。
 
@@ -28,7 +28,7 @@ Mlchain にコントリビュートしたいとお考えなのですね。それ
 | [@jyong](https://github.com/JohnJyong)                                                  | RAG パイプライン設計                 |
 | [@GarfieldDai](https://github.com/GarfieldDai)                                          | workflow orchestrations の構築       |
 | [@iamjoel](https://github.com/iamjoel) & [@zxhlyh](https://github.com/zxhlyh)           | フロントエンドを使いやすくする       |
-| [@guchenhe](https://github.com/guchenhe) & [@gitworkflows](https://github.com/gitworkflows) | 開発者体験、何でも相談できる窓口     |
+| [@guchenhe](https://github.com/guchenhe) & [@crazywoola](https://github.com/crazywoola) | 開発者体験、何でも相談できる窓口     |
 | [@takatost](https://github.com/takatost)                                                | 全体的な製品の方向性とアーキテクチャ |
 
 優先順位の付け方:
@@ -84,7 +84,7 @@ Mlchain はバックエンドとフロントエンドから構成されていま
 
 よくある問題とトラブルシューティングの手順については、[installation FAQ](https://docs-mlchain.khulnasoft.com/v/japanese/learn-more/faq/install-faq) を確認してください。
 
-### 5. ブラウザで Mlchain にアクセスする
+### 5. ブラウザで mlchain にアクセスする
 
 設定を確認するために、ブラウザで[http://localhost:3000](http://localhost:3000)(デフォルト、または自分で設定した URL とポート)にアクセスしてください。Mlchain が起動して実行中であることが確認できるはずです。
 

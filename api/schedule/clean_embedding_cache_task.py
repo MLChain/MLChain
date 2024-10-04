@@ -6,6 +6,7 @@ from sqlalchemy import text
 from werkzeug.exceptions import NotFound
 
 import app
+from configs import mlchain_config
 from extensions.ext_database import db
 from models.dataset import Embedding
 

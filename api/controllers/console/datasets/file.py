@@ -3,7 +3,7 @@ from flask_login import current_user
 from flask_restful import Resource, marshal_with
 
 import services
-from configs import Mlchain_config
+from configs import mlchain_config
 from controllers.console import api
 from controllers.console.datasets.error import (
     FileTooLargeError,
@@ -26,9 +26,9 @@ class FileApi(Resource):
     @account_initialization_required
     @marshal_with(upload_config_fields)
     def get(self):
-        file_size_limit = Mlchain_config.UPLOAD_FILE_SIZE_LIMIT
-        batch_count_limit = Mlchain_config.UPLOAD_FILE_BATCH_LIMIT
-        image_file_size_limit = Mlchain_config.UPLOAD_IMAGE_FILE_SIZE_LIMIT
+        file_size_limit = mlchain_config.UPLOAD_FILE_SIZE_LIMIT
+        batch_count_limit = mlchain_config.UPLOAD_FILE_BATCH_LIMIT
+        image_file_size_limit = mlchain_config.UPLOAD_IMAGE_FILE_SIZE_LIMIT
         return {
             "file_size_limit": file_size_limit,
             "batch_count_limit": batch_count_limit,
@@ -75,7 +75,7 @@ class FileSupportTypeApi(Resource):
     @login_required
     @account_initialization_required
     def get(self):
-        etl_type = Mlchain_config.ETL_TYPE
+        etl_type = mlchain_config.ETL_TYPE
         allowed_extensions = UNSTRUCTURED_ALLOWED_EXTENSIONS if etl_type == "Unstructured" else ALLOWED_EXTENSIONS
         return {"allowed_extensions": allowed_extensions}
 

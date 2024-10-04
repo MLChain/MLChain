@@ -3,7 +3,7 @@ from functools import wraps
 from flask import request
 from flask_restful import Resource, reqparse
 
-from configs import Mlchain_config
+from configs import mlchain_config
 from libs.helper import StrLen, email, get_remote_ip
 from libs.password import valid_password
 from models.model import MlchainSetup
@@ -17,7 +17,7 @@ from .wraps import only_edition_self_hosted
 
 class SetupApi(Resource):
     def get(self):
-        if Mlchain_config.EDITION == "SELF_HOSTED":
+        if mlchain_config.EDITION == "SELF_HOSTED":
             setup_status = get_setup_status()
             if setup_status:
                 return {"step": "finished", "setup_at": setup_status.setup_at.isoformat()}
@@ -68,7 +68,7 @@ def setup_required(view):
 
 
 def get_setup_status():
-    if Mlchain_config.EDITION == "SELF_HOSTED":
+    if mlchain_config.EDITION == "SELF_HOSTED":
         return MlchainSetup.query.first()
     else:
         return True

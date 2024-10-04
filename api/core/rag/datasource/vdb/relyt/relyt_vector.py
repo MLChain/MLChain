@@ -18,6 +18,7 @@ try:
 except ImportError:
     from sqlalchemy.ext.declarative import declarative_base
 
+from configs import mlchain_config
 from core.rag.datasource.vdb.vector_base import BaseVector
 from core.rag.models.document import Document
 from extensions.ext_redis import redis_client

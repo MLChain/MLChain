@@ -6,7 +6,7 @@ from typing import Any, Optional
 from flask import Flask, current_app
 from pydantic import BaseModel, ConfigDict
 
-from configs import Mlchain_config
+from configs import mlchain_config
 from core.app.apps.base_app_queue_manager import AppQueueManager, PublishFrom
 from core.app.entities.queue_entities import QueueMessageReplaceEvent
 from core.moderation.base import ModerationAction, ModerationOutputsResult
@@ -66,12 +66,12 @@ class OutputModeration(BaseModel):
         return final_output
 
     def start_thread(self) -> threading.Thread:
-        buffer_size = Mlchain_config.MODERATION_BUFFER_SIZE
+        buffer_size = mlchain_config.MODERATION_BUFFER_SIZE
         thread = threading.Thread(
             target=self.worker,
             kwargs={
                 "flask_app": current_app._get_current_object(),
-                "buffer_size": buffer_size if buffer_size > 0 else Mlchain_config.MODERATION_BUFFER_SIZE,
+                "buffer_size": buffer_size if buffer_size > 0 else mlchain_config.MODERATION_BUFFER_SIZE,
             },
         )
 

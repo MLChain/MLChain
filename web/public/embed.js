@@ -1,6 +1,6 @@
 /** this file is used to embed the chatbot in a website
- * the MlchainChatbotConfig should be defined in the html file before this script is included
- * the MlchainChatbotConfig should contain the token of the chatbot
+ * the mlchainChatbotConfig should be defined in the html file before this script is included
+ * the mlchainChatbotConfig should contain the token of the chatbot
  * the token can be found in the chatbot settings page
  */
 
@@ -53,7 +53,7 @@
     const params = new URLSearchParams(await getCompressedInputsFromConfig());
 
     const baseUrl =
-      config.baseUrl || `https://${config.isDev ? "dev." : ""}mlchain.khulnasoft.com`;
+      config.baseUrl || `https://${config.isDev ? "dev." : ""}umlchain.app`;
 
     // pre-check the length of the URL
     const iframeUrl = `${baseUrl}/chatbot/${config.token}?${params}`;

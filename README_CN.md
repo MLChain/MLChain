@@ -4,7 +4,7 @@
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain 云服务</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">自托管</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">文档</a> ·
-  <a href="https://mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">（需用英文）常见问题解答 / 联系团队</a>
+  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">（需用英文）常见问题解答 / 联系团队</a>
 </div>
 
 <p align="center">
@@ -196,8 +196,8 @@ docker compose up -d
 
 使用 [Helm Chart](https://helm.sh/) 版本或者 YAML 文件，可以在 Kubernetes 上部署 Mlchain。
 
-
-
+- [Helm Chart by @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
+- [Helm Chart by @BorisPolonsky](https://github.com/BorisPolonsky/mlchain-helm)
 - [YAML 文件 by @Winson-030](https://github.com/Winson-030/mlchain-kubernetes)
 
 #### 使用 Terraform 部署

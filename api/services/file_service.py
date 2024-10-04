@@ -8,7 +8,7 @@ from flask_login import current_user
 from werkzeug.datastructures import FileStorage
 from werkzeug.exceptions import NotFound
 
-from configs import Mlchain_config
+from configs import mlchain_config
 from core.file.upload_file_parser import UploadFileParser
 from core.rag.extractor.extract_processor import ExtractProcessor
 from extensions.ext_database import db
@@ -50,7 +50,7 @@ class FileService:
         extension = file.filename.split(".")[-1]
         if len(filename) > 200:
             filename = filename.split(".")[0][:200] + "." + extension
-        etl_type = Mlchain_config.ETL_TYPE
+        etl_type = mlchain_config.ETL_TYPE
         allowed_extensions = (
             UNSTRUCTURED_ALLOWED_EXTENSIONS + IMAGE_EXTENSIONS
             if etl_type == "Unstructured"
@@ -66,9 +66,9 @@ class FileService:
         file_size = len(file_content)
 
         if extension.lower() in IMAGE_EXTENSIONS:
-            file_size_limit = Mlchain_config.UPLOAD_IMAGE_FILE_SIZE_LIMIT * 1024 * 1024
+            file_size_limit = mlchain_config.UPLOAD_IMAGE_FILE_SIZE_LIMIT * 1024 * 1024
         else:
-            file_size_limit = Mlchain_config.UPLOAD_FILE_SIZE_LIMIT * 1024 * 1024
+            file_size_limit = mlchain_config.UPLOAD_FILE_SIZE_LIMIT * 1024 * 1024
 
         if file_size > file_size_limit:
             message = f"File size exceeded. {file_size} > {file_size_limit}"
@@ -150,7 +150,7 @@ class FileService:
 
         # extract text from file
         extension = upload_file.extension
-        etl_type = Mlchain_config.ETL_TYPE
+        etl_type = mlchain_config.ETL_TYPE
         allowed_extensions = UNSTRUCTURED_ALLOWED_EXTENSIONS if etl_type == "Unstructured" else ALLOWED_EXTENSIONS
         if extension.lower() not in allowed_extensions:
             raise UnsupportedFileTypeError()

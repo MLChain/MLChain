@@ -4,7 +4,7 @@ from mimetypes import guess_extension
 from os import path
 from typing import Any, cast
 
-from configs import Mlchain_config
+from configs import mlchain_config
 from core.app.segments import parser
 from core.file.file_obj import FileTransferMethod, FileType, FileVar
 from core.tools.tool_file_manager import ToolFileManager
@@ -40,9 +40,9 @@ class HttpRequestNode(BaseNode):
                 "body": {"type": "none"},
                 "timeout": {
                     **HTTP_REQUEST_DEFAULT_TIMEOUT.model_dump(),
-                    "max_connect_timeout": Mlchain_config.HTTP_REQUEST_MAX_CONNECT_TIMEOUT,
-                    "max_read_timeout": Mlchain_config.HTTP_REQUEST_MAX_READ_TIMEOUT,
-                    "max_write_timeout": Mlchain_config.HTTP_REQUEST_MAX_WRITE_TIMEOUT,
+                    "max_connect_timeout": mlchain_config.HTTP_REQUEST_MAX_CONNECT_TIMEOUT,
+                    "max_read_timeout": mlchain_config.HTTP_REQUEST_MAX_READ_TIMEOUT,
+                    "max_write_timeout": mlchain_config.HTTP_REQUEST_MAX_WRITE_TIMEOUT,
                 },
             },
         }

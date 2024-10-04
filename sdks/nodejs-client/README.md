@@ -3,7 +3,7 @@ This is the Node.js SDK for the Mlchain API, which allows you to easily integrat
 
 ## Install
 ```bash
-npm install Mlchain-client
+npm install mlchain-client
 ```
 
 ## Usage

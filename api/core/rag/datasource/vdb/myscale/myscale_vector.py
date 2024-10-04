@@ -7,6 +7,7 @@ from typing import Any
 from clickhouse_connect import get_client
 from pydantic import BaseModel
 
+from configs import mlchain_config
 from core.rag.datasource.entity.embedding import Embeddings
 from core.rag.datasource.vdb.vector_base import BaseVector
 from core.rag.datasource.vdb.vector_factory import AbstractVectorFactory

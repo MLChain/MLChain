@@ -9,7 +9,7 @@ const translation = {
     advanced: 'Expert Mode',
     switchBack: 'Switch back',
     advancedWarning: {
-      title: 'You have switched to Expert Mode, and once you  modify the PROMPT, you CANNOT return to the basic mode.',
+      title: 'You have switched to Expert Mode, and once you modify the PROMPT, you CANNOT return to the basic mode.',
       description: 'In Expert Mode, you can edit whole PROMPT.',
       learnMore: 'Learn more',
       ok: 'OK',

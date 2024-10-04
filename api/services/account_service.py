@@ -9,7 +9,7 @@ from typing import Any, Optional
 from sqlalchemy import func
 from werkzeug.exceptions import Unauthorized
 
-from configs import Mlchain_config
+from configs import mlchain_config
 from constants.languages import language_timezone_mapping, languages
 from events.tenant_event import tenant_was_created
 from extensions.ext_redis import redis_client
@@ -77,7 +77,7 @@ class AccountService:
         payload = {
             "user_id": account.id,
             "exp": datetime.now(timezone.utc).replace(tzinfo=None) + exp,
-            "iss": Mlchain_config.EDITION,
+            "iss": mlchain_config.EDITION,
             "sub": "Console API Passport",
         }
 
@@ -493,7 +493,7 @@ class RegisterService:
     @classmethod
     def setup(cls, email: str, name: str, password: str, ip_address: str) -> None:
         """
-        Setup Mlchain
+        Setup mlchain
 
         :param email: email
         :param name: username
@@ -514,7 +514,7 @@ class RegisterService:
 
             TenantService.create_owner_tenant_if_not_exist(account)
 
-            Mlchain_setup = MlchainSetup(version=mlchain_config.CURRENT_VERSION)
+            mlchain_setup = MlchainSetup(version=mlchain_config.CURRENT_VERSION)
             db.session.add(mlchain_setup)
             db.session.commit()
         except Exception as e:
@@ -549,7 +549,7 @@ class RegisterService:
 
             if open_id is not None or provider is not None:
                 AccountService.link_account_integrate(provider, open_id, account)
-            if Mlchain_config.EDITION != "SELF_HOSTED":
+            if mlchain_config.EDITION != "SELF_HOSTED":
                 tenant = TenantService.create_tenant(f"{account.name}'s Workspace")
 
                 TenantService.create_tenant_member(tenant, account, role="owner")
@@ -612,7 +612,7 @@ class RegisterService:
             "email": account.email,
             "workspace_id": tenant.id,
         }
-        expiry_hours = Mlchain_config.INVITE_EXPIRY_HOURS
+        expiry_hours = mlchain_config.INVITE_EXPIRY_HOURS
         redis_client.setex(cls._get_invitation_token_key(token), expiry_hours * 60 * 60, json.dumps(invitation_data))
         return token
 

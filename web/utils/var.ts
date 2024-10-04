@@ -5,7 +5,7 @@ import { InputVarType } from '@/app/components/workflow/types'
 const otherAllowedRegex = /^[a-zA-Z0-9_]+$/
 
 export const getNewVar = (key: string, type: string) => {
-  const { max_length, ...rest } = VAR_ITEM_TEMPLATE
+  const { max_length: _max_length, ...rest } = VAR_ITEM_TEMPLATE // Prefixing with _ to avoid the warning
   if (type !== 'string') {
     return {
       ...rest,
@@ -23,7 +23,7 @@ export const getNewVar = (key: string, type: string) => {
 }
 
 export const getNewVarInWorkflow = (key: string, type = InputVarType.textInput) => {
-  const { max_length, ...rest } = VAR_ITEM_TEMPLATE_IN_WORKFLOW
+  const { max_length: _max_length, ...rest } = VAR_ITEM_TEMPLATE_IN_WORKFLOW // Prefixing with _ to avoid the warning
   if (type !== InputVarType.textInput) {
     return {
       ...rest,

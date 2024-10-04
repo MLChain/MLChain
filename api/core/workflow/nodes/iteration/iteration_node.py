@@ -3,6 +3,7 @@ from collections.abc import Generator, Mapping, Sequence
 from datetime import datetime, timezone
 from typing import Any, cast
 
+from configs import mlchain_config
 from core.model_runtime.utils.encoders import jsonable_encoder
 from core.workflow.entities.node_entities import NodeRunMetadataKey, NodeRunResult, NodeType
 from core.workflow.graph_engine.entities.event import (

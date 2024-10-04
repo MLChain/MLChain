@@ -4,7 +4,7 @@
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">Auto-alojamiento</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">Documentación</a> ·
-  <a href="https://mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">Consultas empresariales (en inglés)</a>
+  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">Consultas empresariales (en inglés)</a>
 </p>
 
 <p align="center">

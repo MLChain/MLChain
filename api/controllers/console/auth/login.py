@@ -73,7 +73,7 @@ class ResetPasswordApi(Resource):
         # AccountService.update_password(account, new_password)
 
         # todo: Send email
-        # MAILCHIMP_API_KEY = Mlchain_config.MAILCHIMP_TRANSACTIONAL_API_KEY
+        # MAILCHIMP_API_KEY = mlchain_config.MAILCHIMP_TRANSACTIONAL_API_KEY
         # mailchimp = MailchimpTransactional(MAILCHIMP_API_KEY)
 
         # message = {
@@ -94,7 +94,7 @@ class ResetPasswordApi(Resource):
         #     'message': message,
         #     # required for transactional email
         #     ' settings': {
-        #         'sandbox_mode': Mlchain_config.MAILCHIMP_SANDBOX_MODE,
+        #         'sandbox_mode': mlchain_config.MAILCHIMP_SANDBOX_MODE,
         #     },
         # })
 

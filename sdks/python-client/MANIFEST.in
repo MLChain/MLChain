@@ -1,1 +1,1 @@
-recursive-include Mlchain_client *.py
+recursive-include mlchain_client *.py

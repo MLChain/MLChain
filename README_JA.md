@@ -4,7 +4,7 @@
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">セルフホスティング</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">ドキュメント</a> ·
-  <a href="https://mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">企業のお問い合わせ（英語のみ）</a>
+  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">企業のお問い合わせ（英語のみ）</a>
 </p>
 
 <p align="center">
@@ -68,7 +68,7 @@ MlchainはオープンソースのLLMアプリケーション開発プラット�
   プロンプトの作成、モデルパフォーマンスの比較が行え、チャットベースのアプリに音声合成などの機能も追加できます。
 
 **4. RAGパイプライン**: 
-  ドキュメントの取り込みから検索までをカバーする広範なRAG機能ができます。ほかにもPDF、PPT、その他の一般的なドキュメントフォーマットからのテキスト抽出のサーポイントも提供します。
+  ドキュメントの取り込みから検索までをカバーする広範なRAG機能ができます。ほかにもPDF、PPT、その他の一般的なドキュメントフォーマットからのテキスト抽出のサポートも提供します。
 
 **5. エージェント機能**: 
   LLM Function CallingやReActに基づくエージェントの定義が可能で、AIエージェント用のプリビルトまたはカスタムツールを追加できます。Mlchainには、Google検索、DALL·E、Stable Diffusion、WolframAlphaなどのAIエージェント用の50以上の組み込みツールが提供します。
@@ -195,9 +195,9 @@ docker compose up -d
 
 高可用性設定を設定する必要がある場合、コミュニティは[Helm Charts](https://helm.sh/)とYAMLファイルにより、MlchainをKubernetesにデプロイすることができます。
 
-
-
-
+- [Helm Chart by @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
+- [Helm Chart by @BorisPolonsky](https://github.com/BorisPolonsky/mlchain-helm)
+- [YAML file by @Winson-030](https://github.com/Winson-030/mlchain-kubernetes)
 
 #### Terraformを使用したデプロイ
 

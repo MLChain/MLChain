@@ -5,9 +5,9 @@ import axios from 'axios'
 jest.mock('axios')
 
 describe('Client', () => {
-  let MlchainClient
+  let mlchainClient
   beforeEach(() => {
-    MlchainClient = new MlchainClient('test')
+    mlchainClient = new MlchainClient('test')
   })
 
   test('should create a client', () => {
@@ -15,16 +15,16 @@ describe('Client', () => {
   })
   // test updateApiKey
   test('should update the api key', () => {
-    MlchainClient.updateApiKey('test2');
+    mlchainClient.updateApiKey('test2');
     expect(mlchainClient.apiKey).toBe('test2');
   })
 });
 
 describe('Send Requests', () => {
-  let MlchainClient
+  let mlchainClient
 
   beforeEach(() => {
-    MlchainClient = new MlchainClient('test')
+    mlchainClient = new MlchainClient('test')
   })
 
   afterEach(() => {
@@ -37,7 +37,7 @@ describe('Send Requests', () => {
     const expectedResponse = { data: 'response' }
     axios.mockResolvedValue(expectedResponse)
 
-    await MlchainClient.sendRequest(method, endpoint)
+    await mlchainClient.sendRequest(method, endpoint)
 
     expect(axios).toHaveBeenCalledWith({
       method,

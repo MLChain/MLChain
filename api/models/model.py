@@ -9,7 +9,7 @@ from flask_login import UserMixin
 from sqlalchemy import Float, func, text
 from sqlalchemy.orm import Mapped, mapped_column
 
-from configs import Mlchain_config
+from configs import mlchain_config
 from core.file.tool_file_parser import ToolFileParser
 from core.file.upload_file_parser import UploadFileParser
 from extensions.ext_database import db
@@ -1211,7 +1211,7 @@ class Site(db.Model):
 
     @property
     def app_base_url(self):
-        return Mlchain_config.APP_WEB_URL or request.url_root.rstrip("/")
+        return mlchain_config.APP_WEB_URL or request.url_root.rstrip("/")
 
 
 class ApiToken(db.Model):
@@ -1421,10 +1421,10 @@ class DatasetRetrieverResource(db.Model):
     position = db.Column(db.Integer, nullable=False)
     dataset_id = db.Column(StringUUID, nullable=False)
     dataset_name = db.Column(db.Text, nullable=False)
-    document_id = db.Column(StringUUID, nullable=False)
+    document_id = db.Column(StringUUID, nullable=True)
     document_name = db.Column(db.Text, nullable=False)
-    data_source_type = db.Column(db.Text, nullable=False)
-    segment_id = db.Column(StringUUID, nullable=False)
+    data_source_type = db.Column(db.Text, nullable=True)
+    segment_id = db.Column(StringUUID, nullable=True)
     score = db.Column(db.Float, nullable=True)
     content = db.Column(db.Text, nullable=False)
     hit_count = db.Column(db.Integer, nullable=True)

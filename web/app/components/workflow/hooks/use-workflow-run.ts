@@ -489,10 +489,10 @@ export const useWorkflowRun = () => {
           if (onIterationFinish)
             onIterationFinish(params)
         },
-        onParallelBranchStarted: (params) => {
+        onParallelBranchStarted: (_params) => {
           // console.log(params, 'parallel start')
         },
-        onParallelBranchFinished: (params) => {
+        onParallelBranchFinished: (_params) => {
           // console.log(params, 'finished')
         },
         onTextChunk: (params) => {
@@ -516,13 +516,13 @@ export const useWorkflowRun = () => {
             draft.resultText = text
           }))
         },
-        onTTSChunk: (messageId: string, audio: string, audioType?: string) => {
+        onTTSChunk: (messageId: string, audio: string, _audioType?: string) => {
           if (!audio || audio === '')
             return
           player.playAudioWithAudio(audio, true)
           AudioPlayerManager.getInstance().resetMsgId(messageId)
         },
-        onTTSEnd: (messageId: string, audio: string, audioType?: string) => {
+        onTTSEnd: (messageId: string, audio: string, _audioType?: string) => {
           player.playAudioWithAudio(audio, false)
         },
         ...restCallback,

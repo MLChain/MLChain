@@ -2,7 +2,7 @@ import os
 import time
 import unittest
 
-from Mlchain_client.client import ChatClient, CompletionClient, MlchainClient, KnowledgeBaseClient
+from mlchain_client.client import ChatClient, CompletionClient, MlchainClient, KnowledgeBaseClient
 
 API_KEY = os.environ.get("API_KEY")
 APP_ID = os.environ.get("APP_ID")

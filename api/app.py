@@ -23,7 +23,7 @@ from werkzeug.exceptions import Unauthorized
 
 import contexts
 from commands import register_commands
-from configs import Mlchain_config
+from configs import mlchain_config
 
 # DO NOT REMOVE BELOW
 from events import event_handlers
@@ -81,11 +81,11 @@ def create_flask_app_with_configs() -> Flask:
     create a raw flask app
     with configs loaded from .env file
     """
-    Mlchain_app = MlchainApp(__name__)
-    Mlchain_app.config.from_mapping(mlchain_config.model_dump())
+    mlchain_app = MlchainApp(__name__)
+    mlchain_app.config.from_mapping(mlchain_config.model_dump())
 
     # populate configs into system environment variables
-    for key, value in Mlchain_app.config.items():
+    for key, value in mlchain_app.config.items():
         if isinstance(value, str):
             os.environ[key] = value
         elif isinstance(value, int | float | bool):
@@ -93,7 +93,7 @@ def create_flask_app_with_configs() -> Flask:
         elif value is None:
             os.environ[key] = ""
 
-    return Mlchain_app
+    return mlchain_app
 
 
 def create_app() -> Flask:

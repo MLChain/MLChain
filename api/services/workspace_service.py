@@ -1,6 +1,6 @@
 from flask_login import current_user
 
-from configs import Mlchain_config
+from configs import mlchain_config
 from extensions.ext_database import db
 from models.account import Tenant, TenantAccountJoin, TenantAccountJoinRole
 from services.account_service import TenantService
@@ -36,7 +36,7 @@ class WorkspaceService:
         if can_replace_logo and TenantService.has_roles(
             tenant, [TenantAccountJoinRole.OWNER, TenantAccountJoinRole.ADMIN]
         ):
-            base_url = Mlchain_config.FILES_URL
+            base_url = mlchain_config.FILES_URL
             replace_webapp_logo = (
                 f"{base_url}/files/workspaces/{tenant.id}/webapp-logo"
                 if tenant.custom_config_dict.get("replace_webapp_logo")

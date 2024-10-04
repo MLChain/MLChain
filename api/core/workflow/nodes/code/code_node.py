@@ -1,7 +1,7 @@
 from collections.abc import Mapping, Sequence
 from typing import Any, Optional, Union, cast
 
-from configs import Mlchain_config
+from configs import mlchain_config
 from core.helper.code_executor.code_executor import CodeExecutionError, CodeExecutor, CodeLanguage
 from core.helper.code_executor.code_node_provider import CodeNodeProvider
 from core.helper.code_executor.javascript.javascript_code_provider import JavascriptCodeProvider
@@ -79,7 +79,7 @@ class CodeNode(BaseNode):
             else:
                 raise ValueError(f"Output variable `{variable}` must be a string")
 
-        if len(value) > Mlchain_config.CODE_MAX_STRING_LENGTH:
+        if len(value) > mlchain_config.CODE_MAX_STRING_LENGTH:
             raise ValueError(
                 f"The length of output variable `{variable}` must be"
                 f" less than {mlchain_config.CODE_MAX_STRING_LENGTH} characters"
@@ -100,7 +100,7 @@ class CodeNode(BaseNode):
             else:
                 raise ValueError(f"Output variable `{variable}` must be a number")
 
-        if value > Mlchain_config.CODE_MAX_NUMBER or value < Mlchain_config.CODE_MIN_NUMBER:
+        if value > mlchain_config.CODE_MAX_NUMBER or value < mlchain_config.CODE_MIN_NUMBER:
             raise ValueError(
                 f"Output variable `{variable}` is out of range,"
                 f" it must be between {mlchain_config.CODE_MIN_NUMBER} and {mlchain_config.CODE_MAX_NUMBER}."
@@ -108,7 +108,7 @@ class CodeNode(BaseNode):
 
         if isinstance(value, float):
             # raise error if precision is too high
-            if len(str(value).split(".")[1]) > Mlchain_config.CODE_MAX_PRECISION:
+            if len(str(value).split(".")[1]) > mlchain_config.CODE_MAX_PRECISION:
                 raise ValueError(
                     f"Output variable `{variable}` has too high precision,"
                     f" it must be less than {mlchain_config.CODE_MAX_PRECISION} digits."
@@ -125,7 +125,7 @@ class CodeNode(BaseNode):
         :param output_schema: output schema
         :return:
         """
-        if depth > Mlchain_config.CODE_MAX_DEPTH:
+        if depth > mlchain_config.CODE_MAX_DEPTH:
             raise ValueError(f"Depth limit ${mlchain_config.CODE_MAX_DEPTH} reached, object too deep.")
 
         transformed_result = {}
@@ -230,7 +230,7 @@ class CodeNode(BaseNode):
                             f" got {type(result.get(output_name))} instead."
                         )
                 else:
-                    if len(result[output_name]) > Mlchain_config.CODE_MAX_NUMBER_ARRAY_LENGTH:
+                    if len(result[output_name]) > mlchain_config.CODE_MAX_NUMBER_ARRAY_LENGTH:
                         raise ValueError(
                             f"The length of output variable `{prefix}{dot}{output_name}` must be"
                             f" less than {mlchain_config.CODE_MAX_NUMBER_ARRAY_LENGTH} elements."
@@ -251,7 +251,7 @@ class CodeNode(BaseNode):
                             f" got {type(result.get(output_name))} instead."
                         )
                 else:
-                    if len(result[output_name]) > Mlchain_config.CODE_MAX_STRING_ARRAY_LENGTH:
+                    if len(result[output_name]) > mlchain_config.CODE_MAX_STRING_ARRAY_LENGTH:
                         raise ValueError(
                             f"The length of output variable `{prefix}{dot}{output_name}` must be"
                             f" less than {mlchain_config.CODE_MAX_STRING_ARRAY_LENGTH} elements."
@@ -272,7 +272,7 @@ class CodeNode(BaseNode):
                             f" got {type(result.get(output_name))} instead."
                         )
                 else:
-                    if len(result[output_name]) > Mlchain_config.CODE_MAX_OBJECT_ARRAY_LENGTH:
+                    if len(result[output_name]) > mlchain_config.CODE_MAX_OBJECT_ARRAY_LENGTH:
                         raise ValueError(
                             f"The length of output variable `{prefix}{dot}{output_name}` must be"
                             f" less than {mlchain_config.CODE_MAX_OBJECT_ARRAY_LENGTH} elements."

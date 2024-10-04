@@ -6,9 +6,9 @@ services:
     restart: always
     environment:
       # The password for the default postgres user.
-      POSTGRES_PASSWORD: Mlchainai123456
+      POSTGRES_PASSWORD: mlchainai123456
       # The name of the default postgres database.
-      POSTGRES_DB: Mlchain
+      POSTGRES_DB: mlchain
       # postgres data directory
       PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
@@ -24,7 +24,7 @@ services:
       # Mount the redis data directory to the container.
       - ./volumes/redis/data:/data
     # Set the redis password when startup redis server.
-    command: redis-server --requirepass Mlchainai123456
+    command: redis-server --requirepass mlchainai123456
     ports:
       - "6379:6379"
 
@@ -59,7 +59,7 @@ services:
       # The MlchainSandbox configurations
       # Make sure you are changing this key for your deployment with a strong key.
       # You can generate a strong key using `openssl rand -base64 42`.
-      API_KEY: Mlchain-sandbox
+      API_KEY: mlchain-sandbox
       GIN_MODE: 'release'
       WORKER_TIMEOUT: 15
       ENABLE_NETWORK: 'true'
@@ -81,7 +81,7 @@ services:
       - "3128:3128"
       - "8194:8194"
     volumes:
-      # pls clearly  modify the squid.conf file to fit your network environment.
+      # pls clearly modify the squid.conf file to fit your network environment.
       - ./volumes/ssrf_proxy/squid.conf:/etc/squid/squid.conf
     networks:
       - ssrf_proxy_network

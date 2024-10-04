@@ -7,7 +7,7 @@ from typing import Optional
 import requests
 from flask import current_app
 
-from configs import Mlchain_config
+from configs import mlchain_config
 from constants.languages import languages
 from extensions.ext_database import db
 from models.model import App, RecommendedApp
@@ -26,12 +26,12 @@ class RecommendedAppService:
         :param language: language
         :return:
         """
-        mode = Mlchain_config.HOSTED_FETCH_APP_TEMPLATES_MODE
+        mode = mlchain_config.HOSTED_FETCH_APP_TEMPLATES_MODE
         if mode == "remote":
             try:
                 result = cls._fetch_recommended_apps_from_mlchain_official(language)
             except Exception as e:
-                logger.warning(f"fetch recommended apps from Mlchain official failed: {e}, switch to built-in.")
+                logger.warning(f"fetch recommended apps from mlchain official failed: {e}, switch to built-in.")
                 result = cls._fetch_recommended_apps_from_builtin(language)
         elif mode == "db":
             result = cls._fetch_recommended_apps_from_db(language)
@@ -103,11 +103,11 @@ class RecommendedAppService:
     @classmethod
     def _fetch_recommended_apps_from_mlchain_official(cls, language: str) -> dict:
         """
-        Fetch recommended apps from Mlchain official.
+        Fetch recommended apps from mlchain official.
         :param language: language
         :return:
         """
-        domain = Mlchain_config.HOSTED_FETCH_APP_TEMPLATES_REMOTE_DOMAIN
+        domain = mlchain_config.HOSTED_FETCH_APP_TEMPLATES_REMOTE_DOMAIN
         url = f"{domain}/apps?language={language}"
         response = requests.get(url, timeout=(3, 10))
         if response.status_code != 200:
@@ -137,12 +137,12 @@ class RecommendedAppService:
         :param app_id: app id
         :return:
         """
-        mode = Mlchain_config.HOSTED_FETCH_APP_TEMPLATES_MODE
+        mode = mlchain_config.HOSTED_FETCH_APP_TEMPLATES_MODE
         if mode == "remote":
             try:
                 result = cls._fetch_recommended_app_detail_from_mlchain_official(app_id)
             except Exception as e:
-                logger.warning(f"fetch recommended app detail from Mlchain official failed: {e}, switch to built-in.")
+                logger.warning(f"fetch recommended app detail from mlchain official failed: {e}, switch to built-in.")
                 result = cls._fetch_recommended_app_detail_from_builtin(app_id)
         elif mode == "db":
             result = cls._fetch_recommended_app_detail_from_db(app_id)
@@ -156,11 +156,11 @@ class RecommendedAppService:
     @classmethod
     def _fetch_recommended_app_detail_from_mlchain_official(cls, app_id: str) -> Optional[dict]:
         """
-        Fetch recommended app detail from Mlchain official.
+        Fetch recommended app detail from mlchain official.
         :param app_id: App ID
         :return:
         """
-        domain = Mlchain_config.HOSTED_FETCH_APP_TEMPLATES_REMOTE_DOMAIN
+        domain = mlchain_config.HOSTED_FETCH_APP_TEMPLATES_REMOTE_DOMAIN
         url = f"{domain}/apps/{app_id}"
         response = requests.get(url, timeout=(3, 10))
         if response.status_code != 200:
@@ -236,7 +236,7 @@ class RecommendedAppService:
             try:
                 result = cls._fetch_recommended_apps_from_mlchain_official(language)
             except Exception as e:
-                logger.warning(f"fetch recommended apps from Mlchain official failed: {e}, skip.")
+                logger.warning(f"fetch recommended apps from mlchain official failed: {e}, skip.")
                 continue
 
             templates["recommended_apps"][language] = result

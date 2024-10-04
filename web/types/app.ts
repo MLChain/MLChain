@@ -253,7 +253,7 @@ export type Language = typeof LanguagesSupported[number]
  * Web Application Configuration
  */
 export type SiteConfig = {
-  /** Application URL Identifier: `http://mlchain.khulnasoft.com/{access_token}` */
+  /** Application URL Identifier: `http://mlchain.app/{access_token}` */
   access_token: string
   /** Public Title */
   title: string

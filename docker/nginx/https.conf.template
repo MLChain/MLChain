@@ -1,4 +1,4 @@
-# Please do not directly edit this file. Instead,  modify the .env variables related to NGINX configuration.
+# Please do not directly edit this file. Instead, modify the .env variables related to NGINX configuration.
 
 listen ${NGINX_SSL_PORT} ssl;
 ssl_certificate ${SSL_CERTIFICATE_PATH};

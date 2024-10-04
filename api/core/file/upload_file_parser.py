@@ -6,7 +6,7 @@ import os
 import time
 from typing import Optional
 
-from configs import Mlchain_config
+from configs import mlchain_config
 from extensions.ext_storage import storage
 
 IMAGE_EXTENSIONS = ["jpg", "jpeg", "png", "webp", "gif", "svg"]
@@ -22,7 +22,7 @@ class UploadFileParser:
         if upload_file.extension not in IMAGE_EXTENSIONS:
             return None
 
-        if Mlchain_config.MULTIMODAL_SEND_IMAGE_FORMAT == "url" or force_url:
+        if mlchain_config.MULTIMODAL_SEND_IMAGE_FORMAT == "url" or force_url:
             return cls.get_signed_temp_image_url(upload_file.id)
         else:
             # get image file base64
@@ -43,13 +43,13 @@ class UploadFileParser:
         :param upload_file: UploadFile object
         :return:
         """
-        base_url = Mlchain_config.FILES_URL
+        base_url = mlchain_config.FILES_URL
         image_preview_url = f"{base_url}/files/{upload_file_id}/image-preview"
 
         timestamp = str(int(time.time()))
         nonce = os.urandom(16).hex()
         data_to_sign = f"image-preview|{upload_file_id}|{timestamp}|{nonce}"
-        secret_key = Mlchain_config.SECRET_KEY.encode()
+        secret_key = mlchain_config.SECRET_KEY.encode()
         sign = hmac.new(secret_key, data_to_sign.encode(), hashlib.sha256).digest()
         encoded_sign = base64.urlsafe_b64encode(sign).decode()
 
@@ -67,7 +67,7 @@ class UploadFileParser:
         :return:
         """
         data_to_sign = f"image-preview|{upload_file_id}|{timestamp}|{nonce}"
-        secret_key = Mlchain_config.SECRET_KEY.encode()
+        secret_key = mlchain_config.SECRET_KEY.encode()
         recalculated_sign = hmac.new(secret_key, data_to_sign.encode(), hashlib.sha256).digest()
         recalculated_encoded_sign = base64.urlsafe_b64encode(recalculated_sign).decode()
 
@@ -76,4 +76,4 @@ class UploadFileParser:
             return False
 
         current_time = int(time.time())
-        return current_time - int(timestamp) <= Mlchain_config.FILES_ACCESS_TIMEOUT
+        return current_time - int(timestamp) <= mlchain_config.FILES_ACCESS_TIMEOUT

@@ -1,6 +1,6 @@
 const translation = {
   title: 'ज्ञान सेटिंग्ज',
-  desc: 'यहां आप ज्ञान की संपत्ति और कार्य प्रक्रियाओं को  modify कर सकते हैं。',
+  desc: 'यहां आप ज्ञान की संपत्ति और कार्य प्रक्रियाओं को modify कर सकते हैं。',
   form: {
     name: 'ज्ञान नाम',
     namePlaceholder: 'कृपया ज्ञान नाम दर्ज करें',
@@ -34,6 +34,9 @@ const translation = {
     save: 'सेवना',
     me: '(आप)',
     permissionsInvitedMembers: 'आंशिक टीम के सदस्य',
+    externalKnowledgeID: 'बाहरी ज्ञान ID',
+    externalKnowledgeAPI: 'बाहरी ज्ञान एपीआई',
+    retrievalSettings: 'पुनर्प्राप्ति सेटिंग्स',
   },
 }
 

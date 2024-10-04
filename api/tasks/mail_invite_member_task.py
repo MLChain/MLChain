@@ -5,6 +5,7 @@ import click
 from celery import shared_task
 from flask import render_template
 
+from configs import mlchain_config
 from extensions.ext_mail import mail
 
 
