@@ -202,9 +202,7 @@ class WorkflowConverter:
         app_mode = AppMode.value_of(app_model.mode)
         if app_mode == AppMode.AGENT_CHAT or app_model.is_agent:
             app_model.mode = AppMode.AGENT_CHAT.value
-            app_config = AgentChatAppConfigManager.get_app_config(
-                app_model=app_model, app_model_config=app_model_config
-            )
+            app_config = AgentChatAppConfigManager.get_app_config(app_model=app_model, app_model_config=app_model_config)
         elif app_mode == AppMode.CHAT:
             app_config = ChatAppConfigManager.get_app_config(app_model=app_model, app_model_config=app_model_config)
         elif app_mode == AppMode.COMPLETION:

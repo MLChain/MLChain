@@ -306,9 +306,7 @@ class WorkflowCycleManage:
     #             to stream responses               #
     #################################################
 
-    def _workflow_start_to_stream_response(
-        self, task_id: str, workflow_run: WorkflowRun
-    ) -> WorkflowStartStreamResponse:
+    def _workflow_start_to_stream_response(self, task_id: str, workflow_run: WorkflowRun) -> WorkflowStartStreamResponse:
         """
         Workflow start to stream response.
         :param task_id: task id

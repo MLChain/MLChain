@@ -397,9 +397,7 @@ class TenantService:
 
         return (
             db.session.query(TenantAccountJoin)
-            .filter(
-                TenantAccountJoin.tenant_id == tenant.id, TenantAccountJoin.role.in_([role.value for role in roles])
-            )
+            .filter(TenantAccountJoin.tenant_id == tenant.id, TenantAccountJoin.role.in_([role.value for role in roles]))
             .first()
             is not None
         )

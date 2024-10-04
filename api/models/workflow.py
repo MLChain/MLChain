@@ -122,9 +122,7 @@ class Workflow(db.Model):
     graph: Mapped[str] = db.Column(db.Text)
     features: Mapped[str] = db.Column(db.Text)
     created_by: Mapped[str] = db.Column(StringUUID, nullable=False)
-    created_at: Mapped[datetime] = db.Column(
-        db.DateTime, nullable=False, server_default=db.text("CURRENT_TIMESTAMP(0)")
-    )
+    created_at: Mapped[datetime] = db.Column(db.DateTime, nullable=False, server_default=db.text("CURRENT_TIMESTAMP(0)"))
     updated_by: Mapped[str] = db.Column(StringUUID)
     updated_at: Mapped[datetime] = db.Column(db.DateTime)
     _environment_variables: Mapped[str] = db.Column(
@@ -214,8 +212,7 @@ class Workflow(db.Model):
         from models.tools import WorkflowToolProvider
 
         return (
-            db.session.query(WorkflowToolProvider).filter(WorkflowToolProvider.app_id == self.app_id).first()
-            is not None
+            db.session.query(WorkflowToolProvider).filter(WorkflowToolProvider.app_id == self.app_id).first() is not None
         )
 
     @property

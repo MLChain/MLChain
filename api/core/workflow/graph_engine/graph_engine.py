@@ -716,9 +716,7 @@ class GraphEngine:
             for key, value in variable_value.items():
                 # construct new key list
                 new_key_list = variable_key_list + [key]
-                self._append_variables_recursively(
-                    node_id=node_id, variable_key_list=new_key_list, variable_value=value
-                )
+                self._append_variables_recursively(node_id=node_id, variable_key_list=new_key_list, variable_value=value)
 
     def _is_timed_out(self, start_at: float, max_execution_time: int) -> bool:
         """

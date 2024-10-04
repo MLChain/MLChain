@@ -240,9 +240,7 @@ class CohereLargeLanguageModel(LargeLanguageModel):
         usage = self._calc_response_usage(model, credentials, prompt_tokens, completion_tokens)
 
         # transform response
-        response = LLMResult(
-            model=model, prompt_messages=prompt_messages, message=assistant_prompt_message, usage=usage
-        )
+        response = LLMResult(model=model, prompt_messages=prompt_messages, message=assistant_prompt_message, usage=usage)
 
         return response
 
@@ -419,9 +417,7 @@ class CohereLargeLanguageModel(LargeLanguageModel):
         usage = self._calc_response_usage(model, credentials, prompt_tokens, completion_tokens)
 
         # transform response
-        response = LLMResult(
-            model=model, prompt_messages=prompt_messages, message=assistant_prompt_message, usage=usage
-        )
+        response = LLMResult(model=model, prompt_messages=prompt_messages, message=assistant_prompt_message, usage=usage)
 
         return response
 
@@ -627,9 +623,7 @@ class CohereLargeLanguageModel(LargeLanguageModel):
                     description=desc, type=p_val["type"], required=required
                 )
 
-            cohere_tool = Tool(
-                name=tool.name, description=tool.description, parameter_definitions=parameter_definitions
-            )
+            cohere_tool = Tool(name=tool.name, description=tool.description, parameter_definitions=parameter_definitions)
 
             cohere_tools.append(cohere_tool)
 

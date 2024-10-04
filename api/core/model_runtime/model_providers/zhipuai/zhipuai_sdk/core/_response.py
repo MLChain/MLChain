@@ -233,7 +233,9 @@ class BaseAPIResponse(Generic[R]):
 
     @override
     def __repr__(self) -> str:
-        return f"<{self.__class__.__name__} [{self.status_code} {self.http_response.reason_phrase}] type={self._cast_type}>"  # noqa: E501
+        return (
+            f"<{self.__class__.__name__} [{self.status_code} {self.http_response.reason_phrase}] type={self._cast_type}>"  # noqa: E501
+        )
 
 
 class APIResponse(BaseAPIResponse[R]):

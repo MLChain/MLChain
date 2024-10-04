@@ -73,9 +73,7 @@ class NvidiaTextEmbeddingModel(TextEmbeddingModel):
                 else:
                     raise InvokeError(msg)
             except JSONDecodeError as e:
-                raise InvokeServerUnavailableError(
-                    f"Failed to convert response to json: {e} with text: {response.text}"
-                )
+                raise InvokeServerUnavailableError(f"Failed to convert response to json: {e} with text: {response.text}")
 
         try:
             resp = response.json()

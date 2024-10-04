@@ -141,9 +141,7 @@ class BasedGenerateTaskPipeline:
         if self._output_moderation_handler:
             self._output_moderation_handler.stop_thread()
 
-            completion = self._output_moderation_handler.moderation_completion(
-                completion=completion, public_event=False
-            )
+            completion = self._output_moderation_handler.moderation_completion(completion=completion, public_event=False)
 
             self._output_moderation_handler = None
 

@@ -111,9 +111,7 @@ class ToolFileManager:
         return tool_file
 
     @staticmethod
-    def create_file_by_key(
-        user_id: str, tenant_id: str, conversation_id: str, file_key: str, mimetype: str
-    ) -> ToolFile:
+    def create_file_by_key(user_id: str, tenant_id: str, conversation_id: str, file_key: str, mimetype: str) -> ToolFile:
         """
         create file
         """

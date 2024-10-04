@@ -236,9 +236,7 @@ class WordExtractor(BaseExtractor):
                         ".//{http://schemas.openxmlformats.org/wordprocessingml/2006/main}drawing"
                     )
                     for drawing in drawing_elements:
-                        blip_elements = drawing.findall(
-                            ".//{http://schemas.openxmlformats.org/drawingml/2006/main}blip"
-                        )
+                        blip_elements = drawing.findall(".//{http://schemas.openxmlformats.org/drawingml/2006/main}blip")
                         for blip in blip_elements:
                             embed_id = blip.get(
                                 "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed"

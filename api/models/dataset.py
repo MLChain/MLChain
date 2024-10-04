@@ -598,9 +598,7 @@ class DatasetKeywordTable(db.Model):
     id = db.Column(StringUUID, primary_key=True, server_default=db.text("uuid_generate_v4()"))
     dataset_id = db.Column(StringUUID, nullable=False, unique=True)
     keyword_table = db.Column(db.Text, nullable=False)
-    data_source_type = db.Column(
-        db.String(255), nullable=False, server_default=db.text("'database'::character varying")
-    )
+    data_source_type = db.Column(db.String(255), nullable=False, server_default=db.text("'database'::character varying"))
 
     @property
     def keyword_table_dict(self):

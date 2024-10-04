@@ -428,9 +428,7 @@ class LocalAILanguageModel(LargeLanguageModel):
         # transform assistant message to prompt message
         assistant_prompt_message = AssistantPromptMessage(content=assistant_message, tool_calls=[])
 
-        prompt_tokens = self._get_num_tokens_by_gpt2(
-            self._convert_prompt_message_to_completion_prompts(prompt_messages)
-        )
+        prompt_tokens = self._get_num_tokens_by_gpt2(self._convert_prompt_message_to_completion_prompts(prompt_messages))
         completion_tokens = self._num_tokens_from_messages(messages=[assistant_prompt_message], tools=[])
 
         usage = self._calc_response_usage(

@@ -260,9 +260,7 @@ class ZhipuAILargeLanguageModel(_CommonZhipuaiAI, LargeLanguageModel):
                         else:
                             params["messages"].append({"role": "assistant", "content": prompt_message.content})
                     else:
-                        params["messages"].append(
-                            {"role": prompt_message.role.value, "content": prompt_message.content}
-                        )
+                        params["messages"].append({"role": prompt_message.role.value, "content": prompt_message.content})
             else:
                 # chatglm model
                 for prompt_message in new_prompt_messages:
@@ -277,9 +275,7 @@ class ZhipuAILargeLanguageModel(_CommonZhipuaiAI, LargeLanguageModel):
                         else:
                             params["messages"].append({"role": "user", "content": prompt_message.content})
                     else:
-                        params["messages"].append(
-                            {"role": prompt_message.role.value, "content": prompt_message.content}
-                        )
+                        params["messages"].append({"role": prompt_message.role.value, "content": prompt_message.content})
 
         if tools and len(tools) > 0:
             params["tools"] = [{"type": "function", "function": helper.dump_model(tool)} for tool in tools]

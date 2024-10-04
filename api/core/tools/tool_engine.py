@@ -246,9 +246,7 @@ class ToolEngine:
                 if response.meta and "mime_type" in response.meta:
                     result.append(
                         ToolInvokeMessageBinary(
-                            mimetype=response.meta.get("mime_type", "octet/stream")
-                            if response.meta
-                            else "octet/stream",
+                            mimetype=response.meta.get("mime_type", "octet/stream") if response.meta else "octet/stream",
                             url=response.message,
                             save_as=response.save_as,
                         )

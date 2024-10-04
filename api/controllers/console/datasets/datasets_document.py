@@ -251,9 +251,7 @@ class DatasetDocumentListApi(Resource):
         parser.add_argument("duplicate", type=bool, default=True, nullable=False, location="json")
         parser.add_argument("original_document_id", type=str, required=False, location="json")
         parser.add_argument("doc_form", type=str, default="text_model", required=False, nullable=False, location="json")
-        parser.add_argument(
-            "doc_language", type=str, default="English", required=False, nullable=False, location="json"
-        )
+        parser.add_argument("doc_language", type=str, default="English", required=False, nullable=False, location="json")
         parser.add_argument("retrieval_model", type=dict, required=False, nullable=False, location="json")
         args = parser.parse_args()
 
@@ -298,9 +296,7 @@ class DatasetInitApi(Resource):
         parser.add_argument("data_source", type=dict, required=True, nullable=True, location="json")
         parser.add_argument("process_rule", type=dict, required=True, nullable=True, location="json")
         parser.add_argument("doc_form", type=str, default="text_model", required=False, nullable=False, location="json")
-        parser.add_argument(
-            "doc_language", type=str, default="English", required=False, nullable=False, location="json"
-        )
+        parser.add_argument("doc_language", type=str, default="English", required=False, nullable=False, location="json")
         parser.add_argument("retrieval_model", type=dict, required=False, nullable=False, location="json")
         parser.add_argument("embedding_model", type=str, required=False, nullable=True, location="json")
         parser.add_argument("embedding_model_provider", type=str, required=False, nullable=True, location="json")
@@ -429,9 +425,7 @@ class DocumentBatchIndexingEstimateApi(DocumentResource):
                 file_id = data_source_info["upload_file_id"]
                 info_list.append(file_id)
             # format document notion info
-            elif (
-                data_source_info and "notion_workspace_id" in data_source_info and "notion_page_id" in data_source_info
-            ):
+            elif data_source_info and "notion_workspace_id" in data_source_info and "notion_page_id" in data_source_info:
                 pages = []
                 page = {"page_id": data_source_info["notion_page_id"], "type": data_source_info["type"]}
                 pages.append(page)
