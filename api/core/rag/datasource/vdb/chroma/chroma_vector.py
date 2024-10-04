@@ -5,7 +5,6 @@ import chromadb
 from chromadb import QueryResult, Settings
 from pydantic import BaseModel
 
-from configs import Mlchain_config
 from core.rag.datasource.entity.embedding import Embeddings
 from core.rag.datasource.vdb.vector_base import BaseVector
 from core.rag.datasource.vdb.vector_factory import AbstractVectorFactory

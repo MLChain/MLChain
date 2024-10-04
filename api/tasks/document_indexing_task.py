@@ -5,7 +5,6 @@ import time
 import click
 from celery import shared_task
 
-from configs import Mlchain_config
 from core.indexing_runner import DocumentIsPausedError, IndexingRunner
 from extensions.ext_database import db
 from models.dataset import Dataset, Document

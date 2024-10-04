@@ -9,7 +9,6 @@ from typing import Optional
 from flask_login import current_user
 from sqlalchemy import func
 
-from configs import Mlchain_config
 from core.errors.error import LLMBadRequestError, ProviderTokenNotInitError
 from core.model_manager import ModelManager
 from core.model_runtime.entities.model_entities import ModelType

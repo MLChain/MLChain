@@ -12,7 +12,6 @@ import oracledb
 from nltk.corpus import stopwords
 from pydantic import BaseModel, model_validator
 
-from configs import Mlchain_config
 from core.rag.datasource.entity.embedding import Embeddings
 from core.rag.datasource.vdb.vector_base import BaseVector
 from core.rag.datasource.vdb.vector_factory import AbstractVectorFactory

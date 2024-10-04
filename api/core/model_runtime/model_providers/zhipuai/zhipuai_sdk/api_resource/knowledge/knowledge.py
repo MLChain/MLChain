@@ -65,7 +65,7 @@ class Knowledge(BaseAPI):
             cast_type=KnowledgeInfo,
         )
 
-    def  modify(
+    def modify(
         self,
         knowledge_id: str,
         embedding_id: int,
