@@ -8,11 +8,11 @@
 
 ## 在开始之前
 
-[查找](https://github.com/mlchain/mlchain/issues?q=is:issue+is:closed)现有问题，或 [创建](https://github.com/mlchain/mlchain/issues/new/choose) 一个新问题。我们将问题分为两类：
+[查找](https://github.com/mlchain/mlchain/issues?q=is:issue+is:open)现有问题，或 [创建](https://github.com/mlchain/mlchain/issues/new/choose) 一个新问题。我们将问题分为两类：
 
 ### 功能请求：
 
-* 如果您要提出新的功能请求，请解释所提议的功能的目标，并尽可能提供详细的上下文。[@perzeusss](https://github.com/perzeuss) 制作了一个很好的 [功能请求助手](https://udify.app/chat/MK2kVSnw1gakVwMX)，可以帮助您起草需求。随时尝试一下。
+* 如果您要提出新的功能请求，请解释所提议的功能的目标，并尽可能提供详细的上下文。[@perzeusss](https://github.com/perzeuss) 制作了一个很好的 [功能请求助手](https://mlchain.khulnasoft.com/chat/MK2kVSnw1gakVwMX)，可以帮助您起草需求。随时尝试一下。
 
 * 如果您想从现有问题中选择一个，请在其下方留下评论表示您的意愿。
 
@@ -36,7 +36,7 @@
   | 被团队成员标记为高优先级的功能    | 高优先级   |
   | 在 [community feedback board](https://github.com/mlchain/mlchain/discussions/categories/feedbacks) 内反馈的常见功能请求 | 中等优先级 |
   | 非核心功能和小幅改进                     | 低优先级    |
-  | 有价值当不紧急                                   | 未来功能  |
+  | 有价值但不紧急                                   | 未来功能  |
 
 ### 其他任何事情（例如 bug 报告、性能优化、拼写错误更正）：
 * 立即开始编码。
@@ -77,7 +77,7 @@ Mlchain 依赖以下工具和库：
 
 Mlchain 由后端和前端组成。通过 `cd api/` 导航到后端目录，然后按照 [后端 README](api/README.md) 进行安装。在另一个终端中，通过 `cd web/` 导航到前端目录，然后按照 [前端 README](web/README.md) 进行安装。
 
-查看 [安装常见问题解答](https://docs.mlchain.khulnasoft.com/v/zh-hans/learn-more/faq/install-faq) 以获取常见问题列表和故障排除步骤。
+查看 [安装常见问题解答](https://docs-mlchain.khulnasoft.com/v/zh-hans/learn-more/faq/install-faq) 以获取常见问题列表和故障排除步骤。
 
 ### 5. 在浏览器中访问 Mlchain
 
@@ -138,7 +138,7 @@ Mlchain 的后端使用 Python 编写，使用 [Flask](https://flask.palletsproj
 ├── models                // 描述数据模型和 API 响应的形状
 ├── public                // 如 favicon 等元资源
 ├── service               // 定义 API 操作的形状
-├── test                  
+├── test
 ├── types                 // 函数参数和返回值的描述
 └── utils                 // 共享的实用函数
 ```

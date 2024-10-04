@@ -8,11 +8,11 @@ In terms of licensing, please take a minute to read our short [License and Contr
 
 ## Before you jump in
 
-[Find](https://github.com/mlchain/mlchain/issues?q=is:issue+is:closed) an existing issue, or [open](https://github.com/mlchain/mlchain/issues/new/choose) a new one. We categorize issues into 2 types:
+[Find](https://github.com/mlchain/mlchain/issues?q=is:issue+is:open) an existing issue, or [open](https://github.com/mlchain/mlchain/issues/new/choose) a new one. We categorize issues into 2 types:
 
 ### Feature requests:
 
-* If you're opening a new feature request, we'd like you to explain what the proposed feature achieves, and include as much context as possible. [@perzeusss](https://github.com/perzeuss) has made a solid [Feature Request Copilot](https://udify.app/chat/MK2kVSnw1gakVwMX) that helps you draft out your needs. Feel free to give it a try.
+* If you're opening a new feature request, we'd like you to explain what the proposed feature achieves, and include as much context as possible. [@perzeusss](https://github.com/perzeuss) has made a solid [Feature Request Copilot](https://mlchain.khulnasoft.com/chat/MK2kVSnw1gakVwMX) that helps you draft out your needs. Feel free to give it a try.
 
 * If you want to pick one up from the existing issues, simply drop a comment below it saying so.
 
@@ -81,9 +81,9 @@ Mlchain requires the following dependencies to build, make sure they're installe
 
 Mlchain is composed of a backend and a frontend. Navigate to the backend directory by `cd api/`, then follow the [Backend README](api/README.md) to install it. In a separate terminal, navigate to the frontend directory by `cd web/`, then follow the [Frontend README](web/README.md) to install.
 
-Check the [installation FAQ](https://docs.mlchain.khulnasoft.com/learn-more/faq/self-host-faq) for a list of common issues and steps to troubleshoot.
+Check the [installation FAQ](https://docs-mlchain.khulnasoft.com/learn-more/faq/self-host-faq) for a list of common issues and steps to troubleshoot.
 
-### 5. Visit mlchain in your browser
+### 5. Visit Mlchain in your browser
 
 To validate your set up, head over to [http://localhost:3000](http://localhost:3000) (the default, or your self-configured URL and port) in your browser. You should now see Mlchain up and running. 
 

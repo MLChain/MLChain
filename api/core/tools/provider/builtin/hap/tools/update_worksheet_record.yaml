@@ -8,7 +8,7 @@ description:
   human:
     en_US: Updates a single record in a worksheet based on the specified record row ID
     zh_Hans: 根据指定的记录ID更新一条工作表记录数据
-  llm: A tool to modify existing information within a particular record of a worksheet by referencing its unique identifier.
+  llm: A tool to  modify existing information within a particular record of a worksheet by referencing its unique identifier.
 parameters:
   - name: appkey
     type: secret-input

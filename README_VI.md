@@ -1,10 +1,10 @@
 ![cover-v5-optimized](https://github.com/mlchain/mlchain/assets/13230914/f9e19af5-61ba-4119-b926-d10c4c06ebab)
 
 <p align="center">
-  <a href="https://cloud.mlchain.khulnasoft.com">Mlchain Cloud</a> ·
-  <a href="https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted">Tự triển khai</a> ·
-  <a href="https://docs.mlchain.khulnasoft.com">Tài liệu</a> ·
-  <a href="https://udify.app/chat/22L1zSxg6yW1cWQg">Yêu cầu doanh nghiệp</a>
+  <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
+  <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">Tự triển khai</a> ·
+  <a href="https://docs-mlchain.khulnasoft.com">Tài liệu</a> ·
+  <a href="https://mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">Yêu cầu doanh nghiệp</a>
 </p>
 
 <p align="center">
@@ -15,8 +15,8 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="chat trên Discord"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=khulnasoft" target="_blank">
-        <img src="https://img.shields.io/twitter/follow/khulnasoft?logo=X&color=%20%23f5f5f5"
+    <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
+        <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
             alt="theo dõi trên Twitter"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
@@ -54,7 +54,7 @@ Mlchain là một nền tảng phát triển ứng dụng LLM mã nguồn mở. 
 
 
 **2. Hỗ trợ mô hình toàn diện**: 
-  Tích hợp liền mạch với hàng trăm mô hình LLM độc quyền / mã nguồn mở từ hàng chục nhà cung cấp suy luận và giải pháp tự lưu trữ, bao gồm GPT, Mistral, Llama3, và bất kỳ mô hình tương thích API OpenAI nào. Danh sách đầy đủ các nhà cung cấp mô hình được hỗ trợ có thể được tìm thấy [tại đây](https://docs.mlchain.khulnasoft.com/getting-started/readme/model-providers).
+  Tích hợp liền mạch với hàng trăm mô hình LLM độc quyền / mã nguồn mở từ hàng chục nhà cung cấp suy luận và giải pháp tự lưu trữ, bao gồm GPT, Mistral, Llama3, và bất kỳ mô hình tương thích API OpenAI nào. Danh sách đầy đủ các nhà cung cấp mô hình được hỗ trợ có thể được tìm thấy [tại đây](https://docs-mlchain.khulnasoft.com/getting-started/readme/model-providers).
 
 ![providers-v5](https://github.com/mlchain/mlchain/assets/13230914/5a17bdbe-097a-4100-8363-40255b70f6e3)
 
@@ -79,7 +79,7 @@ Mlchain là một nền tảng phát triển ứng dụng LLM mã nguồn mở. 
 <table style="width: 100%;">
   <tr>
     <th align="center">Tính năng</th>
-    <th align="center">Mlchain.AI</th>
+    <th align="center">MLChain</th>
     <th align="center">LangChain</th>
     <th align="center">Flowise</th>
     <th align="center">OpenAI Assistants API</th>
@@ -149,10 +149,10 @@ Chúng tôi lưu trữ dịch vụ [Mlchain Cloud](https://mlchain.khulnasoft.co
 
 - **Tự triển khai Mlchain Community Edition</br>**
 Nhanh chóng chạy Mlchain trong môi trường của bạn với [hướng dẫn bắt đầu](#quick-start) này.
-Sử dụng [tài liệu](https://docs.mlchain.khulnasoft.com) của chúng tôi để tham khảo thêm và nhận hướng dẫn chi tiết hơn.
+Sử dụng [tài liệu](https://docs-mlchain.khulnasoft.com) của chúng tôi để tham khảo thêm và nhận hướng dẫn chi tiết hơn.
 
 - **Mlchain cho doanh nghiệp / tổ chức</br>**
-Chúng tôi cung cấp các tính năng bổ sung tập trung vào doanh nghiệp. [Ghi lại câu hỏi của bạn cho chúng tôi thông qua chatbot này](https://udify.app/chat/22L1zSxg6yW1cWQg) hoặc [gửi email cho chúng tôi](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry) để thảo luận về nhu cầu doanh nghiệp. </br>
+Chúng tôi cung cấp các tính năng bổ sung tập trung vào doanh nghiệp. [Ghi lại câu hỏi của bạn cho chúng tôi thông qua chatbot này](https://mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg) hoặc [gửi email cho chúng tôi](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry) để thảo luận về nhu cầu doanh nghiệp. </br>
   > Đối với các công ty khởi nghiệp và doanh nghiệp nhỏ sử dụng AWS, hãy xem [Mlchain Premium trên AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6) và triển khai nó vào AWS VPC của riêng bạn chỉ với một cú nhấp chuột. Đây là một AMI giá cả phải chăng với tùy chọn tạo ứng dụng với logo và thương hiệu tùy chỉnh.
 
 
@@ -182,11 +182,11 @@ docker compose up -d
 
 Sau khi chạy, bạn có thể truy cập bảng điều khiển Mlchain trong trình duyệt của bạn tại [http://localhost/install](http://localhost/install) và bắt đầu quá trình khởi tạo.
 
-> Nếu bạn muốn đóng góp cho Mlchain hoặc phát triển thêm, hãy tham khảo [hướng dẫn triển khai từ mã nguồn](https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted/local-source-code) của chúng tôi
+> Nếu bạn muốn đóng góp cho Mlchain hoặc phát triển thêm, hãy tham khảo [hướng dẫn triển khai từ mã nguồn](https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted/local-source-code) của chúng tôi
 
 ## Các bước tiếp theo
 
-Nếu bạn cần tùy chỉnh cấu hình, vui lòng tham khảo các nhận xét trong tệp [.env.example](docker/.env.example) của chúng tôi và cập nhật các giá trị tương ứng trong tệp `.env` của bạn. Ngoài ra, bạn có thể cần điều chỉnh tệp `docker-compose.yaml`, chẳng hạn như thay đổi phiên bản hình ảnh, ánh xạ cổng hoặc gắn kết khối lượng, dựa trên môi trường triển khai cụ thể và yêu cầu của bạn. Sau khi thực hiện bất kỳ thay đổi nào, vui lòng chạy lại `docker-compose up -d`. Bạn có thể tìm thấy danh sách đầy đủ các biến môi trường có sẵn [tại đây](https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted/environments).
+Nếu bạn cần tùy chỉnh cấu hình, vui lòng tham khảo các nhận xét trong tệp [.env.example](docker/.env.example) của chúng tôi và cập nhật các giá trị tương ứng trong tệp `.env` của bạn. Ngoài ra, bạn có thể cần điều chỉnh tệp `docker-compose.yaml`, chẳng hạn như thay đổi phiên bản hình ảnh, ánh xạ cổng hoặc gắn kết khối lượng, dựa trên môi trường triển khai cụ thể và yêu cầu của bạn. Sau khi thực hiện bất kỳ thay đổi nào, vui lòng chạy lại `docker-compose up -d`. Bạn có thể tìm thấy danh sách đầy đủ các biến môi trường có sẵn [tại đây](https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted/environments).
 
 Nếu bạn muốn cấu hình một cài đặt có độ sẵn sàng cao, có các [Helm Charts](https://helm.sh/) và tệp YAML do cộng đồng đóng góp cho phép Mlchain được triển khai trên Kubernetes.
 
@@ -217,9 +217,9 @@ Triển khai Mlchain lên Azure chỉ với một cú nhấp chuột bằng các
 ## Cộng đồng & liên hệ
 
 * [Thảo luận GitHub](https://github.com/mlchain/mlchain/discussions). Tốt nhất cho: chia sẻ phản hồi và đặt câu hỏi.
-* [Vấn đề GitHub](https://github.com/mlchain/mlchain/issues). Tốt nhất cho: lỗi bạn gặp phải khi sử dụng Mlchain.AI và đề xuất tính năng. Xem [Hướng dẫn Đóng góp](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md) của chúng tôi.
+* [Vấn đề GitHub](https://github.com/mlchain/mlchain/issues). Tốt nhất cho: lỗi bạn gặp phải khi sử dụng MLChain và đề xuất tính năng. Xem [Hướng dẫn Đóng góp](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md) của chúng tôi.
 * [Discord](https://discord.gg/FngNHpbcY7). Tốt nhất cho: chia sẻ ứng dụng của bạn và giao lưu với cộng đồng.
-* [Twitter](https://twitter.com/khulnasoft). Tốt nhất cho: chia sẻ ứng dụng của bạn và giao lưu với cộng đồng.
+* [Twitter](https://twitter.com/mlchain_ai). Tốt nhất cho: chia sẻ ứng dụng của bạn và giao lưu với cộng đồng.
 
 ## Lịch sử Yêu thích
 

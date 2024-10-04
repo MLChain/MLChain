@@ -6,16 +6,19 @@ import { createContext, useContext, useContextSelector } from 'use-context-selec
 import type { FC, ReactNode } from 'react'
 import { fetchAppList } from '@/service/apps'
 import Loading from '@/app/components/base/loading'
-import { fetchCurrentWorkspace, fetchMlchainVersion, fetchUserProfile } from '@/service/common'
+import { fetchCurrentWorkspace, fetchMlchainVersion, fetchUserProfile, getSystemFeatures } from '@/service/common'
 import type { App } from '@/types/app'
 import { Theme } from '@/types/app'
-import type { ICurrentWorkspace, MLChainVersionResponse, UserProfileResponse } from '@/models/common'
+import type { ICurrentWorkspace, MlChainVersionResponse, UserProfileResponse } from '@/models/common'
 import MaintenanceNotice from '@/app/components/header/maintenance-notice'
+import type { SystemFeatures } from '@/types/feature'
+import { defaultSystemFeatures } from '@/types/feature'
 
 export type AppContextValue = {
   theme: Theme
   setTheme: (theme: Theme) => void
   apps: App[]
+  systemFeatures: SystemFeatures
   mutateApps: VoidFunction
   userProfile: UserProfileResponse
   mutateUserProfile: VoidFunction
@@ -26,7 +29,7 @@ export type AppContextValue = {
   isCurrentWorkspaceDatasetOperator: boolean
   mutateCurrentWorkspace: VoidFunction
   pageContainerRef: React.RefObject<HTMLDivElement>
-  langeniusVersionInfo: MLChainVersionResponse
+  langeniusVersionInfo: MlChainVersionResponse
   useSelector: typeof useSelector
 }
 
@@ -53,6 +56,7 @@ const initialWorkspaceInfo: ICurrentWorkspace = {
 
 const AppContext = createContext<AppContextValue>({
   theme: Theme.light,
+  systemFeatures: defaultSystemFeatures,
   setTheme: () => { },
   apps: [],
   mutateApps: () => { },
@@ -90,8 +94,12 @@ export const AppContextProvider: FC<AppContextProviderProps> = ({ children }) =>
   const { data: userProfileResponse, mutate: mutateUserProfile } = useSWR({ url: '/account/profile', params: {} }, fetchUserProfile)
   const { data: currentWorkspaceResponse, mutate: mutateCurrentWorkspace } = useSWR({ url: '/workspaces/current', params: {} }, fetchCurrentWorkspace)
 
+  const { data: systemFeatures } = useSWR({ url: '/console/system-features' }, getSystemFeatures, {
+    fallbackData: defaultSystemFeatures,
+  })
+
   const [userProfile, setUserProfile] = useState<UserProfileResponse>()
-  const [langeniusVersionInfo, setLangeniusVersionInfo] = useState<MLChainVersionResponse>(initialLangeniusVersionInfo)
+  const [langeniusVersionInfo, setLangeniusVersionInfo] = useState<MlChainVersionResponse>(initialLangeniusVersionInfo)
   const [currentWorkspace, setCurrentWorkspace] = useState<ICurrentWorkspace>(initialWorkspaceInfo)
   const isCurrentWorkspaceManager = useMemo(() => ['owner', 'admin'].includes(currentWorkspace.role), [currentWorkspace.role])
   const isCurrentWorkspaceOwner = useMemo(() => currentWorkspace.role === 'owner', [currentWorkspace.role])
@@ -136,6 +144,7 @@ export const AppContextProvider: FC<AppContextProviderProps> = ({ children }) =>
       theme,
       setTheme: handleSetTheme,
       apps: appList.data,
+      systemFeatures,
       mutateApps,
       userProfile,
       mutateUserProfile,

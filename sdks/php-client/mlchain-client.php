@@ -11,7 +11,7 @@ class MlchainClient {
 
     public function __construct($api_key, $base_url = null) {
         $this->api_key = $api_key;
-        $this->base_url = $base_url ?? "https://api.mlchain.khulnasoft.com/v1/";
+        $this->base_url = $base_url ?? "https://api-mlchain.khulnasoft.com/v1/";
         $this->client = new Client([
             'base_uri' => $this->base_url,
             'headers' => [

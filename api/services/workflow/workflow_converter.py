@@ -63,17 +63,19 @@ class WorkflowConverter:
         # create new app
         new_app = App()
         new_app.tenant_id = app_model.tenant_id
-        new_app.name = name if name else app_model.name + "(workflow)"
+        new_app.name = name or app_model.name + "(workflow)"
         new_app.mode = AppMode.ADVANCED_CHAT.value if app_model.mode == AppMode.CHAT.value else AppMode.WORKFLOW.value
-        new_app.icon_type = icon_type if icon_type else app_model.icon_type
-        new_app.icon = icon if icon else app_model.icon
-        new_app.icon_background = icon_background if icon_background else app_model.icon_background
+        new_app.icon_type = icon_type or app_model.icon_type
+        new_app.icon = icon or app_model.icon
+        new_app.icon_background = icon_background or app_model.icon_background
         new_app.enable_site = app_model.enable_site
         new_app.enable_api = app_model.enable_api
         new_app.api_rpm = app_model.api_rpm
         new_app.api_rph = app_model.api_rph
         new_app.is_demo = False
         new_app.is_public = app_model.is_public
+        new_app.created_by = account.id
+        new_app.updated_by = account.id
         db.session.add(new_app)
         db.session.flush()
         db.session.commit()
@@ -200,9 +202,7 @@ class WorkflowConverter:
         app_mode = AppMode.value_of(app_model.mode)
         if app_mode == AppMode.AGENT_CHAT or app_model.is_agent:
             app_model.mode = AppMode.AGENT_CHAT.value
-            app_config = AgentChatAppConfigManager.get_app_config(
-                app_model=app_model, app_model_config=app_model_config
-            )
+            app_config = AgentChatAppConfigManager.get_app_config(app_model=app_model, app_model_config=app_model_config)
         elif app_mode == AppMode.CHAT:
             app_config = ChatAppConfigManager.get_app_config(app_model=app_model, app_model_config=app_model_config)
         elif app_mode == AppMode.COMPLETION:

@@ -6,7 +6,7 @@ services:
     volumes:
       - ./volumes/chroma:/chroma/chroma
     environment:
-      CHROMA_SERVER_AUTHN_CREDENTIALS: mlchainai123456
+      CHROMA_SERVER_AUTHN_CREDENTIALS: Mlchainai123456
       CHROMA_SERVER_AUTHN_PROVIDER: chromadb.auth.token_authn.TokenAuthenticationServerProvider
       IS_PERSISTENT: TRUE
     ports:

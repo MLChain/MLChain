@@ -32,7 +32,7 @@ const UrlInput: FC<Props> = ({
       <Input
         value={url}
         onChange={handleUrlChange}
-        placeholder='https://docs.mlchain.khulnasoft.com'
+        placeholder='https://docs-mlchain.khulnasoft.com'
       />
       <Button
         variant='primary'

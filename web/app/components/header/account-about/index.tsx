@@ -6,12 +6,12 @@ import { RiCloseLine } from '@remixicon/react'
 import s from './index.module.css'
 import classNames from '@/utils/classnames'
 import Modal from '@/app/components/base/modal'
-import type { MLChainVersionResponse } from '@/models/common'
+import type { MlChainVersionResponse } from '@/models/common'
 import { IS_CE_EDITION } from '@/config'
 import LogoSite from '@/app/components/base/logo/logo-site'
 
 type IAccountSettingProps = {
-  langeniusVersionInfo: MLChainVersionResponse
+  langeniusVersionInfo: MlChainVersionResponse
   onCancel: () => void
 }
 const buttonClassName = `
@@ -39,7 +39,7 @@ export default function AccountAbout({
           <LogoSite className='mx-auto mb-2' />
           <div className='mb-3 text-center text-xs font-normal text-gray-500'>Version {langeniusVersionInfo?.current_version}</div>
           <div className='mb-4 text-center text-xs font-normal text-gray-700'>
-            <div>© {dayjs().year()} MLChain, Inc., Contributors.</div>
+            <div>© {dayjs().year()} MlChain, Inc., Contributors.</div>
             <div className='text-[#1C64F2]'>
               {
                 IS_CE_EDITION

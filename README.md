@@ -1,10 +1,11 @@
 # MLCHAIN
+![cover-v5-optimized](https://github.com/mlchain/mlchain/assets/13230914/f9e19af5-61ba-4119-b926-d10c4c06ebab)
 
 <p>
-  <a href="https://cloud.mlchain.khulnasoft.com">Mlchain Cloud</a> ·
-  <a href="https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted">Self-hosting</a> ·
-  <a href="https://docs.mlchain.khulnasoft.com">Documentation</a> ·
-  <a href="https://udify.app/chat/22L1zSxg6yW1cWQg">Enterprise inquiry</a>
+  <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
+  <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">Self-hosting</a> ·
+  <a href="https://docs-mlchain.khulnasoft.com">Documentation</a> ·
+  <a href="https://mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">Enterprise inquiry</a>
 </p>
 
 <p>
@@ -15,8 +16,8 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="chat on Discord"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=khulnasoft" target="_blank">
-        <img src="https://img.shields.io/twitter/follow/khulnasoft?logo=X&color=%20%23f5f5f5"
+    <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
+        <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
             alt="follow on Twitter"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
@@ -54,7 +55,7 @@ Mlchain is an open-source LLM app development platform. Its intuitive interface 
 
 
 **2. Comprehensive model support**: 
-  Seamless integration with hundreds of proprietary / open-source LLMs from dozens of inference providers and self-hosted solutions, covering GPT, Mistral, Llama3, and any OpenAI API-compatible models. A full list of supported model providers can be found [here](https://docs.mlchain.khulnasoft.com/getting-started/readme/model-providers).
+  Seamless integration with hundreds of proprietary / open-source LLMs from dozens of inference providers and self-hosted solutions, covering GPT, Mistral, Llama3, and any OpenAI API-compatible models. A full list of supported model providers can be found [here](https://docs-mlchain.khulnasoft.com/getting-started/readme/model-providers).
 
 ![providers-v5](https://github.com/mlchain/mlchain/assets/13230914/5a17bdbe-097a-4100-8363-40255b70f6e3)
 
@@ -78,67 +79,67 @@ Mlchain is an open-source LLM app development platform. Its intuitive interface 
 ## Feature comparison
 <table style="width: 100%;">
   <tr>
-    <th align="center">Feature</th>
-    <th align="center">Mlchain.AI</th>
-    <th align="center">LangChain</th>
-    <th align="center">Flowise</th>
-    <th align="center">OpenAI Assistants API</th>
+    <th>Feature</th>
+    <th>MLChain</th>
+    <th>LangChain</th>
+    <th>Flowise</th>
+    <th>OpenAI Assistants API</th>
   </tr>
   <tr>
-    <td align="center">Programming Approach</td>
-    <td align="center">API + App-oriented</td>
-    <td align="center">Python Code</td>
-    <td align="center">App-oriented</td>
-    <td align="center">API-oriented</td>
+    <td>Programming Approach</td>
+    <td>API + App-oriented</td>
+    <td>Python Code</td>
+    <td>App-oriented</td>
+    <td>API-oriented</td>
   </tr>
   <tr>
-    <td align="center">Supported LLMs</td>
-    <td align="center">Rich Variety</td>
-    <td align="center">Rich Variety</td>
-    <td align="center">Rich Variety</td>
-    <td align="center">OpenAI-only</td>
+    <td>Supported LLMs</td>
+    <td>Rich Variety</td>
+    <td>Rich Variety</td>
+    <td>Rich Variety</td>
+    <td>OpenAI-only</td>
   </tr>
   <tr>
-    <td align="center">RAG Engine</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
+    <td>RAG Engine</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
   </tr>
   <tr>
-    <td align="center">Agent</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-    <td align="center">❌</td>
-    <td align="center">✅</td>
+    <td>Agent</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>✅</td>
   </tr>
   <tr>
-    <td align="center">Workflow</td>
-    <td align="center">✅</td>
-    <td align="center">❌</td>
-    <td align="center">✅</td>
-    <td align="center">❌</td>
+    <td>Workflow</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>✅</td>
+    <td>❌</td>
   </tr>
   <tr>
-    <td align="center">Observability</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-    <td align="center">❌</td>
-    <td align="center">❌</td>
+    <td>Observability</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>❌</td>
   </tr>
   <tr>
-    <td align="center">Enterprise Features (SSO/Access control)</td>
-    <td align="center">✅</td>
-    <td align="center">❌</td>
-    <td align="center">❌</td>
-    <td align="center">❌</td>
+    <td>Enterprise Features (SSO/Access control)</td>
+    <td>✅</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>❌</td>
   </tr>
   <tr>
-    <td align="center">Local Deployment</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-    <td align="center">❌</td>
+    <td>Local Deployment</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>❌</td>
   </tr>
 </table>
 
@@ -149,10 +150,10 @@ We host a [Mlchain Cloud](https://mlchain.khulnasoft.com) service for anyone to 
 
 - **Self-hosting Mlchain Community Edition</br>**
 Quickly get Mlchain running in your environment with this [starter guide](#quick-start).
-Use our [documentation](https://docs.mlchain.khulnasoft.com) for further references and more in-depth instructions.
+Use our [documentation](https://docs-mlchain.khulnasoft.com) for further references and more in-depth instructions.
 
 - **Mlchain for enterprise / organizations</br>**
-We provide additional enterprise-centric features. [Log your questions for us through this chatbot](https://udify.app/chat/22L1zSxg6yW1cWQg) or [send us an email](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry) to discuss enterprise needs. </br>
+We provide additional enterprise-centric features. [Log your questions for us through this chatbot](https://mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg) or [send us an email](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry) to discuss enterprise needs. </br>
   > For startups and small businesses using AWS, check out [Mlchain Premium on AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6) and deploy it to your own AWS VPC with one-click. It's an affordable AMI offering with the option to create apps with custom logo and branding.
 
 
@@ -182,11 +183,11 @@ docker compose up -d
 
 After running, you can access the Mlchain dashboard in your browser at [http://localhost/install](http://localhost/install) and start the initialization process.
 
-> If you'd like to contribute to Mlchain or do additional development, refer to our [guide to deploying from source code](https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted/local-source-code)
+> If you'd like to contribute to Mlchain or do additional development, refer to our [guide to deploying from source code](https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted/local-source-code)
 
 ## Next steps
 
-If you need to customize the configuration, please refer to the comments in our [.env.example](docker/.env.example) file and update the corresponding values in your `.env` file. Additionally, you might need to make adjustments to the `docker-compose.yaml` file itself, such as changing image versions, port mappings, or volume mounts, based on your specific deployment environment and requirements. After making any changes, please re-run `docker-compose up -d`. You can find the full list of available environment variables [here](https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted/environments).
+If you need to customize the configuration, please refer to the comments in our [.env.example](docker/.env.example) file and update the corresponding values in your `.env` file. Additionally, you might need to make adjustments to the `docker-compose.yaml` file itself, such as changing image versions, port mappings, or volume mounts, based on your specific deployment environment and requirements. After making any changes, please re-run `docker-compose up -d`. You can find the full list of available environment variables [here](https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted/environments).
 
 If you'd like to configure a highly-available setup, there are community-contributed [Helm Charts](https://helm.sh/) and YAML files which allow Mlchain to be deployed on Kubernetes.
 
@@ -217,9 +218,9 @@ At the same time, please consider supporting Mlchain by sharing it on social med
 ## Community & contact
 
 * [Github Discussion](https://github.com/mlchain/mlchain/discussions). Best for: sharing feedback and asking questions.
-* [GitHub Issues](https://github.com/mlchain/mlchain/issues). Best for: bugs you encounter using Mlchain.AI, and feature proposals. See our [Contribution Guide](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
+* [GitHub Issues](https://github.com/mlchain/mlchain/issues). Best for: bugs you encounter using MLChain, and feature proposals. See our [Contribution Guide](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
 * [Discord](https://discord.gg/FngNHpbcY7). Best for: sharing your applications and hanging out with the community.
-* [Twitter](https://twitter.com/khulnasoft). Best for: sharing your applications and hanging out with the community.
+* [Twitter](https://twitter.com/mlchain_ai). Best for: sharing your applications and hanging out with the community.
 
 ## Star history
 

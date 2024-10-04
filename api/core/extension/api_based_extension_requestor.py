@@ -1,6 +1,6 @@
 import requests
 
-from configs import mlchain_config
+from configs import Mlchain_config
 from models.api_based_extension import APIBasedExtensionPoint
 
 
@@ -20,32 +20,26 @@ class APIBasedExtensionRequestor:
         :param params: the request params
         :return: the response json
         """
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer {}".format(self.api_key)
-        }
+        headers = {"Content-Type": "application/json", "Authorization": "Bearer {}".format(self.api_key)}
 
         url = self.api_endpoint
 
         try:
             # proxy support for security
             proxies = None
-            if mlchain_config.SSRF_PROXY_HTTP_URL and mlchain_config.SSRF_PROXY_HTTPS_URL:
+            if Mlchain_config.SSRF_PROXY_HTTP_URL and Mlchain_config.SSRF_PROXY_HTTPS_URL:
                 proxies = {
-                    'http': mlchain_config.SSRF_PROXY_HTTP_URL,
-                    'https': mlchain_config.SSRF_PROXY_HTTPS_URL,
+                    "http": Mlchain_config.SSRF_PROXY_HTTP_URL,
+                    "https": Mlchain_config.SSRF_PROXY_HTTPS_URL,
                 }
 
             response = requests.request(
-                method='POST',
+                method="POST",
                 url=url,
-                json={
-                    'point': point.value,
-                    'params': params
-                },
+                json={"point": point.value, "params": params},
                 headers=headers,
                 timeout=self.timeout,
-                proxies=proxies
+                proxies=proxies,
             )
         except requests.exceptions.Timeout:
             raise ValueError("request timeout")
@@ -53,9 +47,8 @@ class APIBasedExtensionRequestor:
             raise ValueError("request connection error")
 
         if response.status_code != 200:
-            raise ValueError("request error, status_code: {}, content: {}".format(
-                response.status_code,
-                response.text[:100]
-            ))
+            raise ValueError(
+                "request error, status_code: {}, content: {}".format(response.status_code, response.text[:100])
+            )
 
         return response.json()
