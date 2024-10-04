@@ -9,7 +9,7 @@ build-backend = "poetry.core.masonry.api"
 exclude=[
     "migrations/*",
 ]
-line-length = 120
+line-length = 121
 
 [tool.ruff.lint]
 preview = true
