@@ -210,9 +210,7 @@ class Graph(BaseModel):
         if target_node_id in [graph_edge.target_node_id for graph_edge in self.edge_mapping[source_node_id]]:
             return
 
-        graph_edge = GraphEdge(
-            source_node_id=source_node_id, target_node_id=target_node_id, run_condition=run_condition
-        )
+        graph_edge = GraphEdge(source_node_id=source_node_id, target_node_id=target_node_id, run_condition=run_condition)
 
         self.edge_mapping[source_node_id].append(graph_edge)
 

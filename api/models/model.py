@@ -836,9 +836,7 @@ class Message(db.Model):
     def app_model_config(self):
         conversation = db.session.query(Conversation).filter(Conversation.id == self.conversation_id).first()
         if conversation:
-            return (
-                db.session.query(AppModelConfig).filter(AppModelConfig.id == conversation.app_model_config_id).first()
-            )
+            return db.session.query(AppModelConfig).filter(AppModelConfig.id == conversation.app_model_config_id).first()
 
         return None
 

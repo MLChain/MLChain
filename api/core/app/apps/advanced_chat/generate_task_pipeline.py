@@ -527,9 +527,7 @@ class AdvancedChatAppGenerateTaskPipeline(BasedGenerateTaskPipeline, WorkflowCyc
             if "annotation_reply" in extras["metadata"]:
                 del extras["metadata"]["annotation_reply"]
 
-        return MessageEndStreamResponse(
-            task_id=self._application_generate_entity.task_id, id=self._message.id, **extras
-        )
+        return MessageEndStreamResponse(task_id=self._application_generate_entity.task_id, id=self._message.id, **extras)
 
     def _handle_output_moderation_chunk(self, text: str) -> bool:
         """
@@ -541,9 +539,7 @@ class AdvancedChatAppGenerateTaskPipeline(BasedGenerateTaskPipeline, WorkflowCyc
             if self._output_moderation_handler.should_direct_output():
                 # stop subscribe new token when output moderation should direct output
                 self._task_state.answer = self._output_moderation_handler.get_final_output()
-                self._queue_manager.publish(
-                    QueueTextChunkEvent(text=self._task_state.answer), PublishFrom.TASK_PIPELINE
-                )
+                self._queue_manager.publish(QueueTextChunkEvent(text=self._task_state.answer), PublishFrom.TASK_PIPELINE)
 
                 self._queue_manager.publish(
                     QueueStopEvent(stopped_by=QueueStopEvent.StopBy.OUTPUT_MODERATION), PublishFrom.TASK_PIPELINE

@@ -25,9 +25,7 @@ def disable_annotation_reply_task(job_id: str, app_id: str, tenant_id: str):
     if not app:
         raise NotFound("App not found")
 
-    app_annotation_setting = (
-        db.session.query(AppAnnotationSetting).filter(AppAnnotationSetting.app_id == app_id).first()
-    )
+    app_annotation_setting = db.session.query(AppAnnotationSetting).filter(AppAnnotationSetting.app_id == app_id).first()
 
     if not app_annotation_setting:
         raise NotFound("App annotation setting not found")

@@ -140,13 +140,9 @@ class CodeNode(BaseNode):
                         depth=depth + 1,
                     )
                 elif isinstance(output_value, int | float):
-                    self._check_number(
-                        value=output_value, variable=f"{prefix}.{output_name}" if prefix else output_name
-                    )
+                    self._check_number(value=output_value, variable=f"{prefix}.{output_name}" if prefix else output_name)
                 elif isinstance(output_value, str):
-                    self._check_string(
-                        value=output_value, variable=f"{prefix}.{output_name}" if prefix else output_name
-                    )
+                    self._check_string(value=output_value, variable=f"{prefix}.{output_name}" if prefix else output_name)
                 elif isinstance(output_value, list):
                     first_element = output_value[0] if len(output_value) > 0 else None
                     if first_element is not None:

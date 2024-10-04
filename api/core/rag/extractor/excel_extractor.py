@@ -54,9 +54,7 @@ class ExcelExtractor(BaseExtractor):
                                 page_content.append(f'"{k}":"{value}"')
                             else:
                                 page_content.append(f'"{k}":"{v}"')
-                    documents.append(
-                        Document(page_content=";".join(page_content), metadata={"source": self._file_path})
-                    )
+                    documents.append(Document(page_content=";".join(page_content), metadata={"source": self._file_path}))
 
         elif file_extension == ".xls":
             excel_file = pd.ExcelFile(self._file_path, engine="xlrd")
@@ -69,9 +67,7 @@ class ExcelExtractor(BaseExtractor):
                     for k, v in row.items():
                         if pd.notna(v):
                             page_content.append(f'"{k}":"{v}"')
-                    documents.append(
-                        Document(page_content=";".join(page_content), metadata={"source": self._file_path})
-                    )
+                    documents.append(Document(page_content=";".join(page_content), metadata={"source": self._file_path}))
         else:
             raise ValueError(f"Unsupported file extension: {file_extension}")
 

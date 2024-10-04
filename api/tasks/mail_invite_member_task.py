@@ -52,9 +52,7 @@ def send_invite_member_mail_task(language: str, to: str, token: str, inviter_nam
 
         end_at = time.perf_counter()
         logging.info(
-            click.style(
-                "Send invite member mail to {} succeeded: latency: {}".format(to, end_at - start_at), fg="green"
-            )
+            click.style("Send invite member mail to {} succeeded: latency: {}".format(to, end_at - start_at), fg="green")
         )
     except Exception:
         logging.exception("Send invite member mail to {} failed".format(to))

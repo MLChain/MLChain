@@ -178,9 +178,7 @@ class AppDslService:
         }
 
         if app_mode in {AppMode.ADVANCED_CHAT, AppMode.WORKFLOW}:
-            cls._append_workflow_export_data(
-                export_data=export_data, app_model=app_model, include_secret=include_secret
-            )
+            cls._append_workflow_export_data(export_data=export_data, app_model=app_model, include_secret=include_secret)
         else:
             cls._append_model_config_export_data(export_data, app_model)
 
@@ -272,9 +270,7 @@ class AppDslService:
         return app
 
     @classmethod
-    def _import_and_overwrite_workflow_based_app(
-        cls, app_model: App, workflow_data: dict, account: Account
-    ) -> Workflow:
+    def _import_and_overwrite_workflow_based_app(cls, app_model: App, workflow_data: dict, account: Account) -> Workflow:
         """
         Import app dsl and overwrite workflow based app
 

@@ -13,9 +13,7 @@ tool_bundle = {
             {"in": "cookie", "name": "cookie_param"},
             {"in": "header", "name": "header_param"},
         ],
-        "requestBody": {
-            "content": {"application/json": {"schema": {"properties": {"body_param": {"type": "string"}}}}}
-        },
+        "requestBody": {"content": {"application/json": {"schema": {"properties": {"body_param": {"type": "string"}}}}}},
     },
     "parameters": [],
 }

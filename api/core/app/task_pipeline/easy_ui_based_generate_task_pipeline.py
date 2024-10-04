@@ -419,9 +419,7 @@ class EasyUIBasedGenerateTaskPipeline(BasedGenerateTaskPipeline, MessageCycleMan
         if self._task_state.metadata:
             extras["metadata"] = self._task_state.metadata
 
-        return MessageEndStreamResponse(
-            task_id=self._application_generate_entity.task_id, id=self._message.id, **extras
-        )
+        return MessageEndStreamResponse(task_id=self._application_generate_entity.task_id, id=self._message.id, **extras)
 
     def _agent_message_to_stream_response(self, answer: str, message_id: str) -> AgentMessageStreamResponse:
         """

@@ -306,9 +306,7 @@ class AgentChatAppRunner(AppRunner):
         :param message: message
         :return:
         """
-        agent_thoughts = (
-            db.session.query(MessageAgentThought).filter(MessageAgentThought.message_id == message.id).all()
-        )
+        agent_thoughts = db.session.query(MessageAgentThought).filter(MessageAgentThought.message_id == message.id).all()
 
         all_message_tokens = 0
         all_answer_tokens = 0

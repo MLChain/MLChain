@@ -119,9 +119,7 @@ class ListWorksheetRecordsTool(BuiltinTool):
                             for row in rows:
                                 result_values = []
                                 for f in fields:
-                                    result_values.append(
-                                        self.handle_value_type(row[f["fieldId"]], schema[f["fieldId"]])
-                                    )
+                                    result_values.append(self.handle_value_type(row[f["fieldId"]], schema[f["fieldId"]]))
                                 result_text += "\n|" + "|".join(result_values) + "|"
                         return self.create_text_message(result_text)
             else:

@@ -42,6 +42,4 @@ class SearchDevDocsTool(BuiltinTool):
             content = response.text
             return self.create_text_message(self.summary(user_id=user_id, content=content))
         else:
-            return self.create_text_message(
-                f"Failed to retrieve the documentation. Status code: {response.status_code}"
-            )
+            return self.create_text_message(f"Failed to retrieve the documentation. Status code: {response.status_code}")

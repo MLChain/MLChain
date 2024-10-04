@@ -32,9 +32,7 @@ class CacheEmbedding(Embeddings):
             hash = helper.generate_text_hash(text)
             embedding = (
                 db.session.query(Embedding)
-                .filter_by(
-                    model_name=self._model_instance.model, hash=hash, provider_name=self._model_instance.provider
-                )
+                .filter_by(model_name=self._model_instance.model, hash=hash, provider_name=self._model_instance.provider)
                 .first()
             )
             if embedding:

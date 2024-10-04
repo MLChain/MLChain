@@ -290,9 +290,7 @@ class IterationNode(BaseNode):
 
             # remove iteration variables
             sub_node_variable_mapping = {
-                sub_node_id + "." + key: value
-                for key, value in sub_node_variable_mapping.items()
-                if value[0] != node_id
+                sub_node_id + "." + key: value for key, value in sub_node_variable_mapping.items() if value[0] != node_id
             }
 
             variable_mapping.update(sub_node_variable_mapping)

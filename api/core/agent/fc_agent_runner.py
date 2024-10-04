@@ -321,9 +321,7 @@ class FunctionCallAgentRunner(BaseAgentRunner):
             return True
         return False
 
-    def extract_tool_calls(
-        self, llm_result_chunk: LLMResultChunk
-    ) -> Union[None, list[tuple[str, str, dict[str, Any]]]]:
+    def extract_tool_calls(self, llm_result_chunk: LLMResultChunk) -> Union[None, list[tuple[str, str, dict[str, Any]]]]:
         """
         Extract tool calls from llm result chunk
 

@@ -47,9 +47,7 @@ class MessageBasedAppQueueManager(AppQueueManager):
 
         self._q.put(message)
 
-        if isinstance(
-            event, QueueStopEvent | QueueErrorEvent | QueueMessageEndEvent | QueueAdvancedChatMessageEndEvent
-        ):
+        if isinstance(event, QueueStopEvent | QueueErrorEvent | QueueMessageEndEvent | QueueAdvancedChatMessageEndEvent):
             self.stop_listen()
 
         if pub_from == PublishFrom.APPLICATION_MANAGER and self._is_stopped():
