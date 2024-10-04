@@ -1,10 +1,10 @@
 ![cover-v5-optimized](https://github.com/mlchain/mlchain/assets/13230914/f9e19af5-61ba-4119-b926-d10c4c06ebab)
 
 <p align="center">
-  <a href="https://cloud.mlchain.khulnasoft.com">Mlchain Bulut</a> ·
-  <a href="https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted">Kendi Sunucunuzda Barındırma</a> ·
-  <a href="https://docs.mlchain.khulnasoft.com">Dokümantasyon</a> ·
-  <a href="https://udify.app/chat/22L1zSxg6yW1cWQg">Yalnızca İngilizce: Kurumsal Sorgulama</a>
+  <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Bulut</a> ·
+  <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">Kendi Sunucunuzda Barındırma</a> ·
+  <a href="https://docs-mlchain.khulnasoft.com">Dokümantasyon</a> ·
+  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">Yalnızca İngilizce: Kurumsal Sorgulama</a>
 </p>
 
 <p align="center">
@@ -15,8 +15,8 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="Discord'da sohbet et"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=khulnasoft" target="_blank">
-        <img src="https://img.shields.io/twitter/follow/khulnasoft?logo=X&color=%20%23f5f5f5"
+    <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
+        <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
             alt="Twitter'da takip et"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Docker Çekmeleri" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
@@ -54,7 +54,7 @@ Görsel bir arayüz üzerinde güçlü AI iş akışları oluşturun ve test edi
 
 
 **2. Kapsamlı model desteği**:
-Çok sayıda çıkarım sağlayıcısı ve kendi kendine barındırılan çözümlerden yüzlerce özel / açık kaynaklı LLM ile sorunsuz entegrasyon sağlar. GPT, Mistral, Llama3 ve OpenAI API uyumlu tüm modelleri kapsar. Desteklenen model sağlayıcılarının tam listesine [buradan](https://docs.mlchain.khulnasoft.com/getting-started/readme/model-providers) ulaşabilirsiniz.
+Çok sayıda çıkarım sağlayıcısı ve kendi kendine barındırılan çözümlerden yüzlerce özel / açık kaynaklı LLM ile sorunsuz entegrasyon sağlar. GPT, Mistral, Llama3 ve OpenAI API uyumlu tüm modelleri kapsar. Desteklenen model sağlayıcılarının tam listesine [buradan](https://docs-mlchain.khulnasoft.com/getting-started/readme/model-providers) ulaşabilirsiniz.
 
 ![providers-v5](https://github.com/mlchain/mlchain/assets/13230914/5a17bdbe-097a-4100-8363-40255b70f6e3)
 
@@ -81,7 +81,7 @@ Görsel bir arayüz üzerinde güçlü AI iş akışları oluşturun ve test edi
 <table style="width: 100%;">
   <tr>
     <th align="center">Özellik</th>
-    <th align="center">Mlchain.AI</th>
+    <th align="center">MLChain</th>
     <th align="center">LangChain</th>
     <th align="center">Flowise</th>
     <th align="center">OpenAI Assistants API</th>
@@ -153,7 +153,7 @@ Herkesin sıfır kurulumla denemesi için bir [Mlchain Cloud](https://mlchain.kh
 
 - **Mlchain Topluluk Sürümünü Kendi Sunucunuzda Barındırma</br>**
 Bu [başlangıç kılavuzu](#quick-start) ile Mlchain'ı kendi ortamınızda hızlıca çalıştırın.
-Daha fazla referans ve detaylı talimatlar için [dokümantasyonumuzu](https://docs.mlchain.khulnasoft.com) kullanın.
+Daha fazla referans ve detaylı talimatlar için [dokümantasyonumuzu](https://docs-mlchain.khulnasoft.com) kullanın.
 
 - **Kurumlar / organizasyonlar için Mlchain</br>**
 Ek kurumsal odaklı özellikler sunuyoruz. Kurumsal ihtiyaçları görüşmek için [bize bir e-posta gönderin](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry). </br>
@@ -186,11 +186,11 @@ docker compose up -d
 
 Çalıştırdıktan sonra, tarayıcınızda [http://localhost/install](http://localhost/install) adresinden Mlchain kontrol paneline erişebilir ve başlangıç ayarları sürecini başlatabilirsiniz.
 
-> Eğer Mlchain'a katkıda bulunmak veya ek geliştirmeler yapmak isterseniz, [kaynak koddan dağıtım kılavuzumuza](https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted/local-source-code) başvurun.
+> Eğer Mlchain'a katkıda bulunmak veya ek geliştirmeler yapmak isterseniz, [kaynak koddan dağıtım kılavuzumuza](https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted/local-source-code) başvurun.
 
 ## Sonraki adımlar
 
-Yapılandırmayı özelleştirmeniz gerekiyorsa, lütfen [.env.example](docker/.env.example) dosyamızdaki yorumlara bakın ve `.env` dosyanızdaki ilgili değerleri güncelleyin. Ayrıca, spesifik dağıtım ortamınıza ve gereksinimlerinize bağlı olarak `docker-compose.yaml` dosyasının kendisinde de, imaj sürümlerini, port eşlemelerini veya hacim bağlantılarını değiştirmek gibi ayarlamalar yapmanız gerekebilir. Herhangi bir değişiklik yaptıktan sonra, lütfen `docker-compose up -d` komutunu tekrar çalıştırın. Kullanılabilir tüm ortam değişkenlerinin tam listesini [burada](https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted/environments) bulabilirsiniz.
+Yapılandırmayı özelleştirmeniz gerekiyorsa, lütfen [.env.example](docker/.env.example) dosyamızdaki yorumlara bakın ve `.env` dosyanızdaki ilgili değerleri güncelleyin. Ayrıca, spesifik dağıtım ortamınıza ve gereksinimlerinize bağlı olarak `docker-compose.yaml` dosyasının kendisinde de, imaj sürümlerini, port eşlemelerini veya hacim bağlantılarını değiştirmek gibi ayarlamalar yapmanız gerekebilir. Herhangi bir değişiklik yaptıktan sonra, lütfen `docker-compose up -d` komutunu tekrar çalıştırın. Kullanılabilir tüm ortam değişkenlerinin tam listesini [burada](https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted/environments) bulabilirsiniz.
 
 Yüksek kullanılabilirliğe sahip bir kurulum yapılandırmak isterseniz, Mlchain'ın Kubernetes üzerine dağıtılmasına olanak tanıyan topluluk katkılı [Helm Charts](https://helm.sh/) ve YAML dosyaları mevcuttur.
 
@@ -220,9 +220,9 @@ Aynı zamanda, lütfen Mlchain'ı sosyal medyada, etkinliklerde ve konferanslard
 ## Topluluk & iletişim
 
 * [Github Tartışmaları](https://github.com/mlchain/mlchain/discussions). En uygun: geri bildirim paylaşmak ve soru sormak için.
-* [GitHub Sorunları](https://github.com/mlchain/mlchain/issues). En uygun: Mlchain.AI kullanırken karşılaştığınız hatalar ve özellik önerileri için. [Katkı Kılavuzumuza](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md) bakın.
+* [GitHub Sorunları](https://github.com/mlchain/mlchain/issues). En uygun: MLChain kullanırken karşılaştığınız hatalar ve özellik önerileri için. [Katkı Kılavuzumuza](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md) bakın.
 * [Discord](https://discord.gg/FngNHpbcY7). En uygun: uygulamalarınızı paylaşmak ve toplulukla vakit geçirmek için.
-* [Twitter](https://twitter.com/khulnasoft). En uygun: uygulamalarınızı paylaşmak ve toplulukla vakit geçirmek için.
+* [Twitter](https://twitter.com/mlchain_ai). En uygun: uygulamalarınızı paylaşmak ve toplulukla vakit geçirmek için.
 
 ## Star history
 

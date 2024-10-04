@@ -2,7 +2,7 @@ version: '3'
 services:
   # API service
   api:
-    image: mlchain/mlchain-api:0.7.1
+    image: mlchain/mlchain-api:0.9.1
     restart: always
     environment:
       # Startup mode, 'api' starts the API server.
@@ -15,22 +15,22 @@ services:
       SECRET_KEY: sk-9f73s3ljTXVcMT3Blb3ljTqtsKiGHXVcMT3BlbkFJLK7U
       # The base URL of console application web frontend, refers to the Console base URL of WEB service if console domain is
       # different from api or web app domain.
-      # example: http://cloud.mlchain.khulnasoft.com
+      # example: http://cloud-mlchain.khulnasoft.com
       CONSOLE_WEB_URL: ''
       # Password for admin user initialization.
       # If left unset, admin user will not be prompted for a password when creating the initial admin account.
       INIT_PASSWORD: ''
       # The base URL of console application api server, refers to the Console base URL of WEB service if console domain is
       # different from api or web app domain.
-      # example: http://cloud.mlchain.khulnasoft.com
+      # example: http://cloud-mlchain.khulnasoft.com
       CONSOLE_API_URL: ''
       # The URL prefix for Service API endpoints, refers to the base URL of the current API service if api domain is
       # different from console domain.
-      # example: http://api.mlchain.khulnasoft.com
+      # example: http://api-mlchain.khulnasoft.com
       SERVICE_API_URL: ''
       # The URL prefix for Web APP frontend, refers to the Web App base URL of WEB service if web app domain is different from
       # console or api domain.
-      # example: http://udify.app
+      # example: http://umlchain.app
       APP_WEB_URL: ''
       # File preview or download Url prefix.
       # used to display File preview or download Url to the front-end or as Multi-model inputs;
@@ -64,7 +64,7 @@ services:
       CELERY_BROKER_URL: redis://:mlchainai123456@redis:6379/1
       # Specifies the allowed origins for cross-origin requests to the Web API, e.g. https://mlchain.app or * for all origins.
       WEB_API_CORS_ALLOW_ORIGINS: '*'
-      # Specifies the allowed origins for cross-origin requests to the console API, e.g. https://cloud.mlchain.khulnasoft.com or * for all origins.
+      # Specifies the allowed origins for cross-origin requests to the console API, e.g. https://cloud-mlchain.khulnasoft.com or * for all origins.
       CONSOLE_CORS_ALLOW_ORIGINS: '*'
       # CSRF Cookie settings
       # Controls whether a cookie is sent with cross-site requests,
@@ -128,16 +128,14 @@ services:
       # The Qdrant server gRPC mode PORT.
       QDRANT_GRPC_PORT: 6334
       # Milvus configuration Only available when VECTOR_STORE is `milvus`.
-      # The milvus host.
-      MILVUS_HOST: 127.0.0.1
-      # The milvus host.
-      MILVUS_PORT: 19530
+      # The milvus uri.
+      MILVUS_URI: http://127.0.0.1:19530
+      # The milvus token.
+      MILVUS_TOKEN: ''
       # The milvus username.
       MILVUS_USER: root
       # The milvus password.
       MILVUS_PASSWORD: Milvus
-      # The milvus tls switch.
-      MILVUS_SECURE: 'false'
       # relyt configurations
       RELYT_HOST: db
       RELYT_PORT: 5432
@@ -229,7 +227,7 @@ services:
   # worker service
   # The Celery worker for processing the queue.
   worker:
-    image: mlchain/mlchain-api:0.7.1
+    image: mlchain/mlchain-api:0.9.1
     restart: always
     environment:
       CONSOLE_WEB_URL: ''
@@ -308,16 +306,14 @@ services:
       # The Qdrant server gRPC mode PORT.
       QDRANT_GRPC_PORT: 6334
       # Milvus configuration Only available when VECTOR_STORE is `milvus`.
-      # The milvus host.
-      MILVUS_HOST: 127.0.0.1
-      # The milvus host.
-      MILVUS_PORT: 19530
+      # The milvus uri.
+      MILVUS_URI: http://127.0.0.1:19530
+      # The milvus token.
+      MILVUS_PORT: ''
       # The milvus username.
       MILVUS_USER: root
       # The milvus password.
       MILVUS_PASSWORD: Milvus
-      # The milvus tls switch.
-      MILVUS_SECURE: 'false'
       # Mail configuration, support: resend
       MAIL_TYPE: ''
       # default send from email address, if not specified
@@ -400,16 +396,16 @@ services:
 
   # Frontend web application.
   web:
-    image: mlchain/mlchain-web:0.7.1
+    image: mlchain/mlchain-web:0.9.1
     restart: always
     environment:
       # The base URL of console application api server, refers to the Console base URL of WEB service if console domain is
       # different from api or web app domain.
-      # example: http://cloud.mlchain.khulnasoft.com
+      # example: http://cloud-mlchain.khulnasoft.com
       CONSOLE_API_URL: ''
       # The URL for Web APP api server, refers to the Web App base URL of WEB service if web app domain is different from
       # console or api domain.
-      # example: http://udify.app
+      # example: http://umlchain.app
       APP_API_URL: ''
       # The DSN for Sentry error reporting. If not set, Sentry error reporting will be disabled.
       SENTRY_DSN: ''
@@ -504,7 +500,7 @@ services:
 
   # ssrf_proxy server
   # for more information, please refer to
-  # https://docs.mlchain.khulnasoft.com/learn-more/faq/self-host-faq#id-18.-why-is-ssrf_proxy-needed
+  # https://docs-mlchain.khulnasoft.com/learn-more/faq/install-faq#id-18.-why-is-ssrf_proxy-needed
   ssrf_proxy:
     image: ubuntu/squid:latest
     restart: always

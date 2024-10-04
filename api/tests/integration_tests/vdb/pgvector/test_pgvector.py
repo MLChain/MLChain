@@ -18,6 +18,8 @@ class PGVectorTest(AbstractVectorTest):
                 user="postgres",
                 password="mlchainai123456",
                 database="mlchain",
+                min_connection=1,
+                max_connection=5,
             ),
         )
 

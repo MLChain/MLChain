@@ -37,11 +37,24 @@ export const useShortcuts = (): void => {
   const { handleLayout } = useWorkflowOrganize()
 
   const {
-    zoomIn,
-    zoomOut,
     zoomTo,
+    getZoom,
     fitView,
   } = useReactFlow()
+
+  // Zoom out to a minimum of 0.5 for shortcut
+  const constrainedZoomOut = () => {
+    const currentZoom = getZoom()
+    const newZoom = Math.max(currentZoom - 0.1, 0.5)
+    zoomTo(newZoom)
+  }
+
+  // Zoom in to a maximum of 1 for shortcut
+  const constrainedZoomIn = () => {
+    const currentZoom = getZoom()
+    const newZoom = Math.min(currentZoom + 0.1, 1)
+    zoomTo(newZoom)
+  }
 
   const shouldHandleShortcut = useCallback((e: KeyboardEvent) => {
     const { showFeaturesPanel } = workflowStore.getState()
@@ -57,14 +70,16 @@ export const useShortcuts = (): void => {
   })
 
   useKeyPress(`${getKeyboardKeyCodeBySystem('ctrl')}.c`, (e) => {
-    if (shouldHandleShortcut(e)) {
+    const { showDebugAndPreviewPanel } = workflowStore.getState()
+    if (shouldHandleShortcut(e) && !showDebugAndPreviewPanel) {
       e.preventDefault()
       handleNodesCopy()
     }
   }, { exactMatch: true, useCapture: true })
 
   useKeyPress(`${getKeyboardKeyCodeBySystem('ctrl')}.v`, (e) => {
-    if (shouldHandleShortcut(e)) {
+    const { showDebugAndPreviewPanel } = workflowStore.getState()
+    if (shouldHandleShortcut(e) && !showDebugAndPreviewPanel) {
       e.preventDefault()
       handleNodesPaste()
     }
@@ -85,7 +100,8 @@ export const useShortcuts = (): void => {
   }, { exactMatch: true, useCapture: true })
 
   useKeyPress(`${getKeyboardKeyCodeBySystem('ctrl')}.z`, (e) => {
-    if (shouldHandleShortcut(e)) {
+    const { showDebugAndPreviewPanel } = workflowStore.getState()
+    if (shouldHandleShortcut(e) && !showDebugAndPreviewPanel) {
       e.preventDefault()
       workflowHistoryShortcutsEnabled && handleHistoryBack()
     }
@@ -165,7 +181,7 @@ export const useShortcuts = (): void => {
   useKeyPress(`${getKeyboardKeyCodeBySystem('ctrl')}.dash`, (e) => {
     if (shouldHandleShortcut(e)) {
       e.preventDefault()
-      zoomOut()
+      constrainedZoomOut()
       handleSyncWorkflowDraft()
     }
   }, {
@@ -176,7 +192,7 @@ export const useShortcuts = (): void => {
   useKeyPress(`${getKeyboardKeyCodeBySystem('ctrl')}.equalsign`, (e) => {
     if (shouldHandleShortcut(e)) {
       e.preventDefault()
-      zoomIn()
+      constrainedZoomIn()
       handleSyncWorkflowDraft()
     }
   }, {
