@@ -41,7 +41,7 @@ services:
 
   # The MlchainSandbox
   sandbox:
-    image: mlchain/mlchain-sandbox:0.2.9
+    image: mlchain/mlchain-sandbox:0.2.6
     restart: always
     environment:
       # The MlchainSandbox configurations
