@@ -43,9 +43,6 @@ jobs:
             platform: linux/arm64
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Prepare
         run: |
           platform=${{ matrix.platform }}
@@ -73,7 +70,7 @@ jobs:
         id: build
         uses: docker/build-push-action@v6
         with:
-          context: ${{ matrix.context }}
+          context: "{{defaultContext}}:${{ matrix.context }}"
           platforms: ${{ matrix.platform }}
           build-args: COMMIT_SHA=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.revision'] }}
           labels: ${{ steps.meta.outputs.labels }}
