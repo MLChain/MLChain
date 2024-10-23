@@ -126,9 +126,7 @@ class BaseAgentRunner(AppRunner):
         self.query = None
         self._current_thoughts: list[PromptMessage] = []
 
-    def _repack_app_generate_entity(
-        self, app_generate_entity: AgentChatAppGenerateEntity
-    ) -> AgentChatAppGenerateEntity:
+    def _repack_app_generate_entity(self, app_generate_entity: AgentChatAppGenerateEntity) -> AgentChatAppGenerateEntity:
         """
         Repack app generate entity
         """

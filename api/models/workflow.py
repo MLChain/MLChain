@@ -222,8 +222,7 @@ class Workflow(db.Model):
         from models.tools import WorkflowToolProvider
 
         return (
-            db.session.query(WorkflowToolProvider).filter(WorkflowToolProvider.app_id == self.app_id).first()
-            is not None
+            db.session.query(WorkflowToolProvider).filter(WorkflowToolProvider.app_id == self.app_id).first() is not None
         )
 
     @property

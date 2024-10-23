@@ -36,9 +36,7 @@ def test_execute_if_else_result_true():
     )
 
     # construct variable pool
-    pool = VariablePool(
-        system_variables={SystemVariableKey.FILES: [], SystemVariableKey.USER_ID: "aaa"}, user_inputs={}
-    )
+    pool = VariablePool(system_variables={SystemVariableKey.FILES: [], SystemVariableKey.USER_ID: "aaa"}, user_inputs={})
     pool.add(["start", "array_contains"], ["ab", "def"])
     pool.add(["start", "array_not_contains"], ["ac", "def"])
     pool.add(["start", "contains"], "cabcde")

@@ -390,9 +390,7 @@ class GoogleLargeLanguageModel(LargeLanguageModel):
                 "role": "function",
                 "parts": [
                     glm.Part(
-                        function_response=glm.FunctionResponse(
-                            name=message.name, response={"response": message.content}
-                        )
+                        function_response=glm.FunctionResponse(name=message.name, response={"response": message.content})
                     )
                 ],
             }

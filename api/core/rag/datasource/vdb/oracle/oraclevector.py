@@ -150,9 +150,7 @@ class OracleVector(BaseVector):
             )
         # print(f"INSERT INTO {self.table_name} (id, text, meta, embedding) VALUES (:1, :2, :3, :4)")
         with self._get_cursor() as cur:
-            cur.executemany(
-                f"INSERT INTO {self.table_name} (id, text, meta, embedding) VALUES (:1, :2, :3, :4)", values
-            )
+            cur.executemany(f"INSERT INTO {self.table_name} (id, text, meta, embedding) VALUES (:1, :2, :3, :4)", values)
         return pks
 
     def text_exists(self, id: str) -> bool:

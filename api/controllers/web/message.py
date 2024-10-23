@@ -123,9 +123,7 @@ class MessageMoreLikeThisApi(WebApiResource):
         message_id = str(message_id)
 
         parser = reqparse.RequestParser()
-        parser.add_argument(
-            "response_mode", type=str, required=True, choices=["blocking", "streaming"], location="args"
-        )
+        parser.add_argument("response_mode", type=str, required=True, choices=["blocking", "streaming"], location="args")
         args = parser.parse_args()
 
         streaming = args["response_mode"] == "streaming"

@@ -67,9 +67,7 @@ REFRESH_TOKEN_EXPIRY = timedelta(days=30)
 
 class AccountService:
     reset_password_rate_limiter = RateLimiter(prefix="reset_password_rate_limit", max_attempts=1, time_window=60 * 1)
-    email_code_login_rate_limiter = RateLimiter(
-        prefix="email_code_login_rate_limit", max_attempts=1, time_window=60 * 1
-    )
+    email_code_login_rate_limiter = RateLimiter(prefix="email_code_login_rate_limit", max_attempts=1, time_window=60 * 1)
     LOGIN_MAX_ERROR_LIMITS = 5
 
     @staticmethod
@@ -502,9 +500,7 @@ class TenantService:
         return tenant
 
     @staticmethod
-    def create_owner_tenant_if_not_exist(
-        account: Account, name: Optional[str] = None, is_setup: Optional[bool] = False
-    ):
+    def create_owner_tenant_if_not_exist(account: Account, name: Optional[str] = None, is_setup: Optional[bool] = False):
         """Create owner tenant if not exist"""
         if not FeatureService.get_system_features().is_allow_create_workspace and not is_setup:
             raise WorkSpaceNotAllowedCreateError()
@@ -643,9 +639,7 @@ class TenantService:
 
         return (
             db.session.query(TenantAccountJoin)
-            .filter(
-                TenantAccountJoin.tenant_id == tenant.id, TenantAccountJoin.role.in_([role.value for role in roles])
-            )
+            .filter(TenantAccountJoin.tenant_id == tenant.id, TenantAccountJoin.role.in_([role.value for role in roles]))
             .first()
             is not None
         )

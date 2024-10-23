@@ -67,9 +67,7 @@ class BaseAppGenerator:
         # Check if all files are converted to File
         if any(filter(lambda v: isinstance(v, dict), user_inputs.values())):
             raise ValueError("Invalid input type")
-        if any(
-            filter(lambda v: isinstance(v, dict), filter(lambda item: isinstance(item, list), user_inputs.values()))
-        ):
+        if any(filter(lambda v: isinstance(v, dict), filter(lambda item: isinstance(item, list), user_inputs.values()))):
             raise ValueError("Invalid input type")
 
         return user_inputs

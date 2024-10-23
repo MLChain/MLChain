@@ -122,9 +122,7 @@ class MockXinferenceClass:
             top_n = 1
 
         return {
-            "results": [
-                {"index": i, "document": doc, "relevance_score": 0.9} for i, doc in enumerate(documents[:top_n])
-            ]
+            "results": [{"index": i, "document": doc, "relevance_score": 0.9} for i, doc in enumerate(documents[:top_n])]
         }
 
     def create_embedding(self: RESTfulGenerateModelHandle, input: Union[str, list[str]], **kwargs) -> dict:

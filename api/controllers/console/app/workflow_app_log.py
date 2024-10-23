@@ -31,9 +31,7 @@ class WorkflowAppLogApi(Resource):
 
         # get paginate workflow app logs
         workflow_app_service = WorkflowAppService()
-        workflow_app_log_pagination = workflow_app_service.get_paginate_workflow_app_logs(
-            app_model=app_model, args=args
-        )
+        workflow_app_log_pagination = workflow_app_service.get_paginate_workflow_app_logs(app_model=app_model, args=args)
 
         return workflow_app_log_pagination
 

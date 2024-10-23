@@ -37,9 +37,7 @@ def test_invoke_model():
     with open(audio_file_path, "rb") as audio_file:
         file = audio_file
 
-        result = model.invoke(
-            model="iic/SenseVoiceSmall", credentials={"api_key": os.environ.get("API_KEY")}, file=file
-        )
+        result = model.invoke(model="iic/SenseVoiceSmall", credentials={"api_key": os.environ.get("API_KEY")}, file=file)
 
         assert isinstance(result, str)
         assert result == "1,2,3,4,5,6,7,8,9,10."

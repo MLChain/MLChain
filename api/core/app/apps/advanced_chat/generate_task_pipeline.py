@@ -573,9 +573,7 @@ class AdvancedChatAppGenerateTaskPipeline(BasedGenerateTaskPipeline, WorkflowCyc
             if self._output_moderation_handler.should_direct_output():
                 # stop subscribe new token when output moderation should direct output
                 self._task_state.answer = self._output_moderation_handler.get_final_output()
-                self._queue_manager.publish(
-                    QueueTextChunkEvent(text=self._task_state.answer), PublishFrom.TASK_PIPELINE
-                )
+                self._queue_manager.publish(QueueTextChunkEvent(text=self._task_state.answer), PublishFrom.TASK_PIPELINE)
 
                 self._queue_manager.publish(
                     QueueStopEvent(stopped_by=QueueStopEvent.StopBy.OUTPUT_MODERATION), PublishFrom.TASK_PIPELINE

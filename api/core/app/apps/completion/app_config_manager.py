@@ -94,9 +94,7 @@ class CompletionAppConfigManager(BaseAppConfigManager):
         related_config_keys.extend(current_related_config_keys)
 
         # dataset_query_variable
-        config, current_related_config_keys = DatasetConfigManager.validate_and_set_defaults(
-            tenant_id, app_mode, config
-        )
+        config, current_related_config_keys = DatasetConfigManager.validate_and_set_defaults(tenant_id, app_mode, config)
         related_config_keys.extend(current_related_config_keys)
 
         # text_to_speech

@@ -19,6 +19,4 @@ class AliYuqueDescribeDocumentsTool(AliYuqueTool, BuiltinTool):
         token = self.runtime.credentials.get("token", None)
         if not token:
             raise Exception("token is required")
-        return self.create_text_message(
-            self.request("GET", token, tool_parameters, "/api/v2/repos/{book_id}/docs/{id}")
-        )
+        return self.create_text_message(self.request("GET", token, tool_parameters, "/api/v2/repos/{book_id}/docs/{id}"))

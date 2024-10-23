@@ -198,9 +198,7 @@ class BedrockLargeLanguageModel(LargeLanguageModel):
         try:
             if stream:
                 response = bedrock_client.converse_stream(**parameters)
-                return self._handle_converse_stream_response(
-                    model_info["model"], credentials, response, prompt_messages
-                )
+                return self._handle_converse_stream_response(model_info["model"], credentials, response, prompt_messages)
             else:
                 response = bedrock_client.converse(**parameters)
                 return self._handle_converse_response(model_info["model"], credentials, response, prompt_messages)

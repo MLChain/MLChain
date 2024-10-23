@@ -25,8 +25,6 @@ class ComfyUIWorkflowTool(BuiltinTool):
         result = []
         for img in images:
             result.append(
-                self.create_blob_message(
-                    blob=img, meta={"mime_type": "image/png"}, save_as=self.VariableKey.IMAGE.value
-                )
+                self.create_blob_message(blob=img, meta={"mime_type": "image/png"}, save_as=self.VariableKey.IMAGE.value)
             )
         return result
