@@ -217,7 +217,7 @@ class DatasetRetrieval:
                                 "data_source_type": document.data_source_type,
                                 "segment_id": segment.id,
                                 "retriever_from": invoke_from.to_source(),
-                                "score": document_score_list.get(segment.index_node_id, None),
+                                "score": document_score_list.get(segment.index_node_id, 0.0),
                             }
 
                             if invoke_from.to_source() == "dev":
@@ -231,9 +231,12 @@ class DatasetRetrieval:
                                 source["content"] = segment.content
                             retrieval_resource_list.append(source)
         if hit_callback and retrieval_resource_list:
+            retrieval_resource_list = sorted(retrieval_resource_list, key=lambda x: x.get("score") or 0.0, reverse=True)
+            for position, item in enumerate(retrieval_resource_list, start=1):
+                item["position"] = position
             hit_callback.return_retriever_resource_info(retrieval_resource_list)
         if document_context_list:
-            document_context_list = sorted(document_context_list, key=lambda x: x.score, reverse=True)
+            document_context_list = sorted(document_context_list, key=lambda x: x.score or 0.0, reverse=True)
             return str("\n".join([document_context.content for document_context in document_context_list]))
         return ""
 
@@ -313,7 +316,9 @@ class DatasetRetrieval:
                         retrieval_method = retrieval_model_config["search_method"]
                     # get reranking model
                     reranking_model = (
-                        retrieval_model_config["reranking_model"] if retrieval_model_config["reranking_enable"] else None
+                        retrieval_model_config["reranking_model"]
+                        if retrieval_model_config["reranking_enable"]
+                        else None
                     )
                     # get score threshold
                     score_threshold = 0.0
@@ -423,7 +428,9 @@ class DatasetRetrieval:
         )
         if trace_manager:
             trace_manager.add_trace_task(
-                TraceTask(TraceTaskName.DATASET_RETRIEVAL_TRACE, message_id=message_id, documents=documents, timer=timer)
+                TraceTask(
+                    TraceTaskName.DATASET_RETRIEVAL_TRACE, message_id=message_id, documents=documents, timer=timer
+                )
             )
 
     def _on_query(self, query: str, dataset_ids: list[str], app_id: str, user_from: str, user_id: str) -> None:
@@ -532,7 +539,7 @@ class DatasetRetrieval:
                 continue
 
             # pass if dataset is not available
-            if dataset and dataset.available_document_count == 0:
+            if dataset and dataset.provider != "external" and dataset.available_document_count == 0:
                 continue
 
             available_datasets.append(dataset)

@@ -45,7 +45,9 @@ def enable_annotation_reply_task(
         dataset_collection_binding = DatasetCollectionBindingService.get_dataset_collection_binding(
             embedding_provider_name, embedding_model_name, "annotation"
         )
-        annotation_setting = db.session.query(AppAnnotationSetting).filter(AppAnnotationSetting.app_id == app_id).first()
+        annotation_setting = (
+            db.session.query(AppAnnotationSetting).filter(AppAnnotationSetting.app_id == app_id).first()
+        )
         if annotation_setting:
             annotation_setting.score_threshold = score_threshold
             annotation_setting.collection_binding_id = dataset_collection_binding.id

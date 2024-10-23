@@ -4,7 +4,7 @@
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">Self-hosting</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">Documentation</a> ·
-  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">Enterprise inquiry</a>
+  <a href="https://mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">Enterprise inquiry</a>
 </p>
 
 <p align="center">
@@ -17,7 +17,7 @@
             alt="chat on Discord"></a>
     <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
         <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
-            alt="follow on Twitter"></a>
+            alt="follow on X(Twitter)"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
     <a href="https://github.com/mlchain/mlchain/graphs/commit-activity" target="_blank">
@@ -79,7 +79,7 @@ Mlchain is an open-source LLM app development platform. Its intuitive interface 
 <table style="width: 100%;">
   <tr>
     <th align="center">Feature</th>
-    <th align="center">MLChain</th>
+    <th align="center">KhulnaSoft</th>
     <th align="center">LangChain</th>
     <th align="center">Flowise</th>
     <th align="center">OpenAI Assistants API</th>
@@ -152,7 +152,7 @@ Quickly get Mlchain running in your environment with this [starter guide](#quick
 Use our [documentation](https://docs-mlchain.khulnasoft.com) for further references and more in-depth instructions.
 
 - **Mlchain for enterprise / organizations</br>**
-We provide additional enterprise-centric features. [Log your questions for us through this chatbot](https://umlchain.app/chat/22L1zSxg6yW1cWQg) or [send us an email](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry) to discuss enterprise needs. </br>
+We provide additional enterprise-centric features. [Log your questions for us through this chatbot](https://mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg) or [send us an email](mailto:business@khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry) to discuss enterprise needs. </br>
   > For startups and small businesses using AWS, check out [Mlchain Premium on AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6) and deploy it to your own AWS VPC with one-click. It's an affordable AMI offering with the option to create apps with custom logo and branding.
 
 
@@ -168,7 +168,7 @@ Star Mlchain on GitHub and be instantly notified of new releases.
 > Before installing Mlchain, make sure your machine meets the following minimum system requirements:
 > 
 >- CPU >= 2 Core
->- RAM >= 4GB
+>- RAM >= 4 GiB
 
 </br>
 
@@ -196,9 +196,13 @@ If you'd like to configure a highly-available setup, there are community-contrib
 
 #### Using Terraform for Deployment
 
+Deploy Mlchain to Cloud Platform with a single click using [terraform](https://www.terraform.io/)
+
 ##### Azure Global
-Deploy Mlchain to Azure with a single click using [terraform](https://www.terraform.io/).
 - [Azure Terraform by @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
+
+##### Google Cloud
+- [Google Cloud Terraform by @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)
 
 ## Contributing
 
@@ -217,9 +221,9 @@ At the same time, please consider supporting Mlchain by sharing it on social med
 ## Community & contact
 
 * [Github Discussion](https://github.com/mlchain/mlchain/discussions). Best for: sharing feedback and asking questions.
-* [GitHub Issues](https://github.com/mlchain/mlchain/issues). Best for: bugs you encounter using MLChain, and feature proposals. See our [Contribution Guide](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
+* [GitHub Issues](https://github.com/mlchain/mlchain/issues). Best for: bugs you encounter using KhulnaSoft, and feature proposals. See our [Contribution Guide](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
 * [Discord](https://discord.gg/FngNHpbcY7). Best for: sharing your applications and hanging out with the community.
-* [Twitter](https://twitter.com/mlchain_ai). Best for: sharing your applications and hanging out with the community.
+* [X(Twitter)](https://twitter.com/mlchain_ai). Best for: sharing your applications and hanging out with the community.
 
 ## Star history
 
@@ -228,7 +232,7 @@ At the same time, please consider supporting Mlchain by sharing it on social med
 
 ## Security disclosure
 
-To protect your privacy, please avoid posting security issues on GitHub. Instead, send your questions to security@mlchain.khulnasoft.com and we will provide you with a more detailed answer.
+To protect your privacy, please avoid posting security issues on GitHub. Instead, send your questions to security@khulnasoft.com and we will provide you with a more detailed answer.
 
 ## License
 

@@ -560,7 +560,7 @@ class DocumentSegment(db.Model):
         )
 
     def get_sign_content(self):
-        pattern = r"/files/([a-f0-9\-]+)/image-preview"
+        pattern = r"/files/([a-f0-9\-]+)/file-preview"
         text = self.content
         matches = re.finditer(pattern, text)
         signed_urls = []
@@ -568,7 +568,7 @@ class DocumentSegment(db.Model):
             upload_file_id = match.group(1)
             nonce = os.urandom(16).hex()
             timestamp = str(int(time.time()))
-            data_to_sign = f"image-preview|{upload_file_id}|{timestamp}|{nonce}"
+            data_to_sign = f"file-preview|{upload_file_id}|{timestamp}|{nonce}"
             secret_key = mlchain_config.SECRET_KEY.encode() if mlchain_config.SECRET_KEY else b""
             sign = hmac.new(secret_key, data_to_sign.encode(), hashlib.sha256).digest()
             encoded_sign = base64.urlsafe_b64encode(sign).decode()
@@ -630,7 +630,9 @@ class DatasetKeywordTable(db.Model):
     id = db.Column(StringUUID, primary_key=True, server_default=db.text("uuid_generate_v4()"))
     dataset_id = db.Column(StringUUID, nullable=False, unique=True)
     keyword_table = db.Column(db.Text, nullable=False)
-    data_source_type = db.Column(db.String(255), nullable=False, server_default=db.text("'database'::character varying"))
+    data_source_type = db.Column(
+        db.String(255), nullable=False, server_default=db.text("'database'::character varying")
+    )
 
     @property
     def keyword_table_dict(self):

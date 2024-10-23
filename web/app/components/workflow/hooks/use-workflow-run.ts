@@ -24,6 +24,9 @@ import {
 } from '@/service/workflow'
 import { useFeaturesStore } from '@/app/components/base/features/hooks'
 import { AudioPlayerManager } from '@/app/components/base/audio-btn/audio.player.manager'
+import {
+  getProcessedFilesFromResponse,
+} from '@/app/components/base/file-uploader/utils'
 
 export const useWorkflowRun = () => {
   const store = useStoreApi()
@@ -207,6 +210,7 @@ export const useWorkflowRun = () => {
             draft.result = {
               ...draft.result,
               ...data,
+              files: getProcessedFilesFromResponse(data.files || []),
             } as any
             if (isStringOutput) {
               draft.resultTabActive = true
@@ -489,10 +493,10 @@ export const useWorkflowRun = () => {
           if (onIterationFinish)
             onIterationFinish(params)
         },
-        onParallelBranchStarted: (_params) => {
+        onParallelBranchStarted: (params) => {
           // console.log(params, 'parallel start')
         },
-        onParallelBranchFinished: (_params) => {
+        onParallelBranchFinished: (params) => {
           // console.log(params, 'finished')
         },
         onTextChunk: (params) => {
@@ -516,13 +520,13 @@ export const useWorkflowRun = () => {
             draft.resultText = text
           }))
         },
-        onTTSChunk: (messageId: string, audio: string, _audioType?: string) => {
+        onTTSChunk: (messageId: string, audio: string, audioType?: string) => {
           if (!audio || audio === '')
             return
           player.playAudioWithAudio(audio, true)
           AudioPlayerManager.getInstance().resetMsgId(messageId)
         },
-        onTTSEnd: (messageId: string, audio: string, _audioType?: string) => {
+        onTTSEnd: (messageId: string, audio: string, audioType?: string) => {
           player.playAudioWithAudio(audio, false)
         },
         ...restCallback,

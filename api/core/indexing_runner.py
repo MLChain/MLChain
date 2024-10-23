@@ -211,9 +211,9 @@ class IndexingRunner:
         tenant_id: str,
         extract_settings: list[ExtractSetting],
         tmp_processing_rule: dict,
-        doc_form: str = None,
+        doc_form: Optional[str] = None,
         doc_language: str = "English",
-        dataset_id: str = None,
+        dataset_id: Optional[str] = None,
         indexing_technique: str = "economy",
     ) -> dict:
         """
@@ -542,7 +542,9 @@ class IndexingRunner:
                 document_qa_list = self.format_split_text(response)
                 qa_documents = []
                 for result in document_qa_list:
-                    qa_document = Document(page_content=result["question"], metadata=document_node.metadata.model_copy())
+                    qa_document = Document(
+                        page_content=result["question"], metadata=document_node.metadata.model_copy()
+                    )
                     doc_id = str(uuid.uuid4())
                     hash = helper.generate_text_hash(result["question"])
                     qa_document.metadata["answer"] = result["answer"]

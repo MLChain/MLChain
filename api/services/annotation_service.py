@@ -60,7 +60,9 @@ class AppAnnotationService:
         db.session.add(annotation)
         db.session.commit()
         # if annotation reply is enabled , add annotation to index
-        annotation_setting = db.session.query(AppAnnotationSetting).filter(AppAnnotationSetting.app_id == app_id).first()
+        annotation_setting = (
+            db.session.query(AppAnnotationSetting).filter(AppAnnotationSetting.app_id == app_id).first()
+        )
         if annotation_setting:
             add_annotation_to_index_task.delay(
                 annotation.id,
@@ -179,7 +181,9 @@ class AppAnnotationService:
         db.session.add(annotation)
         db.session.commit()
         # if annotation reply is enabled , add annotation to index
-        annotation_setting = db.session.query(AppAnnotationSetting).filter(AppAnnotationSetting.app_id == app_id).first()
+        annotation_setting = (
+            db.session.query(AppAnnotationSetting).filter(AppAnnotationSetting.app_id == app_id).first()
+        )
         if annotation_setting:
             add_annotation_to_index_task.delay(
                 annotation.id,
@@ -385,7 +389,9 @@ class AppAnnotationService:
         if not app:
             raise NotFound("App not found")
 
-        annotation_setting = db.session.query(AppAnnotationSetting).filter(AppAnnotationSetting.app_id == app_id).first()
+        annotation_setting = (
+            db.session.query(AppAnnotationSetting).filter(AppAnnotationSetting.app_id == app_id).first()
+        )
         if annotation_setting:
             collection_binding_detail = annotation_setting.collection_binding_detail
             return {
