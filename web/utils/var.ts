@@ -1,11 +1,11 @@
-import { MAX_VAR_KEY_LENGHT, VAR_ITEM_TEMPLATE, VAR_ITEM_TEMPLATE_IN_WORKFLOW, getMaxVarNameLength } from '@/config'
+import { MAX_VAR_KEY_LENGTH, VAR_ITEM_TEMPLATE, VAR_ITEM_TEMPLATE_IN_WORKFLOW, getMaxVarNameLength } from '@/config'
 import { CONTEXT_PLACEHOLDER_TEXT, HISTORY_PLACEHOLDER_TEXT, PRE_PROMPT_PLACEHOLDER_TEXT, QUERY_PLACEHOLDER_TEXT } from '@/app/components/base/prompt-editor/constants'
 import { InputVarType } from '@/app/components/workflow/types'
 
 const otherAllowedRegex = /^[a-zA-Z0-9_]+$/
 
 export const getNewVar = (key: string, type: string) => {
-  const { max_length, ...rest } = VAR_ITEM_TEMPLATE
+  const { max_length: _max_length, ...rest } = VAR_ITEM_TEMPLATE // Prefixing with _ to avoid the warning
   if (type !== 'string') {
     return {
       ...rest,
@@ -23,7 +23,7 @@ export const getNewVar = (key: string, type: string) => {
 }
 
 export const getNewVarInWorkflow = (key: string, type = InputVarType.textInput) => {
-  const { max_length, ...rest } = VAR_ITEM_TEMPLATE_IN_WORKFLOW
+  const { max_length: _max_length, ...rest } = VAR_ITEM_TEMPLATE_IN_WORKFLOW // Prefixing with _ to avoid the warning
   if (type !== InputVarType.textInput) {
     return {
       ...rest,
@@ -47,7 +47,7 @@ export const checkKey = (key: string, canBeEmpty?: boolean) => {
   if (canBeEmpty && key === '')
     return true
 
-  if (key.length > MAX_VAR_KEY_LENGHT)
+  if (key.length > MAX_VAR_KEY_LENGTH)
     return 'tooLong'
 
   if (otherAllowedRegex.test(key)) {
@@ -86,7 +86,7 @@ export const getVars = (value: string) => {
     return ![CONTEXT_PLACEHOLDER_TEXT, HISTORY_PLACEHOLDER_TEXT, QUERY_PLACEHOLDER_TEXT, PRE_PROMPT_PLACEHOLDER_TEXT].includes(item)
   }).map((item) => {
     return item.replace('{{', '').replace('}}', '')
-  }).filter(key => key.length <= MAX_VAR_KEY_LENGHT) || []
+  }).filter(key => key.length <= MAX_VAR_KEY_LENGTH) || []
   const keyObj: Record<string, boolean> = {}
   // remove duplicate keys
   const res: string[] = []

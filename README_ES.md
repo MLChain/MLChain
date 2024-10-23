@@ -1,10 +1,10 @@
 ![cover-v5-optimized](https://github.com/mlchain/mlchain/assets/13230914/f9e19af5-61ba-4119-b926-d10c4c06ebab)
 
 <p align="center">
-  <a href="https://cloud.mlchain.khulnasoft.com">Mlchain Cloud</a> ·
-  <a href="https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted">Auto-alojamiento</a> ·
-  <a href="https://docs.mlchain.khulnasoft.com">Documentación</a> ·
-  <a href="https://udify.app/chat/22L1zSxg6yW1cWQg">Consultas empresariales (en inglés)</a>
+  <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
+  <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">Auto-alojamiento</a> ·
+  <a href="https://docs-mlchain.khulnasoft.com">Documentación</a> ·
+  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">Consultas empresariales (en inglés)</a>
 </p>
 
 <p align="center">
@@ -15,8 +15,8 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="chat en Discord"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=khulnasoft" target="_blank">
-        <img src="https://img.shields.io/twitter/follow/khulnasoft?logo=X&color=%20%23f5f5f5"
+    <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
+        <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
             alt="seguir en Twitter"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Descargas de Docker" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
@@ -58,7 +58,7 @@ Mlchain es una plataforma de desarrollo de aplicaciones de LLM de código abiert
 
 
 **2. Soporte de modelos completo**: 
-  Integración perfecta con cientos de LLMs propietarios / de código abierto de docenas de proveedores de inferencia y soluciones auto-alojadas, que cubren GPT, Mistral, Llama3 y cualquier modelo compatible con la API de OpenAI. Se puede encontrar una lista completa de proveedores de modelos admitidos [aquí](https://docs.mlchain.khulnasoft.com/getting-started/readme/model-providers).
+  Integración perfecta con cientos de LLMs propietarios / de código abierto de docenas de proveedores de inferencia y soluciones auto-alojadas, que cubren GPT, Mistral, Llama3 y cualquier modelo compatible con la API de OpenAI. Se puede encontrar una lista completa de proveedores de modelos admitidos [aquí](https://docs-mlchain.khulnasoft.com/getting-started/readme/model-providers).
 
 ![proveedores-v5](https://github.com/mlchain/mlchain/assets/13230914/5a17bdbe-097a-4100-8363-40255b70f6e3)
 
@@ -85,7 +85,7 @@ es basados en LLM Function Calling o ReAct, y agregar herramientas preconstruida
 <table style="width: 100%;">
   <tr>
     <th align="center">Característica</th>
-    <th align="center">Mlchain.AI</th>
+    <th align="center">MLChain</th>
     <th align="center">LangChain</th>
     <th align="center">Flowise</th>
     <th align="center">API de Asistentes de OpenAI</th>
@@ -155,7 +155,7 @@ Hospedamos un servicio [Mlchain Cloud](https://mlchain.khulnasoft.com) para que 
 
 - **Auto-alojamiento de Mlchain Community Edition</br>**
 Pon rápidamente Mlchain en funcionamiento en tu entorno con esta [guía de inicio rápido](#quick-start).
-Usa nuestra [documentación](https://docs.mlchain.khulnasoft.com) para más referencias e instrucciones más detalladas.
+Usa nuestra [documentación](https://docs-mlchain.khulnasoft.com) para más referencias e instrucciones más detalladas.
 
 - **Mlchain para Empresas / Organizaciones</br>**
 Proporcionamos características adicionales centradas en la empresa. [Envíanos un correo electrónico](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry) para discutir las necesidades empresariales. </br>
@@ -188,13 +188,13 @@ docker compose up -d
 
 Después de ejecutarlo, puedes acceder al panel de control de Mlchain en tu navegador en [http://localhost/install](http://localhost/install) y comenzar el proceso de inicialización.
 
-> Si deseas contribuir a Mlchain o realizar desarrollo adicional, consulta nuestra [guía para implementar desde el código fuente](https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted/local-source-code)
+> Si deseas contribuir a Mlchain o realizar desarrollo adicional, consulta nuestra [guía para implementar desde el código fuente](https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted/local-source-code)
 
 ## Próximos pasos
 
-Si necesita personalizar la configuración, consulte los comentarios en nuestro archivo [.env.example](docker/.env.example) y actualice los valores correspondientes en su archivo `.env`. Además, es posible que deba realizar ajustes en el propio archivo `docker-compose.yaml`, como cambiar las versiones de las imágenes, las asignaciones de puertos o los montajes de volúmenes, según su entorno de implementación y requisitos específicos. Después de realizar cualquier cambio, vuelva a ejecutar `docker-compose up -d`. Puede encontrar la lista completa de variables de entorno disponibles [aquí](https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted/environments).
+Si necesita personalizar la configuración, consulte los comentarios en nuestro archivo [.env.example](docker/.env.example) y actualice los valores correspondientes en su archivo `.env`. Además, es posible que deba realizar ajustes en el propio archivo `docker-compose.yaml`, como cambiar las versiones de las imágenes, las asignaciones de puertos o los montajes de volúmenes, según su entorno de implementación y requisitos específicos. Después de realizar cualquier cambio, vuelva a ejecutar `docker-compose up -d`. Puede encontrar la lista completa de variables de entorno disponibles [aquí](https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted/environments).
 
-. Después de realizar los cambios, ejecuta `docker-compose up -d` nuevamente. Puedes ver la lista completa de variables de entorno [aquí](https://docs.mlchain.khulnasoft.com/getting-started/install-self-hosted/environments).
+. Después de realizar los cambios, ejecuta `docker-compose up -d` nuevamente. Puedes ver la lista completa de variables de entorno [aquí](https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted/environments).
 
 Si desea configurar una configuración de alta disponibilidad, la comunidad proporciona [Gráficos Helm](https://helm.sh/) y archivos YAML, a través de los cuales puede desplegar Mlchain en Kubernetes.
 
@@ -226,9 +226,9 @@ Al mismo tiempo, considera apoyar a Mlchain compartiéndolo en redes sociales y 
 ## Comunidad y Contacto
 
 * [Discusión en GitHub](https://github.com/mlchain/mlchain/discussions). Lo mejor para: compartir comentarios y hacer preguntas.
-* [Reporte de problemas en GitHub](https://github.com/mlchain/mlchain/issues). Lo mejor para: errores que encuentres usando Mlchain.AI y propuestas de características. Consulta nuestra [Guía de contribución](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
+* [Reporte de problemas en GitHub](https://github.com/mlchain/mlchain/issues). Lo mejor para: errores que encuentres usando MLChain y propuestas de características. Consulta nuestra [Guía de contribución](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
 * [Discord](https://discord.gg/FngNHpbcY7). Lo mejor para: compartir tus aplicaciones y pasar el rato con la comunidad.
-* [Twitter](https://twitter.com/khulnasoft). Lo mejor para: compartir tus aplicaciones y pasar el rato con la comunidad.
+* [Twitter](https://twitter.com/mlchain_ai). Lo mejor para: compartir tus aplicaciones y pasar el rato con la comunidad.
 
 ## Historial de Estrellas
 
