@@ -5,7 +5,7 @@ from typing import Optional
 
 from sqlalchemy.exc import IntegrityError
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.entities.model_entities import DefaultModelEntity, DefaultModelProviderEntity
 from core.entities.provider_configuration import ProviderConfiguration, ProviderConfigurations, ProviderModelBundle
 from core.entities.provider_entities import (

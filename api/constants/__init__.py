@@ -1,4 +1,4 @@
-from configs import mlchain_config
+from configs import mlchain_config
 
 HIDDEN_VALUE = "[__HIDDEN__]"
 UUID_NIL = "00000000-0000-0000-0000-000000000000"
@@ -13,10 +13,10 @@ AUDIO_EXTENSIONS = ["mp3", "m4a", "wav", "webm", "amr"]
 AUDIO_EXTENSIONS.extend([ext.upper() for ext in AUDIO_EXTENSIONS])
 
 
-if mlchain_config.ETL_TYPE == "Unstructured":
+if mlchain_config.ETL_TYPE == "Unstructured":
     DOCUMENT_EXTENSIONS = ["txt", "markdown", "md", "pdf", "html", "htm", "xlsx", "xls"]
     DOCUMENT_EXTENSIONS.extend(("docx", "csv", "eml", "msg", "pptx", "xml", "epub"))
-    if mlchain_config.UNSTRUCTURED_API_URL:
+    if mlchain_config.UNSTRUCTURED_API_URL:
         DOCUMENT_EXTENSIONS.append("ppt")
     DOCUMENT_EXTENSIONS.extend([ext.upper() for ext in DOCUMENT_EXTENSIONS])
 else:

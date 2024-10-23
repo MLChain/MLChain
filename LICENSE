@@ -6,10 +6,11 @@ Mlchain is licensed under the Apache License 2.0, with the following additional 
 
 a. Multi-tenant service: Unless explicitly authorized by Mlchain in writing, you may not use the Mlchain source code to operate a multi-tenant environment. 
     - Tenant Definition: Within the context of Mlchain, one tenant corresponds to one workspace. The workspace provides a separated area for each tenant's data and configurations.
+    
+b. LOGO and copyright information: In the process of using Mlchain's frontend, you may not remove or modify the LOGO or copyright information in the Mlchain console or applications. This restriction is inapplicable to uses of Mlchain that do not involve its frontend.
+    - Frontend Definition: For the purposes of this license, the "frontend" of Mlchain includes all components located in the `web/` directory when running Mlchain from the raw source code, or the "web" image when running Mlchain with Docker.
 
-b. LOGO and copyright information: In the process of using Mlchain's frontend components, you may not remove or modify the LOGO or copyright information in the Mlchain console or applications. This restriction is inapplicable to uses of Mlchain that do not involve its frontend components.
-
-Please contact business@mlchain.khulnasoft.com by email to inquire about licensing matters.
+Please contact business@khulnasoft.com by email to inquire about licensing matters.
 
 2. As a contributor, you should agree that:
 
@@ -20,7 +21,7 @@ Apart from the specific conditions mentioned above, all other rights and restric
 
 The interactive design of this product is protected by appearance patent.
 
-© 2024 MlChain, Inc.
+© 2024 MLChain, Inc.
 
 
 ----------

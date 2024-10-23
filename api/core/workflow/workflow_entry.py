@@ -4,7 +4,7 @@ import uuid
 from collections.abc import Generator, Mapping, Sequence
 from typing import Any, Optional, cast
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.app.app_config.entities import FileExtraConfig
 from core.app.apps.base_app_queue_manager import GenerateTaskStoppedError
 from core.app.entities.app_invoke_entities import InvokeFrom
@@ -63,7 +63,7 @@ class WorkflowEntry:
         :param thread_pool_id: thread pool id
         """
         # check call depth
-        workflow_call_max_depth = mlchain_config.WORKFLOW_CALL_MAX_DEPTH
+        workflow_call_max_depth = mlchain_config.WORKFLOW_CALL_MAX_DEPTH
         if call_depth > workflow_call_max_depth:
             raise ValueError("Max workflow call depth {} reached.".format(workflow_call_max_depth))
 

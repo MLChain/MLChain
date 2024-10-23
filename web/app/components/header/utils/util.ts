@@ -21,5 +21,5 @@ export const mailToSupport = (account: string, plan: string, version: string) =>
     Platform:
     Problem Description:
   `
-  return generateMailToLink('support@mlchain.khulnasoft.com', subject, body)
+  return generateMailToLink('support@khulnasoft.com', subject, body)
 }

@@ -1,6 +1,6 @@
 import base64
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.file import file_repository
 from core.helper import ssrf_proxy
 from core.model_runtime.entities import AudioPromptMessageContent, ImagePromptMessageContent
@@ -55,7 +55,7 @@ def to_prompt_message_content(f: File, /):
     """
     match f.type:
         case FileType.IMAGE:
-            if mlchain_config.MULTIMODAL_SEND_IMAGE_FORMAT == "url":
+            if mlchain_config.MULTIMODAL_SEND_IMAGE_FORMAT == "url":
                 data = _to_url(f)
             else:
                 data = _to_base64_data_string(f)

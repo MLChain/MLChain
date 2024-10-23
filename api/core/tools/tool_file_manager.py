@@ -10,7 +10,7 @@ from uuid import uuid4
 
 from httpx import get
 
-from configs import mlchain_config
+from configs import mlchain_config
 from extensions.ext_database import db
 from extensions.ext_storage import storage
 from models.model import MessageFile
@@ -25,13 +25,13 @@ class ToolFileManager:
         """
         sign file to get a temporary url
         """
-        base_url = mlchain_config.FILES_URL
+        base_url = mlchain_config.FILES_URL
         file_preview_url = f"{base_url}/files/tools/{tool_file_id}{extension}"
 
         timestamp = str(int(time.time()))
         nonce = os.urandom(16).hex()
         data_to_sign = f"file-preview|{tool_file_id}|{timestamp}|{nonce}"
-        secret_key = mlchain_config.SECRET_KEY.encode() if mlchain_config.SECRET_KEY else b""
+        secret_key = mlchain_config.SECRET_KEY.encode() if mlchain_config.SECRET_KEY else b""
         sign = hmac.new(secret_key, data_to_sign.encode(), hashlib.sha256).digest()
         encoded_sign = base64.urlsafe_b64encode(sign).decode()
 
@@ -43,7 +43,7 @@ class ToolFileManager:
         verify signature
         """
         data_to_sign = f"file-preview|{file_id}|{timestamp}|{nonce}"
-        secret_key = mlchain_config.SECRET_KEY.encode() if mlchain_config.SECRET_KEY else b""
+        secret_key = mlchain_config.SECRET_KEY.encode() if mlchain_config.SECRET_KEY else b""
         recalculated_sign = hmac.new(secret_key, data_to_sign.encode(), hashlib.sha256).digest()
         recalculated_encoded_sign = base64.urlsafe_b64encode(recalculated_sign).decode()
 
@@ -52,7 +52,7 @@ class ToolFileManager:
             return False
 
         current_time = int(time.time())
-        return current_time - int(timestamp) <= mlchain_config.FILES_ACCESS_TIMEOUT
+        return current_time - int(timestamp) <= mlchain_config.FILES_ACCESS_TIMEOUT
 
     @staticmethod
     def create_file_by_raw(

@@ -1,6 +1,6 @@
 identity:
   name: web_search
-  author: Mlchain
+  author: Mlchain
   label:
     en_US: Web Search API
     zh_Hans: Web Search API

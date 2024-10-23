@@ -4,7 +4,7 @@ from pathlib import Path
 
 from supabase import Client
 
-from configs import mlchain_config
+from configs import mlchain_config
 from extensions.storage.base_storage import BaseStorage
 
 
@@ -13,14 +13,14 @@ class SupabaseStorage(BaseStorage):
 
     def __init__(self):
         super().__init__()
-        if mlchain_config.SUPABASE_URL is None:
+        if mlchain_config.SUPABASE_URL is None:
             raise ValueError("SUPABASE_URL is not set")
-        if mlchain_config.SUPABASE_API_KEY is None:
+        if mlchain_config.SUPABASE_API_KEY is None:
             raise ValueError("SUPABASE_API_KEY is not set")
-        if mlchain_config.SUPABASE_BUCKET_NAME is None:
+        if mlchain_config.SUPABASE_BUCKET_NAME is None:
             raise ValueError("SUPABASE_BUCKET_NAME is not set")
 
-        self.bucket_name = mlchain_config.SUPABASE_BUCKET_NAME
+        self.bucket_name = mlchain_config.SUPABASE_BUCKET_NAME
         self.client = Client(supabase_url=mlchain_config.SUPABASE_URL, supabase_key=mlchain_config.SUPABASE_API_KEY)
         self.create_bucket(id=mlchain_config.SUPABASE_BUCKET_NAME, bucket_name=mlchain_config.SUPABASE_BUCKET_NAME)
 

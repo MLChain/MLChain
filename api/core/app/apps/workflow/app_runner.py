@@ -1,7 +1,7 @@
 import logging
 from typing import Optional, cast
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.app.apps.base_app_queue_manager import AppQueueManager
 from core.app.apps.workflow.app_config_manager import WorkflowAppConfig
 from core.app.apps.workflow_app_runner import WorkflowBasedAppRunner
@@ -70,7 +70,7 @@ class WorkflowAppRunner(WorkflowBasedAppRunner):
         db.session.close()
 
         workflow_callbacks: list[WorkflowCallback] = []
-        if mlchain_config.DEBUG:
+        if mlchain_config.DEBUG:
             workflow_callbacks.append(WorkflowLoggingCallback())
 
         # if only single iteration run is requested

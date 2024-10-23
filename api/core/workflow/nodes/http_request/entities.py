@@ -4,7 +4,7 @@ from typing import Any, Literal, Optional
 import httpx
 from pydantic import BaseModel, Field, ValidationInfo, field_validator
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.workflow.nodes.base import BaseNodeData
 
 NON_FILE_CONTENT_TYPES = (
@@ -64,9 +64,9 @@ class HttpRequestNodeBody(BaseModel):
 
 
 class HttpRequestNodeTimeout(BaseModel):
-    connect: int = mlchain_config.HTTP_REQUEST_MAX_CONNECT_TIMEOUT
-    read: int = mlchain_config.HTTP_REQUEST_MAX_READ_TIMEOUT
-    write: int = mlchain_config.HTTP_REQUEST_MAX_WRITE_TIMEOUT
+    connect: int = mlchain_config.HTTP_REQUEST_MAX_CONNECT_TIMEOUT
+    read: int = mlchain_config.HTTP_REQUEST_MAX_READ_TIMEOUT
+    write: int = mlchain_config.HTTP_REQUEST_MAX_WRITE_TIMEOUT
 
 
 class HttpRequestNodeData(BaseNodeData):

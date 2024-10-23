@@ -4,7 +4,7 @@ import hmac
 import os
 import time
 
-from configs import mlchain_config
+from configs import mlchain_config
 
 
 def get_signed_file_url(upload_file_id: str) -> str:
@@ -12,7 +12,7 @@ def get_signed_file_url(upload_file_id: str) -> str:
 
     timestamp = str(int(time.time()))
     nonce = os.urandom(16).hex()
-    key = mlchain_config.SECRET_KEY.encode()
+    key = mlchain_config.SECRET_KEY.encode()
     msg = f"file-preview|{upload_file_id}|{timestamp}|{nonce}"
     sign = hmac.new(key, msg.encode(), hashlib.sha256).digest()
     encoded_sign = base64.urlsafe_b64encode(sign).decode()
@@ -22,7 +22,7 @@ def get_signed_file_url(upload_file_id: str) -> str:
 
 def verify_image_signature(*, upload_file_id: str, timestamp: str, nonce: str, sign: str) -> bool:
     data_to_sign = f"image-preview|{upload_file_id}|{timestamp}|{nonce}"
-    secret_key = mlchain_config.SECRET_KEY.encode()
+    secret_key = mlchain_config.SECRET_KEY.encode()
     recalculated_sign = hmac.new(secret_key, data_to_sign.encode(), hashlib.sha256).digest()
     recalculated_encoded_sign = base64.urlsafe_b64encode(recalculated_sign).decode()
 
@@ -31,12 +31,12 @@ def verify_image_signature(*, upload_file_id: str, timestamp: str, nonce: str, s
         return False
 
     current_time = int(time.time())
-    return current_time - int(timestamp) <= mlchain_config.FILES_ACCESS_TIMEOUT
+    return current_time - int(timestamp) <= mlchain_config.FILES_ACCESS_TIMEOUT
 
 
 def verify_file_signature(*, upload_file_id: str, timestamp: str, nonce: str, sign: str) -> bool:
     data_to_sign = f"file-preview|{upload_file_id}|{timestamp}|{nonce}"
-    secret_key = mlchain_config.SECRET_KEY.encode()
+    secret_key = mlchain_config.SECRET_KEY.encode()
     recalculated_sign = hmac.new(secret_key, data_to_sign.encode(), hashlib.sha256).digest()
     recalculated_encoded_sign = base64.urlsafe_b64encode(recalculated_sign).decode()
 
@@ -45,4 +45,4 @@ def verify_file_signature(*, upload_file_id: str, timestamp: str, nonce: str, si
         return False
 
     current_time = int(time.time())
-    return current_time - int(timestamp) <= mlchain_config.FILES_ACCESS_TIMEOUT
+    return current_time - int(timestamp) <= mlchain_config.FILES_ACCESS_TIMEOUT

@@ -6,7 +6,7 @@ from flask_login.config import EXEMPT_METHODS
 from werkzeug.exceptions import Unauthorized
 from werkzeug.local import LocalProxy
 
-from configs import mlchain_config
+from configs import mlchain_config
 from extensions.ext_database import db
 from models.account import Account, Tenant, TenantAccountJoin
 
@@ -52,7 +52,7 @@ def login_required(func):
     @wraps(func)
     def decorated_view(*args, **kwargs):
         auth_header = request.headers.get("Authorization")
-        if mlchain_config.ADMIN_API_KEY_ENABLE:
+        if mlchain_config.ADMIN_API_KEY_ENABLE:
             if auth_header:
                 if " " not in auth_header:
                     raise Unauthorized("Invalid Authorization header format. Expected 'Bearer <api-key>' format.")
@@ -61,7 +61,7 @@ def login_required(func):
                 if auth_scheme != "bearer":
                     raise Unauthorized("Invalid Authorization header format. Expected 'Bearer <api-key>' format.")
 
-                admin_api_key = mlchain_config.ADMIN_API_KEY
+                admin_api_key = mlchain_config.ADMIN_API_KEY
                 if admin_api_key:
                     if admin_api_key == auth_token:
                         workspace_id = request.headers.get("X-WORKSPACE-ID")
@@ -81,7 +81,7 @@ def login_required(func):
                                     account.current_tenant = tenant
                                     current_app.login_manager._update_request_context_with_user(account)
                                     user_logged_in.send(current_app._get_current_object(), user=_get_user())
-        if request.method in EXEMPT_METHODS or mlchain_config.LOGIN_DISABLED:
+        if request.method in EXEMPT_METHODS or mlchain_config.LOGIN_DISABLED:
             pass
         elif not current_user.is_authenticated:
             return current_app.login_manager.unauthorized()

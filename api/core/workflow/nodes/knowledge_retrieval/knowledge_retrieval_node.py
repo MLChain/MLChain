@@ -166,7 +166,7 @@ class KnowledgeRetrievalNode(BaseNode[KnowledgeRetrievalNodeData]):
                 weights,
                 node_data.multiple_retrieval_config.reranking_enable,
             )
-        mlchain_documents = [item for item in all_documents if item.provider == "mlchain"]
+        mlchain_documents = [item for item in all_documents if item.provider == "mlchain"]
         external_documents = [item for item in all_documents if item.provider == "external"]
         retrieval_resource_list = []
         # deal with external documents
@@ -186,14 +186,14 @@ class KnowledgeRetrievalNode(BaseNode[KnowledgeRetrievalNodeData]):
             }
             retrieval_resource_list.append(source)
         document_score_list = {}
-        # deal with mlchain documents
-        if mlchain_documents:
+        # deal with mlchain documents
+        if mlchain_documents:
             document_score_list = {}
-            for item in mlchain_documents:
+            for item in mlchain_documents:
                 if item.metadata.get("score"):
                     document_score_list[item.metadata["doc_id"]] = item.metadata["score"]
 
-            index_node_ids = [document.metadata["doc_id"] for document in mlchain_documents]
+            index_node_ids = [document.metadata["doc_id"] for document in mlchain_documents]
             segments = DocumentSegment.query.filter(
                 DocumentSegment.dataset_id.in_(dataset_ids),
                 DocumentSegment.completed_at.isnot(None),

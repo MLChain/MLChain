@@ -6,7 +6,7 @@ from sqlalchemy import func
 from werkzeug.exceptions import NotFound
 
 import app
-from configs import mlchain_config
+from configs import mlchain_config
 from core.rag.index_processor.index_processor_factory import IndexProcessorFactory
 from extensions.ext_database import db
 from extensions.ext_redis import redis_client
@@ -17,8 +17,8 @@ from services.feature_service import FeatureService
 @app.celery.task(queue="dataset")
 def clean_unused_datasets_task():
     click.echo(click.style("Start clean unused datasets indexes.", fg="green"))
-    plan_sandbox_clean_day_setting = mlchain_config.PLAN_SANDBOX_CLEAN_DAY_SETTING
-    plan_pro_clean_day_setting = mlchain_config.PLAN_PRO_CLEAN_DAY_SETTING
+    plan_sandbox_clean_day_setting = mlchain_config.PLAN_SANDBOX_CLEAN_DAY_SETTING
+    plan_pro_clean_day_setting = mlchain_config.PLAN_PRO_CLEAN_DAY_SETTING
     start_at = time.perf_counter()
     plan_sandbox_clean_day = datetime.datetime.now() - datetime.timedelta(days=plan_sandbox_clean_day_setting)
     plan_pro_clean_day = datetime.datetime.now() - datetime.timedelta(days=plan_pro_clean_day_setting)

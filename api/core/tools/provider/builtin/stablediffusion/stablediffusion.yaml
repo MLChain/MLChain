@@ -1,5 +1,5 @@
 identity:
-  author: Mlchain
+  author: Mlchain
   name: stablediffusion
   label:
     en_US: Stable Diffusion
@@ -39,4 +39,4 @@ credentials_for_provider:
       en_US: The model name of the StableDiffusion server
       zh_Hans: StableDiffusion服务器的模型名称
       pt_BR: The model name of the StableDiffusion server
-    url: https://docs.mlchain.khulnasoft.com/tutorials/tool-configuration/stable-diffusion
+    url: https://docs-mlchain.khulnasoft.com/tutorials/tool-configuration/stable-diffusion

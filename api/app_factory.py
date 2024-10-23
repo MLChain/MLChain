@@ -17,7 +17,7 @@ from werkzeug.exceptions import Unauthorized
 
 import contexts
 from commands import register_commands
-from configs import mlchain_config
+from configs import mlchain_config
 from extensions import (
     ext_celery,
     ext_code_based_extension,
@@ -39,7 +39,7 @@ from libs.passport import PassportService
 from services.account_service import AccountService
 
 
-class MlchainApp(Flask):
+class MlchainApp(Flask):
     pass
 
 
@@ -51,11 +51,11 @@ def create_flask_app_with_configs() -> Flask:
     create a raw flask app
     with configs loaded from .env file
     """
-    mlchain_app = MlchainApp(__name__)
-    mlchain_app.config.from_mapping(mlchain_config.model_dump())
+    mlchain_app = MlchainApp(__name__)
+    mlchain_app.config.from_mapping(mlchain_config.model_dump())
 
     # populate configs into system environment variables
-    for key, value in mlchain_app.config.items():
+    for key, value in mlchain_app.config.items():
         if isinstance(value, str):
             os.environ[key] = value
         elif isinstance(value, int | float | bool):
@@ -63,12 +63,12 @@ def create_flask_app_with_configs() -> Flask:
         elif value is None:
             os.environ[key] = ""
 
-    return mlchain_app
+    return mlchain_app
 
 
 def create_app() -> Flask:
     app = create_flask_app_with_configs()
-    app.secret_key = mlchain_config.SECRET_KEY
+    app.secret_key = mlchain_config.SECRET_KEY
     initialize_extensions(app)
     register_blueprints(app)
     register_commands(app)
@@ -150,7 +150,7 @@ def register_blueprints(app):
 
     CORS(
         web_bp,
-        resources={r"/*": {"origins": mlchain_config.WEB_API_CORS_ALLOW_ORIGINS}},
+        resources={r"/*": {"origins": mlchain_config.WEB_API_CORS_ALLOW_ORIGINS}},
         supports_credentials=True,
         allow_headers=["Content-Type", "Authorization", "X-App-Code"],
         methods=["GET", "PUT", "POST", "DELETE", "OPTIONS", "PATCH"],
@@ -161,7 +161,7 @@ def register_blueprints(app):
 
     CORS(
         console_app_bp,
-        resources={r"/*": {"origins": mlchain_config.CONSOLE_CORS_ALLOW_ORIGINS}},
+        resources={r"/*": {"origins": mlchain_config.CONSOLE_CORS_ALLOW_ORIGINS}},
         supports_credentials=True,
         allow_headers=["Content-Type", "Authorization"],
         methods=["GET", "PUT", "POST", "DELETE", "OPTIONS", "PATCH"],

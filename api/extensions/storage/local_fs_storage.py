@@ -5,7 +5,7 @@ from pathlib import Path
 
 from flask import current_app
 
-from configs import mlchain_config
+from configs import mlchain_config
 from extensions.storage.base_storage import BaseStorage
 
 
@@ -14,7 +14,7 @@ class LocalFsStorage(BaseStorage):
 
     def __init__(self):
         super().__init__()
-        folder = mlchain_config.STORAGE_LOCAL_PATH
+        folder = mlchain_config.STORAGE_LOCAL_PATH
         if not os.path.isabs(folder):
             folder = os.path.join(current_app.root_path, folder)
         self.folder = folder

@@ -2,7 +2,7 @@ import json
 import logging
 from typing import Optional, Union
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.tools.entities.api_entities import UserTool, UserToolProvider
 from core.tools.entities.common_entities import I18nObject
 from core.tools.entities.tool_bundle import ApiToolBundle
@@ -29,7 +29,7 @@ class ToolTransformService:
         """
         get tool provider icon url
         """
-        url_prefix = mlchain_config.CONSOLE_API_URL + "/console/api/workspaces/current/tool-provider/"
+        url_prefix = mlchain_config.CONSOLE_API_URL + "/console/api/workspaces/current/tool-provider/"
 
         if provider_type == ToolProviderType.BUILT_IN.value:
             return url_prefix + "builtin/" + provider_name + "/icon"

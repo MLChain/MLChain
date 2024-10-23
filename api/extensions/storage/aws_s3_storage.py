@@ -5,7 +5,7 @@ import boto3
 from botocore.client import Config
 from botocore.exceptions import ClientError
 
-from configs import mlchain_config
+from configs import mlchain_config
 from extensions.storage.base_storage import BaseStorage
 
 logger = logging.getLogger(__name__)
@@ -16,12 +16,12 @@ class AwsS3Storage(BaseStorage):
 
     def __init__(self):
         super().__init__()
-        self.bucket_name = mlchain_config.S3_BUCKET_NAME
-        if mlchain_config.S3_USE_AWS_MANAGED_IAM:
+        self.bucket_name = mlchain_config.S3_BUCKET_NAME
+        if mlchain_config.S3_USE_AWS_MANAGED_IAM:
             logger.info("Using AWS managed IAM role for S3")
 
             session = boto3.Session()
-            region_name = mlchain_config.S3_REGION
+            region_name = mlchain_config.S3_REGION
             self.client = session.client(service_name="s3", region_name=region_name)
         else:
             logger.info("Using ak and sk for S3")
@@ -32,7 +32,7 @@ class AwsS3Storage(BaseStorage):
                 aws_access_key_id=mlchain_config.S3_ACCESS_KEY,
                 endpoint_url=mlchain_config.S3_ENDPOINT,
                 region_name=mlchain_config.S3_REGION,
-                config=Config(s3={"addressing_style": mlchain_config.S3_ADDRESS_STYLE}),
+                config=Config(s3={"addressing_style": mlchain_config.S3_ADDRESS_STYLE}),
             )
         # create bucket
         try:

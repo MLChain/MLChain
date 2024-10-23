@@ -8,7 +8,7 @@ from sqlalchemy import JSON, TEXT, Column, DateTime, String, Table, create_engin
 from sqlalchemy import text as sql_text
 from sqlalchemy.orm import Session, declarative_base
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.rag.datasource.vdb.vector_base import BaseVector
 from core.rag.datasource.vdb.vector_factory import AbstractVectorFactory
 from core.rag.datasource.vdb.vector_type import VectorType

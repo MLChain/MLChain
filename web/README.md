@@ -33,7 +33,7 @@ NEXT_PUBLIC_EDITION=SELF_HOSTED
 NEXT_PUBLIC_API_PREFIX=http://localhost:5001/console/api
 # The URL for Web APP, refers to the Web App base URL of WEB service if web app domain is different from
 # console or api domain.
-# example: http://mlchain.khulnasoft.com/api
+# example: http://umlchain.app/api
 NEXT_PUBLIC_PUBLIC_API_PREFIX=http://localhost:5001/api
 
 # SENTRY
@@ -73,6 +73,18 @@ If you want to customize the host and port:
 ```bash
 npm run start --port=3001 --host=0.0.0.0
 ```
+
+## Storybook
+
+This project uses [Storybook](https://storybook.js.org/) for UI component development.
+
+To start the storybook server, run:
+
+```bash
+yarn storybook
+```
+
+Open [http://localhost:6006](http://localhost:6006) with your browser to see the result.
 
 ## Lint Code
 

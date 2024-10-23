@@ -12,7 +12,7 @@ from pydantic import BaseModel, Field
 from sqlalchemy import Float, func, text
 from sqlalchemy.orm import Mapped, mapped_column
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.file import FILE_MODEL_IDENTITY, File, FileExtraConfig, FileTransferMethod, FileType
 from core.file import helpers as file_helpers
 from core.file.tool_file_parser import ToolFileParser
@@ -32,7 +32,7 @@ class FileUploadConfig(BaseModel):
     number_limits: int = Field(default=0, gt=0, le=10)
 
 
-class MlchainSetup(db.Model):
+class MlchainSetup(db.Model):
     __tablename__ = "mlchain_setups"
     __table_args__ = (db.PrimaryKeyConstraint("version", name="mlchain_setup_pkey"),)
 
@@ -1324,7 +1324,7 @@ class Site(db.Model):
 
     @property
     def app_base_url(self):
-        return mlchain_config.APP_WEB_URL or request.url_root.rstrip("/")
+        return mlchain_config.APP_WEB_URL or request.url_root.rstrip("/")
 
 
 class ApiToken(db.Model):

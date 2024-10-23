@@ -3,7 +3,7 @@ from datetime import datetime, timedelta, timezone
 
 from azure.storage.blob import AccountSasPermissions, BlobServiceClient, ResourceTypes, generate_account_sas
 
-from configs import mlchain_config
+from configs import mlchain_config
 from extensions.ext_redis import redis_client
 from extensions.storage.base_storage import BaseStorage
 
@@ -13,10 +13,10 @@ class AzureBlobStorage(BaseStorage):
 
     def __init__(self):
         super().__init__()
-        self.bucket_name = mlchain_config.AZURE_BLOB_CONTAINER_NAME
-        self.account_url = mlchain_config.AZURE_BLOB_ACCOUNT_URL
-        self.account_name = mlchain_config.AZURE_BLOB_ACCOUNT_NAME
-        self.account_key = mlchain_config.AZURE_BLOB_ACCOUNT_KEY
+        self.bucket_name = mlchain_config.AZURE_BLOB_CONTAINER_NAME
+        self.account_url = mlchain_config.AZURE_BLOB_ACCOUNT_URL
+        self.account_name = mlchain_config.AZURE_BLOB_ACCOUNT_NAME
+        self.account_key = mlchain_config.AZURE_BLOB_ACCOUNT_KEY
 
     def save(self, filename, data):
         client = self._sync_client()

@@ -148,7 +148,7 @@ class DatasetRetrieval:
                 message_id,
             )
 
-        mlchain_documents = [item for item in all_documents if item.provider == "mlchain"]
+        mlchain_documents = [item for item in all_documents if item.provider == "mlchain"]
         external_documents = [item for item in all_documents if item.provider == "external"]
         document_context_list = []
         retrieval_resource_list = []
@@ -166,13 +166,13 @@ class DatasetRetrieval:
             }
             retrieval_resource_list.append(source)
         document_score_list = {}
-        # deal with mlchain documents
-        if mlchain_documents:
-            for item in mlchain_documents:
+        # deal with mlchain documents
+        if mlchain_documents:
+            for item in mlchain_documents:
                 if item.metadata.get("score"):
                     document_score_list[item.metadata["doc_id"]] = item.metadata["score"]
 
-            index_node_ids = [document.metadata["doc_id"] for document in mlchain_documents]
+            index_node_ids = [document.metadata["doc_id"] for document in mlchain_documents]
             segments = DocumentSegment.query.filter(
                 DocumentSegment.dataset_id.in_(dataset_ids),
                 DocumentSegment.status == "completed",
@@ -407,8 +407,8 @@ class DatasetRetrieval:
         self, documents: list[Document], message_id: Optional[str] = None, timer: Optional[dict] = None
     ) -> None:
         """Handle retrieval end."""
-        mlchain_documents = [document for document in documents if document.provider == "mlchain"]
-        for document in mlchain_documents:
+        mlchain_documents = [document for document in documents if document.provider == "mlchain"]
+        for document in mlchain_documents:
             query = db.session.query(DocumentSegment).filter(
                 DocumentSegment.index_node_id == document.metadata["doc_id"]
             )

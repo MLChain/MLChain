@@ -7,7 +7,7 @@ from urllib.parse import urlencode, urlparse
 
 import httpx
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.file import file_manager
 from core.helper import ssrf_proxy
 from core.workflow.entities.variable_pool import VariablePool
@@ -174,9 +174,9 @@ class Executor:
         executor_response = Response(response)
 
         threshold_size = (
-            mlchain_config.HTTP_REQUEST_NODE_MAX_BINARY_SIZE
+            mlchain_config.HTTP_REQUEST_NODE_MAX_BINARY_SIZE
             if executor_response.is_file
-            else mlchain_config.HTTP_REQUEST_NODE_MAX_TEXT_SIZE
+            else mlchain_config.HTTP_REQUEST_NODE_MAX_TEXT_SIZE
         )
         if executor_response.size > threshold_size:
             raise ValueError(

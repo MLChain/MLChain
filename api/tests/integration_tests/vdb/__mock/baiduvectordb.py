@@ -63,7 +63,7 @@ class MockBaiduVectorDBClass:
             1,
             None,
             enable_dynamic_field=False,
-            description="table for mlchain",
+            description="table for mlchain",
             config=config,
             state=TableState.NORMAL,
         )

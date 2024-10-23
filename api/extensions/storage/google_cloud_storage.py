@@ -5,7 +5,7 @@ from collections.abc import Generator
 
 from google.cloud import storage as google_cloud_storage
 
-from configs import mlchain_config
+from configs import mlchain_config
 from extensions.storage.base_storage import BaseStorage
 
 
@@ -15,8 +15,8 @@ class GoogleCloudStorage(BaseStorage):
     def __init__(self):
         super().__init__()
 
-        self.bucket_name = mlchain_config.GOOGLE_STORAGE_BUCKET_NAME
-        service_account_json_str = mlchain_config.GOOGLE_STORAGE_SERVICE_ACCOUNT_JSON_BASE64
+        self.bucket_name = mlchain_config.GOOGLE_STORAGE_BUCKET_NAME
+        service_account_json_str = mlchain_config.GOOGLE_STORAGE_SERVICE_ACCOUNT_JSON_BASE64
         # if service_account_json_str is empty, use Application Default Credentials
         if service_account_json_str:
             service_account_json = base64.b64decode(service_account_json_str).decode("utf-8")

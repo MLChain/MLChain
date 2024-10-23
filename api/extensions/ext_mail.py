@@ -4,7 +4,7 @@ from typing import Optional
 import resend
 from flask import Flask
 
-from configs import mlchain_config
+from configs import mlchain_config
 
 
 class Mail:
@@ -16,21 +16,21 @@ class Mail:
         return self._client is not None
 
     def init_app(self, app: Flask):
-        mail_type = mlchain_config.MAIL_TYPE
+        mail_type = mlchain_config.MAIL_TYPE
         if not mail_type:
             logging.warning("MAIL_TYPE is not set")
             return
 
-        if mlchain_config.MAIL_DEFAULT_SEND_FROM:
-            self._default_send_from = mlchain_config.MAIL_DEFAULT_SEND_FROM
+        if mlchain_config.MAIL_DEFAULT_SEND_FROM:
+            self._default_send_from = mlchain_config.MAIL_DEFAULT_SEND_FROM
 
         match mail_type:
             case "resend":
-                api_key = mlchain_config.RESEND_API_KEY
+                api_key = mlchain_config.RESEND_API_KEY
                 if not api_key:
                     raise ValueError("RESEND_API_KEY is not set")
 
-                api_url = mlchain_config.RESEND_API_URL
+                api_url = mlchain_config.RESEND_API_URL
                 if api_url:
                     resend.api_url = api_url
 
@@ -39,9 +39,9 @@ class Mail:
             case "smtp":
                 from libs.smtp import SMTPClient
 
-                if not mlchain_config.SMTP_SERVER or not mlchain_config.SMTP_PORT:
+                if not mlchain_config.SMTP_SERVER or not mlchain_config.SMTP_PORT:
                     raise ValueError("SMTP_SERVER and SMTP_PORT are required for smtp mail type")
-                if not mlchain_config.SMTP_USE_TLS and mlchain_config.SMTP_OPPORTUNISTIC_TLS:
+                if not mlchain_config.SMTP_USE_TLS and mlchain_config.SMTP_OPPORTUNISTIC_TLS:
                     raise ValueError("SMTP_OPPORTUNISTIC_TLS is not supported without enabling SMTP_USE_TLS")
                 self._client = SMTPClient(
                     server=mlchain_config.SMTP_SERVER,

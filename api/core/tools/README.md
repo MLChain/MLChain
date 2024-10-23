@@ -1,6 +1,6 @@
 # Tools
 
-This module implements built-in tools used in Agent Assistants and Workflows within Mlchain. You could define and display your own tools in this module, without modifying the frontend logic. This decoupling allows for easier horizontal scaling of Mlchain's capabilities.
+This module implements built-in tools used in Agent Assistants and Workflows within Mlchain. You could define and display your own tools in this module, without modifying the frontend logic. This decoupling allows for easier horizontal scaling of Mlchain's capabilities.
 
 ## Feature Introduction
 

@@ -52,7 +52,7 @@ class TongyiText2SpeechModel(_CommonTongyi, TTSModel):
             self._tts_invoke_streaming(
                 model=model,
                 credentials=credentials,
-                content_text="Hello Mlchain!",
+                content_text="Hello Mlchain!",
                 voice=self._get_model_default_voice(model, credentials),
             )
         except Exception as ex:

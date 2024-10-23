@@ -1,6 +1,6 @@
 import boto3
 
-from configs import mlchain_config
+from configs import mlchain_config
 
 
 class ExternalDatasetTestService:

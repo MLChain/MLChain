@@ -2,7 +2,7 @@ from collections.abc import Generator
 
 import tos
 
-from configs import mlchain_config
+from configs import mlchain_config
 from extensions.storage.base_storage import BaseStorage
 
 
@@ -11,7 +11,7 @@ class VolcengineTosStorage(BaseStorage):
 
     def __init__(self):
         super().__init__()
-        self.bucket_name = mlchain_config.VOLCENGINE_TOS_BUCKET_NAME
+        self.bucket_name = mlchain_config.VOLCENGINE_TOS_BUCKET_NAME
         self.client = tos.TosClientV2(
             ak=mlchain_config.VOLCENGINE_TOS_ACCESS_KEY,
             sk=mlchain_config.VOLCENGINE_TOS_SECRET_KEY,

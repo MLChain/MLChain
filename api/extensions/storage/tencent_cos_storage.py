@@ -2,7 +2,7 @@ from collections.abc import Generator
 
 from qcloud_cos import CosConfig, CosS3Client
 
-from configs import mlchain_config
+from configs import mlchain_config
 from extensions.storage.base_storage import BaseStorage
 
 
@@ -12,7 +12,7 @@ class TencentCosStorage(BaseStorage):
     def __init__(self):
         super().__init__()
 
-        self.bucket_name = mlchain_config.TENCENT_COS_BUCKET_NAME
+        self.bucket_name = mlchain_config.TENCENT_COS_BUCKET_NAME
         config = CosConfig(
             Region=mlchain_config.TENCENT_COS_REGION,
             SecretId=mlchain_config.TENCENT_COS_SECRET_ID,

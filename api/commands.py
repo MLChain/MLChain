@@ -8,7 +8,7 @@ import click
 from flask import current_app
 from werkzeug.exceptions import NotFound
 
-from configs import mlchain_config
+from configs import mlchain_config
 from constants.languages import languages
 from core.rag.datasource.vdb.vector_factory import Vector
 from core.rag.datasource.vdb.vector_type import VectorType
@@ -113,7 +113,7 @@ def reset_encrypt_key_pair():
     After the reset, all LLM credentials will become invalid, requiring re-entry.
     Only support SELF_HOSTED mode.
     """
-    if mlchain_config.EDITION != "SELF_HOSTED":
+    if mlchain_config.EDITION != "SELF_HOSTED":
         click.echo(click.style("This command is only for SELF_HOSTED installations.", fg="red"))
         return
 
@@ -258,7 +258,7 @@ def migrate_knowledge_vector_database():
     create_count = 0
     skipped_count = 0
     total_count = 0
-    vector_type = mlchain_config.VECTOR_STORE
+    vector_type = mlchain_config.VECTOR_STORE
     upper_colletion_vector_types = {
         VectorType.MILVUS,
         VectorType.PGVECTOR,
@@ -477,7 +477,7 @@ def convert_to_agent_apps():
 @click.option("--field", default="metadata.doc_id", prompt=False, help="Index field , default is metadata.doc_id.")
 def add_qdrant_doc_id_index(field: str):
     click.echo(click.style("Starting Qdrant doc_id index creation.", fg="green"))
-    vector_type = mlchain_config.VECTOR_STORE
+    vector_type = mlchain_config.VECTOR_STORE
     if vector_type != "qdrant":
         click.echo(click.style("This command only supports Qdrant vector store.", fg="red"))
         return
@@ -495,7 +495,7 @@ def add_qdrant_doc_id_index(field: str):
         from core.rag.datasource.vdb.qdrant.qdrant_vector import QdrantConfig
 
         for binding in bindings:
-            if mlchain_config.QDRANT_URL is None:
+            if mlchain_config.QDRANT_URL is None:
                 raise ValueError("Qdrant URL is required.")
             qdrant_config = QdrantConfig(
                 endpoint=mlchain_config.QDRANT_URL,

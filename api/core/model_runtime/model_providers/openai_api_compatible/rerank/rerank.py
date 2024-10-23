@@ -23,7 +23,7 @@ from core.model_runtime.model_providers.__base.rerank_model import RerankModel
 class OAICompatRerankModel(RerankModel):
     """
     rerank model API is compatible with Jina rerank model API. So copy the JinaRerankModel class code here.
-    we need enhance for llama.cpp , which return raw score, not normalize score 0~1.  It seems Mlchain need it
+    we need enhance for llama.cpp , which return raw score, not normalize score 0~1.  It seems Mlchain need it
     """
 
     def _invoke(

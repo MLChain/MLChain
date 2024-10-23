@@ -1,7 +1,7 @@
 import pytest
 
 from app_factory import create_app
-from configs import mlchain_config
+from configs import mlchain_config
 
 mock_user = type(
     "MockUser",
@@ -21,5 +21,5 @@ mock_user = type(
 @pytest.fixture
 def app():
     app = create_app()
-    mlchain_config.LOGIN_DISABLED = True
+    mlchain_config.LOGIN_DISABLED = True
     return app

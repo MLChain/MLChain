@@ -1,6 +1,6 @@
 import os
 
-from configs import mlchain_config
+from configs import mlchain_config
 
 if os.environ.get("DEBUG", "false").lower() != "true":
     from gevent import monkey
@@ -42,7 +42,7 @@ if hasattr(time, "tzset"):
 app = create_app()
 celery = app.extensions["celery"]
 
-if mlchain_config.TESTING:
+if mlchain_config.TESTING:
     print("App is running in TESTING mode")
 
 
@@ -50,15 +50,15 @@ if mlchain_config.TESTING:
 def after_request(response):
     """Add Version headers to the response."""
     response.set_cookie("remember_token", "", expires=0)
-    response.headers.add("X-Version", mlchain_config.CURRENT_VERSION)
-    response.headers.add("X-Env", mlchain_config.DEPLOY_ENV)
+    response.headers.add("X-Version", mlchain_config.CURRENT_VERSION)
+    response.headers.add("X-Env", mlchain_config.DEPLOY_ENV)
     return response
 
 
 @app.route("/health")
 def health():
     return Response(
-        json.dumps({"pid": os.getpid(), "status": "ok", "version": mlchain_config.CURRENT_VERSION}),
+        json.dumps({"pid": os.getpid(), "status": "ok", "version": mlchain_config.CURRENT_VERSION}),
         status=200,
         content_type="application/json",
     )

@@ -2,7 +2,7 @@ from collections.abc import Generator
 
 import oss2 as aliyun_s3
 
-from configs import mlchain_config
+from configs import mlchain_config
 from extensions.storage.base_storage import BaseStorage
 
 
@@ -11,17 +11,17 @@ class AliyunOssStorage(BaseStorage):
 
     def __init__(self):
         super().__init__()
-        self.bucket_name = mlchain_config.ALIYUN_OSS_BUCKET_NAME
-        self.folder = mlchain_config.ALIYUN_OSS_PATH
+        self.bucket_name = mlchain_config.ALIYUN_OSS_BUCKET_NAME
+        self.folder = mlchain_config.ALIYUN_OSS_PATH
         oss_auth_method = aliyun_s3.Auth
         region = None
-        if mlchain_config.ALIYUN_OSS_AUTH_VERSION == "v4":
+        if mlchain_config.ALIYUN_OSS_AUTH_VERSION == "v4":
             oss_auth_method = aliyun_s3.AuthV4
-            region = mlchain_config.ALIYUN_OSS_REGION
-        oss_auth = oss_auth_method(mlchain_config.ALIYUN_OSS_ACCESS_KEY, mlchain_config.ALIYUN_OSS_SECRET_KEY)
+            region = mlchain_config.ALIYUN_OSS_REGION
+        oss_auth = oss_auth_method(mlchain_config.ALIYUN_OSS_ACCESS_KEY, mlchain_config.ALIYUN_OSS_SECRET_KEY)
         self.client = aliyun_s3.Bucket(
             oss_auth,
-            mlchain_config.ALIYUN_OSS_ENDPOINT,
+            mlchain_config.ALIYUN_OSS_ENDPOINT,
             self.bucket_name,
             connect_timeout=30,
             region=region,

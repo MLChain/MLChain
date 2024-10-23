@@ -5,7 +5,7 @@ from flask_login import current_user
 from flask_restful import Resource, marshal_with, reqparse
 
 import services
-from configs import mlchain_config
+from configs import mlchain_config
 from constants import DOCUMENT_EXTENSIONS
 from controllers.console import api
 from controllers.console.datasets.error import (
@@ -31,11 +31,11 @@ class FileApi(Resource):
     @marshal_with(upload_config_fields)
     def get(self):
         return {
-            "file_size_limit": mlchain_config.UPLOAD_FILE_SIZE_LIMIT,
-            "batch_count_limit": mlchain_config.UPLOAD_FILE_BATCH_LIMIT,
-            "image_file_size_limit": mlchain_config.UPLOAD_IMAGE_FILE_SIZE_LIMIT,
-            "video_file_size_limit": mlchain_config.UPLOAD_VIDEO_FILE_SIZE_LIMIT,
-            "audio_file_size_limit": mlchain_config.UPLOAD_AUDIO_FILE_SIZE_LIMIT,
+            "file_size_limit": mlchain_config.UPLOAD_FILE_SIZE_LIMIT,
+            "batch_count_limit": mlchain_config.UPLOAD_FILE_BATCH_LIMIT,
+            "image_file_size_limit": mlchain_config.UPLOAD_IMAGE_FILE_SIZE_LIMIT,
+            "video_file_size_limit": mlchain_config.UPLOAD_VIDEO_FILE_SIZE_LIMIT,
+            "audio_file_size_limit": mlchain_config.UPLOAD_AUDIO_FILE_SIZE_LIMIT,
         }, 200
 
     @setup_required

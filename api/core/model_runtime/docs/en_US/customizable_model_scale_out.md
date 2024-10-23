@@ -284,7 +284,7 @@ However, some vendors may support different parameters for different models. For
 
 - Exception Error Mapping
 
-When a model invocation error occurs, it should be mapped to the runtime's specified `InvokeError` type, enabling Mlchain to handle different errors appropriately.
+When a model invocation error occurs, it should be mapped to the runtime's specified `InvokeError` type, enabling Mlchain to handle different errors appropriately.
 
 Runtime Errors:
 

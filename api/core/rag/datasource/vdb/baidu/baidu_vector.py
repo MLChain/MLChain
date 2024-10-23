@@ -11,7 +11,7 @@ from pymochow.model.enum import FieldType, IndexState, IndexType, MetricType, Ta
 from pymochow.model.schema import Field, HNSWParams, Schema, VectorIndex
 from pymochow.model.table import AnnSearch, HNSWSearchParams, Partition, Row
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.rag.datasource.vdb.vector_base import BaseVector
 from core.rag.datasource.vdb.vector_factory import AbstractVectorFactory
 from core.rag.datasource.vdb.vector_type import VectorType
@@ -235,7 +235,7 @@ class BaiduVector(BaseVector):
                 replication=self._client_config.replicas,
                 partition=Partition(partition_num=self._client_config.shard),
                 schema=Schema(fields=fields, indexes=indexes),
-                description="Table for Mlchain",
+                description="Table for Mlchain",
             )
 
             redis_client.set(table_exist_cache_key, 1, ex=3600)

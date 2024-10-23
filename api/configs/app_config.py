@@ -8,7 +8,7 @@ from configs.middleware import MiddlewareConfig
 from configs.packaging import PackagingInfo
 
 
-class MlchainConfig(
+class MlchainConfig(
     # Packaging info
     PackagingInfo,
     # Deployment configs
@@ -20,7 +20,7 @@ class MlchainConfig(
     # Extra service configs
     ExtraServiceConfig,
     # Enterprise feature configs
-    # **Before using, please contact business@mlchain.khulnasoft.com by email to inquire about licensing matters.**
+    # **Before using, please contact business@khulnasoft.com by email to inquire about licensing matters.**
     EnterpriseFeatureConfig,
 ):
     model_config = SettingsConfigDict(

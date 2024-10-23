@@ -6,7 +6,7 @@ import requests
 import weaviate
 from pydantic import BaseModel, model_validator
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.rag.datasource.vdb.field import Field
 from core.rag.datasource.vdb.vector_base import BaseVector
 from core.rag.datasource.vdb.vector_factory import AbstractVectorFactory

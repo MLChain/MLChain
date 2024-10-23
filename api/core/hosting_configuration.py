@@ -3,7 +3,7 @@ from typing import Optional
 from flask import Flask
 from pydantic import BaseModel
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.entities.provider_entities import QuotaUnit, RestrictModel
 from core.model_runtime.entities.model_entities import ModelType
 from models.provider import ProviderQuotaType
@@ -45,7 +45,7 @@ class HostingConfiguration:
     moderation_config: HostedModerationConfig = None
 
     def init_app(self, app: Flask) -> None:
-        if mlchain_config.EDITION != "CLOUD":
+        if mlchain_config.EDITION != "CLOUD":
             return
 
         self.provider_map["azure_openai"] = self.init_azure_openai()
@@ -60,15 +60,15 @@ class HostingConfiguration:
     @staticmethod
     def init_azure_openai() -> HostingProvider:
         quota_unit = QuotaUnit.TIMES
-        if mlchain_config.HOSTED_AZURE_OPENAI_ENABLED:
+        if mlchain_config.HOSTED_AZURE_OPENAI_ENABLED:
             credentials = {
-                "openai_api_key": mlchain_config.HOSTED_AZURE_OPENAI_API_KEY,
-                "openai_api_base": mlchain_config.HOSTED_AZURE_OPENAI_API_BASE,
+                "openai_api_key": mlchain_config.HOSTED_AZURE_OPENAI_API_KEY,
+                "openai_api_base": mlchain_config.HOSTED_AZURE_OPENAI_API_BASE,
                 "base_model_name": "gpt-35-turbo",
             }
 
             quotas = []
-            hosted_quota_limit = mlchain_config.HOSTED_AZURE_OPENAI_QUOTA_LIMIT
+            hosted_quota_limit = mlchain_config.HOSTED_AZURE_OPENAI_QUOTA_LIMIT
             trial_quota = TrialHostingQuota(
                 quota_limit=hosted_quota_limit,
                 restrict_models=[
@@ -125,27 +125,27 @@ class HostingConfiguration:
         quota_unit = QuotaUnit.CREDITS
         quotas = []
 
-        if mlchain_config.HOSTED_OPENAI_TRIAL_ENABLED:
-            hosted_quota_limit = mlchain_config.HOSTED_OPENAI_QUOTA_LIMIT
+        if mlchain_config.HOSTED_OPENAI_TRIAL_ENABLED:
+            hosted_quota_limit = mlchain_config.HOSTED_OPENAI_QUOTA_LIMIT
             trial_models = self.parse_restrict_models_from_env("HOSTED_OPENAI_TRIAL_MODELS")
             trial_quota = TrialHostingQuota(quota_limit=hosted_quota_limit, restrict_models=trial_models)
             quotas.append(trial_quota)
 
-        if mlchain_config.HOSTED_OPENAI_PAID_ENABLED:
+        if mlchain_config.HOSTED_OPENAI_PAID_ENABLED:
             paid_models = self.parse_restrict_models_from_env("HOSTED_OPENAI_PAID_MODELS")
             paid_quota = PaidHostingQuota(restrict_models=paid_models)
             quotas.append(paid_quota)
 
         if len(quotas) > 0:
             credentials = {
-                "openai_api_key": mlchain_config.HOSTED_OPENAI_API_KEY,
+                "openai_api_key": mlchain_config.HOSTED_OPENAI_API_KEY,
             }
 
-            if mlchain_config.HOSTED_OPENAI_API_BASE:
-                credentials["openai_api_base"] = mlchain_config.HOSTED_OPENAI_API_BASE
+            if mlchain_config.HOSTED_OPENAI_API_BASE:
+                credentials["openai_api_base"] = mlchain_config.HOSTED_OPENAI_API_BASE
 
-            if mlchain_config.HOSTED_OPENAI_API_ORGANIZATION:
-                credentials["openai_organization"] = mlchain_config.HOSTED_OPENAI_API_ORGANIZATION
+            if mlchain_config.HOSTED_OPENAI_API_ORGANIZATION:
+                credentials["openai_organization"] = mlchain_config.HOSTED_OPENAI_API_ORGANIZATION
 
             return HostingProvider(enabled=True, credentials=credentials, quota_unit=quota_unit, quotas=quotas)
 
@@ -159,22 +159,22 @@ class HostingConfiguration:
         quota_unit = QuotaUnit.TOKENS
         quotas = []
 
-        if mlchain_config.HOSTED_ANTHROPIC_TRIAL_ENABLED:
-            hosted_quota_limit = mlchain_config.HOSTED_ANTHROPIC_QUOTA_LIMIT
+        if mlchain_config.HOSTED_ANTHROPIC_TRIAL_ENABLED:
+            hosted_quota_limit = mlchain_config.HOSTED_ANTHROPIC_QUOTA_LIMIT
             trial_quota = TrialHostingQuota(quota_limit=hosted_quota_limit)
             quotas.append(trial_quota)
 
-        if mlchain_config.HOSTED_ANTHROPIC_PAID_ENABLED:
+        if mlchain_config.HOSTED_ANTHROPIC_PAID_ENABLED:
             paid_quota = PaidHostingQuota()
             quotas.append(paid_quota)
 
         if len(quotas) > 0:
             credentials = {
-                "anthropic_api_key": mlchain_config.HOSTED_ANTHROPIC_API_KEY,
+                "anthropic_api_key": mlchain_config.HOSTED_ANTHROPIC_API_KEY,
             }
 
-            if mlchain_config.HOSTED_ANTHROPIC_API_BASE:
-                credentials["anthropic_api_url"] = mlchain_config.HOSTED_ANTHROPIC_API_BASE
+            if mlchain_config.HOSTED_ANTHROPIC_API_BASE:
+                credentials["anthropic_api_url"] = mlchain_config.HOSTED_ANTHROPIC_API_BASE
 
             return HostingProvider(enabled=True, credentials=credentials, quota_unit=quota_unit, quotas=quotas)
 
@@ -186,7 +186,7 @@ class HostingConfiguration:
     @staticmethod
     def init_minimax() -> HostingProvider:
         quota_unit = QuotaUnit.TOKENS
-        if mlchain_config.HOSTED_MINIMAX_ENABLED:
+        if mlchain_config.HOSTED_MINIMAX_ENABLED:
             quotas = [FreeHostingQuota()]
 
             return HostingProvider(
@@ -204,7 +204,7 @@ class HostingConfiguration:
     @staticmethod
     def init_spark() -> HostingProvider:
         quota_unit = QuotaUnit.TOKENS
-        if mlchain_config.HOSTED_SPARK_ENABLED:
+        if mlchain_config.HOSTED_SPARK_ENABLED:
             quotas = [FreeHostingQuota()]
 
             return HostingProvider(
@@ -222,7 +222,7 @@ class HostingConfiguration:
     @staticmethod
     def init_zhipuai() -> HostingProvider:
         quota_unit = QuotaUnit.TOKENS
-        if mlchain_config.HOSTED_ZHIPUAI_ENABLED:
+        if mlchain_config.HOSTED_ZHIPUAI_ENABLED:
             quotas = [FreeHostingQuota()]
 
             return HostingProvider(
@@ -239,14 +239,14 @@ class HostingConfiguration:
 
     @staticmethod
     def init_moderation_config() -> HostedModerationConfig:
-        if mlchain_config.HOSTED_MODERATION_ENABLED and mlchain_config.HOSTED_MODERATION_PROVIDERS:
+        if mlchain_config.HOSTED_MODERATION_ENABLED and mlchain_config.HOSTED_MODERATION_PROVIDERS:
             return HostedModerationConfig(enabled=True, providers=mlchain_config.HOSTED_MODERATION_PROVIDERS.split(","))
 
         return HostedModerationConfig(enabled=False)
 
     @staticmethod
     def parse_restrict_models_from_env(env_var: str) -> list[RestrictModel]:
-        models_str = mlchain_config.model_dump().get(env_var)
+        models_str = mlchain_config.model_dump().get(env_var)
         models_list = models_str.split(",") if models_str else []
         return [
             RestrictModel(model=model_name.strip(), model_type=ModelType.LLM)

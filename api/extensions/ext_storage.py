@@ -4,7 +4,7 @@ from typing import Union
 
 from flask import Flask
 
-from configs import mlchain_config
+from configs import mlchain_config
 from extensions.storage.base_storage import BaseStorage
 from extensions.storage.storage_type import StorageType
 

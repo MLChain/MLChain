@@ -4,7 +4,7 @@ from typing import Optional, Union
 
 from flask import Flask, current_app
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.app.entities.app_invoke_entities import (
     AdvancedChatAppGenerateEntity,
     AgentChatAppGenerateEntity,
@@ -85,7 +85,7 @@ class MessageCycleManage:
                     name = LLMGenerator.generate_conversation_name(app_model.tenant_id, query)
                     conversation.name = name
                 except Exception as e:
-                    if mlchain_config.DEBUG:
+                    if mlchain_config.DEBUG:
                         logging.exception(f"generate conversation name failed: {e}")
                     pass
 

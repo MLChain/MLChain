@@ -1,7 +1,7 @@
 from collections.abc import Mapping
 from typing import Any
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.file import File
 from core.variables import (
     ArrayAnySegment,
@@ -58,7 +58,7 @@ def build_variable_from_mapping(mapping: Mapping[str, Any], /) -> Variable:
             result = ArrayObjectVariable.model_validate(mapping)
         case _:
             raise VariableError(f"not supported value type {value_type}")
-    if result.size > mlchain_config.MAX_VARIABLE_SIZE:
+    if result.size > mlchain_config.MAX_VARIABLE_SIZE:
         raise VariableError(f"variable size {result.size} exceeds limit {mlchain_config.MAX_VARIABLE_SIZE}")
     return result
 

@@ -24,7 +24,7 @@ class ComfyUiClient:
         return response.content
 
     def upload_image(self, input_path: str, name: str, image_type: str = "input", overwrite: bool = False):
-        # plan to support img2img in mlchain 0.10.0
+        # plan to support img2img in mlchain 0.10.0
         with open(input_path, "rb") as file:
             files = {"image": (name, file, "image/png")}
             data = {"type": image_type, "overwrite": str(overwrite).lower()}

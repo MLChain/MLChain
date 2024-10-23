@@ -13,7 +13,7 @@ from json import JSONDecodeError
 from sqlalchemy import func
 from sqlalchemy.dialects.postgresql import JSONB
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.rag.retrieval.retrieval_methods import RetrievalMethod
 from extensions.ext_database import db
 from extensions.ext_storage import storage
@@ -569,7 +569,7 @@ class DocumentSegment(db.Model):
             nonce = os.urandom(16).hex()
             timestamp = str(int(time.time()))
             data_to_sign = f"file-preview|{upload_file_id}|{timestamp}|{nonce}"
-            secret_key = mlchain_config.SECRET_KEY.encode() if mlchain_config.SECRET_KEY else b""
+            secret_key = mlchain_config.SECRET_KEY.encode() if mlchain_config.SECRET_KEY else b""
             sign = hmac.new(secret_key, data_to_sign.encode(), hashlib.sha256).digest()
             encoded_sign = base64.urlsafe_b64encode(sign).decode()
 

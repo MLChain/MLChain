@@ -5,7 +5,7 @@ from sentry_sdk.integrations.celery import CeleryIntegration
 from sentry_sdk.integrations.flask import FlaskIntegration
 from werkzeug.exceptions import HTTPException
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.model_runtime.errors.invoke import InvokeRateLimitError
 
 
@@ -19,7 +19,7 @@ def before_send(event, hint):
 
 
 def init_app(app):
-    if mlchain_config.SENTRY_DSN:
+    if mlchain_config.SENTRY_DSN:
         sentry_sdk.init(
             dsn=mlchain_config.SENTRY_DSN,
             integrations=[FlaskIntegration(), CeleryIntegration()],

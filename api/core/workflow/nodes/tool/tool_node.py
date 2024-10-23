@@ -5,7 +5,7 @@ from typing import Any
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from core.callback_handler.workflow_tool_callback_handler import MlchainWorkflowCallbackHandler
+from core.callback_handler.workflow_tool_callback_handler import MlchainWorkflowCallbackHandler
 from core.file.models import File, FileTransferMethod, FileType
 from core.tools.entities.tool_entities import ToolInvokeMessage, ToolParameter
 from core.tools.tool_engine import ToolEngine
@@ -71,7 +71,7 @@ class ToolNode(BaseNode[ToolNodeData]):
                 tool=tool_runtime,
                 tool_parameters=parameters,
                 user_id=self.user_id,
-                workflow_tool_callback=DifyWorkflowCallbackHandler(),
+                workflow_tool_callback=MlchainWorkflowCallbackHandler(),
                 workflow_call_depth=self.workflow_call_depth,
                 thread_pool_id=self.thread_pool_id,
             )

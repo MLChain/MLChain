@@ -5,7 +5,7 @@ from uuid import uuid4
 from pydantic import BaseModel, model_validator
 from upstash_vector import Index, Vector
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.rag.datasource.vdb.vector_base import BaseVector
 from core.rag.datasource.vdb.vector_factory import AbstractVectorFactory
 from core.rag.datasource.vdb.vector_type import VectorType

@@ -29,9 +29,9 @@ class RerankModelRunner(BaseRerankRunner):
         docs = []
         doc_id = []
         unique_documents = []
-        mlchain_documents = [item for item in documents if item.provider == "mlchain"]
+        mlchain_documents = [item for item in documents if item.provider == "mlchain"]
         external_documents = [item for item in documents if item.provider == "external"]
-        for document in mlchain_documents:
+        for document in mlchain_documents:
             if document.metadata["doc_id"] not in doc_id:
                 doc_id.append(document.metadata["doc_id"])
                 docs.append(document.page_content)

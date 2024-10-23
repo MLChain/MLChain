@@ -4,7 +4,7 @@ from flask import request
 from flask_restful import Resource, reqparse
 from werkzeug.exceptions import NotFound, Unauthorized
 
-from configs import mlchain_config
+from configs import mlchain_config
 from constants.languages import supported_language
 from controllers.console import api
 from controllers.console.wraps import only_edition_cloud
@@ -15,7 +15,7 @@ from models.model import App, InstalledApp, RecommendedApp
 def admin_required(view):
     @wraps(view)
     def decorated(*args, **kwargs):
-        if not mlchain_config.ADMIN_API_KEY:
+        if not mlchain_config.ADMIN_API_KEY:
             raise Unauthorized("API key is invalid.")
 
         auth_header = request.headers.get("Authorization")
@@ -31,7 +31,7 @@ def admin_required(view):
         if auth_scheme != "bearer":
             raise Unauthorized("Invalid Authorization header format. Expected 'Bearer <api-key>' format.")
 
-        if mlchain_config.ADMIN_API_KEY != auth_token:
+        if mlchain_config.ADMIN_API_KEY != auth_token:
             raise Unauthorized("API key is invalid.")
 
         return view(*args, **kwargs)

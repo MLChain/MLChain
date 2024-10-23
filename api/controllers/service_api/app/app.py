@@ -1,6 +1,6 @@
 from flask_restful import Resource, fields, marshal_with
 
-from configs import mlchain_config
+from configs import mlchain_config
 from controllers.service_api import api
 from controllers.service_api.app.error import AppUnavailableError
 from controllers.service_api.wraps import validate_app_token
@@ -81,7 +81,7 @@ class AppParameterApi(Resource):
                     }
                 },
             ),
-            "system_parameters": {"image_file_size_limit": mlchain_config.UPLOAD_IMAGE_FILE_SIZE_LIMIT},
+            "system_parameters": {"image_file_size_limit": mlchain_config.UPLOAD_IMAGE_FILE_SIZE_LIMIT},
         }
 
 

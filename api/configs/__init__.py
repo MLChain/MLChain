@@ -1,3 +1,3 @@
-from .app_config import MlchainConfig
+from .app_config import MlchainConfig
 
-mlchain_config = MlchainConfig()
+mlchain_config = MlchainConfig()

@@ -3,7 +3,7 @@ from collections import OrderedDict
 from collections.abc import Callable
 from typing import Any
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.tools.utils.yaml_utils import load_yaml_file
 
 

@@ -1,6 +1,6 @@
 identity:
   name: podcast_audio_generator
-  author: Mlchain
+  author: Mlchain
   label:
     en_US: Podcast Audio Generator
     zh_Hans: 播客音频生成器

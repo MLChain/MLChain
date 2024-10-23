@@ -5,7 +5,7 @@ from flask_login import current_user
 from flask_restful import Resource, reqparse
 from werkzeug.exceptions import Forbidden
 
-from configs import mlchain_config
+from configs import mlchain_config
 from controllers.console import api
 from controllers.console.setup import setup_required
 from controllers.console.wraps import account_initialization_required
@@ -119,7 +119,7 @@ class ToolBuiltinProviderIconApi(Resource):
     @setup_required
     def get(self, provider):
         icon_bytes, mimetype = BuiltinToolManageService.get_builtin_tool_provider_icon(provider)
-        icon_cache_max_age = mlchain_config.TOOL_ICON_CACHE_MAX_AGE
+        icon_cache_max_age = mlchain_config.TOOL_ICON_CACHE_MAX_AGE
         return send_file(io.BytesIO(icon_bytes), mimetype=mimetype, max_age=icon_cache_max_age)
 
 

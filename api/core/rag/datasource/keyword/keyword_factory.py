@@ -1,6 +1,6 @@
 from typing import Any
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.rag.datasource.keyword.keyword_base import BaseKeyword
 from core.rag.datasource.keyword.keyword_type import KeyWordType
 from core.rag.models.document import Document
@@ -13,7 +13,7 @@ class Keyword:
         self._keyword_processor = self._init_keyword()
 
     def _init_keyword(self) -> BaseKeyword:
-        keyword_type = mlchain_config.KEYWORD_STORE
+        keyword_type = mlchain_config.KEYWORD_STORE
         keyword_factory = self.get_keyword_factory(keyword_type)
         return keyword_factory(self._dataset)
 

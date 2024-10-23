@@ -3,7 +3,7 @@ from typing import Any, Union
 
 from openai._exceptions import RateLimitError
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.app.apps.advanced_chat.app_generator import AdvancedChatAppGenerator
 from core.app.apps.agent_chat.app_generator import AgentChatAppGenerator
 from core.app.apps.chat.app_generator import ChatAppGenerator

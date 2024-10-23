@@ -5,7 +5,7 @@ from typing import Optional, cast
 import numpy as np
 from sqlalchemy.exc import IntegrityError
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.entities.embedding_type import EmbeddingInputType
 from core.model_manager import ModelInstance
 from core.model_runtime.entities.model_entities import ModelPropertyKey
@@ -111,7 +111,7 @@ class CacheEmbedding(Embeddings):
             embedding_results = embedding_result.embeddings[0]
             embedding_results = (embedding_results / np.linalg.norm(embedding_results)).tolist()
         except Exception as ex:
-            if mlchain_config.DEBUG:
+            if mlchain_config.DEBUG:
                 logging.exception(f"Failed to embed query text: {ex}")
             raise ex
 
@@ -125,7 +125,7 @@ class CacheEmbedding(Embeddings):
             encoded_str = encoded_vector.decode("utf-8")
             redis_client.setex(embedding_cache_key, 600, encoded_str)
         except Exception as ex:
-            if mlchain_config.DEBUG:
+            if mlchain_config.DEBUG:
                 logging.exception("Failed to add embedding to redis %s", ex)
             raise ex
 

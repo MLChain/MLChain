@@ -1,6 +1,6 @@
 from typing import Optional
 
-from configs import mlchain_config
+from configs import mlchain_config
 from services.recommend_app.recommend_app_factory import RecommendAppRetrievalFactory
 
 
@@ -12,7 +12,7 @@ class RecommendedAppService:
         :param language: language
         :return:
         """
-        mode = mlchain_config.HOSTED_FETCH_APP_TEMPLATES_MODE
+        mode = mlchain_config.HOSTED_FETCH_APP_TEMPLATES_MODE
         retrieval_instance = RecommendAppRetrievalFactory.get_recommend_app_factory(mode)()
         result = retrieval_instance.get_recommended_apps_and_categories(language)
         if not result.get("recommended_apps") and language != "en-US":
@@ -31,7 +31,7 @@ class RecommendedAppService:
         :param app_id: app id
         :return:
         """
-        mode = mlchain_config.HOSTED_FETCH_APP_TEMPLATES_MODE
+        mode = mlchain_config.HOSTED_FETCH_APP_TEMPLATES_MODE
         retrieval_instance = RecommendAppRetrievalFactory.get_recommend_app_factory(mode)()
         result = retrieval_instance.get_recommend_app_detail(app_id)
         return result

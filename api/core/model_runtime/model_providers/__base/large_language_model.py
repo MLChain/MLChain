@@ -7,7 +7,7 @@ from typing import Optional, Union
 
 from pydantic import ConfigDict
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.model_runtime.callbacks.base_callback import Callback
 from core.model_runtime.callbacks.logging_callback import LoggingCallback
 from core.model_runtime.entities.llm_entities import LLMMode, LLMResult, LLMResultChunk, LLMResultChunkDelta, LLMUsage
@@ -77,7 +77,7 @@ class LargeLanguageModel(AIModel):
 
         callbacks = callbacks or []
 
-        if mlchain_config.DEBUG:
+        if mlchain_config.DEBUG:
             callbacks.append(LoggingCallback())
 
         # trigger before invoke callbacks

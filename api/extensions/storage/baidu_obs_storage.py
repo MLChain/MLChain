@@ -6,7 +6,7 @@ from baidubce.auth.bce_credentials import BceCredentials
 from baidubce.bce_client_configuration import BceClientConfiguration
 from baidubce.services.bos.bos_client import BosClient
 
-from configs import mlchain_config
+from configs import mlchain_config
 from extensions.storage.base_storage import BaseStorage
 
 
@@ -15,7 +15,7 @@ class BaiduObsStorage(BaseStorage):
 
     def __init__(self):
         super().__init__()
-        self.bucket_name = mlchain_config.BAIDU_OBS_BUCKET_NAME
+        self.bucket_name = mlchain_config.BAIDU_OBS_BUCKET_NAME
         client_config = BceClientConfiguration(
             credentials=BceCredentials(
                 access_key_id=mlchain_config.BAIDU_OBS_ACCESS_KEY,

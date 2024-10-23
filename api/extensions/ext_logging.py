@@ -5,12 +5,12 @@ from logging.handlers import RotatingFileHandler
 
 from flask import Flask
 
-from configs import mlchain_config
+from configs import mlchain_config
 
 
 def init_app(app: Flask):
     log_handlers = None
-    log_file = mlchain_config.LOG_FILE
+    log_file = mlchain_config.LOG_FILE
     if log_file:
         log_dir = os.path.dirname(log_file)
         os.makedirs(log_dir, exist_ok=True)
@@ -30,7 +30,7 @@ def init_app(app: Flask):
         handlers=log_handlers,
         force=True,
     )
-    log_tz = mlchain_config.LOG_TZ
+    log_tz = mlchain_config.LOG_TZ
     if log_tz:
         from datetime import datetime
 

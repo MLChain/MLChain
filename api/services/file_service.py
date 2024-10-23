@@ -7,7 +7,7 @@ from flask_login import current_user
 from werkzeug.datastructures import FileStorage
 from werkzeug.exceptions import NotFound
 
-from configs import mlchain_config
+from configs import mlchain_config
 from constants import (
     AUDIO_EXTENSIONS,
     DOCUMENT_EXTENSIONS,
@@ -44,13 +44,13 @@ class FileService:
 
         # select file size limit
         if extension in IMAGE_EXTENSIONS:
-            file_size_limit = mlchain_config.UPLOAD_IMAGE_FILE_SIZE_LIMIT * 1024 * 1024
+            file_size_limit = mlchain_config.UPLOAD_IMAGE_FILE_SIZE_LIMIT * 1024 * 1024
         elif extension in VIDEO_EXTENSIONS:
-            file_size_limit = mlchain_config.UPLOAD_VIDEO_FILE_SIZE_LIMIT * 1024 * 1024
+            file_size_limit = mlchain_config.UPLOAD_VIDEO_FILE_SIZE_LIMIT * 1024 * 1024
         elif extension in AUDIO_EXTENSIONS:
-            file_size_limit = mlchain_config.UPLOAD_AUDIO_FILE_SIZE_LIMIT * 1024 * 1024
+            file_size_limit = mlchain_config.UPLOAD_AUDIO_FILE_SIZE_LIMIT * 1024 * 1024
         else:
-            file_size_limit = mlchain_config.UPLOAD_FILE_SIZE_LIMIT * 1024 * 1024
+            file_size_limit = mlchain_config.UPLOAD_FILE_SIZE_LIMIT * 1024 * 1024
 
         # read file content
         file_content = file.read()

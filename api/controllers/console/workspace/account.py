@@ -5,7 +5,7 @@ from flask import request
 from flask_login import current_user
 from flask_restful import Resource, fields, marshal_with, reqparse
 
-from configs import mlchain_config
+from configs import mlchain_config
 from constants.languages import supported_language
 from controllers.console import api
 from controllers.console.setup import setup_required
@@ -36,14 +36,14 @@ class AccountInitApi(Resource):
 
         parser = reqparse.RequestParser()
 
-        if mlchain_config.EDITION == "CLOUD":
+        if mlchain_config.EDITION == "CLOUD":
             parser.add_argument("invitation_code", type=str, location="json")
 
         parser.add_argument("interface_language", type=supported_language, required=True, location="json")
         parser.add_argument("timezone", type=timezone, required=True, location="json")
         args = parser.parse_args()
 
-        if mlchain_config.EDITION == "CLOUD":
+        if mlchain_config.EDITION == "CLOUD":
             if not args["invitation_code"]:
                 raise ValueError("invitation_code is required")
 

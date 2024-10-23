@@ -10,7 +10,7 @@ from core.model_runtime.model_providers.openai_api_compatible.llm.llm import OAI
 class NovitaLargeLanguageModel(OAIAPICompatLargeLanguageModel):
     def _update_endpoint_url(self, credentials: dict):
         credentials["endpoint_url"] = "https://api.novita.ai/v3/openai"
-        credentials["extra_headers"] = {"X-Novita-Source": "mlchain.ai"}
+        credentials["extra_headers"] = {"X-Novita-Source": "mlchain.khulnasoft.com"}
         return credentials
 
     def _invoke(

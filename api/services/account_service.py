@@ -12,7 +12,7 @@ from pydantic import BaseModel
 from sqlalchemy import func
 from werkzeug.exceptions import Unauthorized
 
-from configs import mlchain_config
+from configs import mlchain_config
 from constants.languages import language_timezone_mapping, languages
 from events.tenant_event import tenant_was_created
 from extensions.ext_database import db
@@ -31,7 +31,7 @@ from models.account import (
     TenantAccountRole,
     TenantStatus,
 )
-from models.model import MlchainSetup
+from models.model import MlchainSetup
 from services.errors.account import (
     AccountAlreadyInTenantError,
     AccountLoginError,
@@ -128,7 +128,7 @@ class AccountService:
         payload = {
             "user_id": account.id,
             "exp": exp,
-            "iss": mlchain_config.EDITION,
+            "iss": mlchain_config.EDITION,
             "sub": "Console API Passport",
         }
 
@@ -456,7 +456,7 @@ class AccountService:
         current_minute_count = int(current_minute_count)
 
         # check current hour count
-        if current_minute_count > mlchain_config.EMAIL_SEND_IP_LIMIT_PER_MINUTE:
+        if current_minute_count > mlchain_config.EMAIL_SEND_IP_LIMIT_PER_MINUTE:
             hour_limit_count = redis_client.get(hour_limit_key)
             if hour_limit_count is None:
                 hour_limit_count = 0
@@ -741,7 +741,7 @@ class RegisterService:
     @classmethod
     def setup(cls, email: str, name: str, password: str, ip_address: str) -> None:
         """
-        Setup mlchain
+        Setup mlchain
 
         :param email: email
         :param name: username
@@ -763,11 +763,11 @@ class RegisterService:
 
             TenantService.create_owner_tenant_if_not_exist(account=account, is_setup=True)
 
-            mlchain_setup = MlchainSetup(version=mlchain_config.CURRENT_VERSION)
+            mlchain_setup = MlchainSetup(version=mlchain_config.CURRENT_VERSION)
             db.session.add(mlchain_setup)
             db.session.commit()
         except Exception as e:
-            db.session.query(DifySetup).delete()
+            db.session.query(MlchainSetup).delete()
             db.session.query(TenantAccountJoin).delete()
             db.session.query(Account).delete()
             db.session.query(Tenant).delete()
@@ -869,7 +869,7 @@ class RegisterService:
             "email": account.email,
             "workspace_id": tenant.id,
         }
-        expiry_hours = mlchain_config.INVITE_EXPIRY_HOURS
+        expiry_hours = mlchain_config.INVITE_EXPIRY_HOURS
         redis_client.setex(cls._get_invitation_token_key(token), expiry_hours * 60 * 60, json.dumps(invitation_data))
         return token
 

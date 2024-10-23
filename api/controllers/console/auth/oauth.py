@@ -7,7 +7,7 @@ from flask import current_app, redirect, request
 from flask_restful import Resource
 from werkzeug.exceptions import Unauthorized
 
-from configs import mlchain_config
+from configs import mlchain_config
 from constants.languages import languages
 from events.tenant_event import tenant_was_created
 from extensions.ext_database import db
@@ -25,7 +25,7 @@ from .. import api
 
 def get_oauth_providers():
     with current_app.app_context():
-        if not mlchain_config.GITHUB_CLIENT_ID or not mlchain_config.GITHUB_CLIENT_SECRET:
+        if not mlchain_config.GITHUB_CLIENT_ID or not mlchain_config.GITHUB_CLIENT_SECRET:
             github_oauth = None
         else:
             github_oauth = GitHubOAuth(
@@ -33,7 +33,7 @@ def get_oauth_providers():
                 client_secret=mlchain_config.GITHUB_CLIENT_SECRET,
                 redirect_uri=mlchain_config.CONSOLE_API_URL + "/console/api/oauth/authorize/github",
             )
-        if not mlchain_config.GOOGLE_CLIENT_ID or not mlchain_config.GOOGLE_CLIENT_SECRET:
+        if not mlchain_config.GOOGLE_CLIENT_ID or not mlchain_config.GOOGLE_CLIENT_SECRET:
             google_oauth = None
         else:
             google_oauth = GoogleOAuth(

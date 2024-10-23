@@ -7,7 +7,7 @@ import psycopg2.extras
 import psycopg2.pool
 from pydantic import BaseModel, model_validator
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.rag.datasource.vdb.vector_base import BaseVector
 from core.rag.datasource.vdb.vector_factory import AbstractVectorFactory
 from core.rag.datasource.vdb.vector_type import VectorType

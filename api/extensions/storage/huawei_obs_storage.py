@@ -2,7 +2,7 @@ from collections.abc import Generator
 
 from obs import ObsClient
 
-from configs import mlchain_config
+from configs import mlchain_config
 from extensions.storage.base_storage import BaseStorage
 
 
@@ -12,7 +12,7 @@ class HuaweiObsStorage(BaseStorage):
     def __init__(self):
         super().__init__()
 
-        self.bucket_name = mlchain_config.HUAWEI_OBS_BUCKET_NAME
+        self.bucket_name = mlchain_config.HUAWEI_OBS_BUCKET_NAME
         self.client = ObsClient(
             access_key_id=mlchain_config.HUAWEI_OBS_ACCESS_KEY,
             secret_access_key=mlchain_config.HUAWEI_OBS_SECRET_KEY,
