@@ -52,6 +52,10 @@ const OPTION_MAP = {
   #mlchain-chatbot-bubble-button {
     background-color: ${primaryColor} !important;
   }
+  #mlchain-chatbot-bubble-window {
+    width: 24rem !important;
+    height: 40rem !important;
+  }
 </style>`,
   },
   chromePlugin: {
