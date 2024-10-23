@@ -1,9 +1,9 @@
-import os
 from collections.abc import Mapping, Sequence
 from typing import Any, Optional, TextIO, Union
 
 from pydantic import BaseModel
 
+from configs import mlchain_config
 from core.ops.entities.trace_entity import TraceTaskName
 from core.ops.ops_trace_manager import TraceQueueManager, TraceTask
 from core.tools.entities.tool_entities import ToolInvokeMessage
@@ -31,7 +31,7 @@ def print_text(text: str, color: Optional[str] = None, end: str = "", file: Opti
         file.flush()  # ensure all printed content are written to file
 
 
-class MlchainAgentCallbackHandler(BaseModel):
+class MlchainAgentCallbackHandler(BaseModel):
     """Callback Handler that prints to std out."""
 
     color: Optional[str] = ""
@@ -50,7 +50,8 @@ class MlchainAgentCallbackHandler(BaseModel):
         tool_inputs: Mapping[str, Any],
     ) -> None:
         """Do nothing."""
-        print_text("\n[on_tool_start] ToolCall:" + tool_name + "\n" + str(tool_inputs) + "\n", color=self.color)
+        if mlchain_config.DEBUG:
+            print_text("\n[on_tool_start] ToolCall:" + tool_name + "\n" + str(tool_inputs) + "\n", color=self.color)
 
     def on_tool_end(
         self,
@@ -62,11 +63,12 @@ class MlchainAgentCallbackHandler(BaseModel):
         trace_manager: Optional[TraceQueueManager] = None,
     ) -> None:
         """If not the final action, print out observation."""
-        print_text("\n[on_tool_end]\n", color=self.color)
-        print_text("Tool: " + tool_name + "\n", color=self.color)
-        print_text("Inputs: " + str(tool_inputs) + "\n", color=self.color)
-        print_text("Outputs: " + str(tool_outputs)[:1000] + "\n", color=self.color)
-        print_text("\n")
+        if mlchain_config.DEBUG:
+            print_text("\n[on_tool_end]\n", color=self.color)
+            print_text("Tool: " + tool_name + "\n", color=self.color)
+            print_text("Inputs: " + str(tool_inputs) + "\n", color=self.color)
+            print_text("Outputs: " + str(tool_outputs)[:1000] + "\n", color=self.color)
+            print_text("\n")
 
         if trace_manager:
             trace_manager.add_trace_task(
@@ -82,30 +84,33 @@ class MlchainAgentCallbackHandler(BaseModel):
 
     def on_tool_error(self, error: Union[Exception, KeyboardInterrupt], **kwargs: Any) -> None:
         """Do nothing."""
-        print_text("\n[on_tool_error] Error: " + str(error) + "\n", color="red")
+        if mlchain_config.DEBUG:
+            print_text("\n[on_tool_error] Error: " + str(error) + "\n", color="red")
 
     def on_agent_start(self, thought: str) -> None:
         """Run on agent start."""
-        if thought:
-            print_text(
-                "\n[on_agent_start] \nCurrent Loop: " + str(self.current_loop) + "\nThought: " + thought + "\n",
-                color=self.color,
-            )
-        else:
-            print_text("\n[on_agent_start] \nCurrent Loop: " + str(self.current_loop) + "\n", color=self.color)
+        if mlchain_config.DEBUG:
+            if thought:
+                print_text(
+                    "\n[on_agent_start] \nCurrent Loop: " + str(self.current_loop) + "\nThought: " + thought + "\n",
+                    color=self.color,
+                )
+            else:
+                print_text("\n[on_agent_start] \nCurrent Loop: " + str(self.current_loop) + "\n", color=self.color)
 
     def on_agent_finish(self, color: Optional[str] = None, **kwargs: Any) -> None:
         """Run on agent end."""
-        print_text("\n[on_agent_finish]\n Loop: " + str(self.current_loop) + "\n", color=self.color)
+        if mlchain_config.DEBUG:
+            print_text("\n[on_agent_finish]\n Loop: " + str(self.current_loop) + "\n", color=self.color)
 
         self.current_loop += 1
 
     @property
     def ignore_agent(self) -> bool:
         """Whether to ignore agent callbacks."""
-        return not os.environ.get("DEBUG") or os.environ.get("DEBUG").lower() != "true"
+        return not mlchain_config.DEBUG
 
     @property
     def ignore_chat_model(self) -> bool:
         """Whether to ignore chat model callbacks."""
-        return not os.environ.get("DEBUG") or os.environ.get("DEBUG").lower() != "true"
+        return not mlchain_config.DEBUG

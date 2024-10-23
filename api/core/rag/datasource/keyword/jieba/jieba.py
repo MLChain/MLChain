@@ -4,7 +4,7 @@ from typing import Any, Optional
 
 from pydantic import BaseModel
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.rag.datasource.keyword.jieba.jieba_keyword_table_handler import JiebaKeywordTableHandler
 from core.rag.datasource.keyword.keyword_base import BaseKeyword
 from core.rag.models.document import Document
@@ -29,7 +29,9 @@ class Jieba(BaseKeyword):
             keyword_table_handler = JiebaKeywordTableHandler()
             keyword_table = self._get_dataset_keyword_table()
             for text in texts:
-                keywords = keyword_table_handler.extract_keywords(text.page_content, self._config.max_keywords_per_chunk)
+                keywords = keyword_table_handler.extract_keywords(
+                    text.page_content, self._config.max_keywords_per_chunk
+                )
                 self._update_segment_keywords(self.dataset.id, text.metadata["doc_id"], list(keywords))
                 keyword_table = self._add_text_to_keyword_table(keyword_table, text.metadata["doc_id"], list(keywords))
 
@@ -137,7 +139,7 @@ class Jieba(BaseKeyword):
             if keyword_table_dict:
                 return keyword_table_dict["__data__"]["table"]
         else:
-            keyword_data_source_type = mlchain_config.KEYWORD_DATA_SOURCE_TYPE
+            keyword_data_source_type = mlchain_config.KEYWORD_DATA_SOURCE_TYPE
             dataset_keyword_table = DatasetKeywordTable(
                 dataset_id=self.dataset.id,
                 keyword_table="",

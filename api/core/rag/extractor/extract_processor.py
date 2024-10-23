@@ -1,10 +1,10 @@
 import re
 import tempfile
 from pathlib import Path
-from typing import Union
+from typing import Optional, Union
 from urllib.parse import unquote
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.helper import ssrf_proxy
 from core.rag.extractor.csv_extractor import CSVExtractor
 from core.rag.extractor.entity.datasource_type import DatasourceType
@@ -21,6 +21,7 @@ from core.rag.extractor.unstructured.unstructured_eml_extractor import Unstructu
 from core.rag.extractor.unstructured.unstructured_epub_extractor import UnstructuredEpubExtractor
 from core.rag.extractor.unstructured.unstructured_markdown_extractor import UnstructuredMarkdownExtractor
 from core.rag.extractor.unstructured.unstructured_msg_extractor import UnstructuredMsgExtractor
+from core.rag.extractor.unstructured.unstructured_pdf_extractor import UnstructuredPDFExtractor
 from core.rag.extractor.unstructured.unstructured_ppt_extractor import UnstructuredPPTExtractor
 from core.rag.extractor.unstructured.unstructured_pptx_extractor import UnstructuredPPTXExtractor
 from core.rag.extractor.unstructured.unstructured_text_extractor import UnstructuredTextExtractor
@@ -84,7 +85,7 @@ class ExtractProcessor:
 
     @classmethod
     def extract(
-        cls, extract_setting: ExtractSetting, is_automatic: bool = False, file_path: str = None
+        cls, extract_setting: ExtractSetting, is_automatic: bool = False, file_path: Optional[str] = None
     ) -> list[Document]:
         if extract_setting.datasource_type == DatasourceType.FILE.value:
             with tempfile.TemporaryDirectory() as temp_dir:
@@ -95,17 +96,17 @@ class ExtractProcessor:
                     storage.download(upload_file.key, file_path)
                 input_file = Path(file_path)
                 file_extension = input_file.suffix.lower()
-                etl_type = mlchain_config.ETL_TYPE
-                unstructured_api_url = mlchain_config.UNSTRUCTURED_API_URL
-                unstructured_api_key = mlchain_config.UNSTRUCTURED_API_KEY
+                etl_type = mlchain_config.ETL_TYPE
+                unstructured_api_url = mlchain_config.UNSTRUCTURED_API_URL
+                unstructured_api_key = mlchain_config.UNSTRUCTURED_API_KEY
                 if etl_type == "Unstructured":
                     if file_extension in {".xlsx", ".xls"}:
                         extractor = ExcelExtractor(file_path)
                     elif file_extension == ".pdf":
-                        extractor = PdfExtractor(file_path)
+                        extractor = UnstructuredPDFExtractor(file_path, unstructured_api_url, unstructured_api_key)
                     elif file_extension in {".md", ".markdown"}:
                         extractor = (
-                            UnstructuredMarkdownExtractor(file_path, unstructured_api_url)
+                            UnstructuredMarkdownExtractor(file_path, unstructured_api_url, unstructured_api_key)
                             if is_automatic
                             else MarkdownExtractor(file_path, autodetect_encoding=True)
                         )
@@ -116,17 +117,17 @@ class ExtractProcessor:
                     elif file_extension == ".csv":
                         extractor = CSVExtractor(file_path, autodetect_encoding=True)
                     elif file_extension == ".msg":
-                        extractor = UnstructuredMsgExtractor(file_path, unstructured_api_url)
+                        extractor = UnstructuredMsgExtractor(file_path, unstructured_api_url, unstructured_api_key)
                     elif file_extension == ".eml":
-                        extractor = UnstructuredEmailExtractor(file_path, unstructured_api_url)
+                        extractor = UnstructuredEmailExtractor(file_path, unstructured_api_url, unstructured_api_key)
                     elif file_extension == ".ppt":
                         extractor = UnstructuredPPTExtractor(file_path, unstructured_api_url, unstructured_api_key)
                     elif file_extension == ".pptx":
-                        extractor = UnstructuredPPTXExtractor(file_path, unstructured_api_url)
+                        extractor = UnstructuredPPTXExtractor(file_path, unstructured_api_url, unstructured_api_key)
                     elif file_extension == ".xml":
-                        extractor = UnstructuredXmlExtractor(file_path, unstructured_api_url)
+                        extractor = UnstructuredXmlExtractor(file_path, unstructured_api_url, unstructured_api_key)
                     elif file_extension == ".epub":
-                        extractor = UnstructuredEpubExtractor(file_path, unstructured_api_url)
+                        extractor = UnstructuredEpubExtractor(file_path, unstructured_api_url, unstructured_api_key)
                     else:
                         # txt
                         extractor = (

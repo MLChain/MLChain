@@ -7,7 +7,8 @@ from controllers.console.setup import setup_required
 from controllers.console.wraps import account_initialization_required
 from fields.workflow_app_log_fields import workflow_app_log_pagination_fields
 from libs.login import login_required
-from models.model import App, AppMode
+from models import App
+from models.model import AppMode
 from services.workflow_app_service import WorkflowAppService
 
 
@@ -30,7 +31,9 @@ class WorkflowAppLogApi(Resource):
 
         # get paginate workflow app logs
         workflow_app_service = WorkflowAppService()
-        workflow_app_log_pagination = workflow_app_service.get_paginate_workflow_app_logs(app_model=app_model, args=args)
+        workflow_app_log_pagination = workflow_app_service.get_paginate_workflow_app_logs(
+            app_model=app_model, args=args
+        )
 
         return workflow_app_log_pagination
 

@@ -2,9 +2,10 @@ from typing import Optional
 
 from core.model_manager import ModelInstance
 from core.rag.models.document import Document
+from core.rag.rerank.rerank_base import BaseRerankRunner
 
 
-class RerankModelRunner:
+class RerankModelRunner(BaseRerankRunner):
     def __init__(self, rerank_model_instance: ModelInstance) -> None:
         self.rerank_model_instance = rerank_model_instance
 
@@ -28,9 +29,9 @@ class RerankModelRunner:
         docs = []
         doc_id = []
         unique_documents = []
-        mlchain_documents = [item for item in documents if item.provider == "mlchain"]
+        mlchain_documents = [item for item in documents if item.provider == "mlchain"]
         external_documents = [item for item in documents if item.provider == "external"]
-        for document in mlchain_documents:
+        for document in mlchain_documents:
             if document.metadata["doc_id"] not in doc_id:
                 doc_id.append(document.metadata["doc_id"])
                 docs.append(document.page_content)

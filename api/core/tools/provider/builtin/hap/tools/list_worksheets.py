@@ -41,7 +41,9 @@ class ListWorksheetsTool(BuiltinTool):
             res_json = res.json()
             if res.is_success:
                 if res_json["error_code"] != 1:
-                    return self.create_text_message("Failed to access the application. {}".format(res_json["error_msg"]))
+                    return self.create_text_message(
+                        "Failed to access the application. {}".format(res_json["error_msg"])
+                    )
                 else:
                     if result_type == "json":
                         worksheets = []

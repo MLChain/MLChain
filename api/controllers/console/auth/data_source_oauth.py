@@ -6,7 +6,7 @@ from flask_login import current_user
 from flask_restful import Resource
 from werkzeug.exceptions import Forbidden
 
-from configs import mlchain_config
+from configs import mlchain_config
 from controllers.console import api
 from libs.login import login_required
 from libs.oauth_data_source import NotionOAuth
@@ -38,8 +38,8 @@ class OAuthDataSource(Resource):
             print(vars(oauth_provider))
         if not oauth_provider:
             return {"error": "Invalid provider"}, 400
-        if mlchain_config.NOTION_INTEGRATION_TYPE == "internal":
-            internal_secret = mlchain_config.NOTION_INTERNAL_SECRET
+        if mlchain_config.NOTION_INTEGRATION_TYPE == "internal":
+            internal_secret = mlchain_config.NOTION_INTERNAL_SECRET
             if not internal_secret:
                 return ({"error": "Internal secret is not set"},)
             oauth_provider.save_internal_access_token(internal_secret)

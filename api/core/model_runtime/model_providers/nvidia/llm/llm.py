@@ -216,7 +216,8 @@ class NVIDIALargeLanguageModel(OAIAPICompatLargeLanguageModel):
         if tools:
             if function_calling_type == "function_call":
                 data["functions"] = [
-                    {"name": tool.name, "description": tool.description, "parameters": tool.parameters} for tool in tools
+                    {"name": tool.name, "description": tool.description, "parameters": tool.parameters}
+                    for tool in tools
                 ]
             elif function_calling_type == "tool_call":
                 data["tool_choice"] = "auto"

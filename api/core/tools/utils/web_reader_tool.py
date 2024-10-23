@@ -9,6 +9,7 @@ import tempfile
 import unicodedata
 from contextlib import contextmanager
 from pathlib import Path
+from typing import Optional
 from urllib.parse import unquote
 
 import chardet
@@ -36,7 +37,7 @@ def page_result(text: str, cursor: int, max_length: int) -> str:
     return text[cursor : cursor + max_length]
 
 
-def get_url(url: str, user_agent: str = None) -> str:
+def get_url(url: str, user_agent: Optional[str] = None) -> str:
     """Fetch URL and return the contents as a string."""
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)"
@@ -290,7 +291,10 @@ def strip_control_characters(text):
 
     # Remove non-printing control characters
     return "".join(
-        ["" if (unicodedata.category(char) in control_chars) and (char not in retained_chars) else char for char in text]
+        [
+            "" if (unicodedata.category(char) in control_chars) and (char not in retained_chars) else char
+            for char in text
+        ]
     )
 
 

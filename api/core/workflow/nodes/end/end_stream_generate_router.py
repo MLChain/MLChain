@@ -1,5 +1,5 @@
-from core.workflow.entities.node_entities import NodeType
 from core.workflow.nodes.end.entities import EndNodeData, EndStreamParam
+from core.workflow.nodes.enums import NodeType
 
 
 class EndStreamGeneratorRouter:
@@ -72,7 +72,9 @@ class EndStreamGeneratorRouter:
         return value_selectors
 
     @classmethod
-    def _extract_stream_variable_selector(cls, node_id_config_mapping: dict[str, dict], config: dict) -> list[list[str]]:
+    def _extract_stream_variable_selector(
+        cls, node_id_config_mapping: dict[str, dict], config: dict
+    ) -> list[list[str]]:
         """
         Extract stream variable selector from node config
         :param node_id_config_mapping: node id config mapping

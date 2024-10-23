@@ -146,7 +146,7 @@ Similar to vendor credential validation, but specific to a single model.
 
 - Map Invoke Errors
 
-When a model call fails, map it to a specific `InvokeError` type as required by Runtime, allowing Mlchain to handle different errors accordingly.
+When a model call fails, map it to a specific `InvokeError` type as required by Runtime, allowing Mlchain to handle different errors accordingly.
 
 Runtime Errors:
 

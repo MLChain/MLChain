@@ -1,6 +1,6 @@
 import requests
 
-from configs import mlchain_config
+from configs import mlchain_config
 from models.api_based_extension import APIBasedExtensionPoint
 
 
@@ -27,10 +27,10 @@ class APIBasedExtensionRequestor:
         try:
             # proxy support for security
             proxies = None
-            if mlchain_config.SSRF_PROXY_HTTP_URL and mlchain_config.SSRF_PROXY_HTTPS_URL:
+            if mlchain_config.SSRF_PROXY_HTTP_URL and mlchain_config.SSRF_PROXY_HTTPS_URL:
                 proxies = {
-                    "http": mlchain_config.SSRF_PROXY_HTTP_URL,
-                    "https": mlchain_config.SSRF_PROXY_HTTPS_URL,
+                    "http": mlchain_config.SSRF_PROXY_HTTP_URL,
+                    "https": mlchain_config.SSRF_PROXY_HTTPS_URL,
                 }
 
             response = requests.request(

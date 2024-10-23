@@ -14,7 +14,7 @@ class SearchAPIProvider(BuiltinToolProviderController):
                 }
             ).invoke(
                 user_id="",
-                tool_parameters={"query": "SearchApi mlchain", "result_type": "link"},
+                tool_parameters={"query": "SearchApi mlchain", "result_type": "link"},
             )
         except Exception as e:
             raise ToolProviderCredentialValidationError(str(e))

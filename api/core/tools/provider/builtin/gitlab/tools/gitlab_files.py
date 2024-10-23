@@ -75,7 +75,9 @@ class GitlabFilesTool(BuiltinTool):
                             f"/{item_path}/raw?ref={branch}"
                         )
                     else:
-                        file_url = f"{domain}/api/v4/projects/{project_id}/repository/files/{item_path}/raw?ref={branch}"
+                        file_url = (
+                            f"{domain}/api/v4/projects/{project_id}/repository/files/{item_path}/raw?ref={branch}"
+                        )
 
                     file_response = requests.get(file_url, headers=headers)
                     file_response.raise_for_status()

@@ -5,7 +5,7 @@ import click
 from celery import shared_task
 from flask import render_template
 
-from configs import mlchain_config
+from configs import mlchain_config
 from extensions.ext_mail import mail
 
 
@@ -40,7 +40,7 @@ def send_invite_member_mail_task(language: str, to: str, token: str, inviter_nam
                 workspace_name=workspace_name,
                 url=url,
             )
-            mail.send(to=to, subject="立即加入 Mlchain 工作空间", html=html_content)
+            mail.send(to=to, subject="立即加入 Mlchain 工作空间", html=html_content)
         else:
             html_content = render_template(
                 "invite_member_mail_template_en-US.html",
@@ -49,11 +49,13 @@ def send_invite_member_mail_task(language: str, to: str, token: str, inviter_nam
                 workspace_name=workspace_name,
                 url=url,
             )
-            mail.send(to=to, subject="Join Mlchain Workspace Now", html=html_content)
+            mail.send(to=to, subject="Join Mlchain Workspace Now", html=html_content)
 
         end_at = time.perf_counter()
         logging.info(
-            click.style("Send invite member mail to {} succeeded: latency: {}".format(to, end_at - start_at), fg="green")
+            click.style(
+                "Send invite member mail to {} succeeded: latency: {}".format(to, end_at - start_at), fg="green"
+            )
         )
     except Exception:
         logging.exception("Send invite member mail to {} failed".format(to))

@@ -8,7 +8,7 @@ from configs.middleware import MiddlewareConfig
 from configs.packaging import PackagingInfo
 
 
-class MlchainConfig(
+class MlchainConfig(
     # Packaging info
     PackagingInfo,
     # Deployment configs

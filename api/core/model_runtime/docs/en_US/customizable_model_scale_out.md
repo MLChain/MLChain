@@ -218,7 +218,7 @@ For instance, Xinference supports `max_tokens`, `temperature`, and `top_p` param
 However, some vendors may support different parameters for different models. For example, the `OpenLLM` vendor supports `top_k`, but not all models provided by this vendor support `top_k`. Let's say model A supports `top_k` but model B does not. In such cases, we need to dynamically generate the model parameter schema, as illustrated below:
 
 ```python
-    def get_customizable_model_schema(self, model: str, credentials: dict) -> AIModelEntity | None:
+    def get_customizable_model_schema(self, model: str, credentials: dict) -> Optional[AIModelEntity]:
         """
             used to define customizable model schema
         """
@@ -284,7 +284,7 @@ However, some vendors may support different parameters for different models. For
 
 - Exception Error Mapping
 
-When a model invocation error occurs, it should be mapped to the runtime's specified `InvokeError` type, enabling Mlchain to handle different errors appropriately.
+When a model invocation error occurs, it should be mapped to the runtime's specified `InvokeError` type, enabling Mlchain to handle different errors appropriately.
 
 Runtime Errors:
 

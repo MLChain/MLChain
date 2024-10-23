@@ -6,12 +6,12 @@ from pydantic import BaseModel, model_validator
 from pymilvus import MilvusClient, MilvusException
 from pymilvus.milvus_client import IndexParams
 
-from configs import mlchain_config
-from core.rag.datasource.entity.embedding import Embeddings
+from configs import mlchain_config
 from core.rag.datasource.vdb.field import Field
 from core.rag.datasource.vdb.vector_base import BaseVector
 from core.rag.datasource.vdb.vector_factory import AbstractVectorFactory
 from core.rag.datasource.vdb.vector_type import VectorType
+from core.rag.embedding.embedding_base import Embeddings
 from core.rag.models.document import Document
 from extensions.ext_redis import redis_client
 from models.dataset import Dataset

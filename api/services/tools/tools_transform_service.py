@@ -2,7 +2,7 @@ import json
 import logging
 from typing import Optional, Union
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.tools.entities.api_entities import UserTool, UserToolProvider
 from core.tools.entities.common_entities import I18nObject
 from core.tools.entities.tool_bundle import ApiToolBundle
@@ -29,7 +29,7 @@ class ToolTransformService:
         """
         get tool provider icon url
         """
-        url_prefix = mlchain_config.CONSOLE_API_URL + "/console/api/workspaces/current/tool-provider/"
+        url_prefix = mlchain_config.CONSOLE_API_URL + "/console/api/workspaces/current/tool-provider/"
 
         if provider_type == ToolProviderType.BUILT_IN.value:
             return url_prefix + "builtin/" + provider_name + "/icon"
@@ -144,7 +144,7 @@ class ToolTransformService:
 
     @staticmethod
     def workflow_provider_to_user_provider(
-        provider_controller: WorkflowToolProviderController, labels: list[str] = None
+        provider_controller: WorkflowToolProviderController, labels: Optional[list[str]] = None
     ):
         """
         convert provider controller to user provider
@@ -174,7 +174,7 @@ class ToolTransformService:
         provider_controller: ApiToolProviderController,
         db_provider: ApiToolProvider,
         decrypt_credentials: bool = True,
-        labels: list[str] = None,
+        labels: Optional[list[str]] = None,
     ) -> UserToolProvider:
         """
         convert provider controller to user provider
@@ -223,9 +223,9 @@ class ToolTransformService:
     @staticmethod
     def tool_to_user_tool(
         tool: Union[ApiToolBundle, WorkflowTool, Tool],
-        credentials: dict = None,
-        tenant_id: str = None,
-        labels: list[str] = None,
+        credentials: Optional[dict] = None,
+        tenant_id: Optional[str] = None,
+        labels: Optional[list[str]] = None,
     ) -> UserTool:
         """
         convert tool to user tool

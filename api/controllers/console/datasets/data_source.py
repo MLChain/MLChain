@@ -15,8 +15,7 @@ from core.rag.extractor.notion_extractor import NotionExtractor
 from extensions.ext_database import db
 from fields.data_source_fields import integrate_list_fields, integrate_notion_info_list_fields
 from libs.login import login_required
-from models.dataset import Document
-from models.source import DataSourceOauthBinding
+from models import DataSourceOauthBinding, Document
 from services.dataset_service import DatasetService, DocumentService
 from tasks.document_indexing_sync_task import document_indexing_sync_task
 
@@ -190,7 +189,9 @@ class DataSourceNotionApi(Resource):
         parser.add_argument("notion_info_list", type=list, required=True, nullable=True, location="json")
         parser.add_argument("process_rule", type=dict, required=True, nullable=True, location="json")
         parser.add_argument("doc_form", type=str, default="text_model", required=False, nullable=False, location="json")
-        parser.add_argument("doc_language", type=str, default="English", required=False, nullable=False, location="json")
+        parser.add_argument(
+            "doc_language", type=str, default="English", required=False, nullable=False, location="json"
+        )
         args = parser.parse_args()
         # validate args
         DocumentService.estimate_args_validate(args)
@@ -263,4 +264,6 @@ api.add_resource(
     "/datasets/notion-indexing-estimate",
 )
 api.add_resource(DataSourceNotionDatasetSyncApi, "/datasets/<uuid:dataset_id>/notion/sync")
-api.add_resource(DataSourceNotionDocumentSyncApi, "/datasets/<uuid:dataset_id>/documents/<uuid:document_id>/notion/sync")
+api.add_resource(
+    DataSourceNotionDocumentSyncApi, "/datasets/<uuid:dataset_id>/documents/<uuid:document_id>/notion/sync"
+)

@@ -1,5 +1,5 @@
 import concurrent.futures
-from typing import Optional
+from typing import Any, Optional
 
 from openai import OpenAI
 
@@ -16,7 +16,7 @@ class OpenAIText2SpeechModel(_CommonOpenAI, TTSModel):
 
     def _invoke(
         self, model: str, tenant_id: str, credentials: dict, content_text: str, voice: str, user: Optional[str] = None
-    ) -> any:
+    ) -> Any:
         """
         _invoke text2speech model
 
@@ -49,13 +49,13 @@ class OpenAIText2SpeechModel(_CommonOpenAI, TTSModel):
             self._tts_invoke_streaming(
                 model=model,
                 credentials=credentials,
-                content_text="Hello Mlchain!",
+                content_text="Hello Mlchain!",
                 voice=self._get_model_default_voice(model, credentials),
             )
         except Exception as ex:
             raise CredentialsValidateFailedError(str(ex))
 
-    def _tts_invoke_streaming(self, model: str, credentials: dict, content_text: str, voice: str) -> any:
+    def _tts_invoke_streaming(self, model: str, credentials: dict, content_text: str, voice: str) -> Any:
         """
         _tts_invoke_streaming text2speech model
 

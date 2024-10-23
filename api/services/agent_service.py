@@ -46,7 +46,9 @@ class AgentService:
                 db.session.query(EndUser, EndUser.name).filter(EndUser.id == conversation.from_end_user_id).first()
             )
         else:
-            executor = db.session.query(Account, Account.name).filter(Account.id == conversation.from_account_id).first()
+            executor = (
+                db.session.query(Account, Account.name).filter(Account.id == conversation.from_account_id).first()
+            )
 
         if executor:
             executor = executor.name
@@ -66,7 +68,7 @@ class AgentService:
                 "iterations": len(agent_thoughts),
             },
             "iterations": [],
-            "files": message.files,
+            "files": message.message_files,
         }
 
         agent_config = AgentConfigManager.convert(app_model.app_model_config.to_dict())

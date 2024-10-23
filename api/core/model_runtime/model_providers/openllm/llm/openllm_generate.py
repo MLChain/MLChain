@@ -155,7 +155,9 @@ class OpenLLMGenerate:
 
         return message
 
-    def _handle_chat_stream_generate_response(self, response: Response) -> Generator[OpenLLMGenerateMessage, None, None]:
+    def _handle_chat_stream_generate_response(
+        self, response: Response
+    ) -> Generator[OpenLLMGenerateMessage, None, None]:
         completion_usage = 0
 
         for line in response.iter_lines():

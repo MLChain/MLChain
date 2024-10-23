@@ -1,6 +1,6 @@
 identity:
   name: jina_reader
-  author: Mlchain
+  author: Mlchain
   label:
     en_US: Fetch Single Page
     zh_Hans: 获取单页面

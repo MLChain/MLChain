@@ -40,7 +40,7 @@ parameters:
       en_US: Auto Escape
       zh_Hans: 自动转义
     human_description:
-      en_US: If true, the message will be treated as a CQ code for parsing, otherwise it will be treated as plain text for direct sending. Since Mlchain currently does not support passing Object-format message chains, developers can send complex message components through CQ codes.
-      zh_Hans: 若为 true 则会把 message 视为 CQ 码解析，否则视为 纯文本 直接发送。由于 Mlchain 目前不支持传入 Object格式 的消息，故开发者可以通过 CQ 码来发送复杂消息组件。
+      en_US: If true, the message will be treated as a CQ code for parsing, otherwise it will be treated as plain text for direct sending. Since Mlchain currently does not support passing Object-format message chains, developers can send complex message components through CQ codes.
+      zh_Hans: 若为 true 则会把 message 视为 CQ 码解析，否则视为 纯文本 直接发送。由于 Mlchain 目前不支持传入 Object格式 的消息，故开发者可以通过 CQ 码来发送复杂消息组件。
     llm_description: If true, the message will be treated as a CQ code for parsing, otherwise it will be treated as plain text for direct sending.
     form: form

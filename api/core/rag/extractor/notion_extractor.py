@@ -4,7 +4,7 @@ from typing import Any, Optional
 
 import requests
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.rag.extractor.extractor_base import BaseExtractor
 from core.rag.models.document import Document
 from extensions.ext_database import db
@@ -47,7 +47,7 @@ class NotionExtractor(BaseExtractor):
         else:
             self._notion_access_token = self._get_access_token(tenant_id, self._notion_workspace_id)
             if not self._notion_access_token:
-                integration_token = mlchain_config.NOTION_INTEGRATION_TOKEN
+                integration_token = mlchain_config.NOTION_INTEGRATION_TOKEN
                 if integration_token is None:
                     raise ValueError(
                         "Must specify `integration_token` or set environment variable `NOTION_INTEGRATION_TOKEN`."

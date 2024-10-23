@@ -351,7 +351,8 @@ class OAIAPICompatLargeLanguageModel(_CommonOaiApiCompat, LargeLanguageModel):
         if tools:
             if function_calling_type == "function_call":
                 data["functions"] = [
-                    {"name": tool.name, "description": tool.description, "parameters": tool.parameters} for tool in tools
+                    {"name": tool.name, "description": tool.description, "parameters": tool.parameters}
+                    for tool in tools
                 ]
             elif function_calling_type == "tool_call":
                 data["tool_choice"] = "auto"
@@ -687,7 +688,7 @@ class OAIAPICompatLargeLanguageModel(_CommonOaiApiCompat, LargeLanguageModel):
         model: str,
         messages: list[PromptMessage],
         tools: Optional[list[PromptMessageTool]] = None,
-        credentials: dict = None,
+        credentials: Optional[dict] = None,
     ) -> int:
         """
         Approximate num tokens with GPT2 tokenizer.

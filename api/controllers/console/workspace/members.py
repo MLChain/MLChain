@@ -2,7 +2,7 @@ from flask_login import current_user
 from flask_restful import Resource, abort, marshal_with, reqparse
 
 import services
-from configs import mlchain_config
+from configs import mlchain_config
 from controllers.console import api
 from controllers.console.setup import setup_required
 from controllers.console.wraps import account_initialization_required, cloud_edition_billing_resource_check
@@ -48,7 +48,7 @@ class MemberInviteEmailApi(Resource):
 
         inviter = current_user
         invitation_results = []
-        console_web_url = mlchain_config.CONSOLE_WEB_URL
+        console_web_url = mlchain_config.CONSOLE_WEB_URL
         for invitee_email in invitee_emails:
             try:
                 token = RegisterService.invite_new_member(

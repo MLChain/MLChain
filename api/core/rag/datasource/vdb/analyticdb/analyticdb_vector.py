@@ -8,11 +8,11 @@ _import_err_msg = (
     "please run `pip install alibabacloud_gpdb20160503 alibabacloud_tea_openapi`"
 )
 
-from configs import mlchain_config
-from core.rag.datasource.entity.embedding import Embeddings
+from configs import mlchain_config
 from core.rag.datasource.vdb.vector_base import BaseVector
 from core.rag.datasource.vdb.vector_factory import AbstractVectorFactory
 from core.rag.datasource.vdb.vector_type import VectorType
+from core.rag.embedding.embedding_base import Embeddings
 from core.rag.models.document import Document
 from extensions.ext_redis import redis_client
 from models.dataset import Dataset
@@ -314,21 +314,21 @@ class AnalyticdbVectorFactory(AbstractVectorFactory):
             dataset.index_struct = json.dumps(self.gen_index_struct_dict(VectorType.ANALYTICDB, collection_name))
 
         # handle optional params
-        if mlchain_config.ANALYTICDB_KEY_ID is None:
+        if mlchain_config.ANALYTICDB_KEY_ID is None:
             raise ValueError("ANALYTICDB_KEY_ID should not be None")
-        if mlchain_config.ANALYTICDB_KEY_SECRET is None:
+        if mlchain_config.ANALYTICDB_KEY_SECRET is None:
             raise ValueError("ANALYTICDB_KEY_SECRET should not be None")
-        if mlchain_config.ANALYTICDB_REGION_ID is None:
+        if mlchain_config.ANALYTICDB_REGION_ID is None:
             raise ValueError("ANALYTICDB_REGION_ID should not be None")
-        if mlchain_config.ANALYTICDB_INSTANCE_ID is None:
+        if mlchain_config.ANALYTICDB_INSTANCE_ID is None:
             raise ValueError("ANALYTICDB_INSTANCE_ID should not be None")
-        if mlchain_config.ANALYTICDB_ACCOUNT is None:
+        if mlchain_config.ANALYTICDB_ACCOUNT is None:
             raise ValueError("ANALYTICDB_ACCOUNT should not be None")
-        if mlchain_config.ANALYTICDB_PASSWORD is None:
+        if mlchain_config.ANALYTICDB_PASSWORD is None:
             raise ValueError("ANALYTICDB_PASSWORD should not be None")
-        if mlchain_config.ANALYTICDB_NAMESPACE is None:
+        if mlchain_config.ANALYTICDB_NAMESPACE is None:
             raise ValueError("ANALYTICDB_NAMESPACE should not be None")
-        if mlchain_config.ANALYTICDB_NAMESPACE_PASSWORD is None:
+        if mlchain_config.ANALYTICDB_NAMESPACE_PASSWORD is None:
             raise ValueError("ANALYTICDB_NAMESPACE_PASSWORD should not be None")
         return AnalyticdbVector(
             collection_name,

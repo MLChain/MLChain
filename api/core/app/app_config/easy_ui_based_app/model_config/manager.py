@@ -87,7 +87,9 @@ class ModelConfigManager:
         if "completion_params" not in config["model"]:
             raise ValueError("model.completion_params is required")
 
-        config["model"]["completion_params"] = cls.validate_model_completion_params(config["model"]["completion_params"])
+        config["model"]["completion_params"] = cls.validate_model_completion_params(
+            config["model"]["completion_params"]
+        )
 
         return config, ["model"]
 

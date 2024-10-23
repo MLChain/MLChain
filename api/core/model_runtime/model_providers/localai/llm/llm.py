@@ -1,5 +1,5 @@
 from collections.abc import Generator
-from typing import cast
+from typing import Optional, cast
 
 from httpx import Timeout
 from openai import (
@@ -212,7 +212,7 @@ class LocalAILanguageModel(LargeLanguageModel):
         except Exception as ex:
             raise CredentialsValidateFailedError(f"Invalid credentials {str(ex)}")
 
-    def get_customizable_model_schema(self, model: str, credentials: dict) -> AIModelEntity | None:
+    def get_customizable_model_schema(self, model: str, credentials: dict) -> Optional[AIModelEntity]:
         completion_model = None
         if credentials["completion_type"] == "chat_completion":
             completion_model = LLMMode.CHAT.value
@@ -428,7 +428,9 @@ class LocalAILanguageModel(LargeLanguageModel):
         # transform assistant message to prompt message
         assistant_prompt_message = AssistantPromptMessage(content=assistant_message, tool_calls=[])
 
-        prompt_tokens = self._get_num_tokens_by_gpt2(self._convert_prompt_message_to_completion_prompts(prompt_messages))
+        prompt_tokens = self._get_num_tokens_by_gpt2(
+            self._convert_prompt_message_to_completion_prompts(prompt_messages)
+        )
         completion_tokens = self._num_tokens_from_messages(messages=[assistant_prompt_message], tools=[])
 
         usage = self._calc_response_usage(

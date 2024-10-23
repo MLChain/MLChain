@@ -1,9 +1,9 @@
-from collections.abc import Generator
+from collections.abc import Generator, Mapping
 from typing import Any, Union
 
 from openai._exceptions import RateLimitError
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.app.apps.advanced_chat.app_generator import AdvancedChatAppGenerator
 from core.app.apps.agent_chat.app_generator import AgentChatAppGenerator
 from core.app.apps.chat.app_generator import ChatAppGenerator
@@ -23,7 +23,7 @@ class AppGenerateService:
         cls,
         app_model: App,
         user: Union[Account, EndUser],
-        args: Any,
+        args: Mapping[str, Any],
         invoke_from: InvokeFrom,
         streaming: bool = True,
     ):

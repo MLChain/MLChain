@@ -3,9 +3,9 @@ import os
 from flask import session
 from flask_restful import Resource, reqparse
 
-from configs import mlchain_config
+from configs import mlchain_config
 from libs.helper import StrLen
-from models.model import MlchainSetup
+from models.model import MlchainSetup
 from services.account_service import TenantService
 
 from . import api
@@ -40,9 +40,9 @@ class InitValidateAPI(Resource):
 
 
 def get_init_validate_status():
-    if mlchain_config.EDITION == "SELF_HOSTED":
+    if mlchain_config.EDITION == "SELF_HOSTED":
         if os.environ.get("INIT_PASSWORD"):
-            return session.get("is_init_validated") or MlchainSetup.query.first()
+            return session.get("is_init_validated") or MlchainSetup.query.first()
 
     return True
 

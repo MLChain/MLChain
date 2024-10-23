@@ -3,9 +3,9 @@ import logging
 import httpx
 import yaml  # type: ignore
 
-from core.app.segments import factory
 from events.app_event import app_model_config_was_updated, app_was_created
 from extensions.ext_database import db
+from factories import variable_factory
 from models.account import Account
 from models.model import App, AppMode, AppModelConfig
 from models.workflow import Workflow
@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 current_dsl_version = "0.1.2"
 dsl_to_mlchain_version_mapping: dict[str, str] = {
     "0.1.2": "0.8.0",
-    "0.1.1": "0.6.0",  # dsl version -> from mlchain version
+    "0.1.1": "0.6.0",  # dsl version -> from mlchain version
 }
 
 
@@ -178,7 +178,9 @@ class AppDslService:
         }
 
         if app_mode in {AppMode.ADVANCED_CHAT, AppMode.WORKFLOW}:
-            cls._append_workflow_export_data(export_data=export_data, app_model=app_model, include_secret=include_secret)
+            cls._append_workflow_export_data(
+                export_data=export_data, app_model=app_model, include_secret=include_secret
+            )
         else:
             cls._append_model_config_export_data(export_data, app_model)
 
@@ -252,14 +254,18 @@ class AppDslService:
 
         # init draft workflow
         environment_variables_list = workflow_data.get("environment_variables") or []
-        environment_variables = [factory.build_variable_from_mapping(obj) for obj in environment_variables_list]
+        environment_variables = [
+            variable_factory.build_variable_from_mapping(obj) for obj in environment_variables_list
+        ]
         conversation_variables_list = workflow_data.get("conversation_variables") or []
-        conversation_variables = [factory.build_variable_from_mapping(obj) for obj in conversation_variables_list]
+        conversation_variables = [
+            variable_factory.build_variable_from_mapping(obj) for obj in conversation_variables_list
+        ]
         workflow_service = WorkflowService()
         draft_workflow = workflow_service.sync_draft_workflow(
             app_model=app,
             graph=workflow_data.get("graph", {}),
-            features=workflow_data.get("../core/app/features", {}),
+            features=workflow_data.get("features", {}),
             unique_hash=None,
             account=account,
             environment_variables=environment_variables,
@@ -270,7 +276,9 @@ class AppDslService:
         return app
 
     @classmethod
-    def _import_and_overwrite_workflow_based_app(cls, app_model: App, workflow_data: dict, account: Account) -> Workflow:
+    def _import_and_overwrite_workflow_based_app(
+        cls, app_model: App, workflow_data: dict, account: Account
+    ) -> Workflow:
         """
         Import app dsl and overwrite workflow based app
 
@@ -291,9 +299,13 @@ class AppDslService:
 
         # sync draft workflow
         environment_variables_list = workflow_data.get("environment_variables") or []
-        environment_variables = [factory.build_variable_from_mapping(obj) for obj in environment_variables_list]
+        environment_variables = [
+            variable_factory.build_variable_from_mapping(obj) for obj in environment_variables_list
+        ]
         conversation_variables_list = workflow_data.get("conversation_variables") or []
-        conversation_variables = [factory.build_variable_from_mapping(obj) for obj in conversation_variables_list]
+        conversation_variables = [
+            variable_factory.build_variable_from_mapping(obj) for obj in conversation_variables_list
+        ]
         draft_workflow = workflow_service.sync_draft_workflow(
             app_model=app_model,
             graph=workflow_data.get("graph", {}),

@@ -5,7 +5,7 @@ from flask_restful import Resource, marshal, marshal_with, reqparse
 from werkzeug.exceptions import Forbidden, NotFound
 
 import services
-from configs import mlchain_config
+from configs import mlchain_config
 from controllers.console import api
 from controllers.console.apikey import api_key_fields, api_key_list
 from controllers.console.app.error import ProviderNotInitializeError
@@ -24,8 +24,8 @@ from fields.app_fields import related_app_list
 from fields.dataset_fields import dataset_detail_fields, dataset_query_detail_fields
 from fields.document_fields import document_status_fields
 from libs.login import login_required
-from models.dataset import Dataset, DatasetPermissionEnum, Document, DocumentSegment
-from models.model import ApiToken, UploadFile
+from models import ApiToken, Dataset, Document, DocumentSegment, UploadFile
+from models.dataset import DatasetPermissionEnum
 from services.dataset_service import DatasetPermissionService, DatasetService, DocumentService
 
 
@@ -378,7 +378,9 @@ class DatasetIndexingEstimateApi(Resource):
         )
         parser.add_argument("doc_form", type=str, default="text_model", required=False, nullable=False, location="json")
         parser.add_argument("dataset_id", type=str, required=False, nullable=False, location="json")
-        parser.add_argument("doc_language", type=str, default="English", required=False, nullable=False, location="json")
+        parser.add_argument(
+            "doc_language", type=str, default="English", required=False, nullable=False, location="json"
+        )
         args = parser.parse_args()
         # validate args
         DocumentService.estimate_args_validate(args)
@@ -606,7 +608,7 @@ class DatasetRetrievalSettingApi(Resource):
     @login_required
     @account_initialization_required
     def get(self):
-        vector_type = mlchain_config.VECTOR_STORE
+        vector_type = mlchain_config.VECTOR_STORE
         match vector_type:
             case (
                 VectorType.MILVUS
@@ -615,6 +617,9 @@ class DatasetRetrievalSettingApi(Resource):
                 | VectorType.CHROMA
                 | VectorType.TENCENT
                 | VectorType.PGVECTO_RS
+                | VectorType.BAIDU
+                | VectorType.VIKINGDB
+                | VectorType.UPSTASH
             ):
                 return {"retrieval_method": [RetrievalMethod.SEMANTIC_SEARCH.value]}
             case (
@@ -651,6 +656,9 @@ class DatasetRetrievalSettingMockApi(Resource):
                 | VectorType.CHROMA
                 | VectorType.TENCENT
                 | VectorType.PGVECTO_RS
+                | VectorType.BAIDU
+                | VectorType.VIKINGDB
+                | VectorType.UPSTASH
             ):
                 return {"retrieval_method": [RetrievalMethod.SEMANTIC_SEARCH.value]}
             case (

@@ -16,7 +16,7 @@
 
 ```yaml
 identity: # ツールプロバイダーの基本情報
-  author: Mlchain # 作者
+  author: Mlchain # 作者
   name: google # 名前（一意、他のプロバイダーと重複不可）
   label: # フロントエンド表示用のラベル
     en_US: Google # 英語ラベル
@@ -60,7 +60,7 @@ GoogleはSerpApiが提供するAPIを使用するサードパーティツール�
 
 ```yaml
 identity:
-  author: Mlchain
+  author: Mlchain
   name: google
   label:
     en_US: Google
@@ -96,7 +96,7 @@ credentials_for_provider: # 認証情報フィールド
 ```yaml
 identity: # ツールの基本情報
   name: google_search # ツール名（一意、他のツールと重複不可）
-  author: Mlchain # 作者
+  author: Mlchain # 作者
   label: # フロントエンド表示用のラベル
     en_US: GoogleSearch # 英語ラベル
     zh_Hans: 谷歌搜索 # 中国語ラベル
@@ -151,7 +151,7 @@ parameters: # パラメータリスト
     - `llm`モードでは、パラメータが必須の場合、Agentはこのパラメータを推論する必要があります。
     - `form`モードでは、パラメータが必須の場合、ユーザーは対話開始前にフロントエンドでこのパラメータを入力する必要があります。
   - `options` パラメータオプション
-    - `llm`モードでは、MlchainはすべてのオプションをLLMに渡し、LLMはこれらのオプションに基づいて推論できます。
+    - `llm`モードでは、DifyはすべてのオプションをLLMに渡し、LLMはこれらのオプションに基づいて推論できます。
     - `form`モードで、`type`が`select`の場合、フロントエンドはこれらのオプションを表示します。
   - `default` デフォルト値
   - `min` 最小値。パラメータタイプが`number`の場合に設定できます。

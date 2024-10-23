@@ -3,10 +3,10 @@ from functools import wraps
 from flask import request
 from flask_restful import Resource, reqparse
 
-from configs import mlchain_config
-from libs.helper import StrLen, email, get_remote_ip
+from configs import mlchain_config
+from libs.helper import StrLen, email, extract_remote_ip
 from libs.password import valid_password
-from models.model import MlchainSetup
+from models.model import MlchainSetup
 from services.account_service import RegisterService, TenantService
 
 from . import api
@@ -17,7 +17,7 @@ from .wraps import only_edition_self_hosted
 
 class SetupApi(Resource):
     def get(self):
-        if mlchain_config.EDITION == "SELF_HOSTED":
+        if mlchain_config.EDITION == "SELF_HOSTED":
             setup_status = get_setup_status()
             if setup_status:
                 return {"step": "finished", "setup_at": setup_status.setup_at.isoformat()}
@@ -46,7 +46,7 @@ class SetupApi(Resource):
 
         # setup
         RegisterService.setup(
-            email=args["email"], name=args["name"], password=args["password"], ip_address=get_remote_ip(request)
+            email=args["email"], name=args["name"], password=args["password"], ip_address=extract_remote_ip(request)
         )
 
         return {"result": "success"}, 201
@@ -68,8 +68,8 @@ def setup_required(view):
 
 
 def get_setup_status():
-    if mlchain_config.EDITION == "SELF_HOSTED":
-        return MlchainSetup.query.first()
+    if mlchain_config.EDITION == "SELF_HOSTED":
+        return MlchainSetup.query.first()
     else:
         return True
 

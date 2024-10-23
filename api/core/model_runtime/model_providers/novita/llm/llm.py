@@ -10,7 +10,7 @@ from core.model_runtime.model_providers.openai_api_compatible.llm.llm import OAI
 class NovitaLargeLanguageModel(OAIAPICompatLargeLanguageModel):
     def _update_endpoint_url(self, credentials: dict):
         credentials["endpoint_url"] = "https://api.novita.ai/v3/openai"
-        credentials["extra_headers"] = {"X-Novita-Source": "mlchain.khulnasoft.com"}
+        credentials["extra_headers"] = {"X-Novita-Source": "mlchain.ai"}
         return credentials
 
     def _invoke(
@@ -48,7 +48,9 @@ class NovitaLargeLanguageModel(OAIAPICompatLargeLanguageModel):
         user: Optional[str] = None,
     ) -> Union[LLMResult, Generator]:
         cred_with_endpoint = self._update_endpoint_url(credentials=credentials)
-        return super()._generate(model, cred_with_endpoint, prompt_messages, model_parameters, tools, stop, stream, user)
+        return super()._generate(
+            model, cred_with_endpoint, prompt_messages, model_parameters, tools, stop, stream, user
+        )
 
     def get_customizable_model_schema(self, model: str, credentials: dict) -> AIModelEntity:
         cred_with_endpoint = self._update_endpoint_url(credentials=credentials)

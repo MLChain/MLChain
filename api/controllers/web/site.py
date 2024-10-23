@@ -1,7 +1,7 @@
 from flask_restful import fields, marshal_with
 from werkzeug.exceptions import Forbidden
 
-from configs import mlchain_config
+from configs import mlchain_config
 from controllers.web import api
 from controllers.web.wraps import WebApiResource
 from extensions.ext_database import db
@@ -87,7 +87,7 @@ class AppSiteInfo:
         self.can_replace_logo = can_replace_logo
 
         if can_replace_logo:
-            base_url = mlchain_config.FILES_URL
+            base_url = mlchain_config.FILES_URL
             remove_webapp_brand = tenant.custom_config_dict.get("remove_webapp_brand", False)
             replace_webapp_logo = (
                 f"{base_url}/files/workspaces/{tenant.id}/webapp-logo"

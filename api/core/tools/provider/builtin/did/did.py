@@ -11,7 +11,7 @@ class DIDProvider(BuiltinToolProviderController):
                 user_id="",
                 tool_parameters={
                     "source_url": "https://www.d-id.com/wp-content/uploads/2023/11/Hero-image-1.png",
-                    "text_input": "Hello, welcome to use D-ID tool in Mlchain",
+                    "text_input": "Hello, welcome to use D-ID tool in Mlchain",
                 },
             )
         except Exception as e:

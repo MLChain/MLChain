@@ -7,11 +7,11 @@ from tcvectordb.model import document, enum
 from tcvectordb.model import index as vdb_index
 from tcvectordb.model.document import Filter
 
-from configs import mlchain_config
-from core.rag.datasource.entity.embedding import Embeddings
+from configs import mlchain_config
 from core.rag.datasource.vdb.vector_base import BaseVector
 from core.rag.datasource.vdb.vector_factory import AbstractVectorFactory
 from core.rag.datasource.vdb.vector_type import VectorType
+from core.rag.embedding.embedding_base import Embeddings
 from core.rag.models.document import Document
 from extensions.ext_redis import redis_client
 from models.dataset import Dataset
@@ -106,7 +106,7 @@ class TencentVector(BaseVector):
                 name=self._collection_name,
                 shard=self._client_config.shard,
                 replicas=self._client_config.replicas,
-                description="Collection for Mlchain",
+                description="Collection for Mlchain",
                 index=index,
             )
             redis_client.set(collection_exist_cache_key, 1, ex=3600)

@@ -4,7 +4,7 @@ import logging
 import requests
 from flask_restful import Resource, reqparse
 
-from configs import mlchain_config
+from configs import mlchain_config
 
 from . import api
 
@@ -14,16 +14,16 @@ class VersionApi(Resource):
         parser = reqparse.RequestParser()
         parser.add_argument("current_version", type=str, required=True, location="args")
         args = parser.parse_args()
-        check_update_url = mlchain_config.CHECK_UPDATE_URL
+        check_update_url = mlchain_config.CHECK_UPDATE_URL
 
         result = {
-            "version": mlchain_config.CURRENT_VERSION,
+            "version": mlchain_config.CURRENT_VERSION,
             "release_date": "",
             "release_notes": "",
             "can_auto_update": False,
             "features": {
-                "can_replace_logo": mlchain_config.CAN_REPLACE_LOGO,
-                "model_load_balancing_enabled": mlchain_config.MODEL_LB_ENABLED,
+                "can_replace_logo": mlchain_config.CAN_REPLACE_LOGO,
+                "model_load_balancing_enabled": mlchain_config.MODEL_LB_ENABLED,
             },
         }
 

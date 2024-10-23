@@ -5,7 +5,7 @@ from typing import Optional
 
 from sqlalchemy.exc import IntegrityError
 
-from configs import mlchain_config
+from configs import mlchain_config
 from core.entities.model_entities import DefaultModelEntity, DefaultModelProviderEntity
 from core.entities.provider_configuration import ProviderConfiguration, ProviderConfigurations, ProviderModelBundle
 from core.entities.provider_entities import (
@@ -685,7 +685,9 @@ class ProviderManager:
             if provider_record.provider_type != ProviderType.SYSTEM.value:
                 continue
 
-            quota_type_to_provider_records_dict[ProviderQuotaType.value_of(provider_record.quota_type)] = provider_record
+            quota_type_to_provider_records_dict[ProviderQuotaType.value_of(provider_record.quota_type)] = (
+                provider_record
+            )
 
         quota_configurations = []
         for provider_quota in provider_hosting_configuration.quotas:

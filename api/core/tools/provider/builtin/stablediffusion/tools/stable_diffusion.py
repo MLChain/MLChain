@@ -356,7 +356,9 @@ class StableDiffusionTool(BuiltinTool):
                             " of Stable Diffusion",
                             required=True,
                             default=models[0],
-                            options=[ToolParameterOption(value=i, label=I18nObject(en_US=i, zh_Hans=i)) for i in models],
+                            options=[
+                                ToolParameterOption(value=i, label=I18nObject(en_US=i, zh_Hans=i)) for i in models
+                            ],
                         )
                     )
 
