@@ -14,7 +14,6 @@ from core.model_runtime.entities.message_entities import (
 )
 from core.model_runtime.entities.model_entities import AIModelEntity, ModelType
 from core.model_runtime.errors.validate import CredentialsValidateFailedError
-from core.model_runtime.model_providers.__base.large_language_model import LargeLanguageModel
 from core.model_runtime.model_providers.openai.llm.llm import OpenAILargeLanguageModel
 
 """FOR MOCK FIXTURES, DO NOT REMOVE"""
@@ -46,9 +45,7 @@ def test_validate_credentials_for_completion_model(setup_openai_mock):
     with pytest.raises(CredentialsValidateFailedError):
         model.validate_credentials(model="text-davinci-003", credentials={"openai_api_key": "invalid_key"})
 
-    model.validate_credentials(
-        model="text-davinci-003", credentials={"openai_api_key": os.environ.get("OPENAI_API_KEY")}
-    )
+    model.validate_credentials(model="text-davinci-003", credentials={"openai_api_key": os.environ.get("OPENAI_API_KEY")})
 
 
 @pytest.mark.parametrize("setup_openai_mock", [["completion"]], indirect=True)

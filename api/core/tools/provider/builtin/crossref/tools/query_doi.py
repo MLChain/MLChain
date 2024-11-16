@@ -12,9 +12,7 @@ class CrossRefQueryDOITool(BuiltinTool):
     Tool for querying the metadata of a publication using its DOI.
     """
 
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         doi = tool_parameters.get("doi")
         if not doi:
             raise ToolParameterValidationError("doi is required.")

@@ -15,9 +15,12 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="Discordでチャット"></a>
+    <a href="https://reddit.com/r/mlchainai" target="_blank">  
+        <img src="https://img.shields.io/reddit/subreddit-subscribers/mlchainai?style=plastic&logo=reddit&label=r%2Fmlchainai&labelColor=white"
+            alt="Reddit"></a>
     <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
         <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
-            alt="Twitterでフォロー"></a>
+            alt="X(Twitter)でフォロー"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
     <a href="https://github.com/mlchain/mlchain/graphs/commit-activity" target="_blank">
@@ -84,7 +87,7 @@ MlchainはオープンソースのLLMアプリケーション開発プラット�
 <table style="width: 100%;">
   <tr>
     <th align="center">機能</th>
-    <th align="center">MLChain</th>
+    <th align="center">MlChain</th>
     <th align="center">LangChain</th>
     <th align="center">Flowise</th>
     <th align="center">OpenAI Assistants API</th>
@@ -201,10 +204,13 @@ docker compose up -d
 
 #### Terraformを使用したデプロイ
 
-##### Azure Global
-[terraform](https://www.terraform.io/) を使用して、AzureにMlchainをワンクリックでデプロイします。
-- [nikawangのAzure Terraform](https://github.com/nikawang/mlchain-azure-terraform)
+[terraform](https://www.terraform.io/) を使用して、ワンクリックでMlchainをクラウドプラットフォームにデプロイします
 
+##### Azure Global
+- [@nikawangによるAzure Terraform](https://github.com/nikawang/mlchain-azure-terraform)
+
+##### Google Cloud
+- [@sotazumによるGoogle Cloud Terraform](https://github.com/DeNA/mlchain-google-cloud-terraform)
 
 ## 貢献
 
@@ -223,9 +229,9 @@ docker compose up -d
 ## コミュニティ & お問い合わせ
 
 * [Github Discussion](https://github.com/mlchain/mlchain/discussions). 主に: フィードバックの共有や質問。
-* [GitHub Issues](https://github.com/mlchain/mlchain/issues). 主に: MLChainを使用する際に発生するエラーや問題については、[貢献ガイド](CONTRIBUTING_JA.md)を参照してください
+* [GitHub Issues](https://github.com/mlchain/mlchain/issues). 主に: MlChainを使用する際に発生するエラーや問題については、[貢献ガイド](CONTRIBUTING_JA.md)を参照してください
 * [Discord](https://discord.gg/FngNHpbcY7). 主に: アプリケーションの共有やコミュニティとの交流。
-* [Twitter](https://twitter.com/mlchain_ai). 主に: アプリケーションの共有やコミュニティとの交流。
+* [X(Twitter)](https://twitter.com/mlchain_ai). 主に: アプリケーションの共有やコミュニティとの交流。
 
 
 

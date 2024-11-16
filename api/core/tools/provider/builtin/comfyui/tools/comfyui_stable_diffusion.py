@@ -36,9 +36,7 @@ class ModelType(Enum):
 
 
 class ComfyuiStableDiffusionTool(BuiltinTool):
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         """
         invoke tools
         """
@@ -419,8 +417,7 @@ class ComfyuiStableDiffusionTool(BuiltinTool):
                             required=True,
                             default=sample_methods[0],
                             options=[
-                                ToolParameterOption(value=i, label=I18nObject(en_US=i, zh_Hans=i))
-                                for i in sample_methods
+                                ToolParameterOption(value=i, label=I18nObject(en_US=i, zh_Hans=i)) for i in sample_methods
                             ],
                         )
                     )

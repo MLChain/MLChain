@@ -7,9 +7,7 @@ from core.tools.tool.builtin_tool import BuiltinTool
 
 
 class DiscordWebhookTool(BuiltinTool):
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         """
         Incoming Webhooks
         API Document:
@@ -21,7 +19,6 @@ class DiscordWebhookTool(BuiltinTool):
             return self.create_text_message("Invalid parameter content")
 
         webhook_url = tool_parameters.get("webhook_url", "")
-
         if not webhook_url.startswith("https://discord.com/api/webhooks/"):
             return self.create_text_message(
                 f"Invalid parameter webhook_url ${webhook_url}, \
@@ -31,13 +28,14 @@ class DiscordWebhookTool(BuiltinTool):
         headers = {
             "Content-Type": "application/json",
         }
-        params = {}
         payload = {
+            "username": tool_parameters.get("username") or user_id,
             "content": content,
+            "avatar_url": tool_parameters.get("avatar_url") or None,
         }
 
         try:
-            res = httpx.post(webhook_url, headers=headers, params=params, json=payload)
+            res = httpx.post(webhook_url, headers=headers, json=payload)
             if res.is_success:
                 return self.create_text_message("Text message was sent successfully")
             else:

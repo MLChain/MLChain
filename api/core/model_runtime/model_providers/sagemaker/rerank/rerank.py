@@ -100,9 +100,7 @@ class SageMakerRerankModel(RerankModel):
             line = 3
             rerank_documents = []
             for idx, result in enumerate(candidate_docs):
-                rerank_document = RerankDocument(
-                    index=idx, text=result.get("content"), score=result.get("score", -100.0)
-                )
+                rerank_document = RerankDocument(index=idx, text=result.get("content"), score=result.get("score", -100.0))
 
                 if score_threshold is not None:
                     if rerank_document.score >= score_threshold:
@@ -113,7 +111,7 @@ class SageMakerRerankModel(RerankModel):
             return RerankResult(model=model, docs=rerank_documents)
 
         except Exception as e:
-            logger.exception(f"Exception {e}, line : {line}")
+            logger.exception(f"Failed to invoke rerank model, model: {model}")
 
     def validate_credentials(self, model: str, credentials: dict) -> None:
         """
@@ -157,7 +155,7 @@ class SageMakerRerankModel(RerankModel):
             InvokeBadRequestError: [InvokeBadRequestError, KeyError, ValueError],
         }
 
-    def get_customizable_model_schema(self, model: str, credentials: dict) -> AIModelEntity | None:
+    def get_customizable_model_schema(self, model: str, credentials: dict) -> Optional[AIModelEntity]:
         """
         used to define customizable model schema
         """

@@ -19,9 +19,7 @@ class SearchStackExQuestionsInput(BaseModel):
 
 
 class SearchStackExQuestionsTool(BuiltinTool):
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         input = SearchStackExQuestionsInput(**tool_parameters)
 
         params = {

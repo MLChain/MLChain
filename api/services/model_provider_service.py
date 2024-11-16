@@ -96,9 +96,7 @@ class ModelProviderService:
         provider_configurations = self.provider_manager.get_configurations(tenant_id)
 
         # Get provider available models
-        return [
-            ModelWithProviderEntityResponse(model) for model in provider_configurations.get_models(provider=provider)
-        ]
+        return [ModelWithProviderEntityResponse(model) for model in provider_configurations.get_models(provider=provider)]
 
     def get_provider_credentials(self, tenant_id: str, provider: str) -> dict:
         """

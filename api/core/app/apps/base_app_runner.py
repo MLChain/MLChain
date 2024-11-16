@@ -27,7 +27,7 @@ from core.prompt.simple_prompt_transform import ModelMode, SimplePromptTransform
 from models.model import App, AppMode, Message, MessageAnnotation
 
 if TYPE_CHECKING:
-    from core.file.file_obj import FileVar
+    from core.file.models import File
 
 
 class AppRunner:
@@ -37,7 +37,7 @@ class AppRunner:
         model_config: ModelConfigWithCredentialsEntity,
         prompt_template_entity: PromptTemplateEntity,
         inputs: dict[str, str],
-        files: list["FileVar"],
+        files: list["File"],
         query: Optional[str] = None,
     ) -> int:
         """
@@ -51,9 +51,7 @@ class AppRunner:
         :return:
         """
         # Invoke model
-        model_instance = ModelInstance(
-            provider_model_bundle=model_config.provider_model_bundle, model=model_config.model
-        )
+        model_instance = ModelInstance(provider_model_bundle=model_config.provider_model_bundle, model=model_config.model)
 
         model_context_tokens = model_config.model_schema.model_properties.get(ModelPropertyKey.CONTEXT_SIZE)
 
@@ -94,13 +92,9 @@ class AppRunner:
 
         return rest_tokens
 
-    def recalc_llm_max_tokens(
-        self, model_config: ModelConfigWithCredentialsEntity, prompt_messages: list[PromptMessage]
-    ):
+    def recalc_llm_max_tokens(self, model_config: ModelConfigWithCredentialsEntity, prompt_messages: list[PromptMessage]):
         # recalc max_tokens if sum(prompt_token +  max_tokens) over model token limit
-        model_instance = ModelInstance(
-            provider_model_bundle=model_config.provider_model_bundle, model=model_config.model
-        )
+        model_instance = ModelInstance(provider_model_bundle=model_config.provider_model_bundle, model=model_config.model)
 
         model_context_tokens = model_config.model_schema.model_properties.get(ModelPropertyKey.CONTEXT_SIZE)
 
@@ -137,7 +131,7 @@ class AppRunner:
         model_config: ModelConfigWithCredentialsEntity,
         prompt_template_entity: PromptTemplateEntity,
         inputs: dict[str, str],
-        files: list["FileVar"],
+        files: list["File"],
         query: Optional[str] = None,
         context: Optional[str] = None,
         memory: Optional[TokenBufferMemory] = None,
@@ -264,9 +258,7 @@ class AppRunner:
         else:
             self._handle_invoke_result_stream(invoke_result=invoke_result, queue_manager=queue_manager, agent=agent)
 
-    def _handle_invoke_result_direct(
-        self, invoke_result: LLMResult, queue_manager: AppQueueManager, agent: bool
-    ) -> None:
+    def _handle_invoke_result_direct(self, invoke_result: LLMResult, queue_manager: AppQueueManager, agent: bool) -> None:
         """
         Handle invoke result direct
         :param invoke_result: invoke result
@@ -281,9 +273,7 @@ class AppRunner:
             PublishFrom.APPLICATION_MANAGER,
         )
 
-    def _handle_invoke_result_stream(
-        self, invoke_result: Generator, queue_manager: AppQueueManager, agent: bool
-    ) -> None:
+    def _handle_invoke_result_stream(self, invoke_result: Generator, queue_manager: AppQueueManager, agent: bool) -> None:
         """
         Handle invoke result
         :param invoke_result: invoke result

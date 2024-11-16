@@ -1,6 +1,10 @@
 ![cover-v5-optimized](https://github.com/mlchain/mlchain/assets/13230914/f9e19af5-61ba-4119-b926-d10c4c06ebab)
 
 <p align="center">
+  📌 <a href="https://mlchain.khulnasoft.com/blog/introducing-mlchain-workflow-file-upload-a-demo-on-ai-podcast">Introducing Mlchain Workflow File Upload: Recreate Google NotebookLM Podcast</a>
+</p>
+
+<p align="center">
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">Self-hosting</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">Documentation</a> ·
@@ -15,9 +19,12 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="chat on Discord"></a>
+    <a href="https://reddit.com/r/mlchainai" target="_blank">  
+        <img src="https://img.shields.io/reddit/subreddit-subscribers/mlchainai?style=plastic&logo=reddit&label=r%2Fmlchainai&labelColor=white"
+            alt="join Reddit"></a>
     <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
         <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
-            alt="follow on Twitter"></a>
+            alt="follow on X(Twitter)"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
     <a href="https://github.com/mlchain/mlchain/graphs/commit-activity" target="_blank">
@@ -42,9 +49,33 @@
 </p>
 
 
-Mlchain is an open-source LLM app development platform. Its intuitive interface combines AI workflow, RAG pipeline, agent capabilities, model management, observability features and more, letting you quickly go from prototype to production. Here's a list of the core features:
-</br> </br>
+Mlchain is an open-source LLM app development platform. Its intuitive interface combines agentic AI workflow, RAG pipeline, agent capabilities, model management, observability features and more, letting you quickly go from prototype to production. 
 
+## Quick start
+> Before installing Mlchain, make sure your machine meets the following minimum system requirements:
+> 
+>- CPU >= 2 Core
+>- RAM >= 4 GiB
+
+</br>
+
+The easiest way to start the Mlchain server is through [docker compose](docker/docker-compose.yaml). Before running Mlchain with the following commands, make sure that [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) are installed on your machine:
+
+```bash
+cd mlchain
+cd docker
+cp .env.example .env
+docker compose up -d
+```
+
+After running, you can access the Mlchain dashboard in your browser at [http://localhost/install](http://localhost/install) and start the initialization process.
+
+#### Seeking help
+Please refer to our [FAQ](https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted/faqs) if you encounter problems setting up Mlchain. Reach out to [the community and us](#community--contact) if you are still having issues.
+
+> If you'd like to contribute to Mlchain or do additional development, refer to our [guide to deploying from source code](https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted/local-source-code)
+
+## Key features
 **1. Workflow**: 
   Build and test powerful AI workflows on a visual canvas, leveraging all the following features and beyond.
 
@@ -75,73 +106,6 @@ Mlchain is an open-source LLM app development platform. Its intuitive interface 
   All of Mlchain's offerings come with corresponding APIs, so you could effortlessly integrate Mlchain into your own business logic.
 
 
-## Feature comparison
-<table style="width: 100%;">
-  <tr>
-    <th align="center">Feature</th>
-    <th align="center">MLChain</th>
-    <th align="center">LangChain</th>
-    <th align="center">Flowise</th>
-    <th align="center">OpenAI Assistants API</th>
-  </tr>
-  <tr>
-    <td align="center">Programming Approach</td>
-    <td align="center">API + App-oriented</td>
-    <td align="center">Python Code</td>
-    <td align="center">App-oriented</td>
-    <td align="center">API-oriented</td>
-  </tr>
-  <tr>
-    <td align="center">Supported LLMs</td>
-    <td align="center">Rich Variety</td>
-    <td align="center">Rich Variety</td>
-    <td align="center">Rich Variety</td>
-    <td align="center">OpenAI-only</td>
-  </tr>
-  <tr>
-    <td align="center">RAG Engine</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-  </tr>
-  <tr>
-    <td align="center">Agent</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-    <td align="center">❌</td>
-    <td align="center">✅</td>
-  </tr>
-  <tr>
-    <td align="center">Workflow</td>
-    <td align="center">✅</td>
-    <td align="center">❌</td>
-    <td align="center">✅</td>
-    <td align="center">❌</td>
-  </tr>
-  <tr>
-    <td align="center">Observability</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-    <td align="center">❌</td>
-    <td align="center">❌</td>
-  </tr>
-  <tr>
-    <td align="center">Enterprise Features (SSO/Access control)</td>
-    <td align="center">✅</td>
-    <td align="center">❌</td>
-    <td align="center">❌</td>
-    <td align="center">❌</td>
-  </tr>
-  <tr>
-    <td align="center">Local Deployment</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-    <td align="center">✅</td>
-    <td align="center">❌</td>
-  </tr>
-</table>
-
 ## Using Mlchain
 
 - **Cloud </br>**
@@ -163,28 +127,7 @@ Star Mlchain on GitHub and be instantly notified of new releases.
 ![star-us](https://github.com/mlchain/mlchain/assets/13230914/b823edc1-6388-4e25-ad45-2f6b187adbb4)
 
 
-
-## Quick start
-> Before installing Mlchain, make sure your machine meets the following minimum system requirements:
-> 
->- CPU >= 2 Core
->- RAM >= 4GB
-
-</br>
-
-The easiest way to start the Mlchain server is to run our [docker-compose.yml](docker/docker-compose.yaml) file. Before running the installation command, make sure that [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) are installed on your machine:
-
-```bash
-cd docker
-cp .env.example .env
-docker compose up -d
-```
-
-After running, you can access the Mlchain dashboard in your browser at [http://localhost/install](http://localhost/install) and start the initialization process.
-
-> If you'd like to contribute to Mlchain or do additional development, refer to our [guide to deploying from source code](https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted/local-source-code)
-
-## Next steps
+## Advanced Setup
 
 If you need to customize the configuration, please refer to the comments in our [.env.example](docker/.env.example) file and update the corresponding values in your `.env` file. Additionally, you might need to make adjustments to the `docker-compose.yaml` file itself, such as changing image versions, port mappings, or volume mounts, based on your specific deployment environment and requirements. After making any changes, please re-run `docker-compose up -d`. You can find the full list of available environment variables [here](https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted/environments).
 
@@ -196,9 +139,13 @@ If you'd like to configure a highly-available setup, there are community-contrib
 
 #### Using Terraform for Deployment
 
+Deploy Mlchain to Cloud Platform with a single click using [terraform](https://www.terraform.io/)
+
 ##### Azure Global
-Deploy Mlchain to Azure with a single click using [terraform](https://www.terraform.io/).
 - [Azure Terraform by @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
+
+##### Google Cloud
+- [Google Cloud Terraform by @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)
 
 ## Contributing
 
@@ -208,18 +155,18 @@ At the same time, please consider supporting Mlchain by sharing it on social med
 
 > We are looking for contributors to help with translating Mlchain to languages other than Mandarin or English. If you are interested in helping, please see the [i18n README](https://github.com/mlchain/mlchain/blob/main/web/i18n/README.md) for more information, and leave us a comment in the `global-users` channel of our [Discord Community Server](https://discord.gg/8Tpq4AcN9c).
 
+## Community & contact
+
+* [Github Discussion](https://github.com/mlchain/mlchain/discussions). Best for: sharing feedback and asking questions.
+* [GitHub Issues](https://github.com/mlchain/mlchain/issues). Best for: bugs you encounter using MlChain, and feature proposals. See our [Contribution Guide](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
+* [Discord](https://discord.gg/FngNHpbcY7). Best for: sharing your applications and hanging out with the community.
+* [X(Twitter)](https://twitter.com/mlchain_ai). Best for: sharing your applications and hanging out with the community.
+
 **Contributors**
 
 <a href="https://github.com/mlchain/mlchain/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=mlchain/mlchain" />
 </a>
-
-## Community & contact
-
-* [Github Discussion](https://github.com/mlchain/mlchain/discussions). Best for: sharing feedback and asking questions.
-* [GitHub Issues](https://github.com/mlchain/mlchain/issues). Best for: bugs you encounter using MLChain, and feature proposals. See our [Contribution Guide](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
-* [Discord](https://discord.gg/FngNHpbcY7). Best for: sharing your applications and hanging out with the community.
-* [Twitter](https://twitter.com/mlchain_ai). Best for: sharing your applications and hanging out with the community.
 
 ## Star history
 
@@ -233,3 +180,4 @@ To protect your privacy, please avoid posting security issues on GitHub. Instead
 ## License
 
 This repository is available under the [Mlchain Open Source License](LICENSE), which is essentially Apache 2.0 with a few additional restrictions.
+

@@ -364,9 +364,7 @@ class EasyUIBasedGenerateTaskPipeline(BasedGenerateTaskPipeline, MessageCycleMan
 
         if trace_manager:
             trace_manager.add_trace_task(
-                TraceTask(
-                    TraceTaskName.MESSAGE_TRACE, conversation_id=self._conversation.id, message_id=self._message.id
-                )
+                TraceTask(TraceTaskName.MESSAGE_TRACE, conversation_id=self._conversation.id, message_id=self._message.id)
             )
 
         message_was_created.send(
@@ -386,9 +384,7 @@ class EasyUIBasedGenerateTaskPipeline(BasedGenerateTaskPipeline, MessageCycleMan
         model_config = self._model_config
         model = model_config.model
 
-        model_instance = ModelInstance(
-            provider_model_bundle=model_config.provider_model_bundle, model=model_config.model
-        )
+        model_instance = ModelInstance(provider_model_bundle=model_config.provider_model_bundle, model=model_config.model)
 
         # calculate num tokens
         prompt_tokens = 0
@@ -428,9 +424,7 @@ class EasyUIBasedGenerateTaskPipeline(BasedGenerateTaskPipeline, MessageCycleMan
         :param message_id: message id
         :return:
         """
-        return AgentMessageStreamResponse(
-            task_id=self._application_generate_entity.task_id, id=message_id, answer=answer
-        )
+        return AgentMessageStreamResponse(task_id=self._application_generate_entity.task_id, id=message_id, answer=answer)
 
     def _agent_thought_to_stream_response(self, event: QueueAgentThoughtEvent) -> Optional[AgentThoughtStreamResponse]:
         """

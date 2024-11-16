@@ -15,9 +15,12 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="chat on Discord"></a>
+    <a href="https://reddit.com/r/mlchainai" target="_blank">  
+        <img src="https://img.shields.io/reddit/subreddit-subscribers/mlchainai?style=plastic&logo=reddit&label=r%2Fmlchainai&labelColor=white"
+            alt="Follow Reddit"></a>
     <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
         <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
-            alt="follow on Twitter"></a>
+            alt="follow on X(Twitter)"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
     <a href="https://github.com/mlchain/mlchain/graphs/commit-activity" target="_blank">
@@ -85,7 +88,7 @@ Mlchain is an open-source LLM app development platform. Its intuitive interface 
 
 >
     <th align="center">Feature</th>
-    <th align="center">MLChain</th>
+    <th align="center">MlChain</th>
     <th align="center">LangChain</th>
     <th align="center">Flowise</th>
     <th align="center">OpenAI Assistants API</th>
@@ -202,10 +205,13 @@ If you'd like to configure a highly-available setup, there are community-contrib
 
 #### Terraform atorlugu pilersitsineq
 
-##### Azure Global
-Atoruk [terraform](https://www.terraform.io/) Mlchain-mik Azure-mut ataatsikkut ikkussuilluarlugu.
-- [Azure Terraform atorlugu @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
+wa'logh nIqHom neH ghun deployment toy'wI' [terraform](https://www.terraform.io/) lo'laH.
 
+##### Azure Global
+- [Azure Terraform mung @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
+
+##### Google Cloud
+- [Google Cloud Terraform qachlot @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)
 
 ## Contributing
 
@@ -226,9 +232,9 @@ At the same time, please consider supporting Mlchain by sharing it on social med
 * [Github Discussion](https://github.com/mlchain/mlchain/discussions
 
 ). Best for: sharing feedback and asking questions.
-* [GitHub Issues](https://github.com/mlchain/mlchain/issues). Best for: bugs you encounter using MLChain, and feature proposals. See our [Contribution Guide](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
+* [GitHub Issues](https://github.com/mlchain/mlchain/issues). Best for: bugs you encounter using MlChain, and feature proposals. See our [Contribution Guide](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
 * [Discord](https://discord.gg/FngNHpbcY7). Best for: sharing your applications and hanging out with the community.
-* [Twitter](https://twitter.com/mlchain_ai). Best for: sharing your applications and hanging out with the community.
+* [X(Twitter)](https://twitter.com/mlchain_ai). Best for: sharing your applications and hanging out with the community.
 
 ## Star History
 

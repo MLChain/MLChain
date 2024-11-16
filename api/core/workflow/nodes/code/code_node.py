@@ -1,18 +1,25 @@
 from collections.abc import Mapping, Sequence
-from typing import Any, Optional, Union, cast
+from typing import Any, Optional, Union
 
 from configs import mlchain_config
 from core.helper.code_executor.code_executor import CodeExecutionError, CodeExecutor, CodeLanguage
 from core.helper.code_executor.code_node_provider import CodeNodeProvider
 from core.helper.code_executor.javascript.javascript_code_provider import JavascriptCodeProvider
 from core.helper.code_executor.python3.python3_code_provider import Python3CodeProvider
-from core.workflow.entities.node_entities import NodeRunResult, NodeType
-from core.workflow.nodes.base_node import BaseNode
+from core.workflow.entities.node_entities import NodeRunResult
+from core.workflow.nodes.base import BaseNode
 from core.workflow.nodes.code.entities import CodeNodeData
+from core.workflow.nodes.enums import NodeType
 from models.workflow import WorkflowNodeExecutionStatus
 
+from .exc import (
+    CodeNodeError,
+    DepthLimitError,
+    OutputValidationError,
+)
 
-class CodeNode(BaseNode):
+
+class CodeNode(BaseNode[CodeNodeData]):
     _node_data_cls = CodeNodeData
     _node_type = NodeType.CODE
 
@@ -33,24 +40,16 @@ class CodeNode(BaseNode):
         return code_provider.get_default_config()
 
     def _run(self) -> NodeRunResult:
-        """
-        Run code
-        :return:
-        """
-        node_data = self.node_data
-        node_data = cast(CodeNodeData, node_data)
-
         # Get code language
-        code_language = node_data.code_language
-        code = node_data.code
+        code_language = self.node_data.code_language
+        code = self.node_data.code
 
         # Get variables
         variables = {}
-        for variable_selector in node_data.variables:
-            variable = variable_selector.variable
-            value = self.graph_runtime_state.variable_pool.get_any(variable_selector.value_selector)
-
-            variables[variable] = value
+        for variable_selector in self.node_data.variables:
+            variable_name = variable_selector.variable
+            variable = self.graph_runtime_state.variable_pool.get(variable_selector.value_selector)
+            variables[variable_name] = variable.to_object() if variable else None
         # Run code
         try:
             result = CodeExecutor.execute_workflow_code_template(
@@ -60,8 +59,8 @@ class CodeNode(BaseNode):
             )
 
             # Transform result
-            result = self._transform_result(result, node_data.outputs)
-        except (CodeExecutionError, ValueError) as e:
+            result = self._transform_result(result, self.node_data.outputs)
+        except (CodeExecutionError, CodeNodeError) as e:
             return NodeRunResult(status=WorkflowNodeExecutionStatus.FAILED, inputs=variables, error=str(e))
 
         return NodeRunResult(status=WorkflowNodeExecutionStatus.SUCCEEDED, inputs=variables, outputs=result)
@@ -77,10 +76,10 @@ class CodeNode(BaseNode):
             if value is None:
                 return None
             else:
-                raise ValueError(f"Output variable `{variable}` must be a string")
+                raise OutputValidationError(f"Output variable `{variable}` must be a string")
 
         if len(value) > mlchain_config.CODE_MAX_STRING_LENGTH:
-            raise ValueError(
+            raise OutputValidationError(
                 f"The length of output variable `{variable}` must be"
                 f" less than {mlchain_config.CODE_MAX_STRING_LENGTH} characters"
             )
@@ -98,10 +97,10 @@ class CodeNode(BaseNode):
             if value is None:
                 return None
             else:
-                raise ValueError(f"Output variable `{variable}` must be a number")
+                raise OutputValidationError(f"Output variable `{variable}` must be a number")
 
         if value > mlchain_config.CODE_MAX_NUMBER or value < mlchain_config.CODE_MIN_NUMBER:
-            raise ValueError(
+            raise OutputValidationError(
                 f"Output variable `{variable}` is out of range,"
                 f" it must be between {mlchain_config.CODE_MIN_NUMBER} and {mlchain_config.CODE_MAX_NUMBER}."
             )
@@ -109,7 +108,7 @@ class CodeNode(BaseNode):
         if isinstance(value, float):
             # raise error if precision is too high
             if len(str(value).split(".")[1]) > mlchain_config.CODE_MAX_PRECISION:
-                raise ValueError(
+                raise OutputValidationError(
                     f"Output variable `{variable}` has too high precision,"
                     f" it must be less than {mlchain_config.CODE_MAX_PRECISION} digits."
                 )
@@ -126,7 +125,7 @@ class CodeNode(BaseNode):
         :return:
         """
         if depth > mlchain_config.CODE_MAX_DEPTH:
-            raise ValueError(f"Depth limit ${mlchain_config.CODE_MAX_DEPTH} reached, object too deep.")
+            raise DepthLimitError(f"Depth limit ${mlchain_config.CODE_MAX_DEPTH} reached, object too deep.")
 
         transformed_result = {}
         if output_schema is None:
@@ -174,14 +173,14 @@ class CodeNode(BaseNode):
                                         depth=depth + 1,
                                     )
                         else:
-                            raise ValueError(
+                            raise OutputValidationError(
                                 f"Output {prefix}.{output_name} is not a valid array."
                                 f" make sure all elements are of the same type."
                             )
                 elif output_value is None:
                     pass
                 else:
-                    raise ValueError(f"Output {prefix}.{output_name} is not a valid type.")
+                    raise OutputValidationError(f"Output {prefix}.{output_name} is not a valid type.")
 
             return result
 
@@ -189,7 +188,7 @@ class CodeNode(BaseNode):
         for output_name, output_config in output_schema.items():
             dot = "." if prefix else ""
             if output_name not in result:
-                raise ValueError(f"Output {prefix}{dot}{output_name} is missing.")
+                raise OutputValidationError(f"Output {prefix}{dot}{output_name} is missing.")
 
             if output_config.type == "object":
                 # check if output is object
@@ -197,7 +196,7 @@ class CodeNode(BaseNode):
                     if isinstance(result.get(output_name), type(None)):
                         transformed_result[output_name] = None
                     else:
-                        raise ValueError(
+                        raise OutputValidationError(
                             f"Output {prefix}{dot}{output_name} is not an object,"
                             f" got {type(result.get(output_name))} instead."
                         )
@@ -225,13 +224,13 @@ class CodeNode(BaseNode):
                     if isinstance(result[output_name], type(None)):
                         transformed_result[output_name] = None
                     else:
-                        raise ValueError(
+                        raise OutputValidationError(
                             f"Output {prefix}{dot}{output_name} is not an array,"
                             f" got {type(result.get(output_name))} instead."
                         )
                 else:
                     if len(result[output_name]) > mlchain_config.CODE_MAX_NUMBER_ARRAY_LENGTH:
-                        raise ValueError(
+                        raise OutputValidationError(
                             f"The length of output variable `{prefix}{dot}{output_name}` must be"
                             f" less than {mlchain_config.CODE_MAX_NUMBER_ARRAY_LENGTH} elements."
                         )
@@ -246,13 +245,13 @@ class CodeNode(BaseNode):
                     if isinstance(result[output_name], type(None)):
                         transformed_result[output_name] = None
                     else:
-                        raise ValueError(
+                        raise OutputValidationError(
                             f"Output {prefix}{dot}{output_name} is not an array,"
                             f" got {type(result.get(output_name))} instead."
                         )
                 else:
                     if len(result[output_name]) > mlchain_config.CODE_MAX_STRING_ARRAY_LENGTH:
-                        raise ValueError(
+                        raise OutputValidationError(
                             f"The length of output variable `{prefix}{dot}{output_name}` must be"
                             f" less than {mlchain_config.CODE_MAX_STRING_ARRAY_LENGTH} elements."
                         )
@@ -267,13 +266,13 @@ class CodeNode(BaseNode):
                     if isinstance(result[output_name], type(None)):
                         transformed_result[output_name] = None
                     else:
-                        raise ValueError(
+                        raise OutputValidationError(
                             f"Output {prefix}{dot}{output_name} is not an array,"
                             f" got {type(result.get(output_name))} instead."
                         )
                 else:
                     if len(result[output_name]) > mlchain_config.CODE_MAX_OBJECT_ARRAY_LENGTH:
-                        raise ValueError(
+                        raise OutputValidationError(
                             f"The length of output variable `{prefix}{dot}{output_name}` must be"
                             f" less than {mlchain_config.CODE_MAX_OBJECT_ARRAY_LENGTH} elements."
                         )
@@ -283,7 +282,7 @@ class CodeNode(BaseNode):
                             if value is None:
                                 pass
                             else:
-                                raise ValueError(
+                                raise OutputValidationError(
                                     f"Output {prefix}{dot}{output_name}[{i}] is not an object,"
                                     f" got {type(value)} instead at index {i}."
                                 )
@@ -300,19 +299,23 @@ class CodeNode(BaseNode):
                         for i, value in enumerate(result[output_name])
                     ]
             else:
-                raise ValueError(f"Output type {output_config.type} is not supported.")
+                raise OutputValidationError(f"Output type {output_config.type} is not supported.")
 
             parameters_validated[output_name] = True
 
         # check if all output parameters are validated
         if len(parameters_validated) != len(result):
-            raise ValueError("Not all output parameters are validated.")
+            raise CodeNodeError("Not all output parameters are validated.")
 
         return transformed_result
 
     @classmethod
     def _extract_variable_selector_to_variable_mapping(
-        cls, graph_config: Mapping[str, Any], node_id: str, node_data: CodeNodeData
+        cls,
+        *,
+        graph_config: Mapping[str, Any],
+        node_id: str,
+        node_data: CodeNodeData,
     ) -> Mapping[str, Sequence[str]]:
         """
         Extract variable selector to variable mapping

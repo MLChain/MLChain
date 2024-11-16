@@ -13,9 +13,7 @@ class SearchDevDocsInput(BaseModel):
 
 
 class SearchDevDocsTool(BuiltinTool):
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         """
         Invokes the DevDocs search tool with the given user ID and tool parameters.
 

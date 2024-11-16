@@ -4,7 +4,7 @@ from typing import Optional
 
 from replicate import Client as ReplicateClient
 
-from core.embedding.embedding_constant import EmbeddingInputType
+from core.entities.embedding_type import EmbeddingInputType
 from core.model_runtime.entities.common_entities import I18nObject
 from core.model_runtime.entities.model_entities import AIModelEntity, FetchFrom, ModelType, PriceType
 from core.model_runtime.entities.text_embedding_entities import EmbeddingUsage, TextEmbeddingResult
@@ -134,9 +134,7 @@ class ReplicateEmbeddingModel(_CommonReplicate, TextEmbeddingModel):
             raise ValueError(f"embeddings input key is invalid: {text_input_key}")
 
     def _calc_response_usage(self, model: str, credentials: dict, tokens: int) -> EmbeddingUsage:
-        input_price_info = self.get_price(
-            model=model, credentials=credentials, price_type=PriceType.INPUT, tokens=tokens
-        )
+        input_price_info = self.get_price(model=model, credentials=credentials, price_type=PriceType.INPUT, tokens=tokens)
 
         # transform usage
         usage = EmbeddingUsage(

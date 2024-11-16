@@ -4,8 +4,8 @@ from typing import Any, Optional, cast
 
 from pydantic import BaseModel, Field
 
-from core.workflow.entities.node_entities import NodeType
 from core.workflow.graph_engine.entities.run_condition import RunCondition
+from core.workflow.nodes import NodeType
 from core.workflow.nodes.answer.answer_stream_generate_router import AnswerStreamGeneratorRouter
 from core.workflow.nodes.answer.entities import AnswerStreamGenerateRoute
 from core.workflow.nodes.end.end_stream_generate_router import EndStreamGeneratorRouter
@@ -223,8 +223,7 @@ class Graph(BaseModel):
         leaf_node_ids = []
         for node_id in self.node_ids:
             if node_id not in self.edge_mapping or (
-                len(self.edge_mapping[node_id]) == 1
-                and self.edge_mapping[node_id][0].target_node_id == self.root_node_id
+                len(self.edge_mapping[node_id]) == 1 and self.edge_mapping[node_id][0].target_node_id == self.root_node_id
             ):
                 leaf_node_ids.append(node_id)
 
@@ -246,9 +245,7 @@ class Graph(BaseModel):
                 continue
 
             node_ids.append(graph_edge.target_node_id)
-            cls._recursively_add_node_ids(
-                node_ids=node_ids, edge_mapping=edge_mapping, node_id=graph_edge.target_node_id
-            )
+            cls._recursively_add_node_ids(node_ids=node_ids, edge_mapping=edge_mapping, node_id=graph_edge.target_node_id)
 
     @classmethod
     def _check_connected_to_previous_node(cls, route: list[str], edge_mapping: dict[str, list[GraphEdge]]) -> None:

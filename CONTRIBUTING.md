@@ -81,7 +81,7 @@ Mlchain requires the following dependencies to build, make sure they're installe
 
 Mlchain is composed of a backend and a frontend. Navigate to the backend directory by `cd api/`, then follow the [Backend README](api/README.md) to install it. In a separate terminal, navigate to the frontend directory by `cd web/`, then follow the [Frontend README](web/README.md) to install.
 
-Check the [installation FAQ](https://docs-mlchain.khulnasoft.com/learn-more/faq/self-host-faq) for a list of common issues and steps to troubleshoot.
+Check the [installation FAQ](https://docs-mlchain.khulnasoft.com/learn-more/faq/install-faq) for a list of common issues and steps to troubleshoot.
 
 ### 5. Visit mlchain in your browser
 

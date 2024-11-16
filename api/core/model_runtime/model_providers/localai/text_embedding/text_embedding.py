@@ -5,7 +5,7 @@ from typing import Optional
 from requests import post
 from yarl import URL
 
-from core.embedding.embedding_constant import EmbeddingInputType
+from core.entities.embedding_type import EmbeddingInputType
 from core.model_runtime.entities.common_entities import I18nObject
 from core.model_runtime.entities.model_entities import AIModelEntity, FetchFrom, ModelPropertyKey, ModelType, PriceType
 from core.model_runtime.entities.text_embedding_entities import EmbeddingUsage, TextEmbeddingResult
@@ -113,7 +113,7 @@ class LocalAITextEmbeddingModel(TextEmbeddingModel):
             num_tokens += self._get_num_tokens_by_gpt2(text)
         return num_tokens
 
-    def _get_customizable_model_schema(self, model: str, credentials: dict) -> AIModelEntity | None:
+    def _get_customizable_model_schema(self, model: str, credentials: dict) -> Optional[AIModelEntity]:
         """
         Get customizable model schema
 
@@ -169,9 +169,7 @@ class LocalAITextEmbeddingModel(TextEmbeddingModel):
         :return: usage
         """
         # get input price info
-        input_price_info = self.get_price(
-            model=model, credentials=credentials, price_type=PriceType.INPUT, tokens=tokens
-        )
+        input_price_info = self.get_price(model=model, credentials=credentials, price_type=PriceType.INPUT, tokens=tokens)
 
         # transform usage
         usage = EmbeddingUsage(

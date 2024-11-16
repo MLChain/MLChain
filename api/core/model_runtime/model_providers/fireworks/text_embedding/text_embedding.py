@@ -5,7 +5,7 @@ from typing import Optional, Union
 import numpy as np
 from openai import OpenAI
 
-from core.embedding.embedding_constant import EmbeddingInputType
+from core.entities.embedding_type import EmbeddingInputType
 from core.model_runtime.entities.model_entities import PriceType
 from core.model_runtime.entities.text_embedding_entities import EmbeddingUsage, TextEmbeddingResult
 from core.model_runtime.errors.validate import CredentialsValidateFailedError
@@ -134,9 +134,7 @@ class FireworksTextEmbeddingModel(_CommonFireworks, TextEmbeddingModel):
         :param tokens: input tokens
         :return: usage
         """
-        input_price_info = self.get_price(
-            model=model, credentials=credentials, tokens=tokens, price_type=PriceType.INPUT
-        )
+        input_price_info = self.get_price(model=model, credentials=credentials, tokens=tokens, price_type=PriceType.INPUT)
 
         usage = EmbeddingUsage(
             tokens=tokens,

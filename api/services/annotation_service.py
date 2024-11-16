@@ -130,14 +130,14 @@ class AppAnnotationService:
                         MessageAnnotation.content.ilike("%{}%".format(keyword)),
                     )
                 )
-                .order_by(MessageAnnotation.created_at.desc())
+                .order_by(MessageAnnotation.created_at.desc(), MessageAnnotation.id.desc())
                 .paginate(page=page, per_page=limit, max_per_page=100, error_out=False)
             )
         else:
             annotations = (
                 db.session.query(MessageAnnotation)
                 .filter(MessageAnnotation.app_id == app_id)
-                .order_by(MessageAnnotation.created_at.desc())
+                .order_by(MessageAnnotation.created_at.desc(), MessageAnnotation.id.desc())
                 .paginate(page=page, per_page=limit, max_per_page=100, error_out=False)
             )
         return annotations.items, annotations.total
@@ -247,9 +247,7 @@ class AppAnnotationService:
         db.session.delete(annotation)
 
         annotation_hit_histories = (
-            db.session.query(AppAnnotationHitHistory)
-            .filter(AppAnnotationHitHistory.annotation_id == annotation_id)
-            .all()
+            db.session.query(AppAnnotationHitHistory).filter(AppAnnotationHitHistory.annotation_id == annotation_id).all()
         )
         if annotation_hit_histories:
             for annotation_hit_history in annotation_hit_histories:

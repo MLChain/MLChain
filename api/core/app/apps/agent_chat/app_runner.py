@@ -282,9 +282,7 @@ class AgentChatAppRunner(AppRunner):
 
         return tool_variables
 
-    def _convert_db_variables_to_tool_variables(
-        self, db_variables: ToolConversationVariables
-    ) -> ToolRuntimeVariablePool:
+    def _convert_db_variables_to_tool_variables(self, db_variables: ToolConversationVariables) -> ToolRuntimeVariablePool:
         """
         convert db variables to tool variables
         """

@@ -128,9 +128,7 @@ class CrossRefQueryTitleTool(BuiltinTool):
     Tool for querying the metadata of a publication using its title.
     """
 
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         query = tool_parameters.get("query")
         fuzzy_query = tool_parameters.get("fuzzy_query", False)
         rows = tool_parameters.get("rows", 3)

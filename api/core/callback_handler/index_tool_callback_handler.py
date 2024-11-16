@@ -28,9 +28,7 @@ class DatasetIndexToolCallbackHandler:
             content=query,
             source="app",
             source_app_id=self._app_id,
-            created_by_role=(
-                "account" if self._invoke_from in {InvokeFrom.EXPLORE, InvokeFrom.DEBUGGER} else "end_user"
-            ),
+            created_by_role=("account" if self._invoke_from in {InvokeFrom.EXPLORE, InvokeFrom.DEBUGGER} else "end_user"),
             created_by=self._user_id,
         )
 
@@ -40,9 +38,7 @@ class DatasetIndexToolCallbackHandler:
     def on_tool_end(self, documents: list[Document]) -> None:
         """Handle tool end."""
         for document in documents:
-            query = db.session.query(DocumentSegment).filter(
-                DocumentSegment.index_node_id == document.metadata["doc_id"]
-            )
+            query = db.session.query(DocumentSegment).filter(DocumentSegment.index_node_id == document.metadata["doc_id"])
 
             if "dataset_id" in document.metadata:
                 query = query.filter(DocumentSegment.dataset_id == document.metadata["dataset_id"])

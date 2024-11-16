@@ -20,6 +20,8 @@ import { useChatContext } from '@/app/components/base/chat/chat/context'
 import VideoGallery from '@/app/components/base/video-gallery'
 import AudioGallery from '@/app/components/base/audio-gallery'
 import SVGRenderer from '@/app/components/base/svg-gallery'
+import MarkdownButton from '@/app/components/base/markdown-blocks/button'
+import MarkdownForm from '@/app/components/base/markdown-blocks/form'
 
 // Available language https://github.com/react-syntax-highlighter/react-syntax-highlighter/blob/master/AVAILABLE_LANGUAGES_HLJS.MD
 const capitalizationLanguageNameMap: Record<string, string> = {
@@ -245,7 +247,7 @@ export function Markdown(props: { content: string; className?: string }) {
   return (
     <div className={cn(props.className, 'markdown-body')}>
       <ReactMarkdown
-        remarkPlugins={[[RemarkGfm, RemarkMath, { singleDollarTextMath: false }], RemarkBreaks]}
+        remarkPlugins={[RemarkGfm, RemarkMath, RemarkBreaks]}
         rehypePlugins={[
           RehypeKatex,
           RehypeRaw as any,
@@ -271,6 +273,8 @@ export function Markdown(props: { content: string; className?: string }) {
           audio: AudioBlock,
           a: Link,
           p: Paragraph,
+          button: MarkdownButton,
+          form: MarkdownForm,
         }}
         linkTarget='_blank'
       >

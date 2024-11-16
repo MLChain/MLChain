@@ -6,9 +6,7 @@ from core.tools.tool.builtin_tool import BuiltinTool
 
 
 class ScrapeTool(BuiltinTool):
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         # initialize the app object with the api key
         app = Spider(api_key=self.runtime.credentials["spider_api_key"])
 

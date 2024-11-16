@@ -1,7 +1,8 @@
 import random
 from typing import Any, Union
 
-from core.model_runtime.model_providers.zhipuai.zhipuai_sdk._client import ZhipuAI
+from zhipuai import ZhipuAI
+
 from core.tools.entities.tool_entities import ToolInvokeMessage
 from core.tools.tool.builtin_tool import BuiltinTool
 
@@ -9,9 +10,7 @@ from core.tools.tool.builtin_tool import BuiltinTool
 class CogView3Tool(BuiltinTool):
     """CogView3 Tool"""
 
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         """
         Invoke CogView3 tool
         """
