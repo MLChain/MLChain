@@ -100,9 +100,7 @@ class JinaTextEmbeddingModel(TextEmbeddingModel):
                 else:
                     raise InvokeBadRequestError(msg)
             except JSONDecodeError as e:
-                raise InvokeServerUnavailableError(
-                    f"Failed to convert response to json: {e} with text: {response.text}"
-                )
+                raise InvokeServerUnavailableError(f"Failed to convert response to json: {e} with text: {response.text}")
 
         try:
             resp = response.json()
@@ -167,9 +165,7 @@ class JinaTextEmbeddingModel(TextEmbeddingModel):
         :return: usage
         """
         # get input price info
-        input_price_info = self.get_price(
-            model=model, credentials=credentials, price_type=PriceType.INPUT, tokens=tokens
-        )
+        input_price_info = self.get_price(model=model, credentials=credentials, price_type=PriceType.INPUT, tokens=tokens)
 
         # transform usage
         usage = EmbeddingUsage(

@@ -33,9 +33,7 @@ def send_reset_password_mail_task(language: str, to: str, code: str):
 
         end_at = time.perf_counter()
         logging.info(
-            click.style(
-                "Send password reset mail to {} succeeded: latency: {}".format(to, end_at - start_at), fg="green"
-            )
+            click.style("Send password reset mail to {} succeeded: latency: {}".format(to, end_at - start_at), fg="green")
         )
     except Exception:
         logging.exception("Send password reset mail to {} failed".format(to))

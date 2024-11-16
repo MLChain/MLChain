@@ -365,9 +365,7 @@ class MarkdownHeaderTextSplitter:
         if not self.return_each_line:
             return self.aggregate_lines_to_chunks(lines_with_metadata)
         else:
-            return [
-                Document(page_content=chunk["content"], metadata=chunk["metadata"]) for chunk in lines_with_metadata
-            ]
+            return [Document(page_content=chunk["content"], metadata=chunk["metadata"]) for chunk in lines_with_metadata]
 
 
 # should be in newer Python versions (3.10+)

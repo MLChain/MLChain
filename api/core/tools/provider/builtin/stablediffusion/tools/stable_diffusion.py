@@ -83,9 +83,7 @@ DRAW_TEXT_OPTIONS = {
 
 
 class StableDiffusionTool(BuiltinTool):
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         """
         invoke tools
         """
@@ -356,9 +354,7 @@ class StableDiffusionTool(BuiltinTool):
                             " of Stable Diffusion",
                             required=True,
                             default=models[0],
-                            options=[
-                                ToolParameterOption(value=i, label=I18nObject(en_US=i, zh_Hans=i)) for i in models
-                            ],
+                            options=[ToolParameterOption(value=i, label=I18nObject(en_US=i, zh_Hans=i)) for i in models],
                         )
                     )
 

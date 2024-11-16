@@ -8,9 +8,7 @@ from core.tools.tool.builtin_tool import BuiltinTool
 
 
 class GitlabProjectsTool(BuiltinTool):
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         project_name = tool_parameters.get("project_name", "")
         page = tool_parameters.get("page", 1)
         page_size = tool_parameters.get("page_size", 20)
@@ -44,9 +42,7 @@ class GitlabProjectsTool(BuiltinTool):
             if project_name:
                 # URL encode the project name for the search query
                 encoded_project_name = urllib.parse.quote(project_name, safe="")
-                projects_url = (
-                    f"{domain}/api/v4/projects?search={encoded_project_name}&page={page}&per_page={page_size}"
-                )
+                projects_url = f"{domain}/api/v4/projects?search={encoded_project_name}&page={page}&per_page={page_size}"
             else:
                 projects_url = f"{domain}/api/v4/projects?page={page}&per_page={page_size}"
 

@@ -7,9 +7,7 @@ from core.tools.tool.builtin_tool import BuiltinTool
 
 
 class TalksTool(BuiltinTool):
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         app = DIDApp(api_key=self.runtime.credentials["did_api_key"], base_url=self.runtime.credentials["base_url"])
 
         driver_expressions_str = tool_parameters.get("driver_expressions")

@@ -163,9 +163,7 @@ class AppDslService:
 
         workflow_data = import_data.get("workflow")
         if not workflow_data or not isinstance(workflow_data, dict):
-            raise MissingWorkflowDataError(
-                "Missing workflow in data argument when app mode is advanced-chat or workflow"
-            )
+            raise MissingWorkflowDataError("Missing workflow in data argument when app mode is advanced-chat or workflow")
 
         return cls._import_and_overwrite_workflow_based_app(
             app_model=app_model,
@@ -196,9 +194,7 @@ class AppDslService:
         }
 
         if app_mode in {AppMode.ADVANCED_CHAT, AppMode.WORKFLOW}:
-            cls._append_workflow_export_data(
-                export_data=export_data, app_model=app_model, include_secret=include_secret
-            )
+            cls._append_workflow_export_data(export_data=export_data, app_model=app_model, include_secret=include_secret)
         else:
             cls._append_model_config_export_data(export_data, app_model)
 
@@ -233,9 +229,7 @@ class AppDslService:
         :param use_icon_as_answer_icon: use app icon as answer icon
         """
         if not workflow_data:
-            raise MissingWorkflowDataError(
-                "Missing workflow in data argument when app mode is advanced-chat or workflow"
-            )
+            raise MissingWorkflowDataError("Missing workflow in data argument when app mode is advanced-chat or workflow")
 
         app = cls._create_app(
             tenant_id=tenant_id,
@@ -251,9 +245,7 @@ class AppDslService:
 
         # init draft workflow
         environment_variables_list = workflow_data.get("environment_variables") or []
-        environment_variables = [
-            variable_factory.build_variable_from_mapping(obj) for obj in environment_variables_list
-        ]
+        environment_variables = [variable_factory.build_variable_from_mapping(obj) for obj in environment_variables_list]
         conversation_variables_list = workflow_data.get("conversation_variables") or []
         conversation_variables = [
             variable_factory.build_variable_from_mapping(obj) for obj in conversation_variables_list
@@ -284,9 +276,7 @@ class AppDslService:
         :param account: Account instance
         """
         if not workflow_data:
-            raise MissingWorkflowDataError(
-                "Missing workflow in data argument when app mode is advanced-chat or workflow"
-            )
+            raise MissingWorkflowDataError("Missing workflow in data argument when app mode is advanced-chat or workflow")
 
         # fetch draft workflow by app_model
         workflow_service = WorkflowService()
@@ -298,9 +288,7 @@ class AppDslService:
 
         # sync draft workflow
         environment_variables_list = workflow_data.get("environment_variables") or []
-        environment_variables = [
-            variable_factory.build_variable_from_mapping(obj) for obj in environment_variables_list
-        ]
+        environment_variables = [variable_factory.build_variable_from_mapping(obj) for obj in environment_variables_list]
         conversation_variables_list = workflow_data.get("conversation_variables") or []
         conversation_variables = [
             variable_factory.build_variable_from_mapping(obj) for obj in conversation_variables_list

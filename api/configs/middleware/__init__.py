@@ -117,9 +117,9 @@ class DatabaseConfig:
     @computed_field
     @property
     def SQLALCHEMY_DATABASE_URI(self) -> str:
-        db_extras = (
-            f"{self.DB_EXTRAS}&client_encoding={self.DB_CHARSET}" if self.DB_CHARSET else self.DB_EXTRAS
-        ).strip("&")
+        db_extras = (f"{self.DB_EXTRAS}&client_encoding={self.DB_CHARSET}" if self.DB_CHARSET else self.DB_EXTRAS).strip(
+            "&"
+        )
         db_extras = f"?{db_extras}" if db_extras else ""
         return (
             f"{self.SQLALCHEMY_DATABASE_URI_SCHEME}://"
@@ -194,9 +194,7 @@ class CeleryConfig(DatabaseConfig):
     @property
     def CELERY_RESULT_BACKEND(self) -> str | None:
         return (
-            "db+{}".format(self.SQLALCHEMY_DATABASE_URI)
-            if self.CELERY_BACKEND == "database"
-            else self.CELERY_BROKER_URL
+            "db+{}".format(self.SQLALCHEMY_DATABASE_URI) if self.CELERY_BACKEND == "database" else self.CELERY_BROKER_URL
         )
 
     @computed_field

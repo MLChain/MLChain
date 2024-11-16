@@ -90,9 +90,7 @@ class AdvancedChatAppGenerator(MessageBasedAppGenerator):
         conversation = None
         conversation_id = args.get("conversation_id")
         if conversation_id:
-            conversation = self._get_conversation_by_user(
-                app_model=app_model, conversation_id=conversation_id, user=user
-            )
+            conversation = self._get_conversation_by_user(app_model=app_model, conversation_id=conversation_id, user=user)
 
         # parse files
         files = args["files"] if args.get("files") else []

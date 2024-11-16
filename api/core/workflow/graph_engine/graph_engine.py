@@ -153,8 +153,7 @@ class GraphEngine:
                         if item.node_type == NodeType.END:
                             self.graph_runtime_state.outputs = (
                                 item.route_node_state.node_run_result.outputs
-                                if item.route_node_state.node_run_result
-                                and item.route_node_state.node_run_result.outputs
+                                if item.route_node_state.node_run_result and item.route_node_state.node_run_result.outputs
                                 else {}
                             )
                         elif item.node_type == NodeType.ANSWER:
@@ -163,8 +162,7 @@ class GraphEngine:
 
                             self.graph_runtime_state.outputs["answer"] += "\n" + (
                                 item.route_node_state.node_run_result.outputs.get("answer", "")
-                                if item.route_node_state.node_run_result
-                                and item.route_node_state.node_run_result.outputs
+                                if item.route_node_state.node_run_result and item.route_node_state.node_run_result.outputs
                                 else ""
                             )
 
@@ -212,9 +210,7 @@ class GraphEngine:
                 raise GraphRunFailedError("Max steps {} reached.".format(self.max_execution_steps))
 
             # or max execution time reached
-            if self._is_timed_out(
-                start_at=self.graph_runtime_state.start_at, max_execution_time=self.max_execution_time
-            ):
+            if self._is_timed_out(start_at=self.graph_runtime_state.start_at, max_execution_time=self.max_execution_time):
                 raise GraphRunFailedError("Max execution time {}s reached.".format(self.max_execution_time))
 
             # init route node state
@@ -712,9 +708,7 @@ class GraphEngine:
             for key, value in variable_value.items():
                 # construct new key list
                 new_key_list = variable_key_list + [key]
-                self._append_variables_recursively(
-                    node_id=node_id, variable_key_list=new_key_list, variable_value=value
-                )
+                self._append_variables_recursively(node_id=node_id, variable_key_list=new_key_list, variable_value=value)
 
     def _is_timed_out(self, start_at: float, max_execution_time: int) -> bool:
         """

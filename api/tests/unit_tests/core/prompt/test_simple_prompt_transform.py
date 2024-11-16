@@ -122,9 +122,7 @@ def test_get_common_chat_app_prompt_template_with_cq():
         with_memory_prompt=False,
     )
     prompt_rules = prompt_template["prompt_rules"]
-    assert prompt_template["prompt_template"].template == (
-        prompt_rules["context_prompt"] + prompt_rules["query_prompt"]
-    )
+    assert prompt_template["prompt_template"].template == (prompt_rules["context_prompt"] + prompt_rules["query_prompt"])
     assert prompt_template["special_variable_keys"] == ["#context#", "#query#"]
 
 

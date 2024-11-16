@@ -8,9 +8,7 @@ from core.tools.tool.builtin_tool import BuiltinTool
 
 
 class CogVideoJobTool(BuiltinTool):
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         client = ZhipuAI(
             api_key=self.runtime.credentials["zhipuai_api_key"],
             base_url=self.runtime.credentials["zhipuai_base_url"],

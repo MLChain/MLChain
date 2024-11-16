@@ -23,9 +23,7 @@ def test_validate_credentials_for_chat_model():
     model = ErnieBotLargeLanguageModel()
 
     with pytest.raises(CredentialsValidateFailedError):
-        model.validate_credentials(
-            model="ernie-bot", credentials={"api_key": "invalid_key", "secret_key": "invalid_key"}
-        )
+        model.validate_credentials(model="ernie-bot", credentials={"api_key": "invalid_key", "secret_key": "invalid_key"})
 
     model.validate_credentials(
         model="ernie-bot",

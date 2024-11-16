@@ -8,9 +8,7 @@ from core.tools.tool.builtin_tool import BuiltinTool
 
 
 class ListWorksheetsTool(BuiltinTool):
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         appkey = tool_parameters.get("appkey", "")
         if not appkey:
             return self.create_text_message("Invalid parameter App Key")
@@ -41,9 +39,7 @@ class ListWorksheetsTool(BuiltinTool):
             res_json = res.json()
             if res.is_success:
                 if res_json["error_code"] != 1:
-                    return self.create_text_message(
-                        "Failed to access the application. {}".format(res_json["error_msg"])
-                    )
+                    return self.create_text_message("Failed to access the application. {}".format(res_json["error_msg"]))
                 else:
                     if result_type == "json":
                         worksheets = []

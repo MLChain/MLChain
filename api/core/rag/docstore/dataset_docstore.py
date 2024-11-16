@@ -41,9 +41,7 @@ class DatasetDocumentStore:
 
     @property
     def docs(self) -> dict[str, Document]:
-        document_segments = (
-            db.session.query(DocumentSegment).filter(DocumentSegment.dataset_id == self._dataset.id).all()
-        )
+        document_segments = db.session.query(DocumentSegment).filter(DocumentSegment.dataset_id == self._dataset.id).all()
 
         output = {}
         for document_segment in document_segments:

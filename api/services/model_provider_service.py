@@ -96,9 +96,7 @@ class ModelProviderService:
         provider_configurations = self.provider_manager.get_configurations(tenant_id)
 
         # Get provider available models
-        return [
-            ModelWithProviderEntityResponse(model) for model in provider_configurations.get_models(provider=provider)
-        ]
+        return [ModelWithProviderEntityResponse(model) for model in provider_configurations.get_models(provider=provider)]
 
     def get_provider_credentials(self, tenant_id: str, provider: str) -> dict:
         """
@@ -409,9 +407,7 @@ class ModelProviderService:
             tenant_id=tenant_id, model_type=model_type_enum, provider=provider, model=model
         )
 
-    def get_model_provider_icon(
-        self, provider: str, icon_type: str, lang: str
-    ) -> tuple[Optional[bytes], Optional[str]]:
+    def get_model_provider_icon(self, provider: str, icon_type: str, lang: str) -> tuple[Optional[bytes], Optional[str]]:
         """
         get model provider icon.
 

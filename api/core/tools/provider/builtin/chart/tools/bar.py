@@ -8,9 +8,7 @@ from core.tools.tool.builtin_tool import BuiltinTool
 
 
 class BarChartTool(BuiltinTool):
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         data = tool_parameters.get("data", "")
         if not data:
             return self.create_text_message("Please input data")

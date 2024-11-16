@@ -10,9 +10,7 @@ from core.tools.tool.builtin_tool import BuiltinTool
 class SendGroupMsg(BuiltinTool):
     """OneBot v11 Tool: Send Group Message"""
 
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         # Get parameters
         send_group_id = tool_parameters.get("group_id", "")
 

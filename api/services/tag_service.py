@@ -148,9 +148,7 @@ class TagService:
                 raise NotFound("Dataset not found")
         elif type == "app":
             app = (
-                db.session.query(App)
-                .filter(App.tenant_id == current_user.current_tenant_id, App.id == target_id)
-                .first()
+                db.session.query(App).filter(App.tenant_id == current_user.current_tenant_id, App.id == target_id).first()
             )
             if not app:
                 raise NotFound("App not found")

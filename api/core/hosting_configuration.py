@@ -89,12 +89,8 @@ class HostingConfiguration:
                     RestrictModel(
                         model="gpt-35-turbo-instruct", base_model_name="gpt-35-turbo-instruct", model_type=ModelType.LLM
                     ),
-                    RestrictModel(
-                        model="gpt-35-turbo-16k", base_model_name="gpt-35-turbo-16k", model_type=ModelType.LLM
-                    ),
-                    RestrictModel(
-                        model="text-davinci-003", base_model_name="text-davinci-003", model_type=ModelType.LLM
-                    ),
+                    RestrictModel(model="gpt-35-turbo-16k", base_model_name="gpt-35-turbo-16k", model_type=ModelType.LLM),
+                    RestrictModel(model="text-davinci-003", base_model_name="text-davinci-003", model_type=ModelType.LLM),
                     RestrictModel(
                         model="text-embedding-ada-002",
                         base_model_name="text-embedding-ada-002",

@@ -13,9 +13,7 @@ class SearchDevDocsInput(BaseModel):
 
 
 class SearchDevDocsTool(BuiltinTool):
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         """
         Invokes the DevDocs search tool with the given user ID and tool parameters.
 
@@ -42,6 +40,4 @@ class SearchDevDocsTool(BuiltinTool):
             content = response.text
             return self.create_text_message(self.summary(user_id=user_id, content=content))
         else:
-            return self.create_text_message(
-                f"Failed to retrieve the documentation. Status code: {response.status_code}"
-            )
+            return self.create_text_message(f"Failed to retrieve the documentation. Status code: {response.status_code}")

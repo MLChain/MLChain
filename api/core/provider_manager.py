@@ -571,9 +571,8 @@ class ProviderManager:
             if not cached_provider_credentials:
                 try:
                     # fix origin data
-                    if (
-                        custom_provider_record.encrypted_config
-                        and not custom_provider_record.encrypted_config.startswith("{")
+                    if custom_provider_record.encrypted_config and not custom_provider_record.encrypted_config.startswith(
+                        "{"
                     ):
                         provider_credentials = {"openai_api_key": custom_provider_record.encrypted_config}
                     else:
@@ -685,9 +684,7 @@ class ProviderManager:
             if provider_record.provider_type != ProviderType.SYSTEM.value:
                 continue
 
-            quota_type_to_provider_records_dict[ProviderQuotaType.value_of(provider_record.quota_type)] = (
-                provider_record
-            )
+            quota_type_to_provider_records_dict[ProviderQuotaType.value_of(provider_record.quota_type)] = provider_record
 
         quota_configurations = []
         for provider_quota in provider_hosting_configuration.quotas:

@@ -8,9 +8,7 @@ from core.tools.tool.builtin_tool import BuiltinTool
 
 
 class GetWorksheetPivotDataTool(BuiltinTool):
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         appkey = tool_parameters.get("appkey", "")
         if not appkey:
             return self.create_text_message("Invalid parameter App Key")
@@ -108,14 +106,11 @@ class GetWorksheetPivotDataTool(BuiltinTool):
                 {"fieldId": column["controlId"], "fieldName": column["displayName"]}
                 for column in data["metadata"]["columns"]
             ],
-            "y-axis": [
-                {"fieldId": row["controlId"], "fieldName": row["displayName"]} for row in data["metadata"]["rows"]
-            ]
+            "y-axis": [{"fieldId": row["controlId"], "fieldName": row["displayName"]} for row in data["metadata"]["rows"]]
             if data["metadata"]["rows"]
             else [],
             "values": [
-                {"fieldId": value["controlId"], "fieldName": value["displayName"]}
-                for value in data["metadata"]["values"]
+                {"fieldId": value["controlId"], "fieldName": value["displayName"]} for value in data["metadata"]["values"]
             ],
         }
         # fields = ([

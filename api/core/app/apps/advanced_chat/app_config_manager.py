@@ -60,9 +60,7 @@ class AdvancedChatAppConfigManager(BaseAppConfigManager):
         related_config_keys.extend(current_related_config_keys)
 
         # suggested_questions_after_answer
-        config, current_related_config_keys = SuggestedQuestionsAfterAnswerConfigManager.validate_and_set_defaults(
-            config
-        )
+        config, current_related_config_keys = SuggestedQuestionsAfterAnswerConfigManager.validate_and_set_defaults(config)
         related_config_keys.extend(current_related_config_keys)
 
         # speech_to_text

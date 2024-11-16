@@ -210,9 +210,7 @@ class Graph(BaseModel):
         if target_node_id in [graph_edge.target_node_id for graph_edge in self.edge_mapping[source_node_id]]:
             return
 
-        graph_edge = GraphEdge(
-            source_node_id=source_node_id, target_node_id=target_node_id, run_condition=run_condition
-        )
+        graph_edge = GraphEdge(source_node_id=source_node_id, target_node_id=target_node_id, run_condition=run_condition)
 
         self.edge_mapping[source_node_id].append(graph_edge)
 
@@ -225,8 +223,7 @@ class Graph(BaseModel):
         leaf_node_ids = []
         for node_id in self.node_ids:
             if node_id not in self.edge_mapping or (
-                len(self.edge_mapping[node_id]) == 1
-                and self.edge_mapping[node_id][0].target_node_id == self.root_node_id
+                len(self.edge_mapping[node_id]) == 1 and self.edge_mapping[node_id][0].target_node_id == self.root_node_id
             ):
                 leaf_node_ids.append(node_id)
 
@@ -248,9 +245,7 @@ class Graph(BaseModel):
                 continue
 
             node_ids.append(graph_edge.target_node_id)
-            cls._recursively_add_node_ids(
-                node_ids=node_ids, edge_mapping=edge_mapping, node_id=graph_edge.target_node_id
-            )
+            cls._recursively_add_node_ids(node_ids=node_ids, edge_mapping=edge_mapping, node_id=graph_edge.target_node_id)
 
     @classmethod
     def _check_connected_to_previous_node(cls, route: list[str], edge_mapping: dict[str, list[GraphEdge]]) -> None:

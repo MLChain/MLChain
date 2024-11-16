@@ -59,9 +59,7 @@ class CompletionAppConfigManager(BaseAppConfigManager):
             additional_features=cls.convert_features(config_dict, app_mode),
         )
 
-        app_config.variables, app_config.external_data_variables = BasicVariablesConfigManager.convert(
-            config=config_dict
-        )
+        app_config.variables, app_config.external_data_variables = BasicVariablesConfigManager.convert(config=config_dict)
 
         return app_config
 
@@ -94,9 +92,7 @@ class CompletionAppConfigManager(BaseAppConfigManager):
         related_config_keys.extend(current_related_config_keys)
 
         # dataset_query_variable
-        config, current_related_config_keys = DatasetConfigManager.validate_and_set_defaults(
-            tenant_id, app_mode, config
-        )
+        config, current_related_config_keys = DatasetConfigManager.validate_and_set_defaults(tenant_id, app_mode, config)
         related_config_keys.extend(current_related_config_keys)
 
         # text_to_speech

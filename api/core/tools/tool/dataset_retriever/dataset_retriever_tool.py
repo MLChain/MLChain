@@ -146,9 +146,7 @@ class DatasetRetrieverTool(DatasetRetrieverBaseTool):
                     )
                     for segment in sorted_segments:
                         if segment.answer:
-                            document_context_list.append(
-                                f"question:{segment.get_sign_content()} answer:{segment.answer}"
-                            )
+                            document_context_list.append(f"question:{segment.get_sign_content()} answer:{segment.answer}")
                         else:
                             document_context_list.append(segment.get_sign_content())
                     if self.return_resource:

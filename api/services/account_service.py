@@ -67,9 +67,7 @@ REFRESH_TOKEN_EXPIRY = timedelta(days=30)
 
 class AccountService:
     reset_password_rate_limiter = RateLimiter(prefix="reset_password_rate_limit", max_attempts=1, time_window=60 * 1)
-    email_code_login_rate_limiter = RateLimiter(
-        prefix="email_code_login_rate_limit", max_attempts=1, time_window=60 * 1
-    )
+    email_code_login_rate_limiter = RateLimiter(prefix="email_code_login_rate_limit", max_attempts=1, time_window=60 * 1)
     LOGIN_MAX_ERROR_LIMITS = 5
 
     @staticmethod
@@ -83,9 +81,7 @@ class AccountService:
     @staticmethod
     def _store_refresh_token(refresh_token: str, account_id: str) -> None:
         redis_client.setex(AccountService._get_refresh_token_key(refresh_token), REFRESH_TOKEN_EXPIRY, account_id)
-        redis_client.setex(
-            AccountService._get_account_refresh_token_key(account_id), REFRESH_TOKEN_EXPIRY, refresh_token
-        )
+        redis_client.setex(AccountService._get_account_refresh_token_key(account_id), REFRESH_TOKEN_EXPIRY, refresh_token)
 
     @staticmethod
     def _delete_refresh_token(refresh_token: str, account_id: str) -> None:
@@ -488,11 +484,7 @@ class TenantService:
     @staticmethod
     def create_tenant(name: str, is_setup: Optional[bool] = False, is_from_dashboard: Optional[bool] = False) -> Tenant:
         """Create tenant"""
-        if (
-            not FeatureService.get_system_features().is_allow_create_workspace
-            and not is_setup
-            and not is_from_dashboard
-        ):
+        if not FeatureService.get_system_features().is_allow_create_workspace and not is_setup and not is_from_dashboard:
             from controllers.console.error import NotAllowedCreateWorkspace
 
             raise NotAllowedCreateWorkspace()
@@ -506,9 +498,7 @@ class TenantService:
         return tenant
 
     @staticmethod
-    def create_owner_tenant_if_not_exist(
-        account: Account, name: Optional[str] = None, is_setup: Optional[bool] = False
-    ):
+    def create_owner_tenant_if_not_exist(account: Account, name: Optional[str] = None, is_setup: Optional[bool] = False):
         """Check if user have a workspace or not"""
         available_ta = (
             TenantAccountJoin.query.filter_by(account_id=account.id).order_by(TenantAccountJoin.id.asc()).first()
@@ -649,9 +639,7 @@ class TenantService:
 
         return (
             db.session.query(TenantAccountJoin)
-            .filter(
-                TenantAccountJoin.tenant_id == tenant.id, TenantAccountJoin.role.in_([role.value for role in roles])
-            )
+            .filter(TenantAccountJoin.tenant_id == tenant.id, TenantAccountJoin.role.in_([role.value for role in roles]))
             .first()
             is not None
         )
@@ -837,9 +825,7 @@ class RegisterService:
             TenantService.check_member_permission(tenant, inviter, None, "add")
             name = email.split("@")[0]
 
-            account = cls.register(
-                email=email, name=name, language=language, status=AccountStatus.PENDING, is_setup=True
-            )
+            account = cls.register(email=email, name=name, language=language, status=AccountStatus.PENDING, is_setup=True)
             # Create new tenant member for invited tenant
             TenantService.create_tenant_member(tenant, account, role)
             TenantService.switch_tenant(account, tenant.id)

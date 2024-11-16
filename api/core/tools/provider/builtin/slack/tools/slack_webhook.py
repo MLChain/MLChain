@@ -7,9 +7,7 @@ from core.tools.tool.builtin_tool import BuiltinTool
 
 
 class SlackWebhookTool(BuiltinTool):
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         """
         Incoming Webhooks
         API Document: https://api.slack.com/messaging/webhooks

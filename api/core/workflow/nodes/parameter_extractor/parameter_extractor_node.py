@@ -264,9 +264,7 @@ class ParameterExtractorNode(LLMNode):
 
         prompt_transform = AdvancedPromptTransform(with_variable_tmpl=True)
         rest_token = self._calculate_rest_token(node_data, query, variable_pool, model_config, "")
-        prompt_template = self._get_function_calling_prompt_template(
-            node_data, query, variable_pool, memory, rest_token
-        )
+        prompt_template = self._get_function_calling_prompt_template(node_data, query, variable_pool, memory, rest_token)
         prompt_messages = prompt_transform.get_prompt(
             prompt_template=prompt_template,
             inputs={},
@@ -746,9 +744,7 @@ class ParameterExtractorNode(LLMNode):
 
         return rest_tokens
 
-    def _fetch_model_config(
-        self, node_data_model: ModelConfig
-    ) -> tuple[ModelInstance, ModelConfigWithCredentialsEntity]:
+    def _fetch_model_config(self, node_data_model: ModelConfig) -> tuple[ModelInstance, ModelConfigWithCredentialsEntity]:
         """
         Fetch model config.
         """

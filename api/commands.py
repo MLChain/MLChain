@@ -103,9 +103,7 @@ def reset_email(email, new_email, email_confirm):
     "Only support SELF_HOSTED mode.",
 )
 @click.confirmation_option(
-    prompt=click.style(
-        "Are you sure you want to reset encrypt key pair? This operation cannot be rolled back!", fg="red"
-    )
+    prompt=click.style("Are you sure you want to reset encrypt key pair? This operation cannot be rolled back!", fg="red")
 )
 def reset_encrypt_key_pair():
     """
@@ -520,9 +518,7 @@ def add_qdrant_doc_id_index(field: str):
                 # Some other error occurred, so re-raise the exception
                 else:
                     click.echo(
-                        click.style(
-                            f"Failed to create Qdrant index for collection: {binding.collection_name}.", fg="red"
-                        )
+                        click.style(f"Failed to create Qdrant index for collection: {binding.collection_name}.", fg="red")
                     )
 
     except Exception as e:

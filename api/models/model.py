@@ -402,9 +402,7 @@ class AppModelConfig(db.Model):
         self.text_to_speech = json.dumps(model_config["text_to_speech"]) if model_config.get("text_to_speech") else None
         self.more_like_this = json.dumps(model_config["more_like_this"]) if model_config.get("more_like_this") else None
         self.sensitive_word_avoidance = (
-            json.dumps(model_config["sensitive_word_avoidance"])
-            if model_config.get("sensitive_word_avoidance")
-            else None
+            json.dumps(model_config["sensitive_word_avoidance"]) if model_config.get("sensitive_word_avoidance") else None
         )
         self.external_data_tools = (
             json.dumps(model_config["external_data_tools"]) if model_config.get("external_data_tools") else None
@@ -895,9 +893,7 @@ class Message(db.Model):
     def app_model_config(self):
         conversation = db.session.query(Conversation).filter(Conversation.id == self.conversation_id).first()
         if conversation:
-            return (
-                db.session.query(AppModelConfig).filter(AppModelConfig.id == conversation.app_model_config_id).first()
-            )
+            return db.session.query(AppModelConfig).filter(AppModelConfig.id == conversation.app_model_config_id).first()
 
         return None
 
@@ -1108,9 +1104,7 @@ class MessageFile(db.Model):
     upload_file_id: Mapped[Optional[str]] = db.Column(StringUUID, nullable=True)
     created_by_role: Mapped[str] = db.Column(db.String(255), nullable=False)
     created_by: Mapped[str] = db.Column(StringUUID, nullable=False)
-    created_at: Mapped[datetime] = db.Column(
-        db.DateTime, nullable=False, server_default=db.text("CURRENT_TIMESTAMP(0)")
-    )
+    created_at: Mapped[datetime] = db.Column(db.DateTime, nullable=False, server_default=db.text("CURRENT_TIMESTAMP(0)"))
 
 
 class MessageAnnotation(db.Model):
@@ -1370,9 +1364,7 @@ class UploadFile(db.Model):
         db.String(255), nullable=False, server_default=db.text("'account'::character varying")
     )
     created_by: Mapped[str] = db.Column(StringUUID, nullable=False)
-    created_at: Mapped[datetime] = db.Column(
-        db.DateTime, nullable=False, server_default=db.text("CURRENT_TIMESTAMP(0)")
-    )
+    created_at: Mapped[datetime] = db.Column(db.DateTime, nullable=False, server_default=db.text("CURRENT_TIMESTAMP(0)"))
     used: Mapped[bool] = db.Column(db.Boolean, nullable=False, server_default=db.text("false"))
     used_by: Mapped[str | None] = db.Column(StringUUID, nullable=True)
     used_at: Mapped[datetime | None] = db.Column(db.DateTime, nullable=True)

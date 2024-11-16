@@ -217,9 +217,7 @@ class ToolManager:
             # check if tool_parameter_config in options
             options = [x.value for x in parameter_rule.options]
             if parameter_value is not None and parameter_value not in options:
-                raise ValueError(
-                    f"tool parameter {parameter_rule.name} value {parameter_value} not in options {options}"
-                )
+                raise ValueError(f"tool parameter {parameter_rule.name} value {parameter_value} not in options {options}")
 
         return parameter_rule.type.cast_value(parameter_value)
 

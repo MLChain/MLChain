@@ -8,9 +8,7 @@ from core.tools.tool.builtin_tool import BuiltinTool
 
 
 class GitlabFilesTool(BuiltinTool):
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         project = tool_parameters.get("project", "")
         repository = tool_parameters.get("repository", "")
         branch = tool_parameters.get("branch", "")
@@ -65,9 +63,7 @@ class GitlabFilesTool(BuiltinTool):
             for item in items:
                 item_path = item["path"]
                 if item["type"] == "tree":  # It's a directory
-                    results.extend(
-                        self.fetch_files(site_url, access_token, identifier, branch, item_path, is_repository)
-                    )
+                    results.extend(self.fetch_files(site_url, access_token, identifier, branch, item_path, is_repository))
                 else:  # It's a file
                     if is_repository:
                         file_url = (
@@ -75,9 +71,7 @@ class GitlabFilesTool(BuiltinTool):
                             f"/{item_path}/raw?ref={branch}"
                         )
                     else:
-                        file_url = (
-                            f"{domain}/api/v4/projects/{project_id}/repository/files/{item_path}/raw?ref={branch}"
-                        )
+                        file_url = f"{domain}/api/v4/projects/{project_id}/repository/files/{item_path}/raw?ref={branch}"
 
                     file_response = requests.get(file_url, headers=headers)
                     file_response.raise_for_status()

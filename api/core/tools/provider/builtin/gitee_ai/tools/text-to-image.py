@@ -7,9 +7,7 @@ from core.tools.tool.builtin_tool import BuiltinTool
 
 
 class GiteeAITool(BuiltinTool):
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         headers = {
             "content-type": "application/json",
             "authorization": f"Bearer {self.runtime.credentials['api_key']}",

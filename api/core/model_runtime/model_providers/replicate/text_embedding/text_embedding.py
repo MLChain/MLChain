@@ -134,9 +134,7 @@ class ReplicateEmbeddingModel(_CommonReplicate, TextEmbeddingModel):
             raise ValueError(f"embeddings input key is invalid: {text_input_key}")
 
     def _calc_response_usage(self, model: str, credentials: dict, tokens: int) -> EmbeddingUsage:
-        input_price_info = self.get_price(
-            model=model, credentials=credentials, price_type=PriceType.INPUT, tokens=tokens
-        )
+        input_price_info = self.get_price(model=model, credentials=credentials, price_type=PriceType.INPUT, tokens=tokens)
 
         # transform usage
         usage = EmbeddingUsage(

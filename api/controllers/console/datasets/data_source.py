@@ -188,9 +188,7 @@ class DataSourceNotionApi(Resource):
         parser.add_argument("notion_info_list", type=list, required=True, nullable=True, location="json")
         parser.add_argument("process_rule", type=dict, required=True, nullable=True, location="json")
         parser.add_argument("doc_form", type=str, default="text_model", required=False, nullable=False, location="json")
-        parser.add_argument(
-            "doc_language", type=str, default="English", required=False, nullable=False, location="json"
-        )
+        parser.add_argument("doc_language", type=str, default="English", required=False, nullable=False, location="json")
         args = parser.parse_args()
         # validate args
         DocumentService.estimate_args_validate(args)
@@ -263,6 +261,4 @@ api.add_resource(
     "/datasets/notion-indexing-estimate",
 )
 api.add_resource(DataSourceNotionDatasetSyncApi, "/datasets/<uuid:dataset_id>/notion/sync")
-api.add_resource(
-    DataSourceNotionDocumentSyncApi, "/datasets/<uuid:dataset_id>/documents/<uuid:document_id>/notion/sync"
-)
+api.add_resource(DataSourceNotionDocumentSyncApi, "/datasets/<uuid:dataset_id>/documents/<uuid:document_id>/notion/sync")

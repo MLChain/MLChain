@@ -148,9 +148,7 @@ class AIModel(ABC):
         # get the path of current classes
         current_path = os.path.abspath(__file__)
         # get parent path of the current path
-        provider_model_type_path = os.path.join(
-            os.path.dirname(os.path.dirname(current_path)), provider_name, model_type
-        )
+        provider_model_type_path = os.path.join(os.path.dirname(os.path.dirname(current_path)), provider_name, model_type)
 
         # get all yaml files path under provider_model_type_path that do not start with __
         model_schema_yaml_paths = [
@@ -236,9 +234,7 @@ class AIModel(ABC):
 
         return None
 
-    def get_customizable_model_schema_from_credentials(
-        self, model: str, credentials: Mapping
-    ) -> Optional[AIModelEntity]:
+    def get_customizable_model_schema_from_credentials(self, model: str, credentials: Mapping) -> Optional[AIModelEntity]:
         """
         Get customizable model schema from credentials
 

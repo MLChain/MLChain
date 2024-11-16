@@ -95,9 +95,7 @@ class TTSModel(AIModel):
 
         voices = model_schema.model_properties[ModelPropertyKey.VOICES]
         if language:
-            return [
-                {"name": d["name"], "value": d["mode"]} for d in voices if language and language in d.get("language")
-            ]
+            return [{"name": d["name"], "value": d["mode"]} for d in voices if language and language in d.get("language")]
         else:
             return [{"name": d["name"], "value": d["mode"]} for d in voices]
 

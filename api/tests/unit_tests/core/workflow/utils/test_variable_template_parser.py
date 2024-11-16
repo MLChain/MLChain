@@ -17,9 +17,7 @@ def test_extract_selectors_from_template():
         conversation_variables=[],
     )
     variable_pool.add(("node_id", "custom_query"), "fake-user-query")
-    template = (
-        "Hello, {{#sys.user_id#}}! Your query is {{#node_id.custom_query#}}. And your key is {{#env.secret_key#}}."
-    )
+    template = "Hello, {{#sys.user_id#}}! Your query is {{#node_id.custom_query#}}. And your key is {{#env.secret_key#}}."
     selectors = variable_template_parser.extract_selectors_from_template(template)
     assert selectors == [
         VariableSelector(variable="#sys.user_id#", value_selector=["sys", "user_id"]),

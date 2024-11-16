@@ -428,9 +428,7 @@ class LLMNode(BaseNode[LLMNodeData]):
 
         return None
 
-    def _fetch_model_config(
-        self, node_data_model: ModelConfig
-    ) -> tuple[ModelInstance, ModelConfigWithCredentialsEntity]:
+    def _fetch_model_config(self, node_data_model: ModelConfig) -> tuple[ModelInstance, ModelConfigWithCredentialsEntity]:
         model_name = node_data_model.name
         provider_name = node_data_model.provider
 
@@ -568,9 +566,7 @@ class LLMNode(BaseNode[LLMNodeData]):
 
                 if len(prompt_message_content) > 1:
                     prompt_message.content = prompt_message_content
-                elif (
-                    len(prompt_message_content) == 1 and prompt_message_content[0].type == PromptMessageContentType.TEXT
-                ):
+                elif len(prompt_message_content) == 1 and prompt_message_content[0].type == PromptMessageContentType.TEXT:
                     prompt_message.content = prompt_message_content[0].data
 
             filtered_prompt_messages.append(prompt_message)

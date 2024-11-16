@@ -279,9 +279,7 @@ class WorkflowCycleManage:
         inputs = WorkflowEntry.handle_special_values(event.inputs)
         process_data = WorkflowEntry.handle_special_values(event.process_data)
         outputs = WorkflowEntry.handle_special_values(event.outputs)
-        execution_metadata = (
-            json.dumps(jsonable_encoder(event.execution_metadata)) if event.execution_metadata else None
-        )
+        execution_metadata = json.dumps(jsonable_encoder(event.execution_metadata)) if event.execution_metadata else None
         finished_at = datetime.now(timezone.utc).replace(tzinfo=None)
         elapsed_time = (finished_at - event.start_at).total_seconds()
 
@@ -328,9 +326,7 @@ class WorkflowCycleManage:
         outputs = WorkflowEntry.handle_special_values(event.outputs)
         finished_at = datetime.now(timezone.utc).replace(tzinfo=None)
         elapsed_time = (finished_at - event.start_at).total_seconds()
-        execution_metadata = (
-            json.dumps(jsonable_encoder(event.execution_metadata)) if event.execution_metadata else None
-        )
+        execution_metadata = json.dumps(jsonable_encoder(event.execution_metadata)) if event.execution_metadata else None
         db.session.query(WorkflowNodeExecution).filter(WorkflowNodeExecution.id == workflow_node_execution.id).update(
             {
                 WorkflowNodeExecution.status: WorkflowNodeExecutionStatus.FAILED.value,
@@ -365,9 +361,7 @@ class WorkflowCycleManage:
     #             to stream responses               #
     #################################################
 
-    def _workflow_start_to_stream_response(
-        self, task_id: str, workflow_run: WorkflowRun
-    ) -> WorkflowStartStreamResponse:
+    def _workflow_start_to_stream_response(self, task_id: str, workflow_run: WorkflowRun) -> WorkflowStartStreamResponse:
         """
         Workflow start to stream response.
         :param task_id: task id

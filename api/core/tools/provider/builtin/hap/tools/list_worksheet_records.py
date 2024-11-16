@@ -9,9 +9,7 @@ from core.tools.tool.builtin_tool import BuiltinTool
 
 
 class ListWorksheetRecordsTool(BuiltinTool):
-    def _invoke(
-        self, user_id: str, tool_parameters: dict[str, Any]
-    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         appkey = tool_parameters.get("appkey", "")
         if not appkey:
             return self.create_text_message("Invalid parameter App Key")
@@ -54,9 +52,7 @@ class ListWorksheetRecordsTool(BuiltinTool):
                     f"Failed to get the worksheet information, status code: {res.status_code}, response: {res.text}"
                 )
         except Exception as e:
-            return self.create_text_message(
-                "Failed to get the worksheet information, something went wrong: {}".format(e)
-            )
+            return self.create_text_message("Failed to get the worksheet information, something went wrong: {}".format(e))
 
         if field_ids:
             payload["controls"] = [v.strip() for v in field_ids.split(",")] if field_ids else []
@@ -119,9 +115,7 @@ class ListWorksheetRecordsTool(BuiltinTool):
                             for row in rows:
                                 result_values = []
                                 for f in fields:
-                                    result_values.append(
-                                        self.handle_value_type(row[f["fieldId"]], schema[f["fieldId"]])
-                                    )
+                                    result_values.append(self.handle_value_type(row[f["fieldId"]], schema[f["fieldId"]]))
                                 result_text += "\n|" + "|".join(result_values) + "|"
                         return self.create_text_message(result_text)
             else:

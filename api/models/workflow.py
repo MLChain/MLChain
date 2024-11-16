@@ -225,8 +225,7 @@ class Workflow(db.Model):
         from models.tools import WorkflowToolProvider
 
         return (
-            db.session.query(WorkflowToolProvider).filter(WorkflowToolProvider.app_id == self.app_id).first()
-            is not None
+            db.session.query(WorkflowToolProvider).filter(WorkflowToolProvider.app_id == self.app_id).first() is not None
         )
 
     @property
@@ -432,9 +431,7 @@ class WorkflowRun(db.Model):
     def message(self) -> Optional["Message"]:
         from models.model import Message
 
-        return (
-            db.session.query(Message).filter(Message.app_id == self.app_id, Message.workflow_run_id == self.id).first()
-        )
+        return db.session.query(Message).filter(Message.app_id == self.app_id, Message.workflow_run_id == self.id).first()
 
     @property
     def workflow(self):

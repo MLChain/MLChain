@@ -63,9 +63,7 @@ class BaseAppGenerator:
         # Check if all files are converted to File
         if any(filter(lambda v: isinstance(v, dict), user_inputs.values())):
             raise ValueError("Invalid input type")
-        if any(
-            filter(lambda v: isinstance(v, dict), filter(lambda item: isinstance(item, list), user_inputs.values()))
-        ):
+        if any(filter(lambda v: isinstance(v, dict), filter(lambda item: isinstance(item, list), user_inputs.values()))):
             raise ValueError("Invalid input type")
 
         return user_inputs
@@ -86,9 +84,7 @@ class BaseAppGenerator:
             VariableEntityType.SELECT,
             VariableEntityType.PARAGRAPH,
         } and not isinstance(value, str):
-            raise ValueError(
-                f"(type '{variable_entity.type}') {variable_entity.variable} in input form must be a string"
-            )
+            raise ValueError(f"(type '{variable_entity.type}') {variable_entity.variable} in input form must be a string")
 
         if variable_entity.type == VariableEntityType.NUMBER and isinstance(value, str):
             # handle empty string case

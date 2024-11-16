@@ -100,9 +100,7 @@ class SageMakerRerankModel(RerankModel):
             line = 3
             rerank_documents = []
             for idx, result in enumerate(candidate_docs):
-                rerank_document = RerankDocument(
-                    index=idx, text=result.get("content"), score=result.get("score", -100.0)
-                )
+                rerank_document = RerankDocument(index=idx, text=result.get("content"), score=result.get("score", -100.0))
 
                 if score_threshold is not None:
                     if rerank_document.score >= score_threshold:
