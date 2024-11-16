@@ -27,8 +27,8 @@ const Contribute = ({ onRefreshData }: Props) => {
 
   const linkUrl = useMemo(() => {
     if (language.startsWith('zh_'))
-      return 'https://docs-mlchain.khulnasoft.com/v/zh-hans/guides/gong-ju/quick-tool-integration'
-    return 'https://docs-mlchain.khulnasoft.com/tutorials/quick-tool-integration'
+      return 'https://docs-mlchain.khulnasoft.com/zh-hans/guides/tools#ru-he-chuang-jian-zi-ding-yi-gong-ju'
+    return 'https://docs-mlchain.khulnasoft.com/guides/tools#how-to-create-custom-tools'
   }, [language])
 
   const [isShowEditCollectionToolModal, setIsShowEditCustomCollectionModal] = useState(false)

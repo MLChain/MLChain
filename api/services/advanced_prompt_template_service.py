@@ -45,7 +45,9 @@ class AdvancedPromptTemplateService:
                     copy.deepcopy(COMPLETION_APP_COMPLETION_PROMPT_CONFIG), has_context, context_prompt
                 )
             elif model_mode == "chat":
-                return cls.get_chat_prompt(copy.deepcopy(COMPLETION_APP_CHAT_PROMPT_CONFIG), has_context, context_prompt)
+                return cls.get_chat_prompt(
+                    copy.deepcopy(COMPLETION_APP_CHAT_PROMPT_CONFIG), has_context, context_prompt
+                )
 
     @classmethod
     def get_completion_prompt(cls, prompt_template: dict, has_context: str, context: str) -> dict:

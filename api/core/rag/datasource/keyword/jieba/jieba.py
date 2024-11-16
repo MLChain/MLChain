@@ -29,7 +29,9 @@ class Jieba(BaseKeyword):
             keyword_table_handler = JiebaKeywordTableHandler()
             keyword_table = self._get_dataset_keyword_table()
             for text in texts:
-                keywords = keyword_table_handler.extract_keywords(text.page_content, self._config.max_keywords_per_chunk)
+                keywords = keyword_table_handler.extract_keywords(
+                    text.page_content, self._config.max_keywords_per_chunk
+                )
                 self._update_segment_keywords(self.dataset.id, text.metadata["doc_id"], list(keywords))
                 keyword_table = self._add_text_to_keyword_table(keyword_table, text.metadata["doc_id"], list(keywords))
 

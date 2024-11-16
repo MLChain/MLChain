@@ -15,9 +15,12 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="chat sur Discord"></a>
+    <a href="https://reddit.com/r/mlchainai" target="_blank">  
+        <img src="https://img.shields.io/reddit/subreddit-subscribers/mlchainai?style=plastic&logo=reddit&label=r%2Fmlchainai&labelColor=white"
+            alt="join Reddit"></a>
     <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
         <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
-            alt="suivre sur Twitter"></a>
+            alt="suivre sur X(Twitter)"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Tirages Docker" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
     <a href="https://github.com/mlchain/mlchain/graphs/commit-activity" target="_blank">
@@ -85,7 +88,7 @@ ités d'agent**:
 <table style="width: 100%;">
   <tr>
     <th align="center">Fonctionnalité</th>
-    <th align="center">MLChain</th>
+    <th align="center">MlChain</th>
     <th align="center">LangChain</th>
     <th align="center">Flowise</th>
     <th align="center">OpenAI Assistants API</th>
@@ -202,10 +205,13 @@ Si vous souhaitez configurer une configuration haute disponibilité, la communau
 
 #### Utilisation de Terraform pour le déploiement
 
+Déployez Mlchain sur une plateforme cloud en un clic en utilisant [terraform](https://www.terraform.io/)
+
 ##### Azure Global
-Utilisez [terraform](https://www.terraform.io/) pour déployer Mlchain sur Azure en un clic.
 - [Azure Terraform par @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
 
+##### Google Cloud
+- [Google Cloud Terraform par @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)
 
 ## Contribuer
 
@@ -224,9 +230,9 @@ Dans le même temps, veuillez envisager de soutenir Mlchain en le partageant sur
 ## Communauté & Contact
 
 * [Discussion GitHub](https://github.com/mlchain/mlchain/discussions). Meilleur pour: partager des commentaires et poser des questions.
-* [Problèmes GitHub](https://github.com/mlchain/mlchain/issues). Meilleur pour: les bogues que vous rencontrez en utilisant MLChain et les propositions de fonctionnalités. Consultez notre [Guide de contribution](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
+* [Problèmes GitHub](https://github.com/mlchain/mlchain/issues). Meilleur pour: les bogues que vous rencontrez en utilisant MlChain et les propositions de fonctionnalités. Consultez notre [Guide de contribution](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md).
 * [Discord](https://discord.gg/FngNHpbcY7). Meilleur pour: partager vos applications et passer du temps avec la communauté.
-* [Twitter](https://twitter.com/mlchain_ai). Meilleur pour: partager vos applications et passer du temps avec la communauté.
+* [X(Twitter)](https://twitter.com/mlchain_ai). Meilleur pour: partager vos applications et passer du temps avec la communauté.
 
 ## Historique des étoiles
 

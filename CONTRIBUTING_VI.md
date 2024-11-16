@@ -79,7 +79,7 @@ Mlchain yêu cầu các phụ thuộc sau để build, hãy đảm bảo chúng 
 
 Mlchain bao gồm một backend và một frontend. Đi đến thư mục backend bằng lệnh `cd api/`, sau đó làm theo hướng dẫn trong [README của Backend](api/README.md) để cài đặt. Trong một terminal khác, đi đến thư mục frontend bằng lệnh `cd web/`, sau đó làm theo hướng dẫn trong [README của Frontend](web/README.md) để cài đặt.
 
-Kiểm tra [FAQ về cài đặt](https://docs-mlchain.khulnasoft.com/learn-more/faq/self-host-faq) để xem danh sách các vấn đề thường gặp và các bước khắc phục.
+Kiểm tra [FAQ về cài đặt](https://docs-mlchain.khulnasoft.com/learn-more/faq/install-faq) để xem danh sách các vấn đề thường gặp và các bước khắc phục.
 
 ### 5. Truy cập Mlchain trong trình duyệt của bạn
 

@@ -4,8 +4,8 @@ from typing import Any, Optional, cast
 
 from pydantic import BaseModel, Field
 
-from core.workflow.entities.node_entities import NodeType
 from core.workflow.graph_engine.entities.run_condition import RunCondition
+from core.workflow.nodes import NodeType
 from core.workflow.nodes.answer.answer_stream_generate_router import AnswerStreamGeneratorRouter
 from core.workflow.nodes.answer.entities import AnswerStreamGenerateRoute
 from core.workflow.nodes.end.end_stream_generate_router import EndStreamGeneratorRouter
@@ -210,7 +210,9 @@ class Graph(BaseModel):
         if target_node_id in [graph_edge.target_node_id for graph_edge in self.edge_mapping[source_node_id]]:
             return
 
-        graph_edge = GraphEdge(source_node_id=source_node_id, target_node_id=target_node_id, run_condition=run_condition)
+        graph_edge = GraphEdge(
+            source_node_id=source_node_id, target_node_id=target_node_id, run_condition=run_condition
+        )
 
         self.edge_mapping[source_node_id].append(graph_edge)
 

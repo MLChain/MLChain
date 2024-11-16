@@ -4,7 +4,7 @@ from typing import Optional
 
 import requests
 
-from core.embedding.embedding_constant import EmbeddingInputType
+from core.entities.embedding_type import EmbeddingInputType
 from core.model_runtime.entities.common_entities import I18nObject
 from core.model_runtime.entities.model_entities import AIModelEntity, FetchFrom, ModelPropertyKey, ModelType, PriceType
 from core.model_runtime.entities.text_embedding_entities import EmbeddingUsage, TextEmbeddingResult
@@ -75,7 +75,9 @@ class MixedBreadTextEmbeddingModel(TextEmbeddingModel):
                 else:
                     raise InvokeBadRequestError(msg)
             except JSONDecodeError as e:
-                raise InvokeServerUnavailableError(f"Failed to convert response to json: {e} with text: {response.text}")
+                raise InvokeServerUnavailableError(
+                    f"Failed to convert response to json: {e} with text: {response.text}"
+                )
 
         try:
             resp = response.json()

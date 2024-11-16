@@ -92,7 +92,7 @@ class BedrockLargeLanguageModel(LargeLanguageModel):
         stop: Optional[list[str]] = None,
         stream: bool = True,
         user: Optional[str] = None,
-        callbacks: list[Callback] = None,
+        callbacks: Optional[list[Callback]] = None,
     ) -> Union[LLMResult, Generator]:
         """
         Code block mode wrapper for invoking large language model
@@ -198,7 +198,9 @@ class BedrockLargeLanguageModel(LargeLanguageModel):
         try:
             if stream:
                 response = bedrock_client.converse_stream(**parameters)
-                return self._handle_converse_stream_response(model_info["model"], credentials, response, prompt_messages)
+                return self._handle_converse_stream_response(
+                    model_info["model"], credentials, response, prompt_messages
+                )
             else:
                 response = bedrock_client.converse(**parameters)
                 return self._handle_converse_response(model_info["model"], credentials, response, prompt_messages)

@@ -48,7 +48,9 @@ class NovitaLargeLanguageModel(OAIAPICompatLargeLanguageModel):
         user: Optional[str] = None,
     ) -> Union[LLMResult, Generator]:
         cred_with_endpoint = self._update_endpoint_url(credentials=credentials)
-        return super()._generate(model, cred_with_endpoint, prompt_messages, model_parameters, tools, stop, stream, user)
+        return super()._generate(
+            model, cred_with_endpoint, prompt_messages, model_parameters, tools, stop, stream, user
+        )
 
     def get_customizable_model_schema(self, model: str, credentials: dict) -> AIModelEntity:
         cred_with_endpoint = self._update_endpoint_url(credentials=credentials)

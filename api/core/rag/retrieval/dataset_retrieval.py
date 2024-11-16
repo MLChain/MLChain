@@ -22,6 +22,7 @@ from core.rag.datasource.keyword.jieba.jieba_keyword_table_handler import JiebaK
 from core.rag.datasource.retrieval_service import RetrievalService
 from core.rag.entities.context_entities import DocumentContext
 from core.rag.models.document import Document
+from core.rag.rerank.rerank_type import RerankMode
 from core.rag.retrieval.retrieval_methods import RetrievalMethod
 from core.rag.retrieval.router.multi_dataset_function_call_router import FunctionCallMultiDatasetRouter
 from core.rag.retrieval.router.multi_dataset_react_route import ReactMultiDatasetRouter
@@ -217,7 +218,7 @@ class DatasetRetrieval:
                                 "data_source_type": document.data_source_type,
                                 "segment_id": segment.id,
                                 "retriever_from": invoke_from.to_source(),
-                                "score": document_score_list.get(segment.index_node_id, None),
+                                "score": document_score_list.get(segment.index_node_id, 0.0),
                             }
 
                             if invoke_from.to_source() == "dev":
@@ -231,9 +232,12 @@ class DatasetRetrieval:
                                 source["content"] = segment.content
                             retrieval_resource_list.append(source)
         if hit_callback and retrieval_resource_list:
+            retrieval_resource_list = sorted(retrieval_resource_list, key=lambda x: x.get("score") or 0.0, reverse=True)
+            for position, item in enumerate(retrieval_resource_list, start=1):
+                item["position"] = position
             hit_callback.return_retriever_resource_info(retrieval_resource_list)
         if document_context_list:
-            document_context_list = sorted(document_context_list, key=lambda x: x.score, reverse=True)
+            document_context_list = sorted(document_context_list, key=lambda x: x.score or 0.0, reverse=True)
             return str("\n".join([document_context.content for document_context in document_context_list]))
         return ""
 
@@ -313,7 +317,9 @@ class DatasetRetrieval:
                         retrieval_method = retrieval_model_config["search_method"]
                     # get reranking model
                     reranking_model = (
-                        retrieval_model_config["reranking_model"] if retrieval_model_config["reranking_enable"] else None
+                        retrieval_model_config["reranking_model"]
+                        if retrieval_model_config["reranking_enable"]
+                        else None
                     )
                     # get score threshold
                     score_threshold = 0.0
@@ -356,10 +362,39 @@ class DatasetRetrieval:
         reranking_enable: bool = True,
         message_id: Optional[str] = None,
     ):
+        if not available_datasets:
+            return []
         threads = []
         all_documents = []
         dataset_ids = [dataset.id for dataset in available_datasets]
-        index_type = None
+        index_type_check = all(
+            item.indexing_technique == available_datasets[0].indexing_technique for item in available_datasets
+        )
+        if not index_type_check and (not reranking_enable or reranking_mode != RerankMode.RERANKING_MODEL):
+            raise ValueError(
+                "The configured knowledge base list have different indexing technique, please set reranking model."
+            )
+        index_type = available_datasets[0].indexing_technique
+        if index_type == "high_quality":
+            embedding_model_check = all(
+                item.embedding_model == available_datasets[0].embedding_model for item in available_datasets
+            )
+            embedding_model_provider_check = all(
+                item.embedding_model_provider == available_datasets[0].embedding_model_provider
+                for item in available_datasets
+            )
+            if (
+                reranking_enable
+                and reranking_mode == "weighted_score"
+                and (not embedding_model_check or not embedding_model_provider_check)
+            ):
+                raise ValueError(
+                    "The configured knowledge base list have different embedding model, please set reranking model."
+                )
+            if reranking_enable and reranking_mode == RerankMode.WEIGHTED_SCORE:
+                weights["vector_setting"]["embedding_provider_name"] = available_datasets[0].embedding_model_provider
+                weights["vector_setting"]["embedding_model_name"] = available_datasets[0].embedding_model
+
         for dataset in available_datasets:
             index_type = dataset.indexing_technique
             retrieval_thread = threading.Thread(
@@ -423,7 +458,9 @@ class DatasetRetrieval:
         )
         if trace_manager:
             trace_manager.add_trace_task(
-                TraceTask(TraceTaskName.DATASET_RETRIEVAL_TRACE, message_id=message_id, documents=documents, timer=timer)
+                TraceTask(
+                    TraceTaskName.DATASET_RETRIEVAL_TRACE, message_id=message_id, documents=documents, timer=timer
+                )
             )
 
     def _on_query(self, query: str, dataset_ids: list[str], app_id: str, user_from: str, user_id: str) -> None:
@@ -532,7 +569,7 @@ class DatasetRetrieval:
                 continue
 
             # pass if dataset is not available
-            if dataset and dataset.available_document_count == 0:
+            if dataset and dataset.provider != "external" and dataset.available_document_count == 0:
                 continue
 
             available_datasets.append(dataset)

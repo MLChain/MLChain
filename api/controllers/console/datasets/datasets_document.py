@@ -24,8 +24,11 @@ from controllers.console.datasets.error import (
     InvalidActionError,
     InvalidMetadataError,
 )
-from controllers.console.setup import setup_required
-from controllers.console.wraps import account_initialization_required, cloud_edition_billing_resource_check
+from controllers.console.wraps import (
+    account_initialization_required,
+    cloud_edition_billing_resource_check,
+    setup_required,
+)
 from core.errors.error import (
     LLMBadRequestError,
     ModelCurrentlyNotSupportError,
@@ -46,8 +49,7 @@ from fields.document_fields import (
     document_with_segments_fields,
 )
 from libs.login import login_required
-from models.dataset import Dataset, DatasetProcessRule, Document, DocumentSegment
-from models.model import UploadFile
+from models import Dataset, DatasetProcessRule, Document, DocumentSegment, UploadFile
 from services.dataset_service import DatasetService, DocumentService
 from tasks.add_document_to_index_task import add_document_to_index_task
 from tasks.remove_document_from_index_task import remove_document_from_index_task
@@ -251,7 +253,9 @@ class DatasetDocumentListApi(Resource):
         parser.add_argument("duplicate", type=bool, default=True, nullable=False, location="json")
         parser.add_argument("original_document_id", type=str, required=False, location="json")
         parser.add_argument("doc_form", type=str, default="text_model", required=False, nullable=False, location="json")
-        parser.add_argument("doc_language", type=str, default="English", required=False, nullable=False, location="json")
+        parser.add_argument(
+            "doc_language", type=str, default="English", required=False, nullable=False, location="json"
+        )
         parser.add_argument("retrieval_model", type=dict, required=False, nullable=False, location="json")
         args = parser.parse_args()
 
@@ -296,7 +300,9 @@ class DatasetInitApi(Resource):
         parser.add_argument("data_source", type=dict, required=True, nullable=True, location="json")
         parser.add_argument("process_rule", type=dict, required=True, nullable=True, location="json")
         parser.add_argument("doc_form", type=str, default="text_model", required=False, nullable=False, location="json")
-        parser.add_argument("doc_language", type=str, default="English", required=False, nullable=False, location="json")
+        parser.add_argument(
+            "doc_language", type=str, default="English", required=False, nullable=False, location="json"
+        )
         parser.add_argument("retrieval_model", type=dict, required=False, nullable=False, location="json")
         parser.add_argument("embedding_model", type=str, required=False, nullable=True, location="json")
         parser.add_argument("embedding_model_provider", type=str, required=False, nullable=True, location="json")
@@ -311,8 +317,11 @@ class DatasetInitApi(Resource):
                 raise ValueError("embedding model and embedding model provider are required for high quality indexing.")
             try:
                 model_manager = ModelManager()
-                model_manager.get_default_model_instance(
-                    tenant_id=current_user.current_tenant_id, model_type=ModelType.TEXT_EMBEDDING
+                model_manager.get_model_instance(
+                    tenant_id=current_user.current_tenant_id,
+                    provider=args["embedding_model_provider"],
+                    model_type=ModelType.TEXT_EMBEDDING,
+                    model=args["embedding_model"],
                 )
             except InvokeAuthorizationError:
                 raise ProviderNotInitializeError(
@@ -425,7 +434,9 @@ class DocumentBatchIndexingEstimateApi(DocumentResource):
                 file_id = data_source_info["upload_file_id"]
                 info_list.append(file_id)
             # format document notion info
-            elif data_source_info and "notion_workspace_id" in data_source_info and "notion_page_id" in data_source_info:
+            elif (
+                data_source_info and "notion_workspace_id" in data_source_info and "notion_page_id" in data_source_info
+            ):
                 pages = []
                 page = {"page_id": data_source_info["notion_page_id"], "type": data_source_info["type"]}
                 pages.append(page)
@@ -937,7 +948,7 @@ class DocumentRetryApi(DocumentResource):
                     raise DocumentAlreadyFinishedError()
                 retry_documents.append(document)
             except Exception as e:
-                logging.error(f"Document {document_id} retry failed: {str(e)}")
+                logging.exception(f"Failed to retry document, document id: {document_id}")
                 continue
         # retry document
         DocumentService.retry_document(dataset_id, retry_documents)

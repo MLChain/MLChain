@@ -25,7 +25,9 @@ def disable_annotation_reply_task(job_id: str, app_id: str, tenant_id: str):
     if not app:
         raise NotFound("App not found")
 
-    app_annotation_setting = db.session.query(AppAnnotationSetting).filter(AppAnnotationSetting.app_id == app_id).first()
+    app_annotation_setting = (
+        db.session.query(AppAnnotationSetting).filter(AppAnnotationSetting.app_id == app_id).first()
+    )
 
     if not app_annotation_setting:
         raise NotFound("App annotation setting not found")
@@ -58,7 +60,7 @@ def disable_annotation_reply_task(job_id: str, app_id: str, tenant_id: str):
             click.style("App annotations index deleted : {} latency: {}".format(app_id, end_at - start_at), fg="green")
         )
     except Exception as e:
-        logging.exception("Annotation batch deleted index failed:{}".format(str(e)))
+        logging.exception("Annotation batch deleted index failed")
         redis_client.setex(disable_app_annotation_job_key, 600, "error")
         disable_app_annotation_error_key = "disable_app_annotation_error_{}".format(str(job_id))
         redis_client.setex(disable_app_annotation_error_key, 600, str(e))

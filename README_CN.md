@@ -15,9 +15,12 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="chat on Discord"></a>
+    <a href="https://reddit.com/r/mlchainai" target="_blank">  
+        <img src="https://img.shields.io/reddit/subreddit-subscribers/mlchainai?style=plastic&logo=reddit&label=r%2Fmlchainai&labelColor=white"
+            alt="join Reddit"></a>
     <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
         <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
-            alt="follow on Twitter"></a>
+            alt="follow on X(Twitter)"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
     <a href="https://github.com/mlchain/mlchain/graphs/commit-activity" target="_blank">
@@ -85,7 +88,7 @@ Mlchain 是一个开源的 LLM 应用开发平台。其直观的界面结合了 
 <table style="width: 100%;">
   <tr>
     <th align="center">功能</th>
-    <th align="center">MLChain</th>
+    <th align="center">MlChain</th>
     <th align="center">LangChain</th>
     <th align="center">Flowise</th>
     <th align="center">OpenAI Assistant API</th>
@@ -154,7 +157,7 @@ Mlchain 是一个开源的 LLM 应用开发平台。其直观的界面结合了 
 我们提供[ Mlchain 云服务](https://mlchain.khulnasoft.com)，任何人都可以零设置尝试。它提供了自部署版本的所有功能，并在沙盒计划中包含 200 次免费的 GPT-4 调用。
 
 - **自托管 Mlchain 社区版</br>**
-使用这个[入门指南](#quick-start)快速在您的环境中运行 Mlchain。
+使用这个[入门指南](#快速启动)快速在您的环境中运行 Mlchain。
 使用我们的[文档](https://docs-mlchain.khulnasoft.com)进行进一步的参考和更深入的说明。
 
 - **面向企业/组织的 Mlchain</br>**
@@ -174,7 +177,7 @@ Mlchain 是一个开源的 LLM 应用开发平台。其直观的界面结合了 
 在安装 Mlchain 之前，请确保您的机器满足以下最低系统要求：
 
 - CPU >= 2 Core
-- RAM >= 4GB
+- RAM >= 4 GiB
 
 ### 快速启动
 
@@ -202,9 +205,13 @@ docker compose up -d
 
 #### 使用 Terraform 部署
 
+使用 [terraform](https://www.terraform.io/) 一键将 Mlchain 部署到云平台
+
 ##### Azure Global
-使用 [terraform](https://www.terraform.io/) 一键部署 Mlchain 到 Azure。
 - [Azure Terraform by @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
+
+##### Google Cloud
+- [Google Cloud Terraform by @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)
 
 ## Star History
 
@@ -229,11 +236,11 @@ docker compose up -d
 我们欢迎您为 Mlchain 做出贡献，以帮助改善 Mlchain。包括：提交代码、问题、新想法，或分享您基于 Mlchain 创建的有趣且有用的 AI 应用程序。同时，我们也欢迎您在不同的活动、会议和社交媒体上分享 Mlchain。
 
 - [Github Discussion](https://github.com/mlchain/mlchain/discussions). 👉：分享您的应用程序并与社区交流。
-- [GitHub Issues](https://github.com/mlchain/mlchain/issues)。👉：使用 MLChain 时遇到的错误和问题，请参阅[贡献指南](CONTRIBUTING.md)。
-- [电子邮件支持](mailto:hello@mlchain.khulnasoft.com?subject=[GitHub]Questions%20About%20Mlchain)。👉：关于使用 MLChain 的问题。
+- [GitHub Issues](https://github.com/mlchain/mlchain/issues)。👉：使用 MlChain 时遇到的错误和问题，请参阅[贡献指南](CONTRIBUTING.md)。
+- [电子邮件支持](mailto:hello@mlchain.khulnasoft.com?subject=[GitHub]Questions%20About%20Mlchain)。👉：关于使用 MlChain 的问题。
 - [Discord](https://discord.gg/FngNHpbcY7)。👉：分享您的应用程序并与社区交流。
-- [Twitter](https://twitter.com/mlchain_ai)。👉：分享您的应用程序并与社区交流。
-- [商业许可](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry)。👉：有关商业用途许可 MLChain 的商业咨询。
+- [X(Twitter)](https://twitter.com/mlchain_ai)。👉：分享您的应用程序并与社区交流。
+- [商业许可](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry)。👉：有关商业用途许可 MlChain 的商业咨询。
  - [微信]() 👉：扫描下方二维码，添加微信好友，备注 Mlchain，我们将邀请您加入 Mlchain 社区。  
 <img src="./images/wechat.png" alt="wechat" width="100"/>
 

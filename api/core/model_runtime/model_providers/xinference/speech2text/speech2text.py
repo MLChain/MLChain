@@ -57,7 +57,9 @@ class XinferenceSpeech2TextModel(Speech2TextModel):
             xinference_client = client.get_model(model_uid=credentials["model_uid"])
 
             if not isinstance(xinference_client, RESTfulAudioModelHandle):
-                raise InvokeBadRequestError("please check model type, the model you want to invoke is not a audio model")
+                raise InvokeBadRequestError(
+                    "please check model type, the model you want to invoke is not a audio model"
+                )
 
             audio_file_path = self._get_demo_file_path()
 
@@ -127,7 +129,7 @@ class XinferenceSpeech2TextModel(Speech2TextModel):
 
         return response["text"]
 
-    def get_customizable_model_schema(self, model: str, credentials: dict) -> AIModelEntity | None:
+    def get_customizable_model_schema(self, model: str, credentials: dict) -> Optional[AIModelEntity]:
         """
         used to define customizable model schema
         """

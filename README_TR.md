@@ -15,9 +15,12 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="Discord'da sohbet et"></a>
+    <a href="https://reddit.com/r/mlchainai" target="_blank">  
+        <img src="https://img.shields.io/reddit/subreddit-subscribers/mlchainai?style=plastic&logo=reddit&label=r%2Fmlchainai&labelColor=white"
+            alt="Follow Reddit"></a>
     <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
         <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
-            alt="Twitter'da takip et"></a>
+            alt="X(Twitter)'da takip et"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Docker Çekmeleri" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
     <a href="https://github.com/mlchain/mlchain/graphs/commit-activity" target="_blank">
@@ -81,7 +84,7 @@ Görsel bir arayüz üzerinde güçlü AI iş akışları oluşturun ve test edi
 <table style="width: 100%;">
   <tr>
     <th align="center">Özellik</th>
-    <th align="center">MLChain</th>
+    <th align="center">MlChain</th>
     <th align="center">LangChain</th>
     <th align="center">Flowise</th>
     <th align="center">OpenAI Assistants API</th>
@@ -200,9 +203,13 @@ Yüksek kullanılabilirliğe sahip bir kurulum yapılandırmak isterseniz, Mlcha
 
 #### Dağıtım için Terraform Kullanımı
 
+Mlchain'ı bulut platformuna tek tıklamayla dağıtın [terraform](https://www.terraform.io/) kullanarak
+
 ##### Azure Global
-[Terraform](https://www.terraform.io/) kullanarak Mlchain'ı Azure'a tek tıklamayla dağıtın.
-- [@nikawang tarafından Azure Terraform](https://github.com/nikawang/mlchain-azure-terraform)
+- [Azure Terraform tarafından @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
+
+##### Google Cloud
+- [Google Cloud Terraform tarafından @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)
 
 ## Katkıda Bulunma
 
@@ -220,9 +227,9 @@ Aynı zamanda, lütfen Mlchain'ı sosyal medyada, etkinliklerde ve konferanslard
 ## Topluluk & iletişim
 
 * [Github Tartışmaları](https://github.com/mlchain/mlchain/discussions). En uygun: geri bildirim paylaşmak ve soru sormak için.
-* [GitHub Sorunları](https://github.com/mlchain/mlchain/issues). En uygun: MLChain kullanırken karşılaştığınız hatalar ve özellik önerileri için. [Katkı Kılavuzumuza](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md) bakın.
+* [GitHub Sorunları](https://github.com/mlchain/mlchain/issues). En uygun: MlChain kullanırken karşılaştığınız hatalar ve özellik önerileri için. [Katkı Kılavuzumuza](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md) bakın.
 * [Discord](https://discord.gg/FngNHpbcY7). En uygun: uygulamalarınızı paylaşmak ve toplulukla vakit geçirmek için.
-* [Twitter](https://twitter.com/mlchain_ai). En uygun: uygulamalarınızı paylaşmak ve toplulukla vakit geçirmek için.
+* [X(Twitter)](https://twitter.com/mlchain_ai). En uygun: uygulamalarınızı paylaşmak ve toplulukla vakit geçirmek için.
 
 ## Star history
 

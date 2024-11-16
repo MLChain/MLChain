@@ -15,9 +15,12 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="chat on Discord"></a>
+    <a href="https://reddit.com/r/mlchainai" target="_blank">  
+        <img src="https://img.shields.io/reddit/subreddit-subscribers/mlchainai?style=plastic&logo=reddit&label=r%2Fmlchainai&labelColor=white"
+            alt="Follow Reddit"></a>
     <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
         <img src="https://img.shields.io/twitter/follow/mlchain_ai?logo=X&color=%20%23f5f5f5"
-            alt="follow on Twitter"></a>
+            alt="follow on X(Twitter)"></a>
     <a href="https://hub.docker.com/u/mlchain" target="_blank">
         <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/mlchain/mlchain-web?labelColor=%20%23FDB062&color=%20%23f79009"></a>
     <a href="https://github.com/mlchain/mlchain/graphs/commit-activity" target="_blank">
@@ -39,7 +42,6 @@
   <a href="./README_AR.md"><img alt="README بالعربية" src="https://img.shields.io/badge/العربية-d9d9d9"></a>
   <a href="./README_TR.md"><img alt="Türkçe README" src="https://img.shields.io/badge/Türkçe-d9d9d9"></a>
   <a href="./README_VI.md"><img alt="README Tiếng Việt" src="https://img.shields.io/badge/Ti%E1%BA%BFng%20Vi%E1%BB%87t-d9d9d9"></a>
-
 </p>
 
 
@@ -78,7 +80,7 @@
 <table style="width: 100%;">
   <tr>
     <th align="center">기능</th>
-    <th align="center">MLChain</th>
+    <th align="center">MlChain</th>
     <th align="center">LangChain</th>
     <th align="center">Flowise</th>
     <th align="center">OpenAI Assistants API</th>
@@ -195,9 +197,13 @@ Mlchain를 Kubernetes에 배포하고 프리미엄 스케일링 설정을 구성
 
 #### Terraform을 사용한 배포
 
+[terraform](https://www.terraform.io/)을 사용하여 단 한 번의 클릭으로 Mlchain를 클라우드 플랫폼에 배포하십시오
+
 ##### Azure Global
-[terraform](https://www.terraform.io/)을 사용하여 Azure에 Mlchain를 원클릭으로 배포하세요.
 - [nikawang의 Azure Terraform](https://github.com/nikawang/mlchain-azure-terraform)
+
+##### Google Cloud
+- [sotazum의 Google Cloud Terraform](https://github.com/DeNA/mlchain-google-cloud-terraform)
 
 ## 기여
 
@@ -216,7 +222,7 @@ Mlchain를 Kubernetes에 배포하고 프리미엄 스케일링 설정을 구성
 ## 커뮤니티 & 연락처
 
 * [Github 토론](https://github.com/mlchain/mlchain/discussions). 피드백 공유 및 질문하기에 적합합니다.
-* [GitHub 이슈](https://github.com/mlchain/mlchain/issues). MLChain 사용 중 발견한 버그와 기능 제안에 적합합니다. [기여 가이드](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md)를 참조하세요. 
+* [GitHub 이슈](https://github.com/mlchain/mlchain/issues). MlChain 사용 중 발견한 버그와 기능 제안에 적합합니다. [기여 가이드](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md)를 참조하세요. 
 * [디스코드](https://discord.gg/FngNHpbcY7). 애플리케이션 공유 및 커뮤니티와 소통하기에 적합합니다.
 * [트위터](https://twitter.com/mlchain_ai). 애플리케이션 공유 및 커뮤니티와 소통하기에 적합합니다.
 

@@ -45,7 +45,9 @@ def enable_annotation_reply_task(
         dataset_collection_binding = DatasetCollectionBindingService.get_dataset_collection_binding(
             embedding_provider_name, embedding_model_name, "annotation"
         )
-        annotation_setting = db.session.query(AppAnnotationSetting).filter(AppAnnotationSetting.app_id == app_id).first()
+        annotation_setting = (
+            db.session.query(AppAnnotationSetting).filter(AppAnnotationSetting.app_id == app_id).first()
+        )
         if annotation_setting:
             annotation_setting.score_threshold = score_threshold
             annotation_setting.collection_binding_id = dataset_collection_binding.id
@@ -91,7 +93,7 @@ def enable_annotation_reply_task(
             click.style("App annotations added to index: {} latency: {}".format(app_id, end_at - start_at), fg="green")
         )
     except Exception as e:
-        logging.exception("Annotation batch created index failed:{}".format(str(e)))
+        logging.exception("Annotation batch created index failed")
         redis_client.setex(enable_app_annotation_job_key, 600, "error")
         enable_app_annotation_error_key = "enable_app_annotation_error_{}".format(str(job_id))
         redis_client.setex(enable_app_annotation_error_key, 600, str(e))
