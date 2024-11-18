@@ -69,4 +69,3 @@ parameters:
       en_US: Whether to pass the news results to llm for summarization.
       zh_Hans: 是否需要将新闻结果传给大模型总结
     form: form
-  
