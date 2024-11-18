@@ -46,7 +46,7 @@ jobs:
 
       - name: Create Pull Request
         if: env.FILES_CHANGED == 'true'
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           commit-message: Update i18n files based on en-US changes
           title: 'chore: translate i18n files'
