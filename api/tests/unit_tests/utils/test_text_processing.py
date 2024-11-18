@@ -1,6 +1,10 @@
 from textwrap import dedent
+
 import pytest
+
 from core.tools.utils.text_processing_utils import remove_leading_symbols
+
+
 @pytest.mark.parametrize(
     ("input_text", "expected_output"),
     [
@@ -14,4 +18,3 @@ from core.tools.utils.text_processing_utils import remove_leading_symbols
 )
 def test_remove_leading_symbols(input_text, expected_output):
     assert remove_leading_symbols(input_text) == expected_output
-
