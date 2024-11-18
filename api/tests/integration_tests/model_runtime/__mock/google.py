@@ -22,7 +22,9 @@ class MockGoogleResponseClass:
         for i in range(0, len(full_response_text) + 1, 1):
             if i == len(full_response_text):
                 self._done = True
-                yield GenerateContentResponse(done=True, iterator=None, result=glm.GenerateContentResponse({}), chunks=[])
+                yield GenerateContentResponse(
+                    done=True, iterator=None, result=glm.GenerateContentResponse({}), chunks=[]
+                )
             else:
                 yield GenerateContentResponse(
                     done=False, iterator=None, result=glm.GenerateContentResponse({}), chunks=[]

@@ -110,7 +110,9 @@ def _delete_installed_apps(tenant_id: str, app_id: str):
 
 def _delete_recommended_apps(tenant_id: str, app_id: str):
     def del_recommended_app(recommended_app_id: str):
-        db.session.query(RecommendedApp).filter(RecommendedApp.id == recommended_app_id).delete(synchronize_session=False)
+        db.session.query(RecommendedApp).filter(RecommendedApp.id == recommended_app_id).delete(
+            synchronize_session=False
+        )
 
     _delete_records(
         """select id from recommended_apps where app_id=:app_id limit 1000""",

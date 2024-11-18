@@ -571,8 +571,9 @@ class ProviderManager:
             if not cached_provider_credentials:
                 try:
                     # fix origin data
-                    if custom_provider_record.encrypted_config and not custom_provider_record.encrypted_config.startswith(
-                        "{"
+                    if (
+                        custom_provider_record.encrypted_config
+                        and not custom_provider_record.encrypted_config.startswith("{")
                     ):
                         provider_credentials = {"openai_api_key": custom_provider_record.encrypted_config}
                     else:

@@ -373,7 +373,9 @@ class DatasetService:
                 raise NoPermissionError("You do not have permission to access this dataset.")
 
         elif dataset.permission == DatasetPermissionEnum.PARTIAL_TEAM:
-            if not any(dp.dataset_id == dataset.id for dp in DatasetPermission.query.filter_by(account_id=user.id).all()):
+            if not any(
+                dp.dataset_id == dataset.id for dp in DatasetPermission.query.filter_by(account_id=user.id).all()
+            ):
                 raise NoPermissionError("You do not have permission to access this dataset.")
 
     @staticmethod

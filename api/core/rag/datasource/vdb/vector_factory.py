@@ -49,6 +49,15 @@ class Vector:
                 if whitelist:
                     vector_type = VectorType.TIDB_ON_QDRANT
 
+        if mlchain_config.VECTOR_STORE_WHITELIST_ENABLE:
+            whitelist = (
+                db.session.query(Whitelist)
+                .filter(Whitelist.tenant_id == self._dataset.tenant_id, Whitelist.type == "vector_db")
+                .one_or_none()
+            )
+            if whitelist:
+                vector_type = VectorType.TIDB_ON_QDRANT
+
         if not vector_type:
             raise ValueError("Vector store must be specified.")
 
@@ -126,6 +135,10 @@ class Vector:
                 from core.rag.datasource.vdb.vikingdb.vikingdb_vector import VikingDBVectorFactory
 
                 return VikingDBVectorFactory
+            case VectorType.TIDB_ON_QDRANT:
+                from core.rag.datasource.vdb.tidb_on_qdrant.tidb_on_qdrant_vector import TidbOnQdrantVectorFactory
+
+                return TidbOnQdrantVectorFactory
             case VectorType.UPSTASH:
                 from core.rag.datasource.vdb.upstash.upstash_vector import UpstashVectorFactory
 

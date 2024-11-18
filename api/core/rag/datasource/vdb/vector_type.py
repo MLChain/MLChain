@@ -20,6 +20,6 @@ class VectorType(str, Enum):
     COUCHBASE = "couchbase"
     BAIDU = "baidu"
     VIKINGDB = "vikingdb"
-    UPSTASH = "upstash"
     TIDB_ON_QDRANT = "tidb_on_qdrant"
+    UPSTASH = "upstash"
     OCEANBASE = "oceanbase"

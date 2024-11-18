@@ -36,7 +36,9 @@ def recover_document_indexing_task(dataset_id: str, document_id: str):
         elif document.indexing_status == "indexing":
             indexing_runner.run_in_indexing_status(document)
         end_at = time.perf_counter()
-        logging.info(click.style("Processed document: {} latency: {}".format(document.id, end_at - start_at), fg="green"))
+        logging.info(
+            click.style("Processed document: {} latency: {}".format(document.id, end_at - start_at), fg="green")
+        )
     except DocumentIsPausedError as ex:
         logging.info(click.style(str(ex), fg="yellow"))
     except Exception:

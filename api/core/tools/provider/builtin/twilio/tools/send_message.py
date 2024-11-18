@@ -76,7 +76,9 @@ class SendMessageTool(BuiltinTool):
          which includes the status of the message sending operation.
     """
 
-    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(
+        self, user_id: str, tool_parameters: dict[str, Any]
+    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         account_sid = self.runtime.credentials["account_sid"]
         auth_token = self.runtime.credentials["auth_token"]
         from_number = self.runtime.credentials["from_number"]

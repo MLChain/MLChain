@@ -29,7 +29,9 @@ def external_document_indexing_task(
 
     dataset = db.session.query(Dataset).filter(Dataset.id == dataset_id).first()
     if not dataset:
-        logging.info(click.style("Processed external dataset: {} failed, dataset not exit.".format(dataset_id), fg="red"))
+        logging.info(
+            click.style("Processed external dataset: {} failed, dataset not exit.".format(dataset_id), fg="red")
+        )
         return
 
     # get external api template
@@ -63,7 +65,9 @@ def external_document_indexing_task(
             if file:
                 files[file.id] = (file.name, storage.load_once(file.key), file.mime_type)
     try:
-        settings = ExternalDatasetService.get_external_knowledge_api_settings(json.loads(external_knowledge_api.settings))
+        settings = ExternalDatasetService.get_external_knowledge_api_settings(
+            json.loads(external_knowledge_api.settings)
+        )
         # assemble headers
         headers = ExternalDatasetService.assembling_headers(settings.authorization, settings.headers)
 

@@ -106,7 +106,9 @@ class XinferenceRerankModel(RerankModel):
             xinference_client = client.get_model(model_uid=credentials["model_uid"])
 
             if not isinstance(xinference_client, RESTfulRerankModelHandle):
-                raise InvokeBadRequestError("please check model type, the model you want to invoke is not a rerank model")
+                raise InvokeBadRequestError(
+                    "please check model type, the model you want to invoke is not a rerank model"
+                )
 
             self.invoke(
                 model=model,

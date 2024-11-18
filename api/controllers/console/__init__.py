@@ -55,6 +55,7 @@ from .datasets import (
     datasets_document,
     datasets_segments,
     external,
+    fta_test,
     hit_testing,
     website,
 )

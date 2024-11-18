@@ -8,7 +8,9 @@ from core.tools.utils.uuid_utils import is_valid_uuid
 
 
 class FeishuGroupBotTool(BuiltinTool):
-    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(
+        self, user_id: str, tool_parameters: dict[str, Any]
+    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         """
         invoke tools
         API document: https://open.feishu.cn/document/client-docs/bot-v3/add-custom-bot

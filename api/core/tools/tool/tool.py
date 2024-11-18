@@ -229,7 +229,9 @@ class Tool(BaseModel, ABC):
         return result
 
     @abstractmethod
-    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(
+        self, user_id: str, tool_parameters: dict[str, Any]
+    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         pass
 
     def validate_credentials(self, credentials: dict[str, Any], parameters: dict[str, Any]) -> None:

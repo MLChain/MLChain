@@ -165,7 +165,9 @@ class BedrockTextEmbeddingModel(TextEmbeddingModel):
         :return: usage
         """
         # get input price info
-        input_price_info = self.get_price(model=model, credentials=credentials, price_type=PriceType.INPUT, tokens=tokens)
+        input_price_info = self.get_price(
+            model=model, credentials=credentials, price_type=PriceType.INPUT, tokens=tokens
+        )
 
         # transform usage
         usage = EmbeddingUsage(

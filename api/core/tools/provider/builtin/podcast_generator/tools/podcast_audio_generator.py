@@ -39,7 +39,9 @@ class PodcastAudioGeneratorTool(BuiltinTool):
         except Exception as e:
             return index, f"Error generating audio: {str(e)}", None
 
-    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(
+        self, user_id: str, tool_parameters: dict[str, Any]
+    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         # Extract parameters
         script = tool_parameters.get("script", "")
         host1_voice = tool_parameters.get("host1_voice")

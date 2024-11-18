@@ -200,15 +200,15 @@ Si vous devez personnaliser la configuration, veuillez vous référer aux commen
 Si vous souhaitez configurer une configuration haute disponibilité, la communauté fournit des [Helm Charts](https://helm.sh/) et des fichiers YAML, à travers lesquels vous pouvez déployer Mlchain sur Kubernetes.
 
 - [Helm Chart par @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [Helm Chart par @BorisPolonsky](https://github.com/MLChain/mlchain-helm)
-- [Fichier YAML par @Winson-030](https://github.com/MLChain/mlchain-kubernetes)
+- [Helm Chart par @BorisPolonsky](https://github.com/BorisPolonsky/mlchain-helm)
+- [Fichier YAML par @Winson-030](https://github.com/Winson-030/mlchain-kubernetes)
 
 #### Utilisation de Terraform pour le déploiement
 
 Déployez Mlchain sur une plateforme cloud en un clic en utilisant [terraform](https://www.terraform.io/)
 
 ##### Azure Global
-- [Azure Terraform par @nikawang](https://github.com/MLChain/mlchain-azure-terraform)
+- [Azure Terraform par @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
 
 ##### Google Cloud
 - [Google Cloud Terraform par @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)

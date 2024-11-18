@@ -6,7 +6,9 @@ from core.tools.tool.builtin_tool import BuiltinTool
 
 
 class AliYuqueDeleteDocumentTool(AliYuqueTool, BuiltinTool):
-    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(
+        self, user_id: str, tool_parameters: dict[str, Any]
+    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         token = self.runtime.credentials.get("token", None)
         if not token:
             raise Exception("token is required")

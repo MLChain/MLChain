@@ -156,7 +156,9 @@ class OpsTraceManager:
 
         # decrypt_token
         tenant_id = db.session.query(App).filter(App.id == app_id).first().tenant_id
-        decrypt_tracing_config = cls.decrypt_tracing_config(tenant_id, tracing_provider, trace_config_data.tracing_config)
+        decrypt_tracing_config = cls.decrypt_tracing_config(
+            tenant_id, tracing_provider, trace_config_data.tracing_config
+        )
 
         return decrypt_tracing_config
 

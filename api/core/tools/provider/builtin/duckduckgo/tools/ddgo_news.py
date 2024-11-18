@@ -9,8 +9,10 @@ from core.tools.tool.builtin_tool import BuiltinTool
 SUMMARY_PROMPT = """
 User's query: 
 {query}
+
 Here are the news results:
 {content}
+
 Please summarize the news in a few sentences.
 """
 

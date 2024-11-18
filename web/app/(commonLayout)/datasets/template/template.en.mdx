@@ -1,26 +1,35 @@
-import { CodeGroup } from '@/app/components/develop/code.tsx'
-import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from '@/app/components/develop/md.tsx'
+import { CodeGroup } from "@/app/components/develop/code.tsx";
+import {
+  Row,
+  Col,
+  Properties,
+  Property,
+  Heading,
+  SubProperty,
+  Paragraph,
+} from "@/app/components/develop/md.tsx";
 
 # Knowledge API
 
 <div>
   ### Authentication
 
-  Service API of Mlchain authenticates using an `API-Key`.
+Service API of Mlchain authenticates using an `API-Key`.
 
-  It is suggested that developers store the `API-Key` in the backend instead of sharing or storing it in the client side to avoid the leakage of the `API-Key`, which may lead to property loss.
+It is suggested that developers store the `API-Key` in the backend instead of sharing or storing it in the client side to avoid the leakage of the `API-Key`, which may lead to property loss.
 
-  All API requests should include your `API-Key` in the **`Authorization`** HTTP Header, as shown below:
+All API requests should include your `API-Key` in the **`Authorization`** HTTP Header, as shown below:
 
   <CodeGroup title="Code">
     ```javascript
       Authorization: Bearer {API_KEY}
 
     ```
+
   </CodeGroup>
 </div>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/document/create-by-text'
@@ -67,6 +76,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
               - <code>max_tokens</code> Maximum length (token) defaults to 1000
       </Property>
     </Properties>
+
   </Col>
   <Col sticky>
     <CodeGroup
@@ -123,7 +133,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/document/create-by-file'
@@ -172,6 +182,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
         Files that need to be uploaded.
       </Property>
     </Properties>
+
   </Col>
   <Col sticky>
     <CodeGroup
@@ -221,7 +232,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets'
@@ -306,7 +317,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets'
@@ -369,19 +380,19 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
-  url='/datasets/{dataset_id}'
-  method='DELETE'
-  title='Delete a Knowledge Base'
-  name='#delete_dataset'
+  url="/datasets/{dataset_id}"
+  method="DELETE"
+  title="Delete a Knowledge Base"
+  name="#delete_dataset"
 />
 <Row>
   <Col>
     ### Params
     <Properties>
-      <Property name='dataset_id' type='string' key='dataset_id'>
+      <Property name="dataset_id" type="string" key="dataset_id">
         Knowledge ID
       </Property>
     </Properties>
@@ -393,20 +404,19 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
       label="/datasets/{dataset_id}"
       targetCode={`curl --location --request DELETE '${props.apiBaseUrl}/datasets/{dataset_id}' \\\n--header 'Authorization: Bearer {api_key}'`}
     >
-    ```bash {{ title: 'cURL' }}
-    curl --location --request DELETE '${props.apiBaseUrl}/datasets/{dataset_id}' \
-    --header 'Authorization: Bearer {api_key}'
-    ```
+      ```bash {{ title: "cURL" }}
+      curl --location --request DELETE '${props.apiBaseUrl}/datasets/{
+        dataset_id
+      }' \ --header 'Authorization: Bearer {api_key}' ```
     </CodeGroup>
     <CodeGroup title="Response">
-    ```text {{ title: 'Response' }}
-    204 No Content
-    ```
+      ```text {{ title: "Response" }}
+      204 No Content ```
     </CodeGroup>
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/documents/{document_id}/update-by-text'
@@ -451,6 +461,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
               - <code>max_tokens</code> Maximum length (token) defaults to 1000
       </Property>
     </Properties>
+
   </Col>
   <Col sticky>
     <CodeGroup
@@ -503,7 +514,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/documents/{document_id}/update-by-file'
@@ -548,6 +559,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
               - <code>max_tokens</code> Maximum length (token) defaults to 1000
       </Property>
     </Properties>
+
   </Col>
   <Col sticky>
     <CodeGroup
@@ -597,7 +609,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/documents/{batch}/indexing-status'
@@ -652,7 +664,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/documents/{document_id}'
@@ -694,7 +706,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/documents'
@@ -723,6 +735,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
         Number of items returned, default 20, range 1-100 (optional)
       </Property>
     </Properties>
+
   </Col>
   <Col sticky>
     <CodeGroup
@@ -769,7 +782,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/documents/{document_id}/segments'
@@ -797,6 +810,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
         - <code>keywords</code> (list) Keywords (optional)
       </Property>
     </Properties>
+
   </Col>
   <Col sticky>
     <CodeGroup
@@ -855,7 +869,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/documents/{document_id}/segments'
@@ -884,6 +898,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
         Search status, completed
       </Property>
     </Properties>
+
   </Col>
   <Col sticky>
     <CodeGroup
@@ -933,7 +948,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/documents/{document_id}/segments/{segment_id}'
@@ -979,7 +994,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/documents/{document_id}/segments/{segment_id}'
@@ -1011,6 +1026,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
         - <code>enabled</code> (bool) False / true (optional)
       </Property>
     </Properties>
+
   </Col>
   <Col sticky>
     <CodeGroup
@@ -1067,7 +1083,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/retrieve'
@@ -1109,6 +1125,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
           Unused field
       </Property>
     </Properties>
+
   </Col>
   <Col sticky>
     <CodeGroup
@@ -1212,7 +1229,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Row>
   <Col>

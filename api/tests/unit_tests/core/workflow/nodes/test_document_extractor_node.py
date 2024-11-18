@@ -50,7 +50,9 @@ def test_run_variable_not_found(document_extractor_node, mock_graph_runtime_stat
 
 def test_run_invalid_variable_type(document_extractor_node, mock_graph_runtime_state):
     document_extractor_node.graph_runtime_state = mock_graph_runtime_state
-    mock_graph_runtime_state.variable_pool.get.return_value = StringVariable(value="Not an ArrayFileSegment", name="test")
+    mock_graph_runtime_state.variable_pool.get.return_value = StringVariable(
+        value="Not an ArrayFileSegment", name="test"
+    )
 
     result = document_extractor_node._run()
 

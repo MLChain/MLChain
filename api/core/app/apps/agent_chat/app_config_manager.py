@@ -78,7 +78,9 @@ class AgentChatAppConfigManager(BaseAppConfigManager):
             additional_features=cls.convert_features(config_dict, app_mode),
         )
 
-        app_config.variables, app_config.external_data_variables = BasicVariablesConfigManager.convert(config=config_dict)
+        app_config.variables, app_config.external_data_variables = BasicVariablesConfigManager.convert(
+            config=config_dict
+        )
 
         return app_config
 
@@ -119,7 +121,9 @@ class AgentChatAppConfigManager(BaseAppConfigManager):
         related_config_keys.extend(current_related_config_keys)
 
         # suggested_questions_after_answer
-        config, current_related_config_keys = SuggestedQuestionsAfterAnswerConfigManager.validate_and_set_defaults(config)
+        config, current_related_config_keys = SuggestedQuestionsAfterAnswerConfigManager.validate_and_set_defaults(
+            config
+        )
         related_config_keys.extend(current_related_config_keys)
 
         # speech_to_text

@@ -59,7 +59,9 @@ class CompletionAppConfigManager(BaseAppConfigManager):
             additional_features=cls.convert_features(config_dict, app_mode),
         )
 
-        app_config.variables, app_config.external_data_variables = BasicVariablesConfigManager.convert(config=config_dict)
+        app_config.variables, app_config.external_data_variables = BasicVariablesConfigManager.convert(
+            config=config_dict
+        )
 
         return app_config
 

@@ -32,7 +32,7 @@ jobs:
 
       - name: Set up Node.js
         if: env.FILES_CHANGED == 'true'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v2
         with:
           node-version: 'lts/*'
 
@@ -46,7 +46,7 @@ jobs:
 
       - name: Create Pull Request
         if: env.FILES_CHANGED == 'true'
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v6
         with:
           commit-message: Update i18n files based on en-US changes
           title: 'chore: translate i18n files'

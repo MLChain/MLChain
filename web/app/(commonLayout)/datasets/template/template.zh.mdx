@@ -1,26 +1,35 @@
-import { CodeGroup } from '@/app/components/develop/code.tsx'
-import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from '@/app/components/develop/md.tsx'
+import { CodeGroup } from "@/app/components/develop/code.tsx";
+import {
+  Row,
+  Col,
+  Properties,
+  Property,
+  Heading,
+  SubProperty,
+  Paragraph,
+} from "@/app/components/develop/md.tsx";
 
 # 知识库 API
 
 <div>
   ### 鉴权
 
-  Mlchain Service API 使用 `API-Key` 进行鉴权。
+Mlchain Service API 使用 `API-Key` 进行鉴权。
 
-  建议开发者把 `API-Key` 放在后端存储，而非分享或者放在客户端存储，以免 `API-Key` 泄露，导致财产损失。
+建议开发者把 `API-Key` 放在后端存储，而非分享或者放在客户端存储，以免 `API-Key` 泄露，导致财产损失。
 
-  所有 API 请求都应在 **`Authorization`** HTTP Header 中包含您的 `API-Key`，如下所示：
+所有 API 请求都应在 **`Authorization`** HTTP Header 中包含您的 `API-Key`，如下所示：
 
   <CodeGroup title="Code">
     ```javascript
       Authorization: Bearer {API_KEY}
 
     ```
+
   </CodeGroup>
 </div>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/document/create-by-text'
@@ -67,6 +76,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
               - <code>max_tokens</code> 最大长度（token）默认为 1000
       </Property>
     </Properties>
+
   </Col>
   <Col sticky>
     <CodeGroup
@@ -123,7 +133,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/document/create-by-file'
@@ -172,6 +182,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
         需要上传的文件。
       </Property>
     </Properties>
+
   </Col>
   <Col sticky>
     <CodeGroup
@@ -221,7 +232,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets'
@@ -306,7 +317,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets'
@@ -369,19 +380,19 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
-  url='/datasets/{dataset_id}'
-  method='DELETE'
-  title='删除知识库'
-  name='#delete_dataset'
+  url="/datasets/{dataset_id}"
+  method="DELETE"
+  title="删除知识库"
+  name="#delete_dataset"
 />
 <Row>
   <Col>
     ### Path
     <Properties>
-      <Property name='dataset_id' type='string' key='dataset_id'>
+      <Property name="dataset_id" type="string" key="dataset_id">
         知识库 ID
       </Property>
     </Properties>
@@ -393,20 +404,19 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
       label="/datasets/{dataset_id}"
       targetCode={`curl --location --request DELETE '${props.apiBaseUrl}/datasets/{dataset_id}' \\\n--header 'Authorization: Bearer {api_key}'`}
     >
-    ```bash {{ title: 'cURL' }}
-    curl --location --request DELETE '${props.apiBaseUrl}/datasets/{dataset_id}' \
-    --header 'Authorization: Bearer {api_key}'
-    ```
+      ```bash {{ title: "cURL" }}
+      curl --location --request DELETE '${props.apiBaseUrl}/datasets/{
+        dataset_id
+      }' \ --header 'Authorization: Bearer {api_key}' ```
     </CodeGroup>
     <CodeGroup title="Response">
-    ```text {{ title: 'Response' }}
-    204 No Content
-    ```
+      ```text {{ title: "Response" }}
+      204 No Content ```
     </CodeGroup>
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/documents/{document_id}/update-by-text'
@@ -451,6 +461,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
               - <code>max_tokens</code> 最大长度（token）默认为 1000
       </Property>
     </Properties>
+
   </Col>
   <Col sticky>
     <CodeGroup
@@ -503,7 +514,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/documents/{document_id}/update-by-file'
@@ -548,6 +559,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
               - <code>max_tokens</code> 最大长度（token）默认为 1000
       </Property>
     </Properties>
+
   </Col>
   <Col sticky>
     <CodeGroup
@@ -597,7 +609,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/documents/{batch}/indexing-status'
@@ -652,7 +664,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/documents/{document_id}'
@@ -694,7 +706,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/documents'
@@ -723,6 +735,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
         返回条数，可选，默认 20，范围 1-100
       </Property>
     </Properties>
+
   </Col>
   <Col sticky>
     <CodeGroup
@@ -769,7 +782,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/documents/{document_id}/segments'
@@ -797,6 +810,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
         - <code>keywords</code> (list) 关键字，非必填
       </Property>
     </Properties>
+
   </Col>
   <Col sticky>
     <CodeGroup
@@ -855,7 +869,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/documents/{document_id}/segments'
@@ -884,6 +898,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
         搜索状态，completed
       </Property>
     </Properties>
+
   </Col>
   <Col sticky>
     <CodeGroup
@@ -933,7 +948,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/documents/{document_id}/segments/{segment_id}'
@@ -979,7 +994,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/documents/{document_id}/segments/{segment_id}'
@@ -1011,6 +1026,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
         - <code>enabled</code> (bool) false/true，非必填
       </Property>
     </Properties>
+
   </Col>
   <Col sticky>
     <CodeGroup
@@ -1068,7 +1084,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Heading
   url='/datasets/{dataset_id}/retrieve'
@@ -1110,6 +1126,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
           未启用字段
       </Property>
     </Properties>
+
   </Col>
   <Col sticky>
     <CodeGroup
@@ -1213,8 +1230,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
   </Col>
 </Row>
 
-
-<hr className='ml-0 mr-0' />
+<hr className="ml-0 mr-0" />
 
 <Row>
   <Col>

@@ -71,7 +71,9 @@ class MockCompletionsClass:
                     created=int(time()),
                     model=model,
                     system_fingerprint="",
-                    choices=[CompletionChoice(text=full_text[i], index=0, logprobs=None, finish_reason="content_filter")],
+                    choices=[
+                        CompletionChoice(text=full_text[i], index=0, logprobs=None, finish_reason="content_filter")
+                    ],
                 )
 
     def completion_create(

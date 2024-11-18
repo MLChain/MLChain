@@ -206,7 +206,9 @@ class WorkflowConverter:
         elif app_mode == AppMode.CHAT:
             app_config = ChatAppConfigManager.get_app_config(app_model=app_model, app_model_config=app_model_config)
         elif app_mode == AppMode.COMPLETION:
-            app_config = CompletionAppConfigManager.get_app_config(app_model=app_model, app_model_config=app_model_config)
+            app_config = CompletionAppConfigManager.get_app_config(
+                app_model=app_model, app_model_config=app_model_config
+            )
         else:
             raise ValueError("Invalid app mode")
 

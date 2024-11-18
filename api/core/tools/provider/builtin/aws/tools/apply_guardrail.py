@@ -22,7 +22,9 @@ class GuardrailParameters(BaseModel):
 
 
 class ApplyGuardrailTool(BuiltinTool):
-    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(
+        self, user_id: str, tool_parameters: dict[str, Any]
+    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         """
         Invoke the ApplyGuardrail tool
         """

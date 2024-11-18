@@ -8,7 +8,9 @@ from core.tools.tool.builtin_tool import BuiltinTool
 
 
 class GitlabProjectsTool(BuiltinTool):
-    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(
+        self, user_id: str, tool_parameters: dict[str, Any]
+    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         project_name = tool_parameters.get("project_name", "")
         page = tool_parameters.get("page", 1)
         page_size = tool_parameters.get("page_size", 20)

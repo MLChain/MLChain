@@ -13,7 +13,9 @@ from core.tools.tool.builtin_tool import BuiltinTool
 
 
 class DingTalkGroupBotTool(BuiltinTool):
-    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(
+        self, user_id: str, tool_parameters: dict[str, Any]
+    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         """
         invoke tools
         Dingtalk custom group robot API docs:

@@ -744,7 +744,9 @@ class ParameterExtractorNode(LLMNode):
 
         return rest_tokens
 
-    def _fetch_model_config(self, node_data_model: ModelConfig) -> tuple[ModelInstance, ModelConfigWithCredentialsEntity]:
+    def _fetch_model_config(
+        self, node_data_model: ModelConfig
+    ) -> tuple[ModelInstance, ModelConfigWithCredentialsEntity]:
         """
         Fetch model config.
         """

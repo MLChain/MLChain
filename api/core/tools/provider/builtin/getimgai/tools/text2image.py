@@ -7,7 +7,9 @@ from core.tools.tool.builtin_tool import BuiltinTool
 
 
 class Text2ImageTool(BuiltinTool):
-    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(
+        self, user_id: str, tool_parameters: dict[str, Any]
+    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         app = GetImgAIApp(
             api_key=self.runtime.credentials["getimg_api_key"], base_url=self.runtime.credentials["base_url"]
         )

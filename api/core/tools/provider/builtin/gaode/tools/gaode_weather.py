@@ -8,7 +8,9 @@ from core.tools.tool.builtin_tool import BuiltinTool
 
 
 class GaodeRepositoriesTool(BuiltinTool):
-    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(
+        self, user_id: str, tool_parameters: dict[str, Any]
+    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         """
         invoke tools
         """
@@ -35,9 +37,8 @@ class GaodeRepositoriesTool(BuiltinTool):
                     CityCode = City_data["districts"][0]["adcode"]
                     weatherInfo_response = s.request(
                         method="GET",
-                        url="{url}/weather/weatherInfo?city={citycode}&extensions=all&key={apikey}&output=json" "".format(
-                            url=api_domain, citycode=CityCode, apikey=self.runtime.credentials.get("api_key")
-                        ),
+                        url="{url}/weather/weatherInfo?city={citycode}&extensions=all&key={apikey}&output=json"
+                        "".format(url=api_domain, citycode=CityCode, apikey=self.runtime.credentials.get("api_key")),
                     )
                     weatherInfo_data = weatherInfo_response.json()
                     if weatherInfo_response.status_code == 200 and weatherInfo_data.get("info") == "OK":

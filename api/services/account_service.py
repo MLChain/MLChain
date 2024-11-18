@@ -81,7 +81,9 @@ class AccountService:
     @staticmethod
     def _store_refresh_token(refresh_token: str, account_id: str) -> None:
         redis_client.setex(AccountService._get_refresh_token_key(refresh_token), REFRESH_TOKEN_EXPIRY, account_id)
-        redis_client.setex(AccountService._get_account_refresh_token_key(account_id), REFRESH_TOKEN_EXPIRY, refresh_token)
+        redis_client.setex(
+            AccountService._get_account_refresh_token_key(account_id), REFRESH_TOKEN_EXPIRY, refresh_token
+        )
 
     @staticmethod
     def _delete_refresh_token(refresh_token: str, account_id: str) -> None:
@@ -825,7 +827,9 @@ class RegisterService:
             TenantService.check_member_permission(tenant, inviter, None, "add")
             name = email.split("@")[0]
 
-            account = cls.register(email=email, name=name, language=language, status=AccountStatus.PENDING, is_setup=True)
+            account = cls.register(
+                email=email, name=name, language=language, status=AccountStatus.PENDING, is_setup=True
+            )
             # Create new tenant member for invited tenant
             TenantService.create_tenant_member(tenant, account, role)
             TenantService.switch_tenant(account, tenant.id)

@@ -84,7 +84,9 @@ class BaseAppGenerator:
             VariableEntityType.SELECT,
             VariableEntityType.PARAGRAPH,
         } and not isinstance(value, str):
-            raise ValueError(f"(type '{variable_entity.type}') {variable_entity.variable} in input form must be a string")
+            raise ValueError(
+                f"(type '{variable_entity.type}') {variable_entity.variable} in input form must be a string"
+            )
 
         if variable_entity.type == VariableEntityType.NUMBER and isinstance(value, str):
             # handle empty string case

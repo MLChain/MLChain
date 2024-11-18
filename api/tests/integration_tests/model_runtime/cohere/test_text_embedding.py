@@ -13,7 +13,9 @@ def test_validate_credentials():
     with pytest.raises(CredentialsValidateFailedError):
         model.validate_credentials(model="embed-multilingual-v3.0", credentials={"api_key": "invalid_key"})
 
-    model.validate_credentials(model="embed-multilingual-v3.0", credentials={"api_key": os.environ.get("COHERE_API_KEY")})
+    model.validate_credentials(
+        model="embed-multilingual-v3.0", credentials={"api_key": os.environ.get("COHERE_API_KEY")}
+    )
 
 
 def test_invoke_model():

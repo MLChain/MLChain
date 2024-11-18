@@ -47,7 +47,9 @@ class JSONReplaceTool(BuiltinTool):
                 replace_pattern = tool_parameters.get("replace_pattern", "")
                 if not replace_pattern:
                     return self.create_text_message("Invalid parameter replace_pattern")
-                result = self._replace_pattern(content, query, replace_pattern, replace_value, ensure_ascii, value_decode)
+                result = self._replace_pattern(
+                    content, query, replace_pattern, replace_value, ensure_ascii, value_decode
+                )
             elif replace_model == "key":
                 result = self._replace_key(content, query, replace_value, ensure_ascii)
             elif replace_model == "value":
@@ -105,7 +107,9 @@ class JSONReplaceTool(BuiltinTool):
             return str(e)
 
     # Replace value
-    def _replace_value(self, content: str, query: str, replace_value: str, ensure_ascii: bool, value_decode: bool) -> str:
+    def _replace_value(
+        self, content: str, query: str, replace_value: str, ensure_ascii: bool, value_decode: bool
+    ) -> str:
         try:
             input_data = json.loads(content)
             expr = parse(query)

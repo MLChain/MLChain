@@ -45,7 +45,9 @@ def test_validate_credentials_for_completion_model(setup_openai_mock):
     with pytest.raises(CredentialsValidateFailedError):
         model.validate_credentials(model="text-davinci-003", credentials={"openai_api_key": "invalid_key"})
 
-    model.validate_credentials(model="text-davinci-003", credentials={"openai_api_key": os.environ.get("OPENAI_API_KEY")})
+    model.validate_credentials(
+        model="text-davinci-003", credentials={"openai_api_key": os.environ.get("OPENAI_API_KEY")}
+    )
 
 
 @pytest.mark.parametrize("setup_openai_mock", [["completion"]], indirect=True)

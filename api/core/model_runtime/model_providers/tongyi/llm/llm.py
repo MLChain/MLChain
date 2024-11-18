@@ -410,7 +410,9 @@ class TongyiLargeLanguageModel(LargeLanguageModel):
                     tongyi_messages.append(
                         {
                             "role": "user",
-                            "content": prompt_message.content if not rich_content else [{"text": prompt_message.content}],
+                            "content": prompt_message.content
+                            if not rich_content
+                            else [{"text": prompt_message.content}],
                         }
                     )
                 else:

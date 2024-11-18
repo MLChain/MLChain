@@ -198,15 +198,15 @@ Yapılandırmayı özelleştirmeniz gerekiyorsa, lütfen [.env.example](docker/.
 Yüksek kullanılabilirliğe sahip bir kurulum yapılandırmak isterseniz, Mlchain'ın Kubernetes üzerine dağıtılmasına olanak tanıyan topluluk katkılı [Helm Charts](https://helm.sh/) ve YAML dosyaları mevcuttur.
 
 - [@LeoQuote tarafından Helm Chart](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [@BorisPolonsky tarafından Helm Chart](https://github.com/MLChain/mlchain-helm)
-- [@Winson-030 tarafından YAML dosyası](https://github.com/MLChain/mlchain-kubernetes)
+- [@BorisPolonsky tarafından Helm Chart](https://github.com/BorisPolonsky/mlchain-helm)
+- [@Winson-030 tarafından YAML dosyası](https://github.com/Winson-030/mlchain-kubernetes)
 
 #### Dağıtım için Terraform Kullanımı
 
 Mlchain'ı bulut platformuna tek tıklamayla dağıtın [terraform](https://www.terraform.io/) kullanarak
 
 ##### Azure Global
-- [Azure Terraform tarafından @nikawang](https://github.com/MLChain/mlchain-azure-terraform)
+- [Azure Terraform tarafından @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
 
 ##### Google Cloud
 - [Google Cloud Terraform tarafından @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)

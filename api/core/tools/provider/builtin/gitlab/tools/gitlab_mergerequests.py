@@ -8,7 +8,9 @@ from core.tools.tool.builtin_tool import BuiltinTool
 
 
 class GitlabMergeRequestsTool(BuiltinTool):
-    def _invoke(self, user_id: str, tool_parameters: dict[str, Any]) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
+    def _invoke(
+        self, user_id: str, tool_parameters: dict[str, Any]
+    ) -> Union[ToolInvokeMessage, list[ToolInvokeMessage]]:
         repository = tool_parameters.get("repository", "")
         branch = tool_parameters.get("branch", "")
         start_time = tool_parameters.get("start_time", "")

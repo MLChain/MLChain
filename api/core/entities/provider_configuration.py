@@ -292,7 +292,9 @@ class ProviderConfiguration(BaseModel):
 
             provider_model_credentials_cache.delete()
 
-    def get_custom_model_credentials(self, model_type: ModelType, model: str, obfuscated: bool = False) -> Optional[dict]:
+    def get_custom_model_credentials(
+        self, model_type: ModelType, model: str, obfuscated: bool = False
+    ) -> Optional[dict]:
         """
         Get custom model credentials.
 
@@ -345,7 +347,9 @@ class ProviderConfiguration(BaseModel):
 
         # Get provider credential secret variables
         provider_credential_secret_variables = self.extract_secret_variables(
-            self.provider.model_credential_schema.credential_form_schemas if self.provider.model_credential_schema else []
+            self.provider.model_credential_schema.credential_form_schemas
+            if self.provider.model_credential_schema
+            else []
         )
 
         if provider_model_record:

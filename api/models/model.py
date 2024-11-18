@@ -402,7 +402,9 @@ class AppModelConfig(db.Model):
         self.text_to_speech = json.dumps(model_config["text_to_speech"]) if model_config.get("text_to_speech") else None
         self.more_like_this = json.dumps(model_config["more_like_this"]) if model_config.get("more_like_this") else None
         self.sensitive_word_avoidance = (
-            json.dumps(model_config["sensitive_word_avoidance"]) if model_config.get("sensitive_word_avoidance") else None
+            json.dumps(model_config["sensitive_word_avoidance"])
+            if model_config.get("sensitive_word_avoidance")
+            else None
         )
         self.external_data_tools = (
             json.dumps(model_config["external_data_tools"]) if model_config.get("external_data_tools") else None
@@ -717,6 +719,7 @@ class Message(db.Model):
         db.Index("message_end_user_idx", "app_id", "from_source", "from_end_user_id"),
         db.Index("message_account_idx", "app_id", "from_source", "from_account_id"),
         db.Index("message_workflow_run_id_idx", "conversation_id", "workflow_run_id"),
+        db.Index("message_created_at_idx", "created_at"),
     )
 
     id = db.Column(StringUUID, server_default=db.text("uuid_generate_v4()"))

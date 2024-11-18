@@ -23,7 +23,9 @@ def list_operator_node():
         "variable": ["test_variable"],
         "filter_by": FilterBy(
             enabled=True,
-            conditions=[FilterCondition(key="type", comparison_operator="in", value=[FileType.IMAGE, FileType.DOCUMENT])],
+            conditions=[
+                FilterCondition(key="type", comparison_operator="in", value=[FileType.IMAGE, FileType.DOCUMENT])
+            ],
         ),
         "order_by": OrderBy(enabled=False, value="asc"),
         "limit": Limit(enabled=False, size=0),

@@ -381,7 +381,9 @@ class WorkflowAppGenerateTaskPipeline(BasedGenerateTaskPipeline, WorkflowCycleMa
                     tts_publisher.publish(message=queue_message)
 
                 self._task_state.answer += delta_text
-                yield self._text_chunk_to_stream_response(delta_text, from_variable_selector=event.from_variable_selector)
+                yield self._text_chunk_to_stream_response(
+                    delta_text, from_variable_selector=event.from_variable_selector
+                )
             else:
                 continue
 

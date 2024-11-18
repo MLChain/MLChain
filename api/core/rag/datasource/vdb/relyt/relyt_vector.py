@@ -54,7 +54,9 @@ class RelytVector(BaseVector):
         super().__init__(collection_name)
         self.embedding_dimension = 1536
         self._client_config = config
-        self._url = f"postgresql+psycopg2://{config.user}:{config.password}@{config.host}:{config.port}/{config.database}"
+        self._url = (
+            f"postgresql+psycopg2://{config.user}:{config.password}@{config.host}:{config.port}/{config.database}"
+        )
         self.client = create_engine(self._url)
         self._fields = []
         self._group_id = group_id

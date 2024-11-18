@@ -551,7 +551,9 @@ if you are not sure about the structure.
 
         return mode
 
-    def _calc_response_usage(self, model: str, credentials: dict, prompt_tokens: int, completion_tokens: int) -> LLMUsage:
+    def _calc_response_usage(
+        self, model: str, credentials: dict, prompt_tokens: int, completion_tokens: int
+    ) -> LLMUsage:
         """
         Calculate response usage
 

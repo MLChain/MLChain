@@ -199,15 +199,15 @@ docker compose up -d
 高可用性設定を設定する必要がある場合、コミュニティは[Helm Charts](https://helm.sh/)とYAMLファイルにより、MlchainをKubernetesにデプロイすることができます。
 
 - [Helm Chart by @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [Helm Chart](https://github.com/MLChain/mlchain-helm)
-- [YAML file](https://github.com/MLChain/mlchain-kubernetes)
+- [Helm Chart by @BorisPolonsky](https://github.com/BorisPolonsky/mlchain-helm)
+- [YAML file by @Winson-030](https://github.com/Winson-030/mlchain-kubernetes)
 
 #### Terraformを使用したデプロイ
 
 [terraform](https://www.terraform.io/) を使用して、ワンクリックでMlchainをクラウドプラットフォームにデプロイします
 
 ##### Azure Global
-- [@nikawangによるAzure Terraform](https://github.com/MLChain/mlchain-azure-terraform)
+- [@nikawangによるAzure Terraform](https://github.com/nikawang/mlchain-azure-terraform)
 
 ##### Google Cloud
 - [@sotazumによるGoogle Cloud Terraform](https://github.com/DeNA/mlchain-google-cloud-terraform)

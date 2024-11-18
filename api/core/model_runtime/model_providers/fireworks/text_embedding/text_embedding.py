@@ -134,7 +134,9 @@ class FireworksTextEmbeddingModel(_CommonFireworks, TextEmbeddingModel):
         :param tokens: input tokens
         :return: usage
         """
-        input_price_info = self.get_price(model=model, credentials=credentials, tokens=tokens, price_type=PriceType.INPUT)
+        input_price_info = self.get_price(
+            model=model, credentials=credentials, tokens=tokens, price_type=PriceType.INPUT
+        )
 
         usage = EmbeddingUsage(
             tokens=tokens,

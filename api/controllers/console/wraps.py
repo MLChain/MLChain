@@ -134,7 +134,11 @@ def setup_required(view):
     @wraps(view)
     def decorated(*args, **kwargs):
         # check setup
-        if mlchain_config.EDITION == "SELF_HOSTED" and os.environ.get("INIT_PASSWORD") and not MlchainSetup.query.first():
+        if (
+            mlchain_config.EDITION == "SELF_HOSTED"
+            and os.environ.get("INIT_PASSWORD")
+            and not MlchainSetup.query.first()
+        ):
             raise NotInitValidateError()
         elif mlchain_config.EDITION == "SELF_HOSTED" and not MlchainSetup.query.first():
             raise NotSetupError()

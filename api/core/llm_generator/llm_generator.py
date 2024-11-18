@@ -286,7 +286,9 @@ class LLMGenerator:
             error = str(e)
             return {"code": "", "language": code_language, "error": f"Failed to generate code. Error: {error}"}
         except Exception as e:
-            logging.exception(f"Failed to invoke LLM model, model: {model_config.get('name')}, language: {code_language}")
+            logging.exception(
+                f"Failed to invoke LLM model, model: {model_config.get('name')}, language: {code_language}"
+            )
             return {"code": "", "language": code_language, "error": f"An unexpected error occurred: {str(e)}"}
 
     @classmethod

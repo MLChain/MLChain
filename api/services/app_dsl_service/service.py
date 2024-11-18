@@ -163,7 +163,9 @@ class AppDslService:
 
         workflow_data = import_data.get("workflow")
         if not workflow_data or not isinstance(workflow_data, dict):
-            raise MissingWorkflowDataError("Missing workflow in data argument when app mode is advanced-chat or workflow")
+            raise MissingWorkflowDataError(
+                "Missing workflow in data argument when app mode is advanced-chat or workflow"
+            )
 
         return cls._import_and_overwrite_workflow_based_app(
             app_model=app_model,
@@ -229,7 +231,9 @@ class AppDslService:
         :param use_icon_as_answer_icon: use app icon as answer icon
         """
         if not workflow_data:
-            raise MissingWorkflowDataError("Missing workflow in data argument when app mode is advanced-chat or workflow")
+            raise MissingWorkflowDataError(
+                "Missing workflow in data argument when app mode is advanced-chat or workflow"
+            )
 
         app = cls._create_app(
             tenant_id=tenant_id,
@@ -276,7 +280,9 @@ class AppDslService:
         :param account: Account instance
         """
         if not workflow_data:
-            raise MissingWorkflowDataError("Missing workflow in data argument when app mode is advanced-chat or workflow")
+            raise MissingWorkflowDataError(
+                "Missing workflow in data argument when app mode is advanced-chat or workflow"
+            )
 
         # fetch draft workflow by app_model
         workflow_service = WorkflowService()

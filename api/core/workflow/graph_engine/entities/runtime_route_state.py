@@ -104,4 +104,6 @@ class RuntimeRouteState(BaseModel):
         :param source_node_state_id: source node state id
         :return: routes with node state
         """
-        return [self.node_state_mapping[target_state_id] for target_state_id in self.routes.get(source_node_state_id, [])]
+        return [
+            self.node_state_mapping[target_state_id] for target_state_id in self.routes.get(source_node_state_id, [])
+        ]

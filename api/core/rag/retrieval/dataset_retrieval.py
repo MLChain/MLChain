@@ -274,7 +274,9 @@ class DatasetRetrieval:
         dataset_id = None
         if planning_strategy == PlanningStrategy.REACT_ROUTER:
             react_multi_dataset_router = ReactMultiDatasetRouter()
-            dataset_id = react_multi_dataset_router.invoke(query, tools, model_config, model_instance, user_id, tenant_id)
+            dataset_id = react_multi_dataset_router.invoke(
+                query, tools, model_config, model_instance, user_id, tenant_id
+            )
 
         elif planning_strategy == PlanningStrategy.ROUTER:
             function_call_router = FunctionCallMultiDatasetRouter()
@@ -435,7 +437,9 @@ class DatasetRetrieval:
         """Handle retrieval end."""
         mlchain_documents = [document for document in documents if document.provider == "mlchain"]
         for document in mlchain_documents:
-            query = db.session.query(DocumentSegment).filter(DocumentSegment.index_node_id == document.metadata["doc_id"])
+            query = db.session.query(DocumentSegment).filter(
+                DocumentSegment.index_node_id == document.metadata["doc_id"]
+            )
 
             # if 'dataset_id' in document.metadata:
             if "dataset_id" in document.metadata:
@@ -692,7 +696,9 @@ class DatasetRetrieval:
         documents = sorted(documents, key=lambda x: x.metadata["score"], reverse=True)
         return documents[:top_k] if top_k else documents
 
-    def calculate_vector_score(self, all_documents: list[Document], top_k: int, score_threshold: float) -> list[Document]:
+    def calculate_vector_score(
+        self, all_documents: list[Document], top_k: int, score_threshold: float
+    ) -> list[Document]:
         filter_documents = []
         for document in all_documents:
             if score_threshold is None or document.metadata["score"] >= score_threshold:
