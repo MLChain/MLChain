@@ -204,7 +204,7 @@ If you'd like to configure a highly-available setup, there are community-contrib
 
 ##### Azure Global
 Atoruk [terraform](https://www.terraform.io/) Mlchain-mik Azure-mut ataatsikkut ikkussuilluarlugu.
-- [Azure Terraform atorlugu @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
+- [Azure Terraform atorlugu @nikawang](https://github.com/mlchain/mlchain-azure-terraform)
 
 
 ## Contributing

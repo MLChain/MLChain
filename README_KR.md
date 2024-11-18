@@ -197,7 +197,7 @@ Mlchain를 Kubernetes에 배포하고 프리미엄 스케일링 설정을 구성
 
 ##### Azure Global
 [terraform](https://www.terraform.io/)을 사용하여 Azure에 Mlchain를 원클릭으로 배포하세요.
-- [nikawang의 Azure Terraform](https://github.com/nikawang/mlchain-azure-terraform)
+- [nikawang의 Azure Terraform](https://github.com/mlchain/mlchain-azure-terraform)
 
 ## 기여
 

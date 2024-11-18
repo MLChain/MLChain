@@ -191,14 +191,14 @@ Nếu bạn cần tùy chỉnh cấu hình, vui lòng tham khảo các nhận x�
 Nếu bạn muốn cấu hình một cài đặt có độ sẵn sàng cao, có các [Helm Charts](https://helm.sh/) và tệp YAML do cộng đồng đóng góp cho phép Mlchain được triển khai trên Kubernetes.
 
 - [Helm Chart bởi @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [Helm Chart bởi @BorisPolonsky](https://github.com/BorisPolonsky/mlchain-helm)
-- [Tệp YAML bởi @Winson-030](https://github.com/Winson-030/mlchain-kubernetes)
+- [Helm Chart bởi @BorisPolonsky](https://github.com/mlchain/mlchain-helm)
+- [Tệp YAML bởi @Winson-030](https://github.com/mlchain/mlchain-kubernetes)
 
 #### Sử dụng Terraform để Triển khai
 
 ##### Azure Global
 Triển khai Mlchain lên Azure chỉ với một cú nhấp chuột bằng cách sử dụng [terraform](https://www.terraform.io/).
-- [Azure Terraform bởi @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
+- [Azure Terraform bởi @nikawang](https://github.com/mlchain/mlchain-azure-terraform)
 
 ## Đóng góp
 

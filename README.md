@@ -199,7 +199,7 @@ If you'd like to configure a highly-available setup, there are community-contrib
 
 ##### Azure Global
 Deploy Mlchain to Azure with a single click using [terraform](https://www.terraform.io/).
-- [Azure Terraform by @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
+- [Azure Terraform by @nikawang](https://github.com/mlchain/mlchain-azure-terraform)
 
 ## Contributing
 

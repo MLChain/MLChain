@@ -203,7 +203,7 @@ docker compose up -d
 
 ##### Azure Global
 [terraform](https://www.terraform.io/) を使用して、AzureにMlchainをワンクリックでデプロイします。
-- [nikawangのAzure Terraform](https://github.com/nikawang/mlchain-azure-terraform)
+- [nikawangのAzure Terraform](https://github.com/mlchain/mlchain-azure-terraform)
 
 
 ## 貢献

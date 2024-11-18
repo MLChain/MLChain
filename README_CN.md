@@ -198,13 +198,13 @@ docker compose up -d
 
 
 
-- [YAML 文件 by @Winson-030](https://github.com/Winson-030/mlchain-kubernetes)
+- [YAML 文件 by @Winson-030](https://github.com/mlchain/mlchain-kubernetes)
 
 #### 使用 Terraform 部署
 
 ##### Azure Global
 使用 [terraform](https://www.terraform.io/) 一键部署 Mlchain 到 Azure。
-- [Azure Terraform by @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
+- [Azure Terraform by @nikawang](https://github.com/mlchain/mlchain-azure-terraform)
 
 ## Star History
 

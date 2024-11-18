@@ -195,14 +195,14 @@ Yapılandırmayı özelleştirmeniz gerekiyorsa, lütfen [.env.example](docker/.
 Yüksek kullanılabilirliğe sahip bir kurulum yapılandırmak isterseniz, Mlchain'ın Kubernetes üzerine dağıtılmasına olanak tanıyan topluluk katkılı [Helm Charts](https://helm.sh/) ve YAML dosyaları mevcuttur.
 
 - [@LeoQuote tarafından Helm Chart](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [@BorisPolonsky tarafından Helm Chart](https://github.com/BorisPolonsky/mlchain-helm)
-- [@Winson-030 tarafından YAML dosyası](https://github.com/Winson-030/mlchain-kubernetes)
+- [@BorisPolonsky tarafından Helm Chart](https://github.com/mlchain/mlchain-helm)
+- [@Winson-030 tarafından YAML dosyası](https://github.com/mlchain/mlchain-kubernetes)
 
 #### Dağıtım için Terraform Kullanımı
 
 ##### Azure Global
 [Terraform](https://www.terraform.io/) kullanarak Mlchain'ı Azure'a tek tıklamayla dağıtın.
-- [@nikawang tarafından Azure Terraform](https://github.com/nikawang/mlchain-azure-terraform)
+- [@nikawang tarafından Azure Terraform](https://github.com/mlchain/mlchain-azure-terraform)
 
 ## Katkıda Bulunma
 

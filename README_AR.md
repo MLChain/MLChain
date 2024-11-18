@@ -174,14 +174,14 @@ docker compose up -d
 يوجد مجتمع خاص بـ [Helm Charts](https://helm.sh/) وملفات YAML التي تسمح بتنفيذ Mlchain على Kubernetes للنظام من الإيجابيات العلوية.
 
 - [رسم بياني Helm من قبل @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [رسم بياني Helm من قبل @BorisPolonsky](https://github.com/BorisPolonsky/mlchain-helm)
-- [ملف YAML من قبل @Winson-030](https://github.com/Winson-030/mlchain-kubernetes)
+- [رسم بياني Helm من قبل @BorisPolonsky](https://github.com/mlchain/mlchain-helm)
+- [ملف YAML من قبل @Winson-030](https://github.com/mlchain/mlchain-kubernetes)
 
 #### استخدام Terraform للتوزيع
 
 ##### Azure Global
 استخدم [terraform](https://www.terraform.io/) لنشر Mlchain على Azure بنقرة واحدة.
-- [Azure Terraform بواسطة @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
+- [Azure Terraform بواسطة @nikawang](https://github.com/mlchain/mlchain-azure-terraform)
 
 
 ## المساهمة
