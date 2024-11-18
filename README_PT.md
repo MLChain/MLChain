@@ -198,15 +198,15 @@ Se precisar personalizar a configuração, consulte os comentários no nosso arq
 Se deseja configurar uma instalação de alta disponibilidade, há [Helm Charts](https://helm.sh/) e arquivos YAML contribuídos pela comunidade que permitem a implantação do Mlchain no Kubernetes.
 
 - [Helm Chart de @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [Helm Chart de @BorisPolonsky](https://github.com/BorisPolonsky/mlchain-helm)
-- [Arquivo YAML de @Winson-030](https://github.com/Winson-030/mlchain-kubernetes)
+- [Helm Chart de @BorisPolonsky](https://github.com/MLChain/mlchain-helm)
+- [Arquivo YAML de @Winson-030](https://github.com/MLChain/mlchain-kubernetes)
 
 #### Usando o Terraform para Implantação
 
 Implante o Mlchain na Plataforma Cloud com um único clique usando [terraform](https://www.terraform.io/)
 
 ##### Azure Global
-- [Azure Terraform por @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
+- [Azure Terraform por @nikawang](https://github.com/MLChain/mlchain-azure-terraform)
 
 ##### Google Cloud
 - [Google Cloud Terraform por @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)
