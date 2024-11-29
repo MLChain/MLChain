@@ -82,7 +82,7 @@
       "name": "ไทย (ประเทศไทย)",
       "prompt_name": "Thai",
       "example": "สวัสดี Mlchain!",
-      "supported": false
+      "supported": true
     },
     {
       "value": "id-ID",

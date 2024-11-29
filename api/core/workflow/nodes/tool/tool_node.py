@@ -247,12 +247,9 @@ class ToolNode(BaseNode[ToolNodeData]):
         """
         return "\n".join(
             [
-                f"{message.message}"
-                if message.type == ToolInvokeMessage.MessageType.TEXT
-                else f"Link: {message.message}"
-                if message.type == ToolInvokeMessage.MessageType.LINK
-                else ""
+                f"{message.message}" if message.type == ToolInvokeMessage.MessageType.TEXT else f"Link: {message.message}"
                 for message in tool_response
+                if message.type in {ToolInvokeMessage.MessageType.TEXT, ToolInvokeMessage.MessageType.LINK}
             ]
         )
 

@@ -240,7 +240,7 @@ class ProviderConfiguration(BaseModel):
         if provider_record:
             provider_record.encrypted_config = json.dumps(credentials)
             provider_record.is_valid = True
-            provider_record.updated_at = datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None)
+            provider_record.updated_at = datetime.datetime.now(datetime.UTC).replace(tzinfo=None)
             db.session.commit()
         else:
             provider_record = Provider(
@@ -390,7 +390,7 @@ class ProviderConfiguration(BaseModel):
         if provider_model_record:
             provider_model_record.encrypted_config = json.dumps(credentials)
             provider_model_record.is_valid = True
-            provider_model_record.updated_at = datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None)
+            provider_model_record.updated_at = datetime.datetime.now(datetime.UTC).replace(tzinfo=None)
             db.session.commit()
         else:
             provider_model_record = ProviderModel(
@@ -464,7 +464,7 @@ class ProviderConfiguration(BaseModel):
 
         if model_setting:
             model_setting.enabled = True
-            model_setting.updated_at = datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None)
+            model_setting.updated_at = datetime.datetime.now(datetime.UTC).replace(tzinfo=None)
             db.session.commit()
         else:
             model_setting = ProviderModelSetting(
@@ -499,7 +499,7 @@ class ProviderConfiguration(BaseModel):
 
         if model_setting:
             model_setting.enabled = False
-            model_setting.updated_at = datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None)
+            model_setting.updated_at = datetime.datetime.now(datetime.UTC).replace(tzinfo=None)
             db.session.commit()
         else:
             model_setting = ProviderModelSetting(
@@ -566,7 +566,7 @@ class ProviderConfiguration(BaseModel):
 
         if model_setting:
             model_setting.load_balancing_enabled = True
-            model_setting.updated_at = datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None)
+            model_setting.updated_at = datetime.datetime.now(datetime.UTC).replace(tzinfo=None)
             db.session.commit()
         else:
             model_setting = ProviderModelSetting(
@@ -601,7 +601,7 @@ class ProviderConfiguration(BaseModel):
 
         if model_setting:
             model_setting.load_balancing_enabled = False
-            model_setting.updated_at = datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None)
+            model_setting.updated_at = datetime.datetime.now(datetime.UTC).replace(tzinfo=None)
             db.session.commit()
         else:
             model_setting = ProviderModelSetting(

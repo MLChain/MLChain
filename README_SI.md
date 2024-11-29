@@ -8,7 +8,7 @@
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">Samostojno gostovanje</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">Dokumentacija</a> ·
-  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">Povpraševanje za podjetja</a>
+  <a href="https://cloud-mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">Povpraševanje za podjetja</a>
 </p>
 
 <p align="center">
@@ -132,18 +132,25 @@ Star Mlchain on GitHub and be instantly notified of new releases.
 Če želite konfigurirati visoko razpoložljivo nastavitev, so na voljo Helm Charts in datoteke YAML, ki jih prispeva skupnost, ki omogočajo uvedbo Mlchainja v Kubernetes.
 
 - [Helm Chart by @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [Helm Chart](https://github.com/MLChain/mlchain-helm)
-- [YAML file](https://github.com/MLChain/mlchain-kubernetes)
+- [Helm Chart by @BorisPolonsky](https://github.com/MLChain/mlchain-helm)
+- [YAML file by @Winson-030](https://github.com/MLChain/mlchain-kubernetes)
 
 #### Uporaba Terraform za uvajanje
 
 namestite Mlchain v Cloud Platform z enim klikom z uporabo [terraform](https://www.terraform.io/)
 
 ##### Azure Global
-- [Azure Terraform](https://github.com/MLChain/mlchain-azure-terraform)
+- [Azure Terraform by @nikawang](https://github.com/MLChain/mlchain-azure-terraform)
 
 ##### Google Cloud
 - [Google Cloud Terraform by @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)
+
+#### Uporaba AWS CDK za uvajanje
+
+Uvedite Mlchain v AWS z uporabo [CDK](https://aws.amazon.com/cdk/)
+
+##### AWS 
+- [AWS CDK by @KevinZhao](https://github.com/aws-samples/solution-for-deploying-mlchain-on-aws)
 
 ## Prispevam
 

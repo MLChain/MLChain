@@ -585,6 +585,11 @@ class RagEtlConfig(BaseSettings):
         default=None,
     )
 
+    SCARF_NO_ANALYTICS: Optional[str] = Field(
+        description="This is about whether to disable Scarf analytics in Unstructured library.",
+        default="false",
+    )
+
 
 class DataSetConfig(BaseSettings):
     """
@@ -614,6 +619,11 @@ class DataSetConfig(BaseSettings):
     CREATE_TIDB_SERVICE_JOB_ENABLED: bool = Field(
         description="Enable or disable create tidb service job",
         default=False,
+    )
+
+    PLAN_SANDBOX_CLEAN_MESSAGE_DAY_SETTING: PositiveInt = Field(
+        description="Interval in days for message cleanup operations - plan: sandbox",
+        default=30,
     )
 
 

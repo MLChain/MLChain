@@ -4,7 +4,7 @@
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">Auto-alojamiento</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">Documentación</a> ·
-  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">Consultas empresariales (en inglés)</a>
+  <a href="https://cloud-mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">Consultas empresariales (en inglés)</a>
 </p>
 
 <p align="center">
@@ -215,6 +215,13 @@ Despliega Mlchain en una plataforma en la nube con un solo clic utilizando [terr
 ##### Google Cloud
 - [Google Cloud Terraform por @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)
 
+#### Usando AWS CDK para el Despliegue
+
+Despliegue Mlchain en AWS usando [CDK](https://aws.amazon.com/cdk/)
+
+##### AWS 
+- [AWS CDK por @KevinZhao](https://github.com/aws-samples/solution-for-deploying-mlchain-on-aws)
+
 ## Contribuir
 
 Para aquellos que deseen contribuir con código, consulten nuestra [Guía de contribución](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md). 
@@ -241,6 +248,13 @@ Al mismo tiempo, considera apoyar a Mlchain compartiéndolo en redes sociales y 
 [![Gráfico de Historial de Estrellas](https://api.star-history.com/svg?repos=mlchain/mlchain&type=Date)](https://star-history.com/#mlchain/mlchain&Date)
 
 
+## Divulgación de Seguridad
+
+Para proteger tu privacidad, evita publicar problemas de seguridad en GitHub. En su lugar, envía tus preguntas a security@mlchain.khulnasoft.com y te proporcionaremos una respuesta más detallada.
+
+## Licencia
+
+Este repositorio está disponible bajo la [Licencia de Código Abierto de Mlchain](LICENSE), que es esencialmente Apache 2.0 con algunas restricciones adicionales.
 ## Divulgación de Seguridad
 
 Para proteger tu privacidad, evita publicar problemas de seguridad en GitHub. En su lugar, envía tus preguntas a security@mlchain.khulnasoft.com y te proporcionaremos una respuesta más detallada.

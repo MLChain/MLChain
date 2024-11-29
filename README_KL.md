@@ -4,7 +4,7 @@
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">Self-hosting</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">Documentation</a> ·
-  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">Commercial enquiries</a>
+  <a href="https://cloud-mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">Commercial enquiries</a>
 </p>
 
 <p align="center">
@@ -200,8 +200,8 @@ If you need to customize the configuration, please refer to the comments in our 
 If you'd like to configure a highly-available setup, there are community-contributed [Helm Charts](https://helm.sh/) and YAML files which allow Mlchain to be deployed on Kubernetes.
 
 - [Helm Chart by @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [Helm Chart](https://github.com/MLChain/mlchain-helm)
-- [YAML file](https://github.com/MLChain/mlchain-kubernetes)
+- [Helm Chart by @BorisPolonsky](https://github.com/MLChain/mlchain-helm)
+- [YAML file by @Winson-030](https://github.com/MLChain/mlchain-kubernetes)
 
 #### Terraform atorlugu pilersitsineq
 
@@ -212,6 +212,13 @@ wa'logh nIqHom neH ghun deployment toy'wI' [terraform](https://www.terraform.io/
 
 ##### Google Cloud
 - [Google Cloud Terraform qachlot @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)
+
+#### AWS CDK atorlugh pilersitsineq
+
+wa'logh nIqHom neH ghun deployment toy'wI' [CDK](https://aws.amazon.com/cdk/) lo'laH.
+
+##### AWS 
+- [AWS CDK qachlot @KevinZhao](https://github.com/aws-samples/solution-for-deploying-mlchain-on-aws)
 
 ## Contributing
 
