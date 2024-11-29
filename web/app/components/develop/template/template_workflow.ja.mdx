@@ -243,7 +243,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
         import json
 
         def upload_file(file_path, user):
-            upload_url = "https://api.mlchain.khulnasoft.com/v1/files/upload"
+            upload_url = "https://api-mlchain.khulnasoft.com/v1/files/upload"
             headers = {
                 "Authorization": "Bearer app-xxxxxxxx",
             }
@@ -271,7 +271,7 @@ import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from 
                 return None
 
         def run_workflow(file_id, user, response_mode="blocking"):
-            workflow_url = "https://api.mlchain.khulnasoft.com/v1/workflows/run"
+            workflow_url = "https://api-mlchain.khulnasoft.com/v1/workflows/run"
             headers = {
                 "Authorization": "Bearer app-xxxxxxxxx",
                 "Content-Type": "application/json"

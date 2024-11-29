@@ -14,7 +14,7 @@ In terms of licensing, please take a minute to read our short [License and Contr
 
 ### Feature requests
 
-* If you're opening a new feature request, we'd like you to explain what the proposed feature achieves, and include as much context as possible. [@perzeusss](https://github.com/perzeuss) has made a solid [Feature Request Copilot](https://umlchain.app/chat/MK2kVSnw1gakVwMX) that helps you draft out your needs. Feel free to give it a try.
+* If you're opening a new feature request, we'd like you to explain what the proposed feature achieves, and include as much context as possible. [@perzeusss](https://github.com/perzeuss) has made a solid [Feature Request Copilot](https://cloud-mlchain.khulnasoft.com/chat/MK2kVSnw1gakVwMX) that helps you draft out your needs. Feel free to give it a try.
 
 * If you want to pick one up from the existing issues, simply drop a comment below it saying so.
 
@@ -28,7 +28,7 @@ In terms of licensing, please take a minute to read our short [License and Contr
   | [@jyong](https://github.com/JohnJyong)                       | RAG pipeline design                                  |
   | [@GarfieldDai](https://github.com/GarfieldDai)               | Building workflow orchestrations                     |
   | [@iamjoel](https://github.com/iamjoel) & [@zxhlyh](https://github.com/zxhlyh) | Making our frontend a breeze to use                  |
-  | [@guchenhe](https://github.com/guchenhe) & [@crazywoola](https://github.com/crazywoola) | Developer experience, points of contact for anything |
+  | [@guchenhe](https://github.com/guchenhe) & [@nxpkg](https://github.com/nxpkg) | Developer experience, points of contact for anything |
   | [@takatost](https://github.com/takatost)                     | Overall product direction and architecture           |
 
   How we prioritize:

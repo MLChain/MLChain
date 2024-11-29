@@ -8,7 +8,7 @@
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">Samostojno gostovanje</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">Dokumentacija</a> ·
-  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">Povpraševanje za podjetja</a>
+  <a href="https://cloud-mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">Povpraševanje za podjetja</a>
 </p>
 
 <p align="center">

@@ -12,7 +12,7 @@ Về vấn đề cấp phép, xin vui lòng dành chút thời gian đọc qua [
 
 ### Yêu cầu tính năng:
 
-* Nếu bạn đang tạo một yêu cầu tính năng mới, chúng tôi muốn bạn giải thích tính năng đề xuất sẽ đạt được điều gì và cung cấp càng nhiều thông tin chi tiết càng tốt. [@perzeusss](https://github.com/perzeuss) đã tạo một [Trợ lý Yêu cầu Tính năng](https://umlchain.app/chat/MK2kVSnw1gakVwMX) rất hữu ích để giúp bạn soạn thảo nhu cầu của mình. Hãy thử dùng nó nhé.
+* Nếu bạn đang tạo một yêu cầu tính năng mới, chúng tôi muốn bạn giải thích tính năng đề xuất sẽ đạt được điều gì và cung cấp càng nhiều thông tin chi tiết càng tốt. [@perzeusss](https://github.com/perzeuss) đã tạo một [Trợ lý Yêu cầu Tính năng](https://cloud-mlchain.khulnasoft.com/chat/MK2kVSnw1gakVwMX) rất hữu ích để giúp bạn soạn thảo nhu cầu của mình. Hãy thử dùng nó nhé.
 
 * Nếu bạn muốn chọn một vấn đề từ danh sách hiện có, chỉ cần để lại bình luận dưới vấn đề đó nói rằng bạn sẽ làm.
 
@@ -26,7 +26,7 @@ Về vấn đề cấp phép, xin vui lòng dành chút thời gian đọc qua [
   | [@jyong](https://github.com/JohnJyong)                       | Thiết kế quy trình RAG                               |
   | [@GarfieldDai](https://github.com/GarfieldDai)               | Xây dựng quy trình làm việc                          |
   | [@iamjoel](https://github.com/iamjoel) & [@zxhlyh](https://github.com/zxhlyh) | Làm cho giao diện người dùng dễ sử dụng              |
-  | [@guchenhe](https://github.com/guchenhe) & [@crazywoola](https://github.com/crazywoola) | Trải nghiệm nhà phát triển, đầu mối liên hệ cho mọi vấn đề |
+  | [@guchenhe](https://github.com/guchenhe) & [@nxpkg](https://github.com/nxpkg) | Trải nghiệm nhà phát triển, đầu mối liên hệ cho mọi vấn đề |
   | [@takatost](https://github.com/takatost)                     | Định hướng và kiến trúc tổng thể sản phẩm            |
 
   Cách chúng tôi ưu tiên:
