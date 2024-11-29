@@ -26,11 +26,11 @@ services:
       CONSOLE_API_URL: ''
       # The URL prefix for Service API endpoints, refers to the base URL of the current API service if api domain is
       # different from console domain.
-      # example: http://api.mlchain.khulnasoft.com
+      # example: http://api-mlchain.khulnasoft.com
       SERVICE_API_URL: ''
       # The URL prefix for Web APP frontend, refers to the Web App base URL of WEB service if web app domain is different from
       # console or api domain.
-      # example: http://umlchain.app
+      # example: http://cloud-mlchain.khulnasoft.com
       APP_WEB_URL: ''
       # File preview or download Url prefix.
       # used to display File preview or download Url to the front-end or as Multi-model inputs;
@@ -406,7 +406,7 @@ services:
       CONSOLE_API_URL: ''
       # The URL for Web APP api server, refers to the Web App base URL of WEB service if web app domain is different from
       # console or api domain.
-      # example: http://umlchain.app
+      # example: http://cloud-mlchain.khulnasoft.com
       APP_API_URL: ''
       # The DSN for Sentry error reporting. If not set, Sentry error reporting will be disabled.
       SENTRY_DSN: ''

@@ -4,7 +4,7 @@ import requests
 
 
 class MlchainClient:
-    def __init__(self, api_key, base_url: str = "https://api.mlchain.khulnasoft.com/v1"):
+    def __init__(self, api_key, base_url: str = "https://api-mlchain.khulnasoft.com/v1"):
         self.api_key = api_key
         self.base_url = base_url
 
@@ -160,14 +160,14 @@ class WorkflowClient(MlchainClient):
 
 class KnowledgeBaseClient(MlchainClient):
     def __init__(
-        self, api_key, base_url: str = "https://api.mlchain.khulnasoft.com/v1", dataset_id: str = None
+        self, api_key, base_url: str = "https://api-mlchain.khulnasoft.com/v1", dataset_id: str = None
     ):
         """
         Construct a KnowledgeBaseClient object.
 
         Args:
             api_key (str): API key of Mlchain.
-            base_url (str, optional): Base URL of Mlchain API. Defaults to 'https://api.mlchain.khulnasoft.com/v1'.
+            base_url (str, optional): Base URL of Mlchain API. Defaults to 'https://api-mlchain.khulnasoft.com/v1'.
             dataset_id (str, optional): ID of the dataset. Defaults to None. You don't need this if you just want to
                 create a new dataset. or list datasets. otherwise you need to set this.
         """

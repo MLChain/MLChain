@@ -4,7 +4,7 @@
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Bulut</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">Kendi Sunucunuzda Barındırma</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">Dokümantasyon</a> ·
-  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">Yalnızca İngilizce: Kurumsal Sorgulama</a>
+  <a href="https://cloud-mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">Yalnızca İngilizce: Kurumsal Sorgulama</a>
 </p>
 
 <p align="center">

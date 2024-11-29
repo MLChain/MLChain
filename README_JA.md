@@ -4,7 +4,7 @@
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">セルフホスティング</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">ドキュメント</a> ·
-  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">企業のお問い合わせ（英語のみ）</a>
+  <a href="https://cloud-mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">企業のお問い合わせ（英語のみ）</a>
 </p>
 
 <p align="center">
