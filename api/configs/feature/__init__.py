@@ -751,6 +751,27 @@ class LoginConfig(BaseSettings):
     )
 
 
+class GitHubAdvancedSecurityConfig(BaseSettings):
+    """
+    Configuration for GitHub Advanced Security
+    """
+
+    ENABLED: bool = Field(
+        description="Enable or disable GitHub Advanced Security",
+        default=False,
+    )
+
+    SECURITY_SCANNING: bool = Field(
+        description="Enable or disable security scanning",
+        default=False,
+    )
+
+    CODE_ANALYSIS: bool = Field(
+        description="Enable or disable code analysis",
+        default=False,
+    )
+
+
 class FeatureConfig(
     # place the configs in alphabet order
     AppExecutionConfig,
@@ -777,6 +798,7 @@ class FeatureConfig(
     WorkflowConfig,
     WorkspaceConfig,
     LoginConfig,
+    GitHubAdvancedSecurityConfig,  # Added GitHub Advanced Security configurations
     # hosted services config
     HostedServiceConfig,
     CeleryBeatConfig,

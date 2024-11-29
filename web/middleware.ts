@@ -1,7 +1,7 @@
 import type { NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
 
-const NECESSARY_DOMAIN = '*.sentry.io http://localhost:* http://127.0.0.1:* https://analytics.google.com googletagmanager.com *.googletagmanager.com https://www.google-analytics.com https://api.github.com'
+const NECESSARY_DOMAIN = '*.sentry.io http://localhost:* http://127.0.0.1:* https://analytics.google.com googletagmanager.com *.googletagmanager.com https://www.google-analytics.com https://api.github.com https://securityheaders.com https://cspvalidator.org'
 
 export function middleware(request: NextRequest) {
   const isWhiteListEnabled = !!process.env.NEXT_PUBLIC_CSP_WHITELIST && process.env.NODE_ENV === 'production'
@@ -27,7 +27,13 @@ export function middleware(request: NextRequest) {
     base-uri 'self';
     form-action 'self';
     upgrade-insecure-requests;
+    frame-ancestors 'none';
+    block-all-mixed-content;
+    manifest-src 'self';
+    prefetch-src 'self';
+    report-uri https://cspvalidator.org/report;
 `
+
   // Replace newline characters and spaces
   const contentSecurityPolicyHeaderValue = cspHeader
     .replace(/\s{2,}/g, ' ')
