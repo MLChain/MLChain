@@ -177,18 +177,25 @@ docker compose up -d
 يوجد مجتمع خاص بـ [Helm Charts](https://helm.sh/) وملفات YAML التي تسمح بتنفيذ Mlchain على Kubernetes للنظام من الإيجابيات العلوية.
 
 - [رسم بياني Helm من قبل @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [رسم بياني Helm من قبل @BorisPolonsky](https://github.com/MLChain/mlchain-helm)
-- [ملف YAML من قبل @Winson-030](https://github.com/MLChain/mlchain-kubernetes)
+- [رسم بياني Helm من قبل @BorisPolonsky](https://github.com/BorisPolonsky/mlchain-helm)
+- [ملف YAML من قبل @Winson-030](https://github.com/Winson-030/mlchain-kubernetes)
 
 #### استخدام Terraform للتوزيع
 
 انشر Mlchain إلى منصة السحابة بنقرة واحدة باستخدام [terraform](https://www.terraform.io/)
 
 ##### Azure Global
-- [Azure Terraform بواسطة @nikawang](https://github.com/MLChain/mlchain-azure-terraform)
+- [Azure Terraform بواسطة @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
 
 ##### Google Cloud
 - [Google Cloud Terraform بواسطة @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)
+
+#### استخدام AWS CDK للنشر
+
+انشر Mlchain على AWS باستخدام [CDK](https://aws.amazon.com/cdk/)
+
+##### AWS 
+- [AWS CDK بواسطة @KevinZhao](https://github.com/aws-samples/solution-for-deploying-mlchain-on-aws)
 
 ## المساهمة
 
@@ -215,6 +222,13 @@ docker compose up -d
 [![Star History Chart](https://api.star-history.com/svg?repos=mlchain/mlchain&type=Date)](https://star-history.com/#mlchain/mlchain&Date)
 
 
+## الكشف عن الأمان
+
+لحماية خصوصيتك، يرجى تجنب نشر مشكلات الأمان على GitHub. بدلاً من ذلك، أرسل أسئلتك إلى security@mlchain.khulnasoft.com وسنقدم لك إجابة أكثر تفصيلاً.
+
+## الرخصة
+
+هذا المستودع متاح تحت [رخصة البرنامج الحر Mlchain](LICENSE)، والتي تعتبر بشكل أساسي Apache 2.0 مع بعض القيود الإضافية.
 ## الكشف عن الأمان
 
 لحماية خصوصيتك، يرجى تجنب نشر مشكلات الأمان على GitHub. بدلاً من ذلك، أرسل أسئلتك إلى security@mlchain.khulnasoft.com وسنقدم لك إجابة أكثر تفصيلاً.

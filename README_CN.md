@@ -200,18 +200,25 @@ docker compose up -d
 使用 [Helm Chart](https://helm.sh/) 版本或者 YAML 文件，可以在 Kubernetes 上部署 Mlchain。
 
 - [Helm Chart by @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [Helm Chart](https://github.com/MLChain/mlchain-helm)
-- [YAML 文件 by @Winson-030](https://github.com/MLChain/mlchain-kubernetes)
+- [Helm Chart by @BorisPolonsky](https://github.com/BorisPolonsky/mlchain-helm)
+- [YAML 文件 by @Winson-030](https://github.com/Winson-030/mlchain-kubernetes)
 
 #### 使用 Terraform 部署
 
 使用 [terraform](https://www.terraform.io/) 一键将 Mlchain 部署到云平台
 
 ##### Azure Global
-- [Azure Terraform](https://github.com/MLChain/mlchain-azure-terraform)
+- [Azure Terraform by @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
 
 ##### Google Cloud
 - [Google Cloud Terraform by @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)
+
+#### 使用 AWS CDK 部署
+
+使用 [CDK](https://aws.amazon.com/cdk/) 将 Mlchain 部署到 AWS
+
+##### AWS 
+- [AWS CDK by @KevinZhao](https://github.com/aws-samples/solution-for-deploying-mlchain-on-aws)
 
 ## Star History
 

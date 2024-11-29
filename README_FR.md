@@ -200,18 +200,25 @@ Si vous devez personnaliser la configuration, veuillez vous référer aux commen
 Si vous souhaitez configurer une configuration haute disponibilité, la communauté fournit des [Helm Charts](https://helm.sh/) et des fichiers YAML, à travers lesquels vous pouvez déployer Mlchain sur Kubernetes.
 
 - [Helm Chart par @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [Helm Chart par @BorisPolonsky](https://github.com/MLChain/mlchain-helm)
-- [Fichier YAML par @Winson-030](https://github.com/MLChain/mlchain-kubernetes)
+- [Helm Chart par @BorisPolonsky](https://github.com/BorisPolonsky/mlchain-helm)
+- [Fichier YAML par @Winson-030](https://github.com/Winson-030/mlchain-kubernetes)
 
 #### Utilisation de Terraform pour le déploiement
 
 Déployez Mlchain sur une plateforme cloud en un clic en utilisant [terraform](https://www.terraform.io/)
 
 ##### Azure Global
-- [Azure Terraform par @nikawang](https://github.com/MLChain/mlchain-azure-terraform)
+- [Azure Terraform par @nikawang](https://github.com/nikawang/mlchain-azure-terraform)
 
 ##### Google Cloud
 - [Google Cloud Terraform par @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)
+
+#### Utilisation d'AWS CDK pour le déploiement
+
+Déployez Mlchain sur AWS en utilisant [CDK](https://aws.amazon.com/cdk/)
+
+##### AWS 
+- [AWS CDK par @KevinZhao](https://github.com/aws-samples/solution-for-deploying-mlchain-on-aws)
 
 ## Contribuer
 
@@ -239,6 +246,13 @@ Dans le même temps, veuillez envisager de soutenir Mlchain en le partageant sur
 [![Graphique de l'historique des étoiles](https://api.star-history.com/svg?repos=mlchain/mlchain&type=Date)](https://star-history.com/#mlchain/mlchain&Date)
 
 
+## Divulgation de sécurité
+
+Pour protéger votre vie privée, veuillez éviter de publier des problèmes de sécurité sur GitHub. Au lieu de cela, envoyez vos questions à security@mlchain.khulnasoft.com et nous vous fournirons une réponse plus détaillée.
+
+## Licence
+
+Ce référentiel est disponible sous la [Licence open source Mlchain](LICENSE), qui est essentiellement l'Apache 2.0 avec quelques restrictions supplémentaires.
 ## Divulgation de sécurité
 
 Pour protéger votre vie privée, veuillez éviter de publier des problèmes de sécurité sur GitHub. Au lieu de cela, envoyez vos questions à security@mlchain.khulnasoft.com et nous vous fournirons une réponse plus détaillée.
