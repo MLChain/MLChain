@@ -19,7 +19,7 @@
     <a href="https://discord.gg/FngNHpbcY7" target="_blank">
         <img src="https://img.shields.io/discord/1082486657678311454?logo=discord&labelColor=%20%235462eb&logoColor=%20%23f5f5f5&color=%20%235462eb"
             alt="chat on Discord"></a>
-    <a href="https://reddit.com/r/mlchainai" target="_blank">  
+    <a href="https://reddit.com/r/mlchainai" target="__blank">  
         <img src="https://img.shields.io/reddit/subreddit-subscribers/mlchainai?style=plastic&logo=reddit&label=r%2Fmlchainai&labelColor=white"
             alt="join Reddit"></a>
     <a href="https://twitter.com/intent/follow?screen_name=mlchain_ai" target="_blank">
@@ -188,3 +188,56 @@ To protect your privacy, please avoid posting security issues on GitHub. Instead
 
 This repository is available under the [Mlchain Open Source License](LICENSE), which is essentially Apache 2.0 with a few additional restrictions.
 
+## GitHub Advanced Security Configurations
+
+Mlchain leverages GitHub Advanced Security to enhance the security of our codebase. Below are the configurations and instructions for setting up security scanning and code analysis.
+
+### Security Scanning and Code Analysis
+
+1. **Security Scanning**: We use tools like `bandit` and `safety` to scan our code for security vulnerabilities.
+2. **Code Analysis**: We perform static code analysis to ensure code quality and security.
+
+### Setting Up Security Scanning and Code Analysis
+
+To set up security scanning and code analysis, follow these steps:
+
+1. **Install Security Tools**: Ensure that the security tools are installed in your environment. You can install them using the following commands:
+
+    ```bash
+    pip install bandit safety
+    ```
+
+2. **Run Security Scans**: Execute the security scans using the following commands:
+
+    ```bash
+    bandit -r .
+    safety check
+    ```
+
+3. **Integrate with CI/CD**: Integrate the security scanning and code analysis tools into your CI/CD pipeline to automate the process. You can add the following steps to your CI/CD configuration:
+
+    ```yaml
+    jobs:
+      security-scanning:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+
+          - name: Set up Python
+            uses: actions/setup-python@v2
+            with:
+              python-version: '3.x'
+
+          - name: Install dependencies
+            run: |
+              pip install bandit safety
+
+          - name: Run Bandit
+            run: bandit -r .
+
+          - name: Run Safety
+            run: safety check
+    ```
+
+By following these steps, you can ensure that your codebase is continuously scanned for security vulnerabilities and code quality issues.
