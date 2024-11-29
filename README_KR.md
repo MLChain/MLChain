@@ -192,15 +192,15 @@ docker compose up -d
 Mlchain를 Kubernetes에 배포하고 프리미엄 스케일링 설정을 구성했다는 커뮤니티가 제공하는 [Helm Charts](https://helm.sh/)와 YAML 파일이 존재합니다.
 
 - [Helm Chart by @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [Helm Chart by @BorisPolonsky](https://github.com/BorisPolonsky/mlchain-helm)
-- [YAML file by @Winson-030](https://github.com/Winson-030/mlchain-kubernetes)
+- [Helm Chart by @BorisPolonsky](https://github.com/MLChain/mlchain-helm)
+- [YAML file by @Winson-030](https://github.com/MLChain/mlchain-kubernetes)
 
 #### Terraform을 사용한 배포
 
 [terraform](https://www.terraform.io/)을 사용하여 단 한 번의 클릭으로 Mlchain를 클라우드 플랫폼에 배포하십시오
 
 ##### Azure Global
-- [nikawang의 Azure Terraform](https://github.com/nikawang/mlchain-azure-terraform)
+- [nikawang의 Azure Terraform](https://github.com/MLChain/mlchain-azure-terraform)
 
 ##### Google Cloud
 - [sotazum의 Google Cloud Terraform](https://github.com/DeNA/mlchain-google-cloud-terraform)
