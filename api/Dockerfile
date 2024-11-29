@@ -61,6 +61,14 @@ RUN apt-get update \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
+# Add security scanning and code analysis tools
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+    bandit \
+    safety \
+    && apt-get autoremove -y \
+    && rm -rf /var/lib/apt/lists/*
+
 # Copy Python environment and packages
 ENV VIRTUAL_ENV=/app/api/.venv
 COPY --from=packages ${VIRTUAL_ENV} ${VIRTUAL_ENV}
