@@ -4,7 +4,7 @@
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">Auto-hébergement</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">Documentation</a> ·
-  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">Demande d’entreprise (en anglais seulement)</a>
+  <a href="https://cloud-mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">Demande d’entreprise (en anglais seulement)</a>
 </p>
 
 <p align="center">
@@ -213,6 +213,13 @@ Déployez Mlchain sur une plateforme cloud en un clic en utilisant [terraform](h
 ##### Google Cloud
 - [Google Cloud Terraform par @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)
 
+#### Utilisation d'AWS CDK pour le déploiement
+
+Déployez Mlchain sur AWS en utilisant [CDK](https://aws.amazon.com/cdk/)
+
+##### AWS 
+- [AWS CDK par @KevinZhao](https://github.com/aws-samples/solution-for-deploying-mlchain-on-aws)
+
 ## Contribuer
 
 Pour ceux qui souhaitent contribuer du code, consultez notre [Guide de contribution](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md). 
@@ -239,6 +246,13 @@ Dans le même temps, veuillez envisager de soutenir Mlchain en le partageant sur
 [![Graphique de l'historique des étoiles](https://api.star-history.com/svg?repos=mlchain/mlchain&type=Date)](https://star-history.com/#mlchain/mlchain&Date)
 
 
+## Divulgation de sécurité
+
+Pour protéger votre vie privée, veuillez éviter de publier des problèmes de sécurité sur GitHub. Au lieu de cela, envoyez vos questions à security@mlchain.khulnasoft.com et nous vous fournirons une réponse plus détaillée.
+
+## Licence
+
+Ce référentiel est disponible sous la [Licence open source Mlchain](LICENSE), qui est essentiellement l'Apache 2.0 avec quelques restrictions supplémentaires.
 ## Divulgation de sécurité
 
 Pour protéger votre vie privée, veuillez éviter de publier des problèmes de sécurité sur GitHub. Au lieu de cela, envoyez vos questions à security@mlchain.khulnasoft.com et nous vous fournirons une réponse plus détaillée.

@@ -8,7 +8,7 @@
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">Self-hosting</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">Documentation</a> ·
-  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">Enterprise inquiry</a>
+  <a href="https://cloud-mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">Enterprise inquiry</a>
 </p>
 
 <p align="center">
@@ -116,7 +116,7 @@ Quickly get Mlchain running in your environment with this [starter guide](#quick
 Use our [documentation](https://docs-mlchain.khulnasoft.com) for further references and more in-depth instructions.
 
 - **Mlchain for enterprise / organizations</br>**
-We provide additional enterprise-centric features. [Log your questions for us through this chatbot](https://umlchain.app/chat/22L1zSxg6yW1cWQg) or [send us an email](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry) to discuss enterprise needs. </br>
+We provide additional enterprise-centric features. [Log your questions for us through this chatbot](https://cloud-mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg) or [send us an email](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry) to discuss enterprise needs. </br>
   > For startups and small businesses using AWS, check out [Mlchain Premium on AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6) and deploy it to your own AWS VPC with one-click. It's an affordable AMI offering with the option to create apps with custom logo and branding.
 
 
@@ -134,18 +134,25 @@ If you need to customize the configuration, please refer to the comments in our 
 If you'd like to configure a highly-available setup, there are community-contributed [Helm Charts](https://helm.sh/) and YAML files which allow Mlchain to be deployed on Kubernetes.
 
 - [Helm Chart by @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [Helm Chart](https://github.com/MLChain/mlchain-helm)
-- [YAML file](https://github.com/MLChain/mlchain-kubernetes)
+- [Helm Chart by @BorisPolonsky](https://github.com/MLChain/mlchain-helm)
+- [YAML file by @Winson-030](https://github.com/MLChain/mlchain-kubernetes)
 
 #### Using Terraform for Deployment
 
 Deploy Mlchain to Cloud Platform with a single click using [terraform](https://www.terraform.io/)
 
 ##### Azure Global
-- [Azure Terraform](https://github.com/MLChain/mlchain-azure-terraform)
+- [Azure Terraform by @nikawang](https://github.com/MLChain/mlchain-azure-terraform)
 
 ##### Google Cloud
 - [Google Cloud Terraform by @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)
+
+#### Using AWS CDK for Deployment
+
+Deploy Mlchain to AWS with [CDK](https://aws.amazon.com/cdk/)
+
+##### AWS 
+- [AWS CDK by @KevinZhao](https://github.com/aws-samples/solution-for-deploying-mlchain-on-aws)
 
 ## Contributing
 

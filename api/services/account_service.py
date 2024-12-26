@@ -4,7 +4,7 @@ import logging
 import random
 import secrets
 import uuid
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from hashlib import sha256
 from typing import Any, Optional
 
@@ -111,15 +111,15 @@ class AccountService:
             available_ta.current = True
             db.session.commit()
 
-        if datetime.now(timezone.utc).replace(tzinfo=None) - account.last_active_at > timedelta(minutes=10):
-            account.last_active_at = datetime.now(timezone.utc).replace(tzinfo=None)
+        if datetime.now(UTC).replace(tzinfo=None) - account.last_active_at > timedelta(minutes=10):
+            account.last_active_at = datetime.now(UTC).replace(tzinfo=None)
             db.session.commit()
 
         return account
 
     @staticmethod
     def get_account_jwt_token(account: Account) -> str:
-        exp_dt = datetime.now(timezone.utc) + timedelta(minutes=mlchain_config.ACCESS_TOKEN_EXPIRE_MINUTES)
+        exp_dt = datetime.now(UTC) + timedelta(minutes=mlchain_config.ACCESS_TOKEN_EXPIRE_MINUTES)
         exp = int(exp_dt.timestamp())
         payload = {
             "user_id": account.id,
@@ -156,7 +156,7 @@ class AccountService:
 
         if account.status == AccountStatus.PENDING.value:
             account.status = AccountStatus.ACTIVE.value
-            account.initialized_at = datetime.now(timezone.utc).replace(tzinfo=None)
+            account.initialized_at = datetime.now(UTC).replace(tzinfo=None)
 
         db.session.commit()
 
@@ -194,9 +194,9 @@ class AccountService:
     ) -> Account:
         """create account"""
         if not FeatureService.get_system_features().is_allow_register and not is_setup:
-            from controllers.console.error import NotAllowedRegister
+            from controllers.console.error import AccountNotFound
 
-            raise NotAllowedRegister()
+            raise AccountNotFound()
         account = Account()
         account.email = email
         account.name = name
@@ -249,7 +249,7 @@ class AccountService:
                 # If it exists, update the record
                 account_integrate.open_id = open_id
                 account_integrate.encrypted_token = ""  # todo
-                account_integrate.updated_at = datetime.now(timezone.utc).replace(tzinfo=None)
+                account_integrate.updated_at = datetime.now(UTC).replace(tzinfo=None)
             else:
                 # If it does not exist, create a new record
                 account_integrate = AccountIntegrate(
@@ -284,7 +284,7 @@ class AccountService:
     @staticmethod
     def update_login_info(account: Account, *, ip_address: str) -> None:
         """Update last login time and ip"""
-        account.last_login_at = datetime.now(timezone.utc).replace(tzinfo=None)
+        account.last_login_at = datetime.now(UTC).replace(tzinfo=None)
         account.last_login_ip = ip_address
         db.session.add(account)
         db.session.commit()
@@ -563,7 +563,7 @@ class TenantService:
         return tenant
 
     @staticmethod
-    def switch_tenant(account: Account, tenant_id: Optional[int] = None) -> None:
+    def switch_tenant(account: Account, tenant_id: Optional[str] = None) -> None:
         """Switch the current workspace for the account"""
 
         # Ensure tenant_id is provided
@@ -660,7 +660,7 @@ class TenantService:
         return db.session.query(func.count(Tenant.id)).scalar()
 
     @staticmethod
-    def check_member_permission(tenant: Tenant, operator: Account, member: Account, action: str) -> None:
+    def check_member_permission(tenant: Tenant, operator: Account, member: Account | None, action: str) -> None:
         """Check member permission"""
         perms = {
             "add": [TenantAccountRole.OWNER, TenantAccountRole.ADMIN],
@@ -753,7 +753,7 @@ class RegisterService:
             )
 
             account.last_login_ip = ip_address
-            account.initialized_at = datetime.now(timezone.utc).replace(tzinfo=None)
+            account.initialized_at = datetime.now(UTC).replace(tzinfo=None)
 
             TenantService.create_owner_tenant_if_not_exist(account=account, is_setup=True)
 
@@ -793,7 +793,7 @@ class RegisterService:
                 is_setup=is_setup,
             )
             account.status = AccountStatus.ACTIVE.value if not status else status.value
-            account.initialized_at = datetime.now(timezone.utc).replace(tzinfo=None)
+            account.initialized_at = datetime.now(UTC).replace(tzinfo=None)
 
             if open_id is not None or provider is not None:
                 AccountService.link_account_integrate(provider, open_id, account)

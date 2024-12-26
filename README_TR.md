@@ -4,7 +4,7 @@
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Bulut</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">Kendi Sunucunuzda Barındırma</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">Dokümantasyon</a> ·
-  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">Yalnızca İngilizce: Kurumsal Sorgulama</a>
+  <a href="https://cloud-mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">Yalnızca İngilizce: Kurumsal Sorgulama</a>
 </p>
 
 <p align="center">
@@ -210,6 +210,13 @@ Mlchain'ı bulut platformuna tek tıklamayla dağıtın [terraform](https://www.
 
 ##### Google Cloud
 - [Google Cloud Terraform tarafından @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)
+
+#### AWS CDK ile Dağıtım
+
+[CDK](https://aws.amazon.com/cdk/) kullanarak Mlchain'ı AWS'ye dağıtın
+
+##### AWS 
+- [AWS CDK tarafından @KevinZhao](https://github.com/aws-samples/solution-for-deploying-mlchain-on-aws)
 
 ## Katkıda Bulunma
 

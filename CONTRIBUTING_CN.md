@@ -12,7 +12,7 @@
 
 ### 功能请求：
 
-* 如果您要提出新的功能请求，请解释所提议的功能的目标，并尽可能提供详细的上下文。[@perzeusss](https://github.com/perzeuss) 制作了一个很好的 [功能请求助手](https://umlchain.app/chat/MK2kVSnw1gakVwMX)，可以帮助您起草需求。随时尝试一下。
+* 如果您要提出新的功能请求，请解释所提议的功能的目标，并尽可能提供详细的上下文。[@perzeusss](https://github.com/perzeuss) 制作了一个很好的 [功能请求助手](https://cloud-mlchain.khulnasoft.com/chat/MK2kVSnw1gakVwMX)，可以帮助您起草需求。随时尝试一下。
 
 * 如果您想从现有问题中选择一个，请在其下方留下评论表示您的意愿。
 
@@ -26,7 +26,7 @@
   | [@jyong](https://github.com/JohnJyong)                       | RAG 流水线设计                                  |
   | [@GarfieldDai](https://github.com/GarfieldDai)               | 构建 workflow 编排                     |
   | [@iamjoel](https://github.com/iamjoel) & [@zxhlyh](https://github.com/zxhlyh) | 让我们的前端更易用                  |
-  | [@guchenhe](https://github.com/guchenhe) & [@crazywoola](https://github.com/crazywoola) | 开发人员体验, 综合事项联系人 |
+  | [@guchenhe](https://github.com/guchenhe) & [@nxpkg](https://github.com/nxpkg) | 开发人员体验, 综合事项联系人 |
   | [@takatost](https://github.com/takatost)                     | 产品整体方向和架构           |
 
   事项优先级：
@@ -71,7 +71,7 @@ Mlchain 依赖以下工具和库：
 - [Docker Compose](https://docs.docker.com/compose/install/)
 - [Node.js v18.x (LTS)](http://nodejs.org)
 - [npm](https://www.npmjs.com/) version 8.x.x or [Yarn](https://yarnpkg.com/)
-- [Python](https://www.python.org/) version 3.10.x
+- [Python](https://www.python.org/) version 3.11.x or 3.12.x
 
 ### 4. 安装
 

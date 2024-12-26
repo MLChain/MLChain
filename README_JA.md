@@ -4,7 +4,7 @@
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">セルフホスティング</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">ドキュメント</a> ·
-  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">企業のお問い合わせ（英語のみ）</a>
+  <a href="https://cloud-mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">企業のお問い合わせ（英語のみ）</a>
 </p>
 
 <p align="center">
@@ -199,8 +199,8 @@ docker compose up -d
 高可用性設定を設定する必要がある場合、コミュニティは[Helm Charts](https://helm.sh/)とYAMLファイルにより、MlchainをKubernetesにデプロイすることができます。
 
 - [Helm Chart by @LeoQuote](https://github.com/douban/charts/tree/master/charts/mlchain)
-- [Helm Chart](https://github.com/MLChain/mlchain-helm)
-- [YAML file](https://github.com/MLChain/mlchain-kubernetes)
+- [Helm Chart by @BorisPolonsky](https://github.com/MLChain/mlchain-helm)
+- [YAML file by @Winson-030](https://github.com/MLChain/mlchain-kubernetes)
 
 #### Terraformを使用したデプロイ
 
@@ -211,6 +211,13 @@ docker compose up -d
 
 ##### Google Cloud
 - [@sotazumによるGoogle Cloud Terraform](https://github.com/DeNA/mlchain-google-cloud-terraform)
+
+#### AWS CDK を使用したデプロイ
+
+[CDK](https://aws.amazon.com/cdk/) を使用して、MlchainをAWSにデプロイします
+
+##### AWS 
+- [@KevinZhaoによるAWS CDK](https://github.com/aws-samples/solution-for-deploying-mlchain-on-aws)
 
 ## 貢献
 

@@ -53,7 +53,7 @@
     const params = new URLSearchParams(await getCompressedInputsFromConfig());
 
     const baseUrl =
-      config.baseUrl || `https://${config.isDev ? "dev." : ""}umlchain.app`;
+      config.baseUrl || `https://${config.isDev ? "dev." : ""}cloud-mlchain.khulnasoft.com`;
 
     // pre-check the length of the URL
     const iframeUrl = `${baseUrl}/chatbot/${config.token}?${params}`;

@@ -8,7 +8,7 @@
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">Auto-hospedagem</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">Documentação</a> ·
-  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">Consultas empresariais</a>
+  <a href="https://cloud-mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">Consultas empresariais</a>
 </p>
 
 <p align="center">
@@ -159,7 +159,7 @@ Configure rapidamente o Mlchain no seu ambiente com este [guia inicial](#quick-s
 Use nossa [documentação](https://docs-mlchain.khulnasoft.com) para referências adicionais e instruções mais detalhadas.
 
 - **Mlchain para empresas/organizações</br>**
-Oferecemos recursos adicionais voltados para empresas. [Envie suas perguntas através deste chatbot](https://umlchain.app/chat/22L1zSxg6yW1cWQg) ou [envie-nos um e-mail](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry) para discutir necessidades empresariais. </br>
+Oferecemos recursos adicionais voltados para empresas. [Envie suas perguntas através deste chatbot](https://cloud-mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg) ou [envie-nos um e-mail](mailto:business@mlchain.khulnasoft.com?subject=[GitHub]Business%20License%20Inquiry) para discutir necessidades empresariais. </br>
   > Para startups e pequenas empresas que utilizam AWS, confira o [Mlchain Premium no AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6) e implemente no seu próprio AWS VPC com um clique. É uma oferta AMI acessível com a opção de criar aplicativos com logotipo e marca personalizados.
 
 
@@ -210,6 +210,13 @@ Implante o Mlchain na Plataforma Cloud com um único clique usando [terraform](h
 
 ##### Google Cloud
 - [Google Cloud Terraform por @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)
+
+#### Usando AWS CDK para Implantação
+
+Implante o Mlchain na AWS usando [CDK](https://aws.amazon.com/cdk/)
+
+##### AWS 
+- [AWS CDK por @KevinZhao](https://github.com/aws-samples/solution-for-deploying-mlchain-on-aws)
 
 ## Contribuindo
 

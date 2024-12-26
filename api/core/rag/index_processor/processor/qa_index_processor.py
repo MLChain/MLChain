@@ -53,8 +53,8 @@ class QAIndexProcessor(BaseIndexProcessor):
                     document_node.metadata["doc_id"] = doc_id
                     document_node.metadata["doc_hash"] = hash
                     # delete Splitter character
+                    page_content = document_node.page_content
                     document_node.page_content = remove_leading_symbols(page_content)
-                    document_node.page_content = page_content
                     split_documents.append(document_node)
             all_documents.extend(split_documents)
         for i in range(0, len(all_documents), 10):

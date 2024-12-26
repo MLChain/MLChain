@@ -58,7 +58,7 @@ const translation = {
     registrationNotAllowed: 'アカウントが見つかりません。登録するためにシステム管理者に連絡してください。',
   },
   license: {
-    tip: 'Mlchain Community Editionを開始する前に、GitHubの',
+    tip: 'GitHubのオープンソースライセンスを確認してから、Mlchain Community Editionを開始してください。',
     link: 'オープンソースライセンス',
   },
   join: '参加する',

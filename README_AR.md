@@ -4,7 +4,7 @@
   <a href="https://cloud-mlchain.khulnasoft.com">Mlchain Cloud</a> ·
   <a href="https://docs-mlchain.khulnasoft.com/getting-started/install-self-hosted">الاستضافة الذاتية</a> ·
   <a href="https://docs-mlchain.khulnasoft.com">التوثيق</a> ·
-  <a href="https://umlchain.app/chat/22L1zSxg6yW1cWQg">استفسار الشركات (للإنجليزية فقط)</a>
+  <a href="https://cloud-mlchain.khulnasoft.com/chat/22L1zSxg6yW1cWQg">استفسار الشركات (للإنجليزية فقط)</a>
 </p>
 
 <p align="center">
@@ -190,6 +190,13 @@ docker compose up -d
 ##### Google Cloud
 - [Google Cloud Terraform بواسطة @sotazum](https://github.com/DeNA/mlchain-google-cloud-terraform)
 
+#### استخدام AWS CDK للنشر
+
+انشر Mlchain على AWS باستخدام [CDK](https://aws.amazon.com/cdk/)
+
+##### AWS 
+- [AWS CDK بواسطة @KevinZhao](https://github.com/aws-samples/solution-for-deploying-mlchain-on-aws)
+
 ## المساهمة
 
 لأولئك الذين يرغبون في المساهمة، انظر إلى [دليل المساهمة](https://github.com/mlchain/mlchain/blob/main/CONTRIBUTING.md) لدينا. 
@@ -215,6 +222,13 @@ docker compose up -d
 [![Star History Chart](https://api.star-history.com/svg?repos=mlchain/mlchain&type=Date)](https://star-history.com/#mlchain/mlchain&Date)
 
 
+## الكشف عن الأمان
+
+لحماية خصوصيتك، يرجى تجنب نشر مشكلات الأمان على GitHub. بدلاً من ذلك، أرسل أسئلتك إلى security@mlchain.khulnasoft.com وسنقدم لك إجابة أكثر تفصيلاً.
+
+## الرخصة
+
+هذا المستودع متاح تحت [رخصة البرنامج الحر Mlchain](LICENSE)، والتي تعتبر بشكل أساسي Apache 2.0 مع بعض القيود الإضافية.
 ## الكشف عن الأمان
 
 لحماية خصوصيتك، يرجى تجنب نشر مشكلات الأمان على GitHub. بدلاً من ذلك، أرسل أسئلتك إلى security@mlchain.khulnasoft.com وسنقدم لك إجابة أكثر تفصيلاً.
