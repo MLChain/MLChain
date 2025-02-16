@@ -60,7 +60,7 @@
     "js-audio-recorder": "^1.0.7",
     "js-cookie": "^3.0.1",
     "jwt-decode": "^4.0.0",
-    "katex": "^0.16.10",
+    "katex": "^0.16.21",
     "lamejs": "^1.2.1",
     "lexical": "^0.16.0",
     "lodash-es": "^4.17.21",
